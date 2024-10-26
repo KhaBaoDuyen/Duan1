@@ -149,9 +149,14 @@
 .banner_bottom .account_dropdown .Register {
   width: 100%;
   color: var(--pri-color);
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--pri-color);
+  text-align: center;
 }
 .banner_bottom .account_dropdown .Register:hover {
   color: var(--color-background-light);
+  background-color: var(--pri-color);
 }
 .banner_bottom .cart_shopping {
   color: var(--text-color-light);
@@ -183,10 +188,46 @@
   color: var(--color-secondary);
 }
 
-footer {
-  background-size: auto;
-  background-position: center;
-  height: 30rem;
+footer .footer_top {
+  border-top: 4px solid var(--pri-color);
+  padding-top: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .footer_top .footer_top_icon {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+footer .footer_top .footer_top_icon p {
+  color: var(--pri-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  text-align: center;
+}
+footer .footer_bottom {
+  background: url(/assets/image/icon/left.png) no-repeat left bottom, url(/assets/image/icon/right.png) no-repeat right bottom, var(--pri-color);
+  background-size: 19%, 20%;
+  height: 20rem;
+}
+footer .footer_bottom div {
+  margin: 10% auto;
+}
+footer .footer_bottom div .menu_footer > a {
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+}
+footer .footer_bottom div .menu_footer li a {
+  color: var(--text-color-light);
+}
+footer .footer_bottom div .menu_footer li a:hover {
+  color: var(--color-green);
 }
 
 .section_one {
@@ -279,6 +320,8 @@ footer {
 }
 .flash .card .title .name_product {
   color: var(--color-title);
+  font-size: larger;
+  font-weight: 550;
 }
 .flash .card .title .content {
   color: var(--color-content);
@@ -531,6 +574,8 @@ section .img-box img:hover {
 }
 .all_product .box_card .card .title .name_product {
   color: var(--color-title);
+  font-size: larger;
+  font-weight: 550;
 }
 .all_product .box_card .card .title .content {
   color: var(--color-content);
@@ -612,4 +657,11 @@ h4,
 h5,
 a {
   color: var(--text-color);
+  font-family: var(--font-family-pri);
+}
+
+li {
+  list-style-type: none;
+  padding: none;
+  margin: none;
 }/*# sourceMappingURL=index.css.map */
