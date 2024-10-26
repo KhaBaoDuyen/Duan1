@@ -31,7 +31,7 @@
 
    .title {
       height: max-content;
-
+      
       .price {
          color: var(--color-price);
          font-weight: 600;
@@ -42,6 +42,8 @@
 
       .name_product {
          color: var(--color-title);
+font-size: larger;
+font-weight: 550;
       }
 
       .content {

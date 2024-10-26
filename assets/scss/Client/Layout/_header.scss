@@ -1,10 +1,13 @@
 .banner {
+   .box_top_bottom {}
+
    &_top {
       background: var(--black-color);
       margin: 0 auto;
    }
 
    &_bottom {
+
       background: var(--pri-color);
 
       .box {
@@ -151,9 +154,13 @@
             .Register {
                width: 100%;
                color: var(--pri-color);
-
+               border-radius: 30px;
+               padding: 0.5rem 2rem;
+               border: 2px solid var(--pri-color);
+               text-align: center;
                &:hover {
                   color: var(--color-background-light);
+                  background-color: var(--pri-color);
                }
             }
          }
