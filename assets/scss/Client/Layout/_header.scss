@@ -113,13 +113,15 @@
 
             p {
                margin-right: 5px;
-
-               &:hover {}
+               color: var(--text-color-light);
             }
+
+            a {}
          }
 
          &_dropdown {
             position: absolute;
+
             background: var(--text-color-light);
             width: 100%;
             height: max-content;
@@ -185,6 +187,7 @@
             a {
                color: var(--color-secondary);
                text-decoration: none;
+
 
                &:hover {
                   text-decoration: underline;
