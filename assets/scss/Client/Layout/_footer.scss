@@ -14,9 +14,10 @@ footer {
          align-content: center;
          flex-wrap: nowrap;
          align-items: center;
-// img{
-// width: 100px;
-// }
+
+         // img{
+         // width: 100px;
+         // }
          p {
             color: var(--pri-color);
             font-size: 1.1rem;
@@ -30,17 +31,19 @@ footer {
    }
 
    .footer_bottom {
-      background: url(/assets/image/icon/left.png) no-repeat left bottom,
+      background: url(/assets/image/icon/left.png) no-repeat left top,
          url(/assets/image/icon/right.png) no-repeat right bottom,
          var(--pri-color);
       background-size: 19%, 20%;
       // background-position: center;
       height: 20rem;
 
-      div {
-         margin: 10% auto;
+      .box_menu_footer {
+
 
          .menu_footer {
+            margin: 25% auto;
+
             &>a {
                font-size: 1.2rem;
                color: var(--text-color-light);

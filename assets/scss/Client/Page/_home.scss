@@ -30,12 +30,13 @@
       flex-direction: row;
       justify-content: space-between;
 
-      span {
+      button {
          padding: 10px;
          border: none;
          border-radius: 50%;
          color: var(--text-color-light);
          opacity: 0.5;
+         background: none;
 
          &:hover {
             background: var(--color-green);
@@ -304,7 +305,7 @@ section .img-box {
       font-weight: 600;
       margin: 3% auto;
       width: max-content;
-  
+
       a {
          color: var(--pri-color);
       }

@@ -60,7 +60,10 @@ font-weight: 550;
    &:hover {
       border: 1px solid var(--color-price);
       // box-shadow: 5px 5px 12px #5f5f5f85,
-      //    -5px -5px 12px #ffffff85;
+      //    -5px -5px 12px #ffffff85;  
+   box-shadow: 3px 3px 10px gray;
+      
+
    }
 
    &:hover .image {
