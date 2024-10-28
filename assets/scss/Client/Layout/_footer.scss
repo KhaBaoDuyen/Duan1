@@ -1,5 +1,4 @@
 footer {
-
    // background: url(/assets/image/icon/background.png)  no-repeat ;
    .footer_top {
       border-top: 4px solid var(--pri-color);
@@ -14,6 +13,7 @@ footer {
          align-content: center;
          flex-wrap: nowrap;
          align-items: center;
+         color: var(--text-color-light);
 
          // img{
          // width: 100px;
