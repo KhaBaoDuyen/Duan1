@@ -121,6 +121,7 @@
 }
 .banner_bottom .account_dropdown {
   position: absolute;
+  z-index: 99;
   background: var(--text-color-light);
   width: 100%;
   height: -moz-max-content;
@@ -153,6 +154,7 @@
   padding: 0.5rem 2rem;
   border: 2px solid var(--pri-color);
   text-align: center;
+  margin-top: -5%;
 }
 .banner_bottom .account_dropdown .Register:hover {
   color: var(--color-background-light);
@@ -212,21 +214,21 @@ footer .footer_top .footer_top_icon p {
   text-align: center;
 }
 footer .footer_bottom {
-  background: url(/assets/image/icon/left.png) no-repeat left bottom, url(/assets/image/icon/right.png) no-repeat right bottom, var(--pri-color);
+  background: url(/assets/image/icon/left.png) no-repeat left top, url(/assets/image/icon/right.png) no-repeat right bottom, var(--pri-color);
   background-size: 19%, 20%;
   height: 20rem;
 }
-footer .footer_bottom div {
-  margin: 10% auto;
+footer .footer_bottom .box_menu_footer .menu_footer {
+  margin: 25% auto;
 }
-footer .footer_bottom div .menu_footer > a {
+footer .footer_bottom .box_menu_footer .menu_footer > a {
   font-size: 1.2rem;
   color: var(--text-color-light);
 }
-footer .footer_bottom div .menu_footer li a {
+footer .footer_bottom .box_menu_footer .menu_footer li a {
   color: var(--text-color-light);
 }
-footer .footer_bottom div .menu_footer li a:hover {
+footer .footer_bottom .box_menu_footer .menu_footer li a:hover {
   color: var(--color-green);
 }
 
@@ -256,14 +258,15 @@ footer .footer_bottom div .menu_footer li a:hover {
   flex-direction: row;
   justify-content: space-between;
 }
-.section_one .btn_slide span {
+.section_one .btn_slide button {
   padding: 10px;
   border: none;
   border-radius: 50%;
   color: var(--text-color-light);
   opacity: 0.5;
+  background: none;
 }
-.section_one .btn_slide span:hover {
+.section_one .btn_slide button:hover {
   background: var(--color-green);
   opacity: 0.8;
 }
@@ -334,6 +337,7 @@ footer .footer_bottom div .menu_footer li a:hover {
 }
 .flash .card:hover {
   border: 1px solid var(--color-price);
+  box-shadow: 3px 3px 10px gray;
 }
 .flash .card:hover .image {
   opacity: 0;
@@ -588,6 +592,7 @@ section .img-box img:hover {
 }
 .all_product .box_card .card:hover {
   border: 1px solid var(--color-price);
+  box-shadow: 3px 3px 10px gray;
 }
 .all_product .box_card .card:hover .image {
   opacity: 0;
@@ -632,6 +637,235 @@ section .img-box img:hover {
 }
 .all_product .title_all_product a {
   color: var(--pri-color);
+}
+
+.product_banner {
+  background: var(--text-color-light);
+  box-shadow: 10px 10px 30px #e8e8e8, -10px -10px 30px #ffffff;
+  margin: 0 auto;
+}
+.product_banner .box_banner {
+  height: auto;
+  overflow: hidden;
+}
+.product_banner .box_banner .product_banner_left {
+  background: url(/assets/image/main/image-removebg-preview\ \(5\).png) no-repeat bottom right, var(--text-color-light);
+}
+.product_banner .box_banner .product_banner_left .title {
+  margin-left: 5%;
+}
+.product_banner .box_banner .product_banner_left .title_name {
+  transition: transform 0.3s ease;
+  animation: title 3s ease-in-out;
+  font-size: 11em;
+  color: var(--pri-color);
+  font-weight: 500;
+}
+.product_banner .box_banner .product_banner_left .title_slogan {
+  transition: transform 0.3s ease;
+  animation: slogan 2s ease-in;
+  font-size: 2em;
+  color: var(--text-color);
+  margin-top: -5%;
+}
+.product_banner .box_banner .product_banner_right {
+  margin-left: auto;
+  background: var(--pri-color);
+  box-shadow: -10px 0 100px 0 rgba(0, 0, 0, 0.5);
+}
+.product_banner .box_banner .product_banner_right img {
+  filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.76));
+  transform: rotateX(30deg);
+  transition: transform 0.3s ease;
+  animation: moveImage 3s ease-in-out;
+  margin-top: -10%;
+}
+@keyframes moveImage {
+  0% {
+    transform: translateX(-200%) rotateX(30deg);
+  }
+  50% {
+    transform: translateX(0) rotateX(30deg);
+  }
+}
+@keyframes title {
+  0% {
+    transform: translateY(-200%) rotateX(30deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(30deg);
+  }
+}
+@keyframes slogan {
+  0% {
+    transform: translateY(200%) rotateX(30deg);
+  }
+  50% {
+    transform: translateY(0) rotateX(30deg);
+  }
+}
+
+.count {
+  background: var(--color-price);
+}
+.count .total_product {
+  text-align: center;
+}
+.count .total_product .count_number {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--pri-color);
+  font-family: var(--font-size);
+}
+.count .total_product .count_name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--pri-color);
+  font-family: var(--font-size);
+}
+
+main aside .title_brand {
+  color: var(--pri-color);
+  font-family: var(--font-family);
+  font-size: 2rem;
+}
+main aside .brand {
+  width: 90%;
+}
+main aside .brand_title h5 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--pri-color);
+  font-weight: 500;
+}
+main aside .brand_title:hover {
+  text-decoration: underline;
+}
+main article nav {
+  background: var(--pri-color);
+  padding: 0.5% 0 0 0;
+}
+main article nav .tune {
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  color: var(--text-color-light);
+  margin-left: auto;
+  width: 5%;
+}
+main article nav .tune .tune_down {
+  z-index: 99;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgb(179, 179, 179);
+  text-align: center;
+  width: -moz-max-content;
+  width: max-content;
+  right: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background: var(--text-color-light);
+}
+main article nav .tune .tune_down a {
+  width: 100%;
+  padding: 0 1rem;
+  color: var(--pri-color);
+}
+main article nav .tune .tune_down a:hover {
+  background: rgb(230, 230, 230);
+}
+main article nav .tune:hover .tune_down {
+  opacity: 1;
+  transform: translateY(0);
+}
+main article .all_products {
+  padding: 1%;
+  display: flex;
+}
+main article .all_products .card {
+  width: 24%;
+  transition: all 200ms ease;
+  position: relative;
+  overflow: hidden;
+  padding: 1%;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0.5%;
+  border-radius: 15px;
+  text-decoration: none;
+}
+main article .all_products .card .box_image {
+  height: 15rem;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+main article .all_products .card .box_image .image_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+}
+main article .all_products .card .title {
+  height: -moz-max-content;
+  height: max-content;
+}
+main article .all_products .card .title .price {
+  color: var(--color-price);
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+main article .all_products .card .title .name_product {
+  color: var(--color-title);
+  font-size: larger;
+  font-weight: 550;
+}
+main article .all_products .card .title .content {
+  color: var(--color-content);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main article .all_products .card:hover {
+  border: 1px solid var(--color-price);
+  box-shadow: 3px 3px 10px gray;
+}
+main article .all_products .card:hover .image {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+main article .all_products .card:hover .image_hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  transform: scale(1.4);
+}
+main article .all_products .card .sale {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  background: var(--color-price);
+  color: var(--text-color-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px 15px 3px;
+  font-size: 1.1rem;
+}
+main article .all_products .card .price_sales {
+  color: var(--text-color-sale);
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+main article .all_products .card:hover {
+  box-shadow: 3px 3px 10px gray;
 }
 
 * {

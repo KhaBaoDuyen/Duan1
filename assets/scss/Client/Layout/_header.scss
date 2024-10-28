@@ -124,7 +124,7 @@
 
          &_dropdown {
             position: absolute;
-
+            z-index: 99;
             background: var(--text-color-light);
             width: 100%;
             height: max-content;
@@ -158,6 +158,8 @@
                padding: 0.5rem 2rem;
                border: 2px solid var(--pri-color);
                text-align: center;
+               margin-top: -5%;
+
                &:hover {
                   color: var(--color-background-light);
                   background-color: var(--pri-color);
