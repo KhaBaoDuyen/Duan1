@@ -12,6 +12,7 @@
 
       .product_banner_left {
          background: url(/assets/image/main/image-removebg-preview\ \(5\).png) no-repeat bottom right,
+            // url(/assets/image/main/image-removebg-preview.png) no-repeat bottom left,
             var(--text-color-light);
 
          .title {
@@ -42,16 +43,21 @@
 
       .product_banner_right {
          // width: 30%;
+         position: relative;
          margin-left: auto;
          background: var(--pri-color);
          box-shadow: -10px 0 100px 0 rgba(0, 0, 0, 0.5);
+         height: 32rem;
 
          img {
+            position: absolute;
+            bottom: -7%;
             filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.76));
             transform: rotateX(30deg);
             transition: transform 0.3s ease;
             animation: moveImage 3s ease-in-out;
-            margin-top: -10%;
+            height: auto;
+            // margin-top: -10%;
          }
       }
 

@@ -117,3 +117,36 @@ document.addEventListener("DOMContentLoaded", function() {
     initializeSlider('.slider_box_right', '.box_category_right .btn-left', '.box_category_right .btn-right');
 });
 
+
+//-------- lia chuột phóng to phần tử ---------
+const img = document.getElementById('myImage');
+const magnifier = document.getElementById('magnifier');
+magnifier.style.display = 'none';
+img.addEventListener('mousemove', (event) => {
+  magnifier.style.display = 'block';
+
+  // Tính toán vị trí của con trỏ chuột so với hình ảnh
+  const rect = img.getBoundingClientRect();
+  const x = event.clientX - rect.left;
+  const y = event.clientY - rect.top;
+
+  // Cài đặt kích thước và vị trí của kính lúp
+  magnifier.style.left = x + 'px';
+  magnifier.style.top = y + 'px';
+
+  // Tính toán phần hình ảnh cần phóng to
+  const scale = 3; // Mức độ phóng to
+  const width = magnifier.offsetWidth;
+  const height = magnifier.offsetHeight;
+
+  const cx = x - width / 2;
+  const cy = y - height / 2;
+
+  magnifier.style.backgroundImage = `url(${img.src})`;
+  magnifier.style.backgroundSize = `${img.width * scale}px ${img.height * scale}px`;
+  magnifier.style.backgroundPosition = `-${cx * scale}px -${cy * scale}px`;
+});
+
+img.addEventListener('mouseout', () => {
+  magnifier.style.display = 'none';
+});
