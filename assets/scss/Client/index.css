@@ -1034,6 +1034,7 @@ main article .all_products .card:hover {
 
 .section2 {
   color: #000000;
+  font-family: var(--font-family-pri);
 }
 .section2 h1 {
   color: #000000;
@@ -1208,6 +1209,237 @@ main article .all_products .card:hover {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.Page-login {
+  background: linear-gradient(to right, #142b16, #598059) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.Page-login .container {
+  background-color: #010101;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+.Page-login .container h1 {
+  color: white;
+}
+.Page-login .container p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+.Page-login .container span {
+  font-size: 12px;
+}
+.Page-login .container a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+.Page-login .container .button {
+  background: linear-gradient(to right, #142b16, #598059);
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  padding: 10px 45px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.Page-login .container .checkbox {
+  display: flex;
+  position: relative;
+  height: 3rem;
+}
+.Page-login .container .checkbox .input-checkbox {
+  display: flex;
+  position: absolute;
+  left: -9.5rem;
+}
+.Page-login .container .checkbox .input-checkbox input {
+  width: 15px;
+}
+.Page-login .container .checkbox .input-checkbox label {
+  font-size: 13px;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+.Page-login .container .checkbox a {
+  position: absolute;
+  right: -9.5rem;
+  top: -10px;
+}
+.Page-login .container .checkbox a:hover {
+  color: #078711;
+}
+.Page-login .container a:hover {
+  color: #078711;
+}
+.Page-login .container button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+.Page-login .container form {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
+}
+.Page-login .container input {
+  background-color: #000000;
+  border: 1px solid green;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  color: #fff;
+}
+.Page-login .form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+.Page-login .sign-in {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+.Page-login .container.active .sign-in {
+  transform: translateX(100%);
+}
+.Page-login .sign-up {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+.Page-login .container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+@keyframes move {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+.Page-login .social-icons {
+  margin: 20px 0;
+}
+.Page-login .social-icons a {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+}
+.Page-login .toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  z-index: 1000;
+}
+.Page-login .container.active .toggle-container {
+  transform: translateX(-100%);
+}
+.Page-login .toggle {
+  background-image: url(/assets/image/about/login.jpg);
+  background-size: 100%;
+  height: 100%;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.Page-login .toggle-container #register {
+  width: 150px;
+  background: linear-gradient(to right, #142b16, #598059);
+  top: 0;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  padding: 10px 45px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.Page-login .toggle-container #login {
+  position: absolute;
+  background: linear-gradient(to right, #142b16, #598059);
+  top: 0;
+  right: 0;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  padding: 10px 45px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.Page-login .container.active .toggle {
+  transform: translateX(50%);
+}
+.Page-login .toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.Page-login .toggle-left {
+  transform: translateX(-200%);
+}
+.Page-login .container.active .toggle-left {
+  transform: translateX(0);
+}
+.Page-login .toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+.Page-login .container.active .toggle-right {
+  transform: translateX(200%);
 }
 
 * {
