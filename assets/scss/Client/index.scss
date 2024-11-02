@@ -3,8 +3,10 @@
 @import'./Layout/header';
 @import'./Layout/footer';
 
+//-----------PAGES----------------
 @import'./Page/home';
 @import'./Page/product';
+@import'./Page/product_detail';
 
 * {
     margin: 0;
@@ -30,10 +32,11 @@ h4,
 h5,
 a {
     color: var(--text-color);
-font-family: var(--font-family-pri);
+    font-family: var(--font-family-pri);
 }
-li{
-list-style-type: none;
-padding: none;
-margin: none;}
 
+li {
+    list-style-type: none;
+    padding: none;
+    margin: none;
+}

@@ -14,7 +14,6 @@ footer {
          flex-wrap: nowrap;
          align-items: center;
          color: var(--text-color-light);
-
          // img{
          // width: 100px;
          // }
@@ -38,7 +37,6 @@ footer {
       // background-position: center;
       height: 20rem;
 
-      .box_menu_footer {
 
 
          .menu_footer {
@@ -50,13 +48,13 @@ footer {
             }
 
             li a {
-               color: var(--text-color-light);
+               color: var(--text-color-light) !important;
 
                &:hover {
                   color: var(--color-green);
                }
             }
-         }
+         
       }
    }
 }
