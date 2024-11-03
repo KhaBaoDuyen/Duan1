@@ -46,11 +46,10 @@ footer {
                color: var(--text-color-light);
             }
 
-            li a {
+            >li>a {
                color: var(--text-color-light) !important;
-
                &:hover {
-                  color: var(--color-green);
+                  color: var(--color-green) !important;
                }
             }
 
