@@ -254,11 +254,11 @@ footer .footer_bottom .menu_footer > a {
   font-size: 1.2rem;
   color: var(--text-color-light);
 }
-footer .footer_bottom .menu_footer li a {
+footer .footer_bottom .menu_footer > li > a {
   color: var(--text-color-light) !important;
 }
-footer .footer_bottom .menu_footer li a:hover {
-  color: var(--color-green);
+footer .footer_bottom .menu_footer > li > a:hover {
+  color: var(--color-green) !important;
 }
 
 .section_one {
