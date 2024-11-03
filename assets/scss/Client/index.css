@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
   --pri-color:#07503d;
@@ -10,7 +11,7 @@
   --text-color:#333333;
   --text-color-sale:#808080;
   --text-color-light:#ffffff;
-  --black-color:#000000;
+  --black-color:#313131;
   --font-size:clamp(12px, 3vw, 18px);
   --font-family-pri: "Inter", sans-serif;
 }
@@ -203,6 +204,7 @@ footer .footer_top .footer_top_icon {
   align-content: center;
   flex-wrap: nowrap;
   align-items: center;
+  color: var(--text-color-light);
 }
 footer .footer_top .footer_top_icon p {
   color: var(--pri-color);
@@ -866,6 +868,113 @@ main article .all_products .card .price_sales {
 }
 main article .all_products .card:hover {
   box-shadow: 3px 3px 10px gray;
+}
+
+.contact {
+  /*  border: 1px solid var(--pri-color);  */
+  margin: auto;
+}
+.contact .contact1 {
+  background-color: rgb(7, 80, 61);
+  height: 200px;
+  width: 45%;
+  border-radius: 5px;
+}
+.contact .information {
+  /*  border: 1px solid var(--pri-color); */
+  width: 100%;
+  height: 50%;
+}
+.contact form label {
+  float: left;
+}
+.contact input {
+  height: 55px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid var(--text-color-sale);
+  padding: 10px;
+}
+.contact textarea {
+  padding: 10px;
+  border-radius: 10px;
+  width: 97%;
+  margin: auto;
+}
+.contact .inputsubmit input {
+  width: 90%;
+  background: var(--color-title);
+  color: var(--text-color-light);
+  font-family: var(--font-family-pri);
+}
+.contact .inputsubmit input:hover {
+  background: var(--color-green);
+  /*  color: var(--color-price); */
+  transform: scale(1.1);
+  transition: all 0.5 ease-in-out;
+}
+.contact .imgcontact {
+  display: flex !important;
+  flex-direction: column;
+  align-content: center;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.bannercontact {
+  background-color: white;
+}
+.bannercontact .box_banner {
+  background: url(/assets/image/contact/Betterimage.ai_1730455519571-removebg-preview.png) no-repeat center;
+  background-size: 100%;
+  height: 500px;
+}
+.bannercontact h1 {
+  font-size: 50px;
+}
+.bannercontact .title_banner {
+  padding-bottom: 20px;
+}
+
+.cart {
+  /*    border: 1px solid red;
+      */
+  height: 800px;
+}
+.cart .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart .table th, .cart .table td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+}
+.cart .table img {
+  max-width: 70px; /* Đảm bảo ảnh không vượt quá kích thước */
+  height: auto;
+}
+.cart .quantity-control {
+  display: flex; /* Sử dụng flexbox để căn chỉnh */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+}
+.cart .quantity-control input[type=button] {
+  background-color: #07503d; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  border: none; /* Bỏ viền */
+  border-radius: 5px; /* Bo góc */
+  width: 30px; /* Chiều rộng của nút */
+  height: 30px; /* Chiều cao của nút */
+  cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+}
+.cart .quantity-control input[type=number] {
+  width: 80px; /* Chiều rộng của ô nhập số lượng */
+  text-align: center; /* Căn giữa nội dung */
+  border: 1px solid #ddd; /* Đường viền */
+  border-radius: 5px; /* Bo góc */
+  margin: 0 5px; /* Khoảng cách giữa các phần tử */
 }
 
 * {

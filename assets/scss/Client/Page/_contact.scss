@@ -1,0 +1,79 @@
+.contact{
+   /*  border: 1px solid var(--pri-color);  */
+    // height: 1000px;
+     margin: auto;
+     .contact1{
+        background-color: rgb(7, 80, 61); height: 200px; width: 45%;
+        border-radius: 5px;
+    }
+    .information{
+       /*  border: 1px solid var(--pri-color); */
+        width: 100%;
+        height: 50%;
+    }
+
+     form label{
+       float: left;
+
+     }
+     input{
+        height: 55px;
+        border-radius: 10px;
+        margin-top: 1rem;
+        width: 100%;
+        border: 1px solid var(--text-color-sale);
+        padding: 10px;
+     }
+     
+
+     textarea{
+        // height: 170px;
+        padding: 10px;
+        border-radius: 10px;
+        width: 97%;
+        margin: auto;
+     }
+     .inputsubmit{
+       input{
+        width: 90%;
+        background: var(--color-title);
+        color: var(--text-color-light);
+        font-family: var(--font-family-pri);
+       
+       &:hover{
+        background: var(--color-green);
+       /*  color: var(--color-price); */
+        transform: scale(1.1);
+        transition: all 0.5 ease-in-out;
+       }
+       }
+       
+       
+       
+      
+     }
+     .imgcontact{
+        display: flex !important;
+        flex-direction: column;
+        align-content: center;
+        /* justify-content: center; */
+        align-items: center;
+       }
+}
+
+.bannercontact 
+{
+background-color: white;
+
+.box_banner{
+    background: url(/assets/image/contact/Betterimage.ai_1730455519571-removebg-preview.png) no-repeat center;
+    background-size: 100%;
+    height: 500px;
+}
+h1{
+    font-size: 50px;
+}
+.title_banner{
+   padding-bottom: 20px;
+}
+}
