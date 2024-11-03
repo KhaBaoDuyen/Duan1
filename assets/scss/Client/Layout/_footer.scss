@@ -15,7 +15,6 @@ footer {
          flex-wrap: nowrap;
          align-items: center;
          color: var(--text-color-light);
-
          // img{
          // width: 100px;
          // }
@@ -39,23 +38,21 @@ footer {
       // background-position: center;
       height: 20rem;
 
-      .menu_footer {
-         margin: 25% auto;
+         .menu_footer {
+            margin: 25% auto;
 
-         >a {
-            font-size: 1.2rem;
-            color: var(--text-color-light);
-         }
+            &>a {
+               font-size: 1.2rem;
+               color: var(--text-color-light);
+            }
 
-         li a {
-            color: var(--text-color-light) !important;
+            li a {
+               color: var(--text-color-light) !important;
 
-
-         }
-
-         li:hover a {
-            color: var(--color-green) !important;
-         }
+               &:hover {
+                  color: var(--color-green);
+               }
+            }
 
       }
    }
