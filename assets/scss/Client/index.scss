@@ -15,6 +15,7 @@
 @import'./Page/instruction';
 @import'./Page/baiviet';
 @import'./Page/checkout';
+@import'./Page/history';
 
 * {
     margin: 0;
@@ -47,10 +48,4 @@ li {
     list-style-type: none;
     padding: none;
     margin: none;
-    font-family: var(--font-family-pri);
-}
-ul{
-    padding: none;
-    margin: none;
-
 }
