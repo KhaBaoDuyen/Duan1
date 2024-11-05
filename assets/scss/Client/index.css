@@ -205,6 +205,7 @@ footer .footer_top .footer_top_icon {
   flex-wrap: nowrap;
   align-items: center;
   color: var(--text-color-light);
+  color: var(--text-color-light);
 }
 footer .footer_top .footer_top_icon p {
   color: var(--pri-color);
