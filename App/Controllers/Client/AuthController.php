@@ -11,6 +11,7 @@ use App\Views\Client\Pages\Auth\Profile;
 use App\Views\Client\Layouts\Header;
 use App\Views\Client\Layouts\Footer;
 use App\Models\UserModel;
+use App\Views\Client\Pages\Auth\Resetpassword;
 class AuthController
 {
    public static function Account()
@@ -39,5 +40,9 @@ class AuthController
       // Footer::render();
    }
 
+   public static function Resetpassword()
+   {
+      Resetpassword::render();
+   }
 
 }

@@ -4,7 +4,7 @@ namespace App\Views\Client\Pages\Auth;
 
 use App\Views\BaseView;
 
-class ForgotPassword extends BaseView
+class Resetpassword extends BaseView
 {
    public static function render($data = null)
    {
@@ -42,15 +42,14 @@ class ForgotPassword extends BaseView
             </div>
             <div class="form-container sign-in">
                 <form>
-                    <h1>Lấy lại mật khẩu</h1>
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Tên đăng nhập">
-                    <!-- <input type="password" placeholder="Mật khẩu mới"> -->
+                    <h1>Mật khẩu mới</h1>
+                    <input type="password" placeholder="Mật khẩu mới">
+                    <input type="password" placeholder="Nhập lại mật khẩu mới">
                     <div class="checkbox">
-                        <!-- <div class="input-checkbox">
+                        <div class="input-checkbox">
                             <input type="checkbox" name id>
                             <label>Ghi nhớ mật khẩu</label>
-                        </div> -->
+                        </div>
                         <a href="/Account">Quay về</a>
                     </div>
                     <button class="button">Gửi yêu cầu</button>

@@ -704,7 +704,7 @@ section .img-box img:hover {
   font-size: 2.2em;
   color: var(--text-color);
   margin-top: -5%;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
   font-weight: 400;
   font-style: normal;
   font-style: italic;
@@ -1209,6 +1209,8 @@ main article .all_products .card:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s;
+  border: 1px  solid green;
+  box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219);
 }
 .product_detail .sec_title article .box_btn .buyBtn::after {
   content: "";
@@ -2165,7 +2167,7 @@ main article .all_products .card:hover {
   color: white;
   text-align: center;
   text-shadow: 1px 3px 5px black;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 .instruction .post_1 {
   border-radius: 1px;
@@ -2198,12 +2200,12 @@ main article .all_products .card:hover {
   font-size: 1.5em;
   color: rgb(8, 92, 40);
   text-align: center;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 .instruction .text_post p {
   text-align: center;
   font-size: 0.8em;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 .instruction .post_total {
   background-color: white;
@@ -2221,7 +2223,7 @@ main article .all_products .card:hover {
   color: white;
   text-align: center;
   text-shadow: 1px 3px 5px black;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 
 .post_total_2 {
@@ -2430,7 +2432,7 @@ main article .all_products .card:hover {
 .text_bdbv1 {
   color: white;
   font-size: 50px;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
   text-shadow: 1px 3px 5px black;
   padding-bottom: 100px;
   position: relative;
@@ -2439,7 +2441,7 @@ main article .all_products .card:hover {
 .text_bdbv2 {
   color: white;
   font-size: 15px;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
   text-shadow: 1px 3px 5px black;
   position: absolute;
 }
@@ -2465,7 +2467,7 @@ main article .all_products .card:hover {
   align-content: center;
   justify-content: center;
   align-items: center;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 
 .news_categories {

@@ -30,6 +30,8 @@ Route::get('/Account', 'App\Controllers\Client\AuthController@Account');
 
 Route::get('/ForgotPassword', 'App\Controllers\Client\AuthController@ForgotPassword');
 
+Route::get('/Resetpassword', 'App\Controllers\Client\AuthController@Resetpassword');
+
 Route::get('/logout', 'App\Controllers\Client\AuthController@logout');
 
 Route::get('/user', 'App\Controllers\Client\AuthController@profile');
