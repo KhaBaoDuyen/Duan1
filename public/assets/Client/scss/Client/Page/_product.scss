@@ -1,0 +1,218 @@
+.product_banner {
+   background: var(--text-color-light);
+   box-shadow: 10px 10px 30px #e8e8e8,
+      -10px -10px 30px #ffffff;
+   margin: 0 auto;
+
+
+   .box_banner {
+
+      height: auto;
+      overflow: hidden;
+
+      .product_banner_left {
+         background: url(/assets/image/main/image-removebg-preview\ \(5\).png) no-repeat bottom right,
+            // url(/assets/image/main/image-removebg-preview.png) no-repeat bottom left,
+            var(--text-color-light);
+
+         .title {
+            margin-left: 5%;
+
+            &_name {
+               transition: transform 0.3s ease;
+               animation: title 3s ease-in-out;
+               font-size: 11em;
+               color: var(--pri-color);
+               font-weight: 500;
+            }
+
+            &_slogan {
+               transition: transform 0.3s ease;
+               animation: slogan 2s ease-in;
+               font-size: 2.2em;
+               color: var(--text-color);
+               margin-top: -5%;
+               font-family: "Nanum Myeongjo", serif;
+               font-weight: 400;
+               font-style: normal;
+               font-style: italic;
+            }
+
+         }
+
+      }
+
+
+
+
+      .product_banner_right {
+         // width: 30%;
+         position: relative;
+         margin-left: auto;
+         background: var(--pri-color);
+         box-shadow: -10px 0 100px 0 rgba(0, 0, 0, 0.5);
+         height: 32rem;
+
+         img {
+            position: absolute;
+            bottom: -7%;
+            filter: drop-shadow(25px 25px 15px rgba(0, 0, 0, 0.76));
+            transform: rotateX(30deg);
+            transition: transform 0.3s ease;
+            animation: moveImage 3s ease-in-out;
+            height: auto;
+            // margin-top: -10%;
+         }
+      }
+
+      @keyframes moveImage {
+         0% {
+            transform: translateX(-200%) rotateX(30deg);
+         }
+
+         50% {
+            transform: translateX(0) rotateX(30deg);
+         }
+      }
+
+      @keyframes title {
+         0% {
+            transform: translateY(-200%) rotateX(30deg);
+         }
+
+         50% {
+            transform: translateY(0) rotateX(30deg);
+         }
+      }
+
+      @keyframes slogan {
+         0% {
+            transform: translateY(200%) rotateX(30deg);
+         }
+
+         50% {
+            transform: translateY(0) rotateX(30deg);
+         }
+      }
+   }
+}
+
+.count {
+   background: var(--color-price);
+
+   .total_product {
+      text-align: center;
+
+      .count_number {
+         font-size: 2.6rem;
+         font-weight: 600;
+         color: var(--pri-color);
+         font-family: var(--font-size);
+      }
+
+      .count_name {
+         font-size: 1.3rem;
+         font-weight: 600;
+         color: var(--pri-color);
+         font-family: var(--font-size);
+      }
+   }
+}
+
+main {
+   aside {
+
+
+      .title_brand {
+         color: var(--pri-color);
+         font-family: var(--font-family);
+         font-size: 2rem;
+      }
+
+      .brand {
+         width: 90%;
+
+         &_title {
+
+            h5 {
+               white-space: nowrap;
+               text-overflow: ellipsis;
+               overflow: hidden;
+               color: var(--pri-color);
+               font-weight: 500;
+            }
+
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+
+   article {
+      nav {
+         background: var(--pri-color);
+         padding: 0.5% 0 0 0;
+
+         .tune {
+            width: max-content;
+            position: relative;
+            color: var(--text-color-light);
+            margin-left: auto;
+            // padding: 0 1%;
+            width: 5%;
+
+            .tune_down {
+               z-index: 99;
+               position: absolute;
+               border-radius: 5px;
+               box-shadow: 3px 3px 5px rgb(179, 179, 179);
+               text-align: center;
+               width: max-content;
+               right: 0;
+               opacity: 0;
+               transform: translateY(-20px);
+               transition: opacity 0.5s ease, transform 0.5s ease;
+               background: var(--text-color-light);
+
+               a {
+                  width: 100%;
+                  padding: 0 1rem;
+                  color: var(--pri-color);
+
+                  &:hover {
+                     background: rgb(230, 230, 230);
+                  }
+               }
+            }
+
+            &:hover .tune_down {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+
+
+      }
+
+      .all_products {
+         padding: 1%;
+         display: flex;
+
+         .card {
+            width: 24%;
+            transition: all 200ms ease;
+            @include card(var(--color-price), var(--color-title), var(--text-color));
+
+            &:hover {
+               // border: 1px solid var(--pri-color) !important;
+               box-shadow: 3px 3px 10px gray;
+            }
+
+            // .sale {
+            //    background: var(--color-green);
+            // }
+         }
+      }
+   }
+}
