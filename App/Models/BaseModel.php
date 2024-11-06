@@ -25,7 +25,13 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
-            $sql = "SELECT * FROM $this->table where 1";
+                 $sql = "SELECT $this->table.*, 
+                       (SELECT url FROM images_product 
+                        WHERE images_product.id_product = $this->table.id 
+                        ORDER BY images_product.id ASC 
+                        LIMIT 1) AS image_product_url
+                FROM $this->table";
+
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_all(MYSQLI_ASSOC);
         } catch (\Throwable $th) {

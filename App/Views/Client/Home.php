@@ -38,7 +38,7 @@ class Home extends BaseView
       </div>
       <div class="flash_box d-flex">
          <?php
-         if (isset($data) && isset($data['products']) && $data && $data['products']):
+         if (isset($data) && isset($data['products']) ):
          ?>
          <?php
          foreach ($data['products'] as $item):
