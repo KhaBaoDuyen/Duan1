@@ -19,7 +19,7 @@ class HomeController
         Notification::render();
         NotificationHelper::unset();
         Header::render();
-        Home::render();
+        Home::render($data);
         Footer::render();
     }
     public static function contact()

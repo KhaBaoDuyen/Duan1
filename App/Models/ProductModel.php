@@ -4,8 +4,8 @@ namespace App\Models;
 
 class ProductModel extends BaseModel
 {
-    protected $table = 'product';
-    protected $id = 'product_id';
+    protected $table = 'products';
+    protected $id = 'id';
 
     public function getAllProduct()
     {
@@ -45,6 +45,7 @@ class ProductModel extends BaseModel
         $stmt->bind_param('s', $id);
         $stmt->execute();
         return $stmt->get_result()->fetch_assoc();
+
     }
     public function getOneProductByName($name)
     {
