@@ -4,8 +4,8 @@ namespace App\Models;
 
 class CategoryModel extends BaseModel
 {
-    protected $table = 'category';
-    protected $id = 'categories_id';
+    protected $table = 'categories';
+    protected $id = 'id';
 
     public function getAllCategory()
     {

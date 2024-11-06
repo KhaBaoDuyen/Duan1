@@ -6,6 +6,8 @@ use App\Helpers\NotificationHelper;
 use App\Views\Client\Components\Notification;
 use App\Views\Client\Layouts\Footer;
 use App\Views\Client\Home;
+use App\Models\ProductModel;
+use App\Models\CategoryModel;
 use App\Views\Client\Contact;
 use App\Views\Client\Pages\Blogs\Instruction;
 use App\Views\Client\About;
@@ -16,8 +18,13 @@ class HomeController
     // hiển thị danh sách
     public static function index()
     {
-        Notification::render();
-        NotificationHelper::unset();
+        $product = new ProductModel();
+        $data['products'] = $product->getAllProduct();
+
+        $categogy = new CategoryModel();
+        $data['categogy'] = $categogy->getAllCategory();
+        // Notification::render();
+        // NotificationHelper::unset();
         Header::render();
         Home::render();
         Footer::render();
