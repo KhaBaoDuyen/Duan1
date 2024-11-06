@@ -243,7 +243,7 @@ footer .footer_top .footer_top_icon p {
   text-align: center;
 }
 footer .footer_bottom {
-  background: url(/public/assets/Client/image/icon/left.png) no-repeat left top, url(/public/assets/Client/image/icon/right.png) no-repeat right bottom, var(--pri-color);
+  background: url(/assets/image/icon/left.png) no-repeat left top, url(/assets/image/icon/right.png) no-repeat right bottom, var(--pri-color);
   background-size: 19%, 20%;
   height: 20rem;
 }
@@ -686,7 +686,7 @@ section .img-box img:hover {
   overflow: hidden;
 }
 .product_banner .box_banner .product_banner_left {
-  background: url(/public/assets/Client/image/main/image-removebg-preview\ \(5\).png) no-repeat bottom right, var(--text-color-light);
+  background: url(/assets/image/main/image-removebg-preview\ \(5\).png) no-repeat bottom right, var(--text-color-light);
 }
 .product_banner .box_banner .product_banner_left .title {
   margin-left: 5%;
@@ -973,7 +973,7 @@ main article .all_products .card:hover {
   background-color: white;
 }
 .bannercontact .box_banner {
-  background: url(/public/assets/Client/image/contact/Betterimage.ai_1730455519571-removebg-preview.png) no-repeat center;
+  background: url(/assets/image/contact/Betterimage.ai_1730455519571-removebg-preview.png) no-repeat center;
   background-size: 100%;
   height: 500px;
 }
@@ -1417,7 +1417,7 @@ main article .all_products .card:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/public/assets/Client/image/about/anhnen.jpg);
+  background-image: url(/assets/image/about/anhnen.jpg);
   background-size: cover;
   background-position: center;
   filter: blur(5px);
@@ -1452,7 +1452,7 @@ main article .all_products .card:hover {
 .banner-about .container .content h1 {
   font-weight: 700;
   font-size: 7rem;
-  background-image: url("/public/assets/Client/image/about/nentext.jpg");
+  background-image: url("/assets/image/about/nentext.jpg");
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -1908,7 +1908,7 @@ main article .all_products .card:hover {
   transform: translateX(-100%);
 }
 .Page-login .toggle {
-  background-image: url(/public/assets/Client/image/about/login.jpg);
+  background-image: url(/assets/image/about/login.jpg);
   background-size: 100%;
   height: 100%;
   color: #ffffff;
@@ -1976,7 +1976,7 @@ main article .all_products .card:hover {
 }
 
 .profile {
-  background: url(/public/assets/Client/image/main/78a2c561ba02033e13510a00e56f5776.jpg) no-repeat;
+  background: url(/assets/image/main/78a2c561ba02033e13510a00e56f5776.jpg) no-repeat;
   background-size: 100%;
   padding: 2% 0;
 }
@@ -2154,7 +2154,7 @@ main article .all_products .card:hover {
 }
 
 .instruction .title {
-  background: url(/public/assets/Client/image/instruction/sesion1.png) center;
+  background: url(/assets/image/instruction/sesion1.png) center;
   background-size: cover;
   height: 20vmax;
   background-repeat: no-repeat;
@@ -2209,7 +2209,7 @@ main article .all_products .card:hover {
   background-color: white;
 }
 .instruction .title_2 {
-  background: url(/public/assets/Client/image/instruction/sesion2.png) center;
+  background: url(/assets/image/instruction/sesion2.png) center;
   background-size: cover;
   height: 20vmax;
   background-repeat: no-repeat;
@@ -2384,7 +2384,7 @@ main article .all_products .card:hover {
 }
 
 .title_3 {
-  background: url(/public/assets/Client/image/instruction/section3.png) center;
+  background: url(/assets/image/instruction/section3.png) center;
   background-size: cover;
   height: 20vmax;
   position: relative;
@@ -2417,7 +2417,7 @@ main article .all_products .card:hover {
 }
 
 .banner_baiviet {
-  background: url(/public/assets/Client/image/instruction/bannerbaiviet1.jpeg) center;
+  background: url(/assets/image/instruction/bannerbaiviet1.jpeg) center;
   background-size: cover;
   height: 20vmax;
   background-repeat: no-repeat;
@@ -2571,7 +2571,7 @@ main article .all_products .card:hover {
   width: 50%;
   padding: 2rem;
   /* background-color: #e5fbf1; */
-  background-image: url(/public/assets/Client/image/about/checkout-nen-text.jpg);
+  background-image: url(/public/assets/Client/image/about/checkout-nen.jpg);
   background-size: 100%;
   background-position-y: bottom;
   margin-left: 2rem;
