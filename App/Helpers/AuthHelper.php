@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 namespace App\Helpers;
 
 use App\Models\UserModel;
@@ -7,62 +7,52 @@ class AuthHelper
 {
    public static function register($data)
    {
+       $user = new UserModel();
+       $is_exist = $user->getOneUserByUsername($data['username']);
 
-      $user = new UserModel();
-      $is_exist = $user->getOneUserByUsername($data['username']);
-      if ($is_exist) {
-         NotificationHelper::error('register', 'Tên đăng nhập  đã tồn tại');
-         return false;
-      } else {
-         $result = $user->createUser($data);
+       if ($is_exist) {
+           NotificationHelper::error('exist_register', 'Tên đăng nhập đã tồn tại');
+           return false;
+       }
 
-         // kiểm tra kết quả
-         if ($result) {
-            NotificationHelper::success('register', 'Đăng ký thành công');
-            return true;
-            //   header('location: /Account');
-         } else {
-            NotificationHelper::error('register', 'Đăng ký thất bại');
-            return false;
-            //   header('location: /Account');
-         }
-      }
+       $result = $user->createUser($data);
+
+       if ($result) {
+           NotificationHelper::success('register', 'Đăng ký thành công');
+           return true;
+       }
+       NotificationHelper::error('register', 'Đăng ký thất bại');
+       return false;
    }
    // --------------- LOGIN ---------------
    public static function login($data)
-   {
-      //KIỂM TRA TỒN TẠI USERNAME TRONG DÂTABASE
-// => nếu không trả về false , thông báo 
-      $user = new UserModel();
-      // BẮT LỖI TỒN TẠI USERNAME
-      $is_exist = $user->getOneUserByUsername($data['username']);
-      if (!$is_exist) {
-         NotificationHelper::error('login', 'Tên đăng nhập không tồn tại');
-         return false;
-      }
-      // => nếu có : kiểm ra xem pasword có trùng không => nếu không : trả về flase
-// password người dùng nhập $data['pasword'];
-// pasword trong csdl $is_exist['pasword'];
-      if (!password_verify($data['password'], $is_exist['password'])) {
-         NotificationHelper::error('login', 'Mật khẩu không đúng');
-         return false;
-      }
-      // => nếu có : kiểm tra status ==1 => nếu không trả về flase 
-// trangj thasi  trong csdl $is_exist['status'];
-      if ($is_exist['status'] != 1) {
-         NotificationHelper::error('status', 'Tài khoản đã bị khóa');
-         return false;
-      }
-      // => nếu có : ktr remember, lưu section/cookie => trả về true, thông báo thành công
-      $_SESSION['user'] = $is_exist;
-      if ($data['remember']) {
-         // lưu cookie
-      } else {
-         // lưu section
+    {
+        $user = new UserModel();
+        $is_exist = $user->getOneUserByUsername($data['username']);
 
-      }
-      return true;
-   }
+        if (!$is_exist) {
+            echo 'Tên tài khoản không tồn tại';
+            return false;
+        }
+
+        if (!password_verify($data['password'], $is_exist['password'])) {
+            echo 'Mật khẩu sai';
+            return false;
+        }
+
+        if ($is_exist['status'] == 0) {
+            echo 'Tài khoản đã bị khóa';
+            return false;
+        }
+
+        if ($data['remember']) {
+            self::updateCookie($is_exist['id']);
+        } else {
+            self::updateSession($is_exist['id']);
+        }
+        NotificationHelper::success('login', 'Đăng nhập thành công');
+        return true;
+    }
 
    // ----------- LẤY LẠI MẬT KHẨU -------
    public static function ForgotPassword($data)

@@ -7,7 +7,7 @@ use App\Helpers\NotificationHelper;
 class UserModel extends BaseModel
 {
     protected $table = 'user';
-    protected $id = 'user_id';
+    protected $id = 'id';
 
     public function getAllUser()
     {

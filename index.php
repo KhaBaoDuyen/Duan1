@@ -37,6 +37,11 @@ Route::get('/logout', 'App\Controllers\Client\AuthController@logout');
 
 Route::get('/user', 'App\Controllers\Client\AuthController@profile');
 
+//-----------------------[ ĐĂNG KÝ ]--------------------------
+Route::post('/home-register', 'App\Controllers\Client\AuthController@registerAction');
+
+//-----------------------[ ĐĂNG Nhập ]--------------------------
+Route::post('/home-login', 'App\Controllers\Client\AuthController@loginAction');
 
 //-----------------------[ SẢN PHẨM ]--------------------------------
 Route::get('/shop', 'App\Controllers\Client\ProductController@index'); 

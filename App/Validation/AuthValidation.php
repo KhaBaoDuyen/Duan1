@@ -6,57 +6,33 @@ use App\Helpers\NotificationHelper;
 class AuthValidation
 {
 
-   public static function register(): bool
-   {
+   public static function register(): bool{
       $is_valid = true;
-      // TÊN ĐĂNG NHẬP
-      if (!isset($_POST['username']) || $_POST['username'] === '') {
-         NotificationHelper::error('username', 'Tên đăng nhập không được để trống !!!');
-         $is_valid = false;
+      if(!isset($_POST['username']) || $_POST['username'] === ''){
+          NotificationHelper::error('empty_username','Tên đăng nhập không được để trống');
+          $is_valid = false;
       }
-      // TÊN KHÁCH HÀNG
-      if (!isset($_POST['name']) || $_POST['name'] === '') {
-         NotificationHelper::error('name', 'Họ tên người dùng  không được để trống !!!');
-         $is_valid = false;
-      }
-      //EMAIL
-      if (!isset($_POST['email']) || $_POST['email'] === '') {
-         NotificationHelper::error('email', 'Email không được để trống !!!');
-         $is_valid = false;
-      } else {
-         $emailPattern = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/";
-         if (!preg_match($emailPattern, $_POST['email'])) {
-            NotificationHelper::error('email', 'Email không hợp lệ !!!');
-            $is_valid = false;
-         }
-      }
-      // MẬT KHẨU
-      if (!isset($_POST['password']) || $_POST['password'] === '') {
-         NotificationHelper::error('password', 'Mật khẩu không được để trống !!!');
-         $is_valid = false;
-      } else {
-         //KIỂM TRA ĐỘ DÀI
-         if (strlen($_POST['password']) < 3) {
-            NotificationHelper::error('password', 'Mật khẩu phải có ít nhất 3 ký tự !!!');
-            $is_valid = false;
-         }
-      }
+      
 
-      // NHẬP LẠI MẬT KHẨU
-      if (!isset($_POST['re_password']) || $_POST['re_password'] === '') {
-         NotificationHelper::error('re_password', 'Không được để trống nhập lại mật khẩu');
-         $is_valid = false;
-      } else {
-         if ($_POST['password'] != $_POST['re_password']) {
-            NotificationHelper::error('re_password', 'Mật khẩu và nhập lại mật khẩu phải giống nhau');
-            $is_valid = false;
-         }
+      if(!isset($_POST['password']) || $_POST['password'] === ''){
+          NotificationHelper::error('empty_password','Mat khau không được để trống');
+          $is_valid = false;
       }
+     
 
-
-
+      if(!isset($_POST['email']) || $_POST['email'] === ''){
+          NotificationHelper::error('empty_email','Email không được để trống');
+          $is_valid = false;
+      }else{
+          $emailPattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+          if (!preg_match($emailPattern, $_POST['email'])) {
+              NotificationHelper::error('email', 'Email không đúng định dạng');
+              $is_valid = false;
+          }
+      }
+     
       return $is_valid;
-   }
+  }
 
    public static function login(): bool
    {
