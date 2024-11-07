@@ -9,7 +9,7 @@ class ProductModel extends BaseModel
 
     public function getAllProduct()
     {
-        return $this->getAll();
+        return $this->getAllProducts();
     }
 
     public function getOneProduct($id)

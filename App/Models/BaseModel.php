@@ -25,6 +25,19 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
+            $sql = "SELECT * FROM $this->table where 1";
+            $result = $this->_conn->MySQLi()->query($sql);
+            return $result->fetch_all(MYSQLI_ASSOC);
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
+            return $result;
+        }
+    }
+
+  public function getAllProducts()
+    {
+        $result = [];
+        try {
                  $sql = "SELECT $this->table.*, 
                        (SELECT url FROM images_product 
                         WHERE images_product.id_product = $this->table.id 
@@ -40,7 +53,6 @@ abstract class BaseModel implements CrudInterface
         }
     }
     
-   
     public function getOne(int $id)
     {
         $result = [];
