@@ -21,28 +21,28 @@ class ProductController
 {
     public static function Index()
     {
-        $products = new ProductModel();
-        $data = $products->getAllProductJoinCategory();
+       /*  $products = new ProductModel();
+        $data = $products->getAllProductJoinCategory(); */
         Header::render();
-        Notification::render();
-        NotificationHelper::unset();
-        Index::render($data);
+        /* Notification::render();
+        NotificationHelper::unset(); */
+        Index::render();
         Footer::render();
     }
     //------------ [ CREATE ]-------------
-    public static function create()
+   public static function create()
     {
-        $categories = new CategoryModel();
-        $data = $categories->getAllCategory();
+        /* $categories = new CategoryModel();
+        $data = $categories->getAllCategory(); */
         // $data = $categories->getAllProductJoinCategory();
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Create::render($data);
+        Create::render();
         Footer::render();
     }
     //------------ [ STORE ]-------------
-    public static function store()
+     /* public static function store()
     {
         $is_valid = ProductValidation::create();
         if ($is_valid) {
@@ -164,7 +164,7 @@ class ProductController
         }
         header('location: /admin/Product');
     }
-
+ */
 
 }
 

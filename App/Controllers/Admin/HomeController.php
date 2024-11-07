@@ -17,7 +17,7 @@ class HomeController
     // hiển thị thống kê
     public static function index()
     {
-$user = new UserModel;
+/* $user = new UserModel;
 $total_user=$user->countTotalUser();
 
 $product = new ProductModel;
@@ -39,12 +39,12 @@ $data=[
  'total_comment'=>$total_comment['total'],
 'product_by_categ'=>$product_by_categ,
 'product_by_view'=>$product_by_view
-];
+]; */
 
 // echo"<pre>";
 // var_dump($product_by_view);
         Header::render();
-        Home::render($data);
+        Home::render();
         Footer::render();
     }
 }

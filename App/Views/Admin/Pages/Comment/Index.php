@@ -8,121 +8,89 @@ class Index extends BaseView
 {
     public static function render($data = null)
     {
-        ?>
-        <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-                <div class="row">
-                    <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">QUẢN LÝ BÌNH LUẬN</h4>
-                        <div class="ms-auto text-end">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/admin">Trang chủ</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Danh sách bình luận</li>
-                                </ol>
-                            </nav>
+?>
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Bình luận</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Bình luận</li>
+                </ol>
+            </div>
+            <div class="row">
+                <!-- DataTable with Hover -->
+                <div class="col-lg-12">
+                    <div class="card mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Danh sách bình luận</h6>
+                        </div>
+                        <div class="table-responsive p-3">
+                            <table class="table align-items-center table-flush table-hover" id="dataTableHover">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Người dùng</th>
+                                        <th>Nội dung</th>
+                                        <th>Ngày</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/products/20240807070846.png" alt="img">
+                                        </td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/products/20240807070846.png" alt="img">
+                                        </td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                    </tr>
+
+
+
+
+
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-12">
 
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Danh sách bình luận</h5>
-                                <?php
-                                if (count($data)):
-                                    ?>
-                                    <div class="table-responsive">
-                                        <table id="" class="table table-striped ">
-                                            <thead>
-                                                <tr style="background:black;">
-                                                    <th>STT</th>
-                                                    <th>Tài khoản</th>
-                                                    <th>Sản phẩm</th>
-                                                    <th>Nội dung</th>
-                                                    <th>Thời gian</th>
-                                                    <th>Trạng thái</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                $stt = 0;
-                                                foreach ($data as $item):
-                                                    $stt++;
-                                                    ?>
-                                                    <tr>
-                                                        <td><?= $item['id_comments'] ?></td>
-                                                        <td>
-                                                            <a href="/admin/users/<?= $item['user_id'] ?>"><?= $item['username'] ?></a>
-                                                        </td>
-                                                        <td style="  word-wrap: break-word;   width: 200px;  overflow-wrap: break-word;"  >  <a href="/admin/products/<?= $item['product_id'] ?>"><?= $item['product_name'] ?></a></td>
-                                                        <td><?= $item['content'] ?></td>
-                                                        <td><?= $item['date'] ?></td>
-                                                        <td><?= ($item['status'] == 1) ? 'Hiển thị' : 'Ẩn' ?></td>
-                                                        <td>
-                                                            <a href="/admin/comments/<?= $item['id_comments'] ?>"
-                                                                class="btn btn-primary ">Sửa</a>
-                                                            <form action="/admin/comments/<?= $item['id_comments'] ?>" method="post"
-                                                                style="display: inline-block;" onsubmit="return confirm('Xác nhận xóa ?')">
-                                                                <input type="hidden" name="method" value="DELETE" id="">
-                                                                <button type="submit" class="btn btn-danger text-white">Xoá</button>
-                                                            </form>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                endforeach;
-
-
-                                                ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <?php
-                                else:
-
-                                    ?>
-                                    <h4 class="text-center text-danger">Không có dữ liệu</h4>
-                                    <?php
-                                endif;
-
-                                ?>
-                            </div>
+            <!-- Modal Logout -->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to logout?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                            <a href="login.html" class="btn btn-primary">Logout</a>
                         </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Right sidebar -->
-                <!-- ============================================================== -->
-                <!-- .right-sidebar -->
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
 
-
-            <?php
+        </div>
+        <!---Container Fluid-->
+        </div>
+        <!-- Page level plugins -->
+<?php
     }
 }

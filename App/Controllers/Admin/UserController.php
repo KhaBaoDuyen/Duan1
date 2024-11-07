@@ -22,28 +22,28 @@ class UserController
 {
     public static function Index()
     {
-        $products = new UserModel();
-        $data = $products->getAllUser();
+        /* $products = new UserModel();
+        $data = $products->getAllUser(); */
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Index::render($data);
+        Index::render(/* $data */);
         Footer::render();
     }
     //------------ CREATE-------------
     public static function create()
     {
-        $user = new UserModel();
-        $data = $user->getAllUser();
+        /* $user = new UserModel();
+        $data = $user->getAllUser(); */
         // $data = $categories->getAllUserJoinCategory();
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Create::render($data);
+        Create::render(/* $data */);
         Footer::render();
     }
     // xử lý chức năng thêm
-    public static function store()
+   /*  public static function store()
     {
         $is_valid = UserValidation::create();
         if ($is_valid) {
@@ -87,23 +87,23 @@ class UserController
             header('location:/admin/users/create');
             exit;
         }
-    }
+    } */
     // ------- EDIT ------------------
 
     // hiển thị giao diện form sửa
     public static function edit($id)
     {
-            $user = new UserModel();
-            $data = $user->getOneUser($id);
+            /* $user = new UserModel();
+            $data = $user->getOneUser($id); */
             Header::render();
-            Notification::render();
-            NotificationHelper::unset();
-            Edit::render($data);
+            /* Notification::render();
+            NotificationHelper::unset(); */
+            Edit::render(/* $data */);
             Footer::render();
     }
 
     // xử lý chức năng sửa (cập nhật)
-      public static function update($id)
+    /*   public static function update($id)
    {
       $is_valid = UserValidation::update($id);
       if (!$is_valid) {
@@ -152,7 +152,7 @@ class UserController
             NotificationHelper::error('user', 'Xoá thất bại');
         }
         header('location: /admin/users');
-    }
+    } */
 }
 
 
