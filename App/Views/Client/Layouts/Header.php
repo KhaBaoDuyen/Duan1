@@ -10,7 +10,7 @@ class Header extends BaseView
 {
    public static function render($data = null)
    {
-      ?>
+?>
       <!DOCTYPE html>
       <html lang="en">
 
@@ -40,19 +40,19 @@ class Header extends BaseView
                            <img src="/public/assets/Client/image/icon/Logo.png" width="100%" alt="logo">
                         </div>
 
-                        <div class="search">
+                        <form class="search" action="/Search" method="get">
                            <div class="InputContainer">
-                              <input placeholder="Search" id="input" class="input" name="text" type="text" />
-                              <label class="labelforsearch" for="input">
+                              <input placeholder="Search" id="input" class="input" name="keyword" type="keyword" />
+                              <button type="submit" class="submit-button labelforsearch">
                                  <svg class="searchIcon" viewBox="0 0 512 512">
                                     <path
                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
                                     </path>
                                  </svg>
-                              </label>
+                              </button>
                            </div>
 
-                        </div>
+                        </form>
                      </div>
 
                      <div class="d-flex  align-items-center box col-6 justify-content-end ">
@@ -88,7 +88,7 @@ class Header extends BaseView
             </div>
          </header>
 
-         <?php
+   <?php
    }
 }
-?>
+   ?>

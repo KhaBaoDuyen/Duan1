@@ -1,4 +1,37 @@
 .banner {
+
+.InputContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; 
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+.submit-button {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.searchIcon {
+    width: 20px;
+    height: 20px;
+    fill: #555; 
+}
+
    .box_top_bottom {}
 
    &_top {

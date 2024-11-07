@@ -4,6 +4,7 @@ namespace App\Controllers\Client;
 
 use App\Helpers\NotificationHelper;
 use App\Views\Client\Components\Notification;
+use App\Views\Client\Components\Search;
 use App\Views\Client\Layouts\Footer;
 use App\Views\Client\Home;
 use App\Models\ProductModel;
@@ -35,18 +36,26 @@ class HomeController
         Contact::render();
         Footer::render();
     }
-public static function instruction()
-{
-    Header::render();
-    Instruction::render();
-    Footer::render();
-}
-public static function about()
-{
-    Header::render();
-    About::render();
-    Footer::render();
-}
+    public static function instruction()
+    {
+        Header::render();
+        Instruction::render();
+        Footer::render();
+    }
+    public static function about()
+    {
+        Header::render();
+        About::render();
+        Footer::render();
+    }
+    public static function Search()
+    {
+        $keyword = $_GET['keyword'] ?? '';
+       $products = ProductModel::searchByKeyword($keyword);
+        Header::render();
+        Search::render(['keyword' => $keyword, 'products' => $products]);
+        Footer::render();
+    }
 
 
 }

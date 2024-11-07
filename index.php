@@ -24,6 +24,7 @@ require_once 'config.php';
 Route::get('/', 'App\Controllers\Client\HomeController@index');
 Route::get('/contact', 'App\Controllers\Client\HomeController@contact');
 Route::get('/about', 'App\Controllers\Client\HomeController@about');
+Route::get('/Search', 'App\Controllers\Client\HomeController@search');
 
 //---------------------------[ TÀI KHOẢN ]---------------------------
 Route::get('/Account', 'App\Controllers\Client\AuthController@Account');
