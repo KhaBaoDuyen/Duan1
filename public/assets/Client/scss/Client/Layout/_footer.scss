@@ -1,6 +1,6 @@
 footer {
 
-   // background: url(/assets/image/icon/background.png)  no-repeat ;
+   // background: url(/public/assets/Client/image/icon/background.png)  no-repeat ;
    .footer_top {
       border-top: 4px solid var(--pri-color);
       padding-top: 2%;
@@ -31,8 +31,8 @@ footer {
    }
 
    .footer_bottom {
-      background: url(/assets/image/icon/left.png) no-repeat left top,
-         url(/assets/image/icon/right.png) no-repeat right bottom,
+      background: url(/public/assets/Client/image/icon/left.png) no-repeat left top,
+         url(/public/assets/Client/image/icon/right.png) no-repeat right bottom,
          var(--pri-color);
       background-size: 19%, 20%;
       // background-position: center;

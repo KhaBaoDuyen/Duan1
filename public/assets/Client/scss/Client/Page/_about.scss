@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/assets/image/about/anhnen.jpg);
+    background-image: url(/public/assets/Client/image/about/anhnen.jpg);
     background-size: cover;
     background-position: center;
     filter: blur(5px);
@@ -48,7 +48,7 @@
         h1 {
             font-weight: 700;
             font-size: 7rem;
-            background-image: url("/assets/image/about/nentext.jpg");
+            background-image: url("/public/assets/Client/image/about/nentext.jpg");
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
