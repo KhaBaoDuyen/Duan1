@@ -3798,3 +3798,25 @@ Stack trace:
 [07-Nov-2024 20:41:59 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Components\Search.php on line 28
 [07-Nov-2024 20:42:17 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Components\Search.php on line 28
 [07-Nov-2024 20:42:33 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Components\Search.php on line 28
+[07-Nov-2024 20:56:39 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Components\Search.php on line 28
+[07-Nov-2024 21:37:40 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Components\Search.php on line 28
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:48:32 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 1.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:49:04 Asia/Ho_Chi_Minh] PHP Deprecated:  Implicit conversion from float 0.5 to int loses precision in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 21:49:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught DivisionByZeroError: Modulo by zero in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php:120
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Client\HomeController.php(30): App\Views\Client\Home::render()
+#1 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Client\HomeController::index()
+#2 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\index.php(110): App\Route::dispatch()
+#3 {main}
+  thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 120
+[07-Nov-2024 22:37:13 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $category in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 118
+[07-Nov-2024 22:37:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 118

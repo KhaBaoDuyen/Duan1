@@ -97,7 +97,7 @@ class Home extends BaseView
 
          <section class="brand">
             <div class="box_title d-flex align-items-center justify-content-between ">
-               <h3>Thương hiệu </h3>
+               <h3>Danh mục </h3>
                <a href="">Xem tất cả</a>
             </div>
             <div class="d-flex box_category justify-content-center align-items-center">
@@ -113,20 +113,42 @@ class Home extends BaseView
                </div>
 
                <div class="col-8  box_category_right p-2">
-                  <ul class="flash_box slider_box_right">
-                     <?php foreach ($data['categogy'] as $category): ?>
-                        <li class="col-3 m-1">
-                           <div class="card_category">
-                              <a href="#">
-                                 <img src="<?= $category['image']; ?>" alt="" width="100%" height="100%">
-                                 <div class="name_brand">
-                                    <h2><?= $category['name']; ?></h2>
+                  <div class="flash_box slider_box_right">
+                     <ul class="category-list d-flex">
+                        <?php foreach ($data['categogy'] as $category):
+                           if ($category['id'] % 2 == 0): ?>
+                              <li class="m-1 col-3">
+                                 <div class="card_category">
+                                    <a href="#">
+                                       <img src="<?= $category['image']; ?>" alt="" width="100%" height="100%">
+                                       <div class="name_brand">
+                                          <h2><?= $category['name']; ?></h2>
+                                       </div>
+                                    </a>
                                  </div>
-                              </a>
-                           </div>
-                        </li>
-                     <?php endforeach; ?>
-                  </ul>
+                              </li>
+                           <?php endif; ?>
+                           <?php
+                        endforeach; ?>
+                     </ul>
+                     <ul class="category-list d-flex">
+                        <?php foreach ($data['categogy'] as $category):
+                           if ($category['id'] % 2 != 0): ?>
+                              <li class="m-1 col-3">
+                                 <div class="card_category">
+                                    <a href="#">
+                                       <img src="<?= $category['image']; ?>" alt="" width="100%" height="100%">
+                                       <div class="name_brand">
+                                          <h2><?= $category['name']; ?></h2>
+                                       </div>
+                                    </a>
+                                 </div>
+                              </li>
+                           <?php endif; ?>
+                           <?php
+                        endforeach; ?>
+                     </ul>
+                  </div>
                   <div class="box_btn_category">
                      <button class="btn-left"><span class="material-symbols-outlined">arrow_back_ios</span></button>
                      <button class="btn-right"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
