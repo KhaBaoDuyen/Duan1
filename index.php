@@ -47,6 +47,11 @@ Route::post('/home-login', 'App\Controllers\Client\AuthController@loginAction');
 Route::get('/shop', 'App\Controllers\Client\ProductController@index'); 
 Route::get('/product', 'App\Controllers\Client\ProductController@detail');
 
+//----------------------[ SP THEO DANH MỤC ]-----------------------
+Route::get('/product/categories/{id}', 'App\Controllers\Client\ProductController@getProductByCategory');
+
+Route::get('/product/parent/{id}','App\Controllers\Client\ProductController@showSubCategories');
+
 //-----------------------[ GIỎ HÀNG ]--------------------------------
 Route::get('/cart', 'App\Controllers\Client\CartController@index'); 
 

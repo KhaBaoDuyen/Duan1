@@ -48,7 +48,7 @@ class Home extends BaseView
 
                      if ($start_time && $end_time && $current_time >= $start_time && $current_time <= $end_time && !empty($item['discount_price'])):
                         ?>
-                        <a class="card col-2">
+                        <a href="" class="card col-2">
                            <div class="box_image">
                               <img class="image" src="<?= $item['image'] ?>" alt="" height="100%">
                               <img class="image_hover" src="<?= $item['image_product_url'] ?>" alt="image_hover">
@@ -119,7 +119,7 @@ class Home extends BaseView
                            if ($category['id'] % 2 == 0): ?>
                               <li class="m-1 col-3">
                                  <div class="card_category">
-                                    <a href="#">
+                                    <a href="/product/categories/<?=$category['id']?>">
                                        <img src="<?= $category['image']; ?>" alt="" width="100%" height="100%">
                                        <div class="name_brand">
                                           <h2><?= $category['name']; ?></h2>
@@ -136,7 +136,7 @@ class Home extends BaseView
                            if ($category['id'] % 2 != 0): ?>
                               <li class="m-1 col-3">
                                  <div class="card_category">
-                                    <a href="#">
+                                    <a href="/product/categories/<?=$category['id']?>">
                                        <img src="<?= $category['image']; ?>" alt="" width="100%" height="100%">
                                        <div class="name_brand">
                                           <h2><?= $category['name']; ?></h2>

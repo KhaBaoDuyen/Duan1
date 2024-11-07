@@ -54,3 +54,19 @@ ul{
     margin: none;
 
 }
+  .box_card {
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1%;
+
+      .card {
+         @include card(var(--color-price), var(--color-title), var(--text-color));
+         padding: 3%;
+
+         &:hover {
+            box-shadow: 5px 5px 10px #b4b4b4,
+               -5px -5px 10px #ffffff;
+         }
+      }
+   }

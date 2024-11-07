@@ -33,10 +33,10 @@ class ProductModel extends BaseModel
     //     return $this->delete($id);
     // }
 
-    // public function getAllProductByStatus()
-    // {
-    //     return $this->getAllByStatus();
-    // }
+    public function getAllProductByStatus()
+    {
+        return $this->getAllByStatus();
+    }
 
     // public function getOneProductByCategogy($categogy)
     // {
@@ -68,26 +68,35 @@ class ProductModel extends BaseModel
     //     return $result->fetch_all(MYSQLI_ASSOC);
     // }
 
-    // public function getAllProductByCategoryAndStatus($id)
-    // {
-    //     $result = [];
-    //     try {
-    //         $sql = "SELECT product.*, category.name AS category_name 
-    // FROM product 
-    // INNER JOIN category ON product.category_id = category.categories_id 
-    // WHERE product.category_id = ? 
-    // AND product.status = " . self::STATUS_ENABLE . " 
-    // AND category.status = " . self::STATUS_ENABLE;
-    //         $conn = $this->_conn->MySQLi();
-    //         $stmt = $conn->prepare($sql);
-    //         $stmt->bind_param('i', $id);
-    //         $stmt->execute();
-    //         return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-    //     } catch (\Throwable $th) {
-    //         error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
-    //         return $result;
-    //     }
-    // }
+public function getAllProductByCategoryAndStatus($id)
+{
+    $result = [];
+    try {
+        $sql = "
+            SELECT products.*, categories.name AS category_name, 
+                (SELECT url FROM images_product 
+                 WHERE images_product.id_product = products.id 
+                 ORDER BY images_product.id ASC LIMIT 1) 
+                AS image_product_url 
+            FROM products
+            LEFT JOIN categories ON products.id_categogy = categories.id 
+            WHERE products.id_categogy = ? 
+            AND products.status = " . self::STATUS_ENABLE . "
+            AND categories.status = " . self::STATUS_ENABLE . ";";  
+        $conn = $this->_conn->MySQLi();
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('i', $id);
+        $stmt->execute();
+
+        // Fetch the results and return
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    } catch (\Throwable $th) {
+        error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
+        return $result;
+    }
+}
+
+
 
     // public function countTotalProduct()
     // {
