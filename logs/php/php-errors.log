@@ -3622,78 +3622,16 @@ Stack trace:
 #1 D:\hoctap\hocki4\BLOCK 2\MONDUAN\duan1\index.php(97): App\Route::dispatch()
 #2 {main}
   thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\duan1\App\Controllers\Client\HomeController.php on line 34
-[06-Nov-2024 22:27:37 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:27:37 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:27:37 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:27:37 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:29:15 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:29:15 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:29:15 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:29:15 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:29:16 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:29:16 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:29:16 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:29:16 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:29:34 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:29:34 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:29:34 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:29:34 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:17 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:17 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:17 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:17 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown database 'duanmau'
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:19 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:52 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Table 'webbancayvahoa.product' doesn't exist
-[06-Nov-2024 22:31:52 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:31:52 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:32:14 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Table 'webbancayvahoa.product' doesn't exist
-[06-Nov-2024 22:32:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:32:14 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:32:17 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Table 'webbancayvahoa.product' doesn't exist
-[06-Nov-2024 22:32:17 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:32:17 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:34:14 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Table 'webbancayvahoa.product' doesn't exist
-[06-Nov-2024 22:34:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:34:14 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:01 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Table 'webbancayvahoa.product' doesn't exist
-[06-Nov-2024 22:35:01 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:01 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:38 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:38 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:39 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:39 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:57 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:35:57 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:37:41 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:37:41 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:39:22 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:39:22 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:42:06 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:42:06 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:45:18 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Operand should contain 1 column(s)
-[06-Nov-2024 22:45:18 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Operand should contain 1 column(s)
-[06-Nov-2024 22:45:18 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:45:18 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:46:08 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:46:08 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:47:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:47:07 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:48:12 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:48:12 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:50:00 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
-[06-Nov-2024 22:50:00 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 112
+[06-Nov-2024 19:20:47 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Client\ProductModel" not found in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Client\HomeController.php:19
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Client\HomeController::index()
+#1 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\index.php(101): App\Route::dispatch()
+#2 {main}
+  thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Client\HomeController.php on line 19
+[06-Nov-2024 19:53:34 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Table 'webbancayvahoa.image_product' doesn't exist
+[06-Nov-2024 19:55:37 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'left' at line 1
+[06-Nov-2024 20:54:45 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Expression #12 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'webbancayvahoa.images_product.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[06-Nov-2024 21:00:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "url" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 428
+[06-Nov-2024 21:00:22 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "url" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 428
+[06-Nov-2024 21:02:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "url" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 428
+[06-Nov-2024 21:03:29 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "url" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 428

@@ -18,12 +18,12 @@ class CategoryController
     // hiển thị danh sách
     public static function index()
     {
-        $categories = new CategoryModel();
-        $data = $categories->getAllCategory();
+        /* $categories = new CategoryModel();
+        $data = $categories->getAllCategory(); */
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Index::render($data);
+        Index::render(/* $data */);
         Footer::render();
     }
 
@@ -40,7 +40,7 @@ class CategoryController
         Footer::render();
     }
     // xử lý chức năng thêm
-    public static function store()
+    /* public static function store()
     {
         $is_valid = CategogyValidation::create();
         if (!$is_valid) {
@@ -154,6 +154,6 @@ class CategoryController
         }
 
         header('location: /admin/categories');
-    }
+    } */
 
 }

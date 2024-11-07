@@ -17,17 +17,17 @@ class CommentController
     // hiển thị danh sách
     public static function index()
     {
-        $comment = new CommentModel();
-        $data = $comment->getAllCommentJoinProductAndUser();
+        /* $comment = new CommentModel();
+        $data = $comment->getAllCommentJoinProductAndUser(); */
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Index::render($data);
+        Index::render(/* $data */);
         Footer::render();
     }
 
     // hiển thị giao diện form sửa
-    public static function edit(int $id)
+    /* public static function edit(int $id)
     {
         // khởi tạo đối tượng model
         $comment = new CommentModel();
@@ -89,5 +89,5 @@ class CommentController
         }
 
         header('location: /admin/comments');
-    }
+    } */
 }

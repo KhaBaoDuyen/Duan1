@@ -15,7 +15,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 require_once 'config.php';
 //  Gọi đến middleware;
-AuthHelper::middleware();
+/* AuthHelper::middleware(); */
 // exit();
 
 
@@ -61,40 +61,48 @@ Route::get('/admin/Product', 'App\Controllers\Admin\ProductController@Index');
 Route::get('/admin/products/create', 'App\Controllers\Admin\ProductController@create');
 Route::post('/admin/products', 'App\Controllers\Admin\ProductController@store');
 
-Route::get('/admin/products/{id}', 'App\Controllers\Admin\ProductController@edit');
+/* Route::get('/admin/products/{id}', 'App\Controllers\Admin\ProductController@edit');
 Route::put('/admin/products/{id}', 'App\Controllers\Admin\ProductController@update');
 
-Route::delete('/admin/products/{id}', 'App\Controllers\Admin\ProductController@delete');
+Route::delete('/admin/products/{id}', 'App\Controllers\Admin\ProductController@delete'); */
 
 //--------------------------[ DANH MỤC ]--------------------------
 Route::get('/admin/categories', 'App\Controllers\Admin\CategoryController@Index');
 
 Route::get('/admin/categories/create', 'App\Controllers\Admin\CategoryController@create');
-Route::post('/admin/categories', 'App\Controllers\Admin\CategoryController@store');
+/* Route::post('/admin/categories', 'App\Controllers\Admin\CategoryController@store');
 
 Route::get('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@edit');
-Route::put('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@update');
+Route::put('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@update'); 
 
-Route::delete('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@delete');
+Route::delete('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@delete');*/
 
 //---------------------------[ TÀI KHOẢN ]---------------------------
 Route::get('/admin/users', 'App\Controllers\Admin\UserController@Index');
 
 Route::get('/admin/users/create', 'App\Controllers\Admin\UserController@create');
-Route::post('/admin/users', 'App\Controllers\Admin\UserController@store');
+/* Route::post('/admin/users', 'App\Controllers\Admin\UserController@store');
 
 Route::get('/admin/users/{id}', 'App\Controllers\Admin\UserController@edit');
 Route::put('/admin/users/{id}', 'App\Controllers\Admin\UserController@update');
 
-Route::delete('/admin/users/{id}', 'App\Controllers\Admin\UserController@delete');
+Route::delete('/admin/users/{id}', 'App\Controllers\Admin\UserController@delete'); */
+
+//--------------------------[ ĐƠN HÀNG ]-------------------------------
+Route::get('/admin/order', 'App\Controllers\Admin\OrderController@Index');
+
+/* Route::get('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@edit');
+Route::put('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@update');
+
+Route::delete('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@delete'); */
 
 //--------------------------[ BÌNH LUẬN ]-------------------------------
 Route::get('/admin/comments', 'App\Controllers\Admin\CommentController@Index');
 
-Route::get('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@edit');
+/* Route::get('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@edit');
 Route::put('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@update');
 
-Route::delete('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@delete');
+Route::delete('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@delete'); */
 
 
  //------------------[ BẮT TÀI KHOẢN ĐĂNG NHẬP ]------------------

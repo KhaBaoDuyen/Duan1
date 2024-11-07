@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 namespace App\Helpers;
 
 use App\Models\UserModel;
@@ -172,7 +172,7 @@ class AuthHelper
       return true;
    }
    //------ BẮT TÀI KHOẢN ĐĂNG NHẬP
-   public static function middleware()
+   /* public static function middleware()
    {
       // var_dump($_SERVER['REQUEST_URI']);
       $admin = explode('/', $_SERVER['REQUEST_URI']);
@@ -195,12 +195,12 @@ class AuthHelper
             exit;
          }
 
-      }
+      } */
    }
 
 
 
 
-}
 
-?>
+
+?> -->
