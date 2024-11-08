@@ -27,8 +27,18 @@ class ProductController
     // hiển thị danh sách
     public static function index()
     {
+       $product = new ProductModel();
+        $products = $product->getAllProduct();
+
+        $category = new CategoryModel();
+        $categories = $category->getAllCategoryByStatus();
+
+        $data = [
+            'products' => $products,
+            'categories' => $categories,
+        ];
         Header::render();
-        Index::render();
+        Index::render($data);
         Footer::render();
     }
  

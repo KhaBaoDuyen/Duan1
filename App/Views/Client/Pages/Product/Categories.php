@@ -2,8 +2,6 @@
 // sản phẩm theo loại
 
 namespace App\Views\Client\Pages\Product;
-
-
 use App\Views\BaseView;
 use App\Views\Client\Components\Category as ComponentsCategory;
 
