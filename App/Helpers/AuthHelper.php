@@ -107,41 +107,33 @@ class AuthHelper
    }
    // ----------- ĐĂNG XUẤT -------
    public static function logout()
-   {
-
-      if (isset($_SESSION['user'])) {
-         unset($_SESSION['user']);
-      }
-      if (isset($_COOKIE['user'])) {
-         setcookie('user', '', time() - 3600 * 24 * 30 * 12, '/');
-      }
-      NotificationHelper::success('logout', 'Đăng xuất thành công');
-      header('location: /');
-   }
+    {
+        if (isset($_SESSION['user'])) {
+            unset($_SESSION['user']);
+        }
+        if (isset($_COOKIE['user'])) {
+            setcookie('user', '', time() - 3600 * 24 * 30 * 12, '/');
+        }
+    }
 
 
    // ----------- EDIT -------
-   public static function profile($id): bool
-   {
-      if (!self::checkLogin()) {
-         NotificationHelper::error('login', 'Bạn phải đăng nhập để thực hiện chức năng này');
-         return false;
-      }
-      $data = $_SESSION['user'];
-      $user_id = $data['user_id'];
+   public static function edit($id): bool
+    {
+        if (!self::checklogin()) {
+            NotificationHelper::error('login', 'Vui lòng đăng nhập để xem thông tin');
+            return false;
+        }
 
-      if (isset($_COOKIE['user'])) {
-         self::updateCookie($user_id);
-      }
+        $data = $_SESSION['user'];
+        $user_id = $data['id'];
 
-      self::updateSession($user_id);
-
-      if ($user_id != $id) {
-         NotificationHelper::error('user_id', 'Lỗi không có quyên xem thông tin tài khoảng này ');
-         return false;
-      }
-      return true;
-   }
+        if ($user_id != $id) {
+            NotificationHelper::error('user_id', 'Không có quyền xem thông tin tài khoản này');
+            return false;
+        }
+        return true;
+    }
    //------------------UPDATE-----------------
    public static function update($id, $data)
    {

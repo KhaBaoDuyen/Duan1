@@ -37,6 +37,9 @@ Route::get('/logout', 'App\Controllers\Client\AuthController@logout');
 
 Route::get('/user', 'App\Controllers\Client\AuthController@profile');
 
+//hiển thị thông tin tài khoản
+Route::get('/user/{id}', 'App\Controllers\Client\AuthController@edit');
+
 //-----------------------[ ĐĂNG KÝ ]--------------------------
 Route::post('/home-register', 'App\Controllers\Client\AuthController@registerAction');
 

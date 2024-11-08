@@ -29,7 +29,7 @@ class AuthController
    }
 
    // ------------- LOGOUT ----------------
-   public static function Logout()
+   public static function logout()
    {
       AuthHelper::logout();
       NotificationHelper::success('logout', 'Đăng xuất thành công');
@@ -113,4 +113,29 @@ class AuthController
          header('location: /Account'); // Đăng nhập thất bại, chuyển hướng về trang đăng nhập
       }
    }
+
+   public static function edit($id)
+    {
+        $result = AuthHelper::edit($id);
+        if (!$result) {
+            if (isset($_SESSION['error']['login'])) {
+                header('location: /Account');
+                exit;
+            }
+
+            if (isset($_SESSION['error']['user_id'])) {
+                $data = $_SESSION['user'];
+                $user_id = $data['id'];
+                header("location: /user/$user_id");
+                exit;
+            }
+        }
+        $data = $_SESSION['user'];
+        /* var_dump($data); */
+        Header::render();
+        Profile::render($data);
+        Footer::render();
+
+    }
+
 }

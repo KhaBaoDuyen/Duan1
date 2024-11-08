@@ -59,14 +59,14 @@ class Header extends BaseView
                         <div class="account">
                            <?php if ($isLoggedIn): ?>
                               <!-- Hiển thị tên người dùng nếu đã đăng nhập -->
-                              <a href="/Account" class="d-flex account_title">
+                              <a href="/user/<?=$_SESSION['user']['id']?>" class="d-flex account_title justify-content-center align-items-center">
                                  <p><?php echo htmlspecialchars($userName); ?></p>
-                                 <img class="img-profile rounded-circle" src="public/uploads/users/20240801230858.jpg" style="max-width: 40px">
+                                 <img class="img-profile rounded-circle" src="/public/uploads/users/20240801230858.jpg" style="max-width: 40px">
                                  <!-- <span class="material-symbols-outlined"> account_circle </span> -->
                               </a>
                            <?php else: ?>
                               <!-- Hiển thị nút Đăng nhập / Đăng ký nếu chưa đăng nhập -->
-                              <a href="/Account" class="d-flex account_title">
+                              <a href="/Account" class="d-flex account_title justify-content-center align-items-center">
                                  <p>Đăng nhập / Đăng ký</p>
                                  <span class="material-symbols-outlined"> account_circle </span>
                               </a>
