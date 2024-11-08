@@ -50,6 +50,8 @@ class CategoryModel extends BaseModel
         }
     }
 
+
+
    public function countTotalCategogy(){
     return $this->countTotal();
   }

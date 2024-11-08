@@ -120,7 +120,7 @@ class Home extends BaseView
                               <li class="m-1 col-3">
                                  <div class="card_category">
                                     <a href="/product/categories/<?=$category['id']?>">
-                                       <img src="<?= $category['image']; ?>" alt="" width="100%" height="100%">
+                                       <img src="public/uploads/categogies/<?= $category['image']; ?>" alt="" width="100%" height="100%">
                                        <div class="name_brand">
                                           <h2><?= $category['name']; ?></h2>
                                        </div>

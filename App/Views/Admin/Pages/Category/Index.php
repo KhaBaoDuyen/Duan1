@@ -8,7 +8,7 @@ class Index extends BaseView
 {
     public static function render($data = null)
     {
-?>
+        ?>
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -30,35 +30,41 @@ class Index extends BaseView
                                 <thead class="thead-light">
                                     <tr>
                                         <th>ID</th>
-                                        <th>Danh mục</th>
+                                        <th width="25%">Danh mục</th>
+                                        <th class="">Image</th>
                                         <th>Trạng thái</th>
                                         <th>Khác</th>
                                     </tr>
                                 </thead>
-
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td><span class="badge badge-success">Delivered</span></td>
-                                        <td>
-                                            <a href="#" class="btn btn-sm btn-warning">Sửa</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Xóa</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td><span class="badge badge-success">Delivered</span></td>
-                                        <td>
-                                            <a href="#" class="btn btn-sm btn-warning">Sửa</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Xóa</a>
-                                        </td>
-                                    </tr>
+                                    <?php if (isset($data)): ?>
+                                        <?php foreach ($data as $categogy): ?>
+                                            <tr>
+                                                <td><?= $categogy['id'] ?></td>
+                                                <td><?= $categogy['name'] ?></td>
+                                                <td style="overflow: hidden;"  width="150px" height="150px"><img width="100%" height="100%"  src="/public/uploads/categogies/<?= $categogy['image'] ?>" alt="">
+                                                </td>
+                                                <td>
+                                                    <span
+                                                        class="badge p-2 <?= $categogy['status'] == 1 ? 'badge-success' : 'badge-danger' ?>">
+                                                        <?= $categogy['status'] == 1 ? 'Hiển thị' : 'Ẩn' ?>
+                                                    </span>
+                                                </td>
 
+                                                <td>
+                                                    <a href="/admin/categories/<?= $categogy['id'] ?>"
+                                                        class="btn btn-sm btn-warning">Sửa</a>
+                                                    <form action="/admin/categories/<?= $categogy['id'] ?>" method="post"
+                                                        style="display: inline-block;"
+                                                        onsubmit="return confirm('Bạn có chắc chắn xóa danh mục <?= $categogy['name'] ?>?')">
+                                                        <input type="hidden" name="method" value="DELETE">
+                                                        <button type="submit" class="btn btn-sm btn-danger">Xoá</button>
+                                                    </form>
+                                                </td>
 
-
-
+                                            </tr>
+                                        <?php endforeach ?>
+                                    <?php endif ?>
                                 </tbody>
                             </table>
                         </div>
@@ -93,6 +99,6 @@ class Index extends BaseView
         </div>
         <!-- Page level plugins -->
 
-<?php
+        <?php
     }
 }

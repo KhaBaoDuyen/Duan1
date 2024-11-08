@@ -8,47 +8,99 @@ class CategogyValidation
    public static function create(): bool
    {
       $is_valid = true;
-      // TÊN DAnh MỤC
-      if (!isset($_POST['name']) || $_POST['name'] === '') {
-         NotificationHelper::error('name', 'Tên danh mục không được để trống ');
+      $errors = [];
+
+      // Kiểm tra tên danh mục
+      if (empty($_POST["name"])) {
+         $errors['name'] = "Tên danh mục không được để trống.";
          $is_valid = false;
+      } else {
+         $name = $_POST["name"];
+         if (strlen($name) < 5) {
+            $errors['name'] = "Tên danh mục phải có ít nhất 5 ký tự.";
+            $is_valid = false;
+         }
       }
-      //  TRẠNG THÁI
+
       if (!isset($_POST['status']) || $_POST['status'] === '') {
-         NotificationHelper::error('status', 'Không được để trống ');
+         $errors['status'] = 'Không được để trống trạng thái';
          $is_valid = false;
       }
+
+      if (isset($_FILES['image']) && $_FILES['image']['error'] !== 0) {
+         $errors['image'] = 'Không được để trống ảnh';
+         $is_valid = false;
+      }
+
+      // Lưu lỗi vào session
+      if (!$is_valid) {
+         $_SESSION['errors'] = $errors;
+      }
+
       return $is_valid;
    }
 
-   public static function avatar()
+   public static function update($id): bool
    {
-      if (!file_exists($_FILES['avatar']['tmp_name']) || !is_uploaded_file($_FILES['avatar']['tmp_name'])) {
+      $is_valid = true;
+      $errors = [];
+
+      // Kiểm tra tên danh mục
+      if (empty($_POST["name"])) {
+         $errors['name'] = "Tên danh mục không được để trống.";
+         $is_valid = false;
+      } else {
+         $name = $_POST["name"];
+         if (strlen($name) < 5) {
+            $errors['name'] = "Tên danh mục phải có ít nhất 5 ký tự.";
+            $is_valid = false;
+         }
+      }
+
+      // Kiểm tra trạng thái
+      if (!isset($_POST['status']) || $_POST['status'] === '') {
+         $errors['status'] = 'Không được để trống trạng thái';
+         $is_valid = false;
+      }
+
+      // Kiểm tra ảnh
+      if (isset($_FILES['image']) && $_FILES['image']['error'] !== 0) {
+         $errors['image'] = 'Không được để trống ảnh';
+         $is_valid = false;
+      }
+
+      // Lưu lỗi vào session nếu có
+      if (!$is_valid) {
+         $_SESSION['errors'] = $errors;
+      }
+
+      return $is_valid;
+   }
+
+
+   public static function image()
+   {
+      if (!isset($_FILES['image']) || !file_exists($_FILES['image']['tmp_name']) || !is_uploaded_file($_FILES['image']['tmp_name'])) {
          return false;
       }
-      // nơi lưu trữ hình ảnh (trong source code)
-      $target_dir = 'public/uploads/users/';
-      $target_file = $target_dir . basename($_FILES["avatar"]["name"]);
-      $imageFileType = strtolower(pathinfo(basename($_FILES['avatar']['name']), PATHINFO_EXTENSION));
 
-      // lấy kiểu file (đuôi file)
+      $target_dir = 'public/uploads/categogies/';
+      $target_file = $target_dir . basename($_FILES["image"]["name"]);
+      $imageFileType = strtolower(pathinfo(basename($_FILES['image']['name']), PATHINFO_EXTENSION));
+
       $allowed_types = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
       if (!in_array($imageFileType, $allowed_types)) {
          NotificationHelper::error('type_upload', 'Chỉ nhận file ảnh JPG, PNG, JPEG, GIF, WEBP');
          return false;
       }
-      // thay đổi tên file thành dạng năm tháng ngày giờ phút giây
+
       $nameImage = date('YmdHmi') . '.' . $imageFileType;
-      // đường dẫn đầy đủ để di chuyển file đến
       $target_file = $target_dir . $nameImage;
 
       // Di chuyển file
-      if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-         // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
-
-      } else {
-         $nameImage = '';
-         NotificationHelper::error('upload_file', 'Upload file thất bại');
+      if (!move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
+         NotificationHelper::error('move_uploaded', 'Không thể tải file vào thư mục đã lưu trữ ');
+         return false;
       }
 
       return $nameImage;

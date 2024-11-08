@@ -84,12 +84,11 @@ Route::delete('/admin/products/{id}', 'App\Controllers\Admin\ProductController@d
 Route::get('/admin/categories', 'App\Controllers\Admin\CategoryController@Index');
 
 Route::get('/admin/categories/create', 'App\Controllers\Admin\CategoryController@create');
-/* Route::post('/admin/categories', 'App\Controllers\Admin\CategoryController@store');
+Route::post('/admin/categories', 'App\Controllers\Admin\CategoryController@store');
 
 Route::get('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@edit');
 Route::put('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@update'); 
-
-Route::delete('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@delete');*/
+Route::delete('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@delete');
 
 //---------------------------[ TÀI KHOẢN ]---------------------------
 Route::get('/admin/users', 'App\Controllers\Admin\UserController@Index');
