@@ -28,8 +28,7 @@ class Account extends BaseView
 
         <body>
             <div class="Page-login">
-            <?php Notification::render();?>
-            <?php NotificationHelper::unset();?>
+
                 <div class="container" id="container">
                     <div class="form-container sign-up">
                         <form action="/home-register" method="post">
@@ -40,7 +39,6 @@ class Account extends BaseView
                             <input name="password" type="password" placeholder="Password">
                             <a href="/">Quay về trang chủ</a>
                             <button type="submit" id="home-register" class="button">Đăng ký</button>
-                            
                         </form>
                     </div>
                     <div class="form-container sign-in">
