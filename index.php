@@ -40,10 +40,13 @@ Route::get('/user', 'App\Controllers\Client\AuthController@profile');
 
 //-----------------------[ SẢN PHẨM ]--------------------------------
 Route::get('/shop', 'App\Controllers\Client\ProductController@index'); 
-Route::get('/product', 'App\Controllers\Client\ProductController@detail');
+Route::get('/product/{id}', 'App\Controllers\Client\ProductController@detail');
+
 
 //-----------------------[ GIỎ HÀNG ]--------------------------------
 Route::get('/cart', 'App\Controllers\Client\CartController@index'); 
+
+Route::get('/add_to_card', 'App\Controllers\Client\CartController@add_to_card'); 
 
 Route::get('/checkout', 'App\Controllers\Client\CartController@checkout'); 
 

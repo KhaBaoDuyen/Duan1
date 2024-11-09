@@ -11,10 +11,29 @@ class CartController
 {
     public static function index()
     {
+
+        $data = $_SESSION['cart'];
+        // if(isset($_SESSION[`cart`])) { 
+        //     $data = $_SESSION['cart'];
+        //     var_dump($data);
+        //     // var_dump($data);
+        //     die();
+        // }
         Header::render();
-        Cart::render();
+        Cart::render($data);
         Footer::render();
     }
+
+    public static function add_to_card() {
+        $data = [
+            'product_id' => $_GET['product_id'],
+            'quantity' => $_GET['product_quantity'],
+            'name' => $_GET['product_name'],
+        ];
+        $_SESSION['cart'][] = $data; 
+        header('Location: /cart');  
+    }
+
     public static function checkout()
     {
         Header::render();
