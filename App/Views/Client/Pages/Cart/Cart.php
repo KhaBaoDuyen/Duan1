@@ -6,7 +6,9 @@ use App\Views\BaseView;
 
 class Cart extends BaseView { 
     public static function render($data = null)
+    
     {
+        
 ?>
 
       <main class="col-10 cart m-auto" style="height: auto;">
@@ -26,12 +28,14 @@ class Cart extends BaseView {
                     </tr>
                 </thead>
                 <tbody id="cartItems">
-                    <tr>
+                    <?php
+                    foreach($data as $item) { ?>
+                            <tr>
                         <td>1</td>
                         <td>
                             <img src="/public/assets/Client/image/products/facebook-dynamic-nuoc-hoa-nu-narciso-rodriguez-for-her-edp-30ml-1711530320_img_385x385_622873_fit_center.jpg" alt="">
                         </td>
-                        <td>Hoa bỉ ngạn</td>
+                        <td><?= $item['name'] ?></td>
                         <td>
                             <select style="border: 1px solid white;">
                                 <option value="10cm">10 cm</option>
@@ -42,99 +46,15 @@ class Cart extends BaseView {
                         <td class="price">10,000 VNĐ</td>
                         <td class="quantity-control" style="height: 92px;">
                             <input type="button" value="-" onclick="TinhTien(this, -1)">
-                            <input type="number" value="1" min="1" readonly>
+                            <input type="number" value="<?= $item['quantity'] ?>" min="1" readonly>
                             <input type="button" value="+" onclick="TinhTien(this, 1)">
                         </td>
                         <td class="item-total">10,000 VNĐ</td>
                     </tr>
-                    <!-- Thêm các sản phẩm khác tương tự -->
-                    <tr>
-                        <td>2</td>
-                        <td>
-                            <img src="/public/assets/Client/image/products/facebook-dynamic-nuoc-hoa-nu-narciso-rodriguez-for-her-edp-30ml-1711530320_img_385x385_622873_fit_center.jpg" alt="">
-                        </td>
-                        <td>Hoa bỉ ngạn</td>
-                        <td>
-                            <select style="border: 1px solid white;">
-                                <option value="10cm">10 cm</option>
-                                <option value="20cm">20 cm</option>
-                                <option value="30cm">30 cm</option>
-                            </select>
-                        </td>
-                        <td class="price">10,000 VNĐ</td>
-                        <td class="quantity-control" style="height: 95px;">
-                            <input type="button" value="-" onclick="TinhTien(this, -1)">
-                            <input type="number" value="1" min="1" readonly>
-                            <input type="button" value="+" onclick="TinhTien(this, 1)">
-                        </td>
-                        <td class="item-total">10,000 VNĐ</td>
-                    </tr>
+                    <?php }
+                    ?>
                     
-                    <tr>
-                     <td>3</td>
-                     <td>
-                         <img src="/public/assets/Client/image/products/facebook-dynamic-nuoc-hoa-nu-narciso-rodriguez-for-her-edp-30ml-1711530320_img_385x385_622873_fit_center.jpg" alt="">
-                     </td>
-                     <td>Hoa bỉ ngạn</td>
-                     <td>
-                         <select style="border: 1px solid white;">
-                             <option value="10cm">10 cm</option>
-                             <option value="20cm">20 cm</option>
-                             <option value="30cm">30 cm</option>
-                         </select>
-                     </td>
-                     <td class="price">10,000 VNĐ</td>
-                     <td class="quantity-control" style="height: 97px;">
-                         <input type="button" value="-" onclick="TinhTien(this, -1)">
-                         <input type="number" value="1" min="1" readonly>
-                         <input type="button" value="+" onclick="TinhTien(this, 1)">
-                     </td>
-                     <td class="item-total">10,000 VNĐ</td>
-                 </tr>
-
-                 <tr>
-                  <td>4</td>
-                  <td>
-                      <img src="/public/assets/Client/image/products/facebook-dynamic-nuoc-hoa-nu-narciso-rodriguez-for-her-edp-30ml-1711530320_img_385x385_622873_fit_center.jpg" alt="">
-                  </td>
-                  <td>Hoa bỉ ngạn</td>
-                  <td>
-                      <select style="border: 1px solid white;">
-                          <option value="10cm">10 cm</option>
-                          <option value="20cm">20 cm</option>
-                          <option value="30cm">30 cm</option>
-                      </select>
-                  </td>
-                  <td class="price">10,000 VNĐ</td>
-                  <td class="quantity-control" style="height: 95px;">
-                      <input type="button" value="-" onclick="TinhTien(this, -1)">
-                      <input type="number" value="1" min="1" readonly>
-                      <input type="button" value="+" onclick="TinhTien(this, 1)">
-                  </td>
-                  <td class="item-total">10,000 VNĐ</td>
-              </tr>
-
-              <tr>
-               <td>5</td>
-               <td>
-                   <img src="/public/assets/Client/image/products/facebook-dynamic-nuoc-hoa-nu-narciso-rodriguez-for-her-edp-30ml-1711530320_img_385x385_622873_fit_center.jpg" alt="">
-               </td>
-               <td>Hoa bỉ ngạn</td>
-               <td>
-                   <select style="border: 1px solid white;">
-                       <option value="10cm">10 cm</option>
-                       <option value="20cm">20 cm</option>
-                       <option value="30cm">30 cm</option>
-                   </select>
-               </td>
-               <td class="price">10,000 VNĐ</td>
-               <td class="quantity-control" style="height: 95px;">
-                   <input type="button" value="-" onclick="TinhTien(this, -1)">
-                   <input type="number" value="1" min="1" readonly>
-                   <input type="button" value="+" onclick="TinhTien(this, 1)">
-               </td>
-               <td class="item-total">10,000 VNĐ</td>
-           </tr>
+                  
                 </tbody>
             </table>
         </div>
@@ -158,4 +78,4 @@ class Cart extends BaseView {
 
 <?php 
     }}
-?>
+    ?>

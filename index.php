@@ -48,7 +48,8 @@ Route::post('/home-login', 'App\Controllers\Client\AuthController@loginAction');
 
 //-----------------------[ SẢN PHẨM ]--------------------------------
 Route::get('/shop', 'App\Controllers\Client\ProductController@index'); 
-Route::get('/product', 'App\Controllers\Client\ProductController@detail');
+Route::get('/product/{id}', 'App\Controllers\Client\ProductController@detail');
+
 
 //----------------------[ SP THEO DANH MỤC ]-----------------------
 Route::get('/product/categories/{id}', 'App\Controllers\Client\ProductController@getProductByCategory');
@@ -57,6 +58,8 @@ Route::get('/product/parent/{id}','App\Controllers\Client\ProductController@show
 
 //-----------------------[ GIỎ HÀNG ]--------------------------------
 Route::get('/cart', 'App\Controllers\Client\CartController@index'); 
+
+Route::get('/add_to_card', 'App\Controllers\Client\CartController@add_to_card'); 
 
 Route::get('/checkout', 'App\Controllers\Client\CartController@checkout'); 
 

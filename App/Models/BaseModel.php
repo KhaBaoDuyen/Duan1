@@ -69,6 +69,9 @@ abstract class BaseModel implements CrudInterface
             return $result;
         }
     }
+
+
+    
     public function create(array $data)
     {
         try {
@@ -163,6 +166,7 @@ abstract class BaseModel implements CrudInterface
 
     public function getAllProductByStatus()
     {
+        
         return $this->getAllByStatus();
     }
 
