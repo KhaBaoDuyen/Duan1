@@ -7,4 +7,3 @@ package-lock.json
 .vscode/
 public/styles/*.css
 public/styles/*.map
-php-error.log
