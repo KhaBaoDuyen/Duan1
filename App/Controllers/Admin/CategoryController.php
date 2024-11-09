@@ -1,14 +1,18 @@
 <?php
 
 namespace App\Controllers\Admin;
+
 use App\Helpers\NotificationHelper;
+use App\Models\BaseModel;
 use App\Models\CategoryModel;
+use App\Models\ProductModel;
 use App\Validation\CategogyValidation;
 use App\Views\Admin\Layouts\Footer;
 use App\Views\Admin\Layouts\Header;
 use App\Views\Admin\Components\Notification;
 use App\Views\Admin\Pages\Category\Create;
 use App\Views\Admin\Pages\Category\Edit;
+use App\Views\Admin\Pages\Category\Search;
 use App\Views\Admin\Pages\Category\Index;
 
 class CategoryController
@@ -20,7 +24,7 @@ class CategoryController
         $categories = new CategoryModel();
         $data = $categories->getAllCategory();
         //      echo"<pre>";
-       // var_dump($data);
+        // var_dump($data);
         Header::render();
         Notification::render();
         NotificationHelper::unset();
@@ -78,7 +82,6 @@ class CategoryController
     }
 
     //--------------EDIT--------------------
-    // hiển thị giao diện form sửa
     public static function edit(int $id)
     {
         $categogy = new CategoryModel();
@@ -93,7 +96,6 @@ class CategoryController
             header('location: /admin/categories');
         }
     }
-
     // xử lý chức năng sửa (cập nhật)
     public static function update(int $id)
     {
@@ -133,11 +135,10 @@ class CategoryController
                     'status' => $_POST['status']
                 ];
 
-        $is_upload = CategogyValidation::image();
-        if ($is_upload) {
-            $data['image'] = $is_upload;
-        }
-
+                $is_upload = CategogyValidation::image();
+                if ($is_upload) {
+                    $data['image'] = $is_upload;
+                }
             }
             $result = $category->updateCategory($id, $data);
 
@@ -154,20 +155,37 @@ class CategoryController
             header("location: /admin/categories/$id");
         }
     }
-  
-         // thực hiện xoá
-         public static function delete(int $id)
-         {
-             $category = new CategoryModel();
-             $result = $category->deleteCategory($id);
+    // thực hiện xoá
+    public static function delete(int $id)
+    {
+        $category = new CategoryModel();
+        $result = $category->deleteCategory($id);
 
-             if ($result) {
-                 NotificationHelper::success('category', 'Xoá thành công');
-             } else {
-                 NotificationHelper::error('category', 'Xoá thất bại');
-             }
+        if ($result) {
+            NotificationHelper::success('category', 'Xoá thành công');
+        } else {
+            NotificationHelper::error('category', 'Xoá thất bại');
+        }
 
-             header('location: /admin/categories');
-         } 
+        header('location: /admin/categories');
+    }
+    // -------------------- SEARCH----------------
+    public static function search()
+    {
+        $keyword = $_GET['keyword'] ?? '';
+        $category = new CategoryModel();
+        $categories = $category->searchByKeywordCategogy($keyword);
+        $category = $category->getAllCategory();
+
+        $data = [
+            'keyword' => $keyword,
+            'categories' => $categories,
+            'allCategories' => $category
+        ];
+        Header::render();
+        Search::render($data);
+        Footer::render();
+    }
+
 
 }

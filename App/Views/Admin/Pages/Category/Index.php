@@ -24,7 +24,29 @@ class Index extends BaseView
                     <div class="card mb-4">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Danh sách danh mục</h6>
+                            <div class="nav-item dropdown no-arrow">
+                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </a>
+                                <div style=" width: 350px !important;" class="  dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="navbar-search"  action="/admin/SearchCategogy" method="get">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control bg-light border-1 small"
+                                                placeholder="Nhập từ khóa tìm kiếm ?" aria-label="Search"
+                                                aria-describedby="basic-addon2"  id="input" class="input" name="keyword" type="keyword"  style="border-color: #3f51b5;">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="fas fa-search fa-sm"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="table-responsive p-3">
                             <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                                 <thead class="thead-light">
@@ -42,7 +64,8 @@ class Index extends BaseView
                                             <tr>
                                                 <td><?= $categogy['id'] ?></td>
                                                 <td><?= $categogy['name'] ?></td>
-                                                <td style="overflow: hidden;"  width="150px" height="150px"><img width="100%" height="100%"  src="/public/uploads/categogies/<?= $categogy['image'] ?>" alt="">
+                                                <td style="overflow: hidden;" width="150px" height="150px"><img width="100%"
+                                                        height="100%" src="/public/uploads/categogies/<?= $categogy['image'] ?>" alt="">
                                                 </td>
                                                 <td>
                                                     <span

@@ -50,9 +50,26 @@ class CategoryModel extends BaseModel
         }
     }
 
+    //--------------------SEARCH------------------------
+
+    public function searchByKeywordCategogy($keyword)
+    {
+        $db = (new Database())->Pdo();
+        $stmt = $db->prepare("
+         SELECT * 
+    FROM $this->table 
+    WHERE name LIKE :keyword 
+    ");
+
+        $stmt->execute(['keyword' => '%' . $keyword . '%']);
+
+        // Trả về kết quả
+        return $stmt->fetchAll();
+    }
 
 
-   public function countTotalCategogy(){
-    return $this->countTotal();
-  }
+    public function countTotalCategogy()
+    {
+        return $this->countTotal();
+    }
 }

@@ -14,7 +14,7 @@ use App\Views\Admin\Layouts\Header;
 // use App\Views\Admin\Pages\User\Category as UserCategory;
 use App\Views\Admin\Pages\User\Shop;
 use App\Views\Admin\Pages\User\Index;
-use App\Views\Admin\Pages\User\Create;
+use App\Views\Admin\Pages\User\Search;
 use App\Views\Admin\Pages\User\Edit;
 use App\Views\Admin\Pages\User\Detail;
 
@@ -36,7 +36,7 @@ class UserController
     // {
     //     $user = new UserModel();
     //     $data = $user->getAllUser(); 
-    //     // $data = $categories->getAllUserJoinCategory();
+    //     // $data = $users->getAllUserJoinCategory();
     //     Header::render();
     //     Notification::render();
     //     NotificationHelper::unset();
@@ -151,5 +151,28 @@ class UserController
             NotificationHelper::error('user', 'Xoá thất bại');
         }
         header('location: /admin/users');
+    }
+
+    //--------------- SEARCH----------------
+    public static function search()
+    {
+        $keyword = $_GET['keyword'] ?? '';
+        $user = new UserModel();
+
+        $users = $user->searchByKeywordUser($keyword);
+        $user = $user->getAllUser();
+
+        $data = [
+            'keyword' => $keyword,
+            'users' => $users,
+            'alluser' => $user
+        ];
+
+        // var_dump($data['keyword']);
+        // var_dump($data['users']);
+
+        Header::render();
+        Search::render($data);
+        Footer::render();
     }
 }

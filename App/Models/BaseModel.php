@@ -11,7 +11,7 @@ abstract class BaseModel implements CrudInterface
     protected $_conn;
     protected $table;
     protected $id;
-    protected $id_categlogies ;
+    protected $id_categlogies;
     const STATUS_ENABLE = 1;
     const STATUS_DISABLE = 0;
 
@@ -21,7 +21,7 @@ abstract class BaseModel implements CrudInterface
         $this->_conn = new Database();
     }
 
-  public function getAll()
+    public function getAll()
     {
         $result = [];
         try {
@@ -34,11 +34,11 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-  public function getAllProducts()
+    public function getAllProducts()
     {
         $result = [];
         try {
-                 $sql = "SELECT $this->table.*, 
+            $sql = "SELECT $this->table.*, 
                        (SELECT url FROM images_product 
                         WHERE images_product.id_product = $this->table.id 
                         ORDER BY images_product.id ASC 
@@ -52,7 +52,7 @@ abstract class BaseModel implements CrudInterface
             return $result;
         }
     }
-    
+
     public function getOne(int $id)
     {
         $result = [];
@@ -71,7 +71,7 @@ abstract class BaseModel implements CrudInterface
     }
 
 
-    
+
     public function create(array $data)
     {
         try {
@@ -82,7 +82,7 @@ abstract class BaseModel implements CrudInterface
             // INSERT INTO $this->table (name, description, status, 
             $sql = rtrim($sql, ", ");
             // INSERT INTO $this->table (name, description, status
-            $sql .=   " ) VALUES (";
+            $sql .= " ) VALUES (";
             // INSERT INTO $this->table (name, description, status) VALUES (
             foreach ($data as $key => $value) {
                 $sql .= "'$value', ";
@@ -96,7 +96,6 @@ abstract class BaseModel implements CrudInterface
             $stmt = $conn->prepare($sql);
 
             return $stmt->execute();
-
         } catch (\Throwable $th) {
             error_log('Lỗi khi thêm dữ liệu: ' . $th->getMessage());
             return false;
@@ -117,7 +116,6 @@ abstract class BaseModel implements CrudInterface
             $conn = $this->_conn->MySQLi();
             $stmt = $conn->prepare($sql);
             return $stmt->execute();
-
         } catch (\Throwable $th) {
             error_log('Lỗi khi cập nhật dữ liệu: ', $th->getMessage());
             return false;
@@ -147,7 +145,7 @@ abstract class BaseModel implements CrudInterface
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function getOneByName( $name)
+    public function getOneByName($name)
     {
         $result = [];
         try {
@@ -166,7 +164,7 @@ abstract class BaseModel implements CrudInterface
 
     public function getAllProductByStatus()
     {
-        
+
         return $this->getAllByStatus();
     }
 
@@ -186,7 +184,7 @@ abstract class BaseModel implements CrudInterface
         return $this->getOneByStatus($id);
     }
 
- public function get5CommentNewestByProductAndStatus($id)
+    public function get5CommentNewestByProductAndStatus($id)
     {
         $sql = "SELECT comments.*, user.username, user.name, user.avatar 
                 FROM comments INNER JOIN user ON comments.user_id=user.user_id 
@@ -200,32 +198,32 @@ abstract class BaseModel implements CrudInterface
         return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     }
 
-// đếm số lượng 
- public function countTotal()
+    // đếm số lượng 
+    public function countTotal()
     {
         $result = [];
         try {
             $sql = "SELECT COUNT(*) AS total FROM $this->table";
-            $result =$this->_conn->MySQLi()->query($sql);
+            $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_assoc();
         } catch (\Throwable $th) {
             error_log('Lỗi khi Thoóng kê chi tiết dữ liệu: ' . $th->getMessage());
             return $result;
         }
-    } 
-// đếm số lượng 
- public function countTotalProduct()
+    }
+    // đếm số lượng 
+    public function countTotalProduct()
     {
         $result = [];
         try {
             $sql = "SELECT COUNT(*) AS total FROM $this->table where categories_id=?";
-            $result =$this->_conn->MySQLi()->query($sql);
+            $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_assoc();
         } catch (\Throwable $th) {
             error_log('Lỗi khi Thoóng kê chi tiết dữ liệu: ' . $th->getMessage());
             return $result;
         }
-    } 
+    }
 
-
+  
 }

@@ -95,8 +95,12 @@ Route::get('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@e
 Route::put('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@update'); 
 Route::delete('/admin/categories/{id}', 'App\Controllers\Admin\CategoryController@delete');
 
+Route::get('/admin/SearchCategogy', 'App\Controllers\Admin\CategoryController@search');
+
 //---------------------------[ TÀI KHOẢN ]---------------------------
 Route::get('/admin/users', 'App\Controllers\Admin\UserController@Index');
+
+Route::get('/admin/SearchUsers', 'App\Controllers\Admin\UserController@search');
 
 Route::get('/admin/users/{id}', 'App\Controllers\Admin\UserController@edit');
 Route::put('/admin/users/{id}', 'App\Controllers\Admin\UserController@update');

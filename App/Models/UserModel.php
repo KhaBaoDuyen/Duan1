@@ -79,12 +79,35 @@ class UserModel extends BaseModel
         }
     }
 
-       public function getOneUserByName($name)
+    public function getOneUserByName($name)
     {
         return $this->getOneByName($name);
     }
 
-   public function countTotalUser(){
-    return $this->countTotal();
-  }
+    public function countTotalUser()
+    {
+        return $this->countTotal();
+    }
+
+    //---------------SEARCH------------------------------
+    public function searchByKeywordUser($keyword)
+    {
+        $db = (new Database())->Pdo();
+        $stmt = $db->prepare("
+         SELECT * 
+    FROM $this->table 
+    WHERE name LIKE :keyword  OR username LIKE :keyword 
+    ");
+
+        $stmt->execute(['keyword' => '%' . $keyword . '%']);
+
+        // Trả về kết quả
+        return $stmt->fetchAll();
+    }
+
+
+    public function countTotalCategogy()
+    {
+        return $this->countTotal();
+    }
 }
