@@ -31,66 +31,9 @@ class UserController
         Index::render($data);
         Footer::render();
     }
-    //------------ CREATE-------------
-    // public static function create()
-    // {
-    //     $user = new UserModel();
-    //     $data = $user->getAllUser(); 
-    //     // $data = $users->getAllUserJoinCategory();
-    //     Header::render();
-    //     Notification::render();
-    //     NotificationHelper::unset();
-    //     Create::render( $data );
-    //     Footer::render();
-    // }
-    // xử lý chức năng thêm
-    //   public static function store()
-    //     {
-    //         $is_valid = UserValidation::create();
-    //         if ($is_valid) {
-    //             $user = new UserModel();
-    //             $is_exist = $user->getOneUserByName($_POST['username']);
-    //         } else {
-    //             NotificationHelper::error('store', 'Thêm thất bại thông tin thất bại');
-    //             header("Location:/admin/users/create");
-    //             exit;
-    //         }
-    //         if ($is_exist) {
-    //             NotificationHelper::error('store', 'Tên sản phẩm đã tồn tại');
-    //             // chuyển hướng đến trang thêm
-    //             header('location: /admin/users/create');
-    //             exit;
-    //         }
-    //         $password = $_POST['password'];
-    //         $hash_password = password_hash($password, PASSWORD_DEFAULT);
-    //         $data = [
-    //             'username' => $_POST['username'],
-    //             'name' => $_POST['name'],
-    //             'email' => $_POST['email'],
-    //             'phone' => $_POST['phone'],
-    //             'role' => $_POST['role'],
-    //             'status' => $_POST['status'],
-    //             'password' => $hash_password,
-    //         ];
-    //         $is_upload = UserValidation::avatar();
-    //         if ($is_upload) {
-    //             $data['avatar'] = $is_upload;
-    //         }
-    //         //  var_dump($data);
-    //         $result = $user->createUser($data);
-    //         if ($result) {
-    //             NotificationHelper::success('user', 'Thêm thành công');
-    //             header('location:/admin/users');
-    //             exit;
-    //         } else {
-    //             NotificationHelper::error('user', 'Thêm thất bại');
-    //             header('location:/admin/users/create');
-    //             exit;
-    //         }
-    //     } 
+
     // ------- EDIT ------------------
 
-    // hiển thị giao diện form sửa
     public static function edit($id)
     {
         $user = new UserModel();
@@ -103,7 +46,7 @@ class UserController
         Footer::render();
     }
 
-    // xử lý chức năng sửa (cập nhật)
+
     public static function update($id)
     {
         $is_valid = UserValidation::update($id);
@@ -175,4 +118,14 @@ class UserController
         Search::render($data);
         Footer::render();
     }
+
+   // ------------- LOGOUT ----------------
+  public static function logout()
+{
+    AuthHelper::logout();
+    NotificationHelper::success('logout', 'Đăng xuất thành công');
+    header('Location: /');
+    exit;
+}
+
 }

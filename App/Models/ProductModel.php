@@ -152,4 +152,6 @@ public function getAllProductByCategoryAndStatus($id)
         return $stmt->fetchAll();
     }
 
+
+
 }

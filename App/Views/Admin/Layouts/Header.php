@@ -6,9 +6,11 @@ use App\Views\BaseView;
 
 class Header extends BaseView
 {
+
     public static function render($data = null)
     {
-
+        $isLoggedIn = isset($_SESSION['user']);
+        $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
 ?>
 
         <!DOCTYPE html>
@@ -50,7 +52,7 @@ class Header extends BaseView
 
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct">
-                        <i class='bx bxs-cart-alt'></i>
+                            <i class='bx bxs-cart-alt'></i>
                             <span>Quản lý sản phẩm</span>
                         </a>
                         <div id="collapseProduct" class="collapse" aria-labelledby="headingProduct" data-parent="#accordionSidebar">
@@ -78,7 +80,7 @@ class Header extends BaseView
 
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
-                        <i class='bx bxs-user-circle'></i>
+                            <i class='bx bxs-user-circle'></i>
                             <span>Quản lý tài khoản</span>
                         </a>
                         <div id="collapseUser" class="collapse" aria-labelledby="headingUser" data-parent="#accordionSidebar">
@@ -91,7 +93,7 @@ class Header extends BaseView
 
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder" aria-expanded="true" aria-controls="collapseOrder">
-                        <i class='bx bxs-cart-add'></i>
+                            <i class='bx bxs-cart-add'></i>
                             <span>Quản lý đơn hàng</span>
                         </a>
                         <div id="collapseOrder" class="collapse" aria-labelledby="headingOrder" data-parent="#accordionSidebar">
@@ -104,7 +106,7 @@ class Header extends BaseView
 
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComment" aria-expanded="true" aria-controls="collapseComment">
-                        <i class='bx bx-message-dots'></i>
+                            <i class='bx bx-message-dots'></i>
                             <span>Quản lý bình luận</span>
                         </a>
                         <div id="collapseComment" class="collapse" aria-labelledby="headingComment" data-parent="#accordionSidebar">
@@ -263,33 +265,34 @@ class Header extends BaseView
                                 <li class="nav-item dropdown no-arrow">
                                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
-                                        <img class="img-profile rounded-circle" src="/public/assets/admin/img/boy.png" style="max-width: 60px">
-                                        <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                                        <?php if ($isLoggedIn): ?>
+
+                                            <?php $avatar = $_SESSION['user']['avatar'] ?? 'usermacdinh.png'; ?>
+                                            <img class="img-profile rounded-circle" src="/public/uploads/users/<?= $avatar ?>" style="max-width: 60px">
+                                            <span class="ml-2 d-none d-lg-inline text-white small"><?php echo htmlspecialchars($_SESSION['user']['username'] ?? ''); ?></span>
+
                                     </a>
-                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                        <a class="dropdown-item" href="#">
-                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Profile
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Settings
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Activity Log
-                                        </a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
-                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                            Logout
-                                        </a>
-                                    </div>
+                                <?php else: ?>
+                                    <img class="img-profile rounded-circle" src="/public/uploads/users/usermacdinh.png" style="max-width: 60px">
+                                    <span class="ml-2 d-none d-lg-inline text-white small">Usename</span>
+                                <?php endif; ?>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Profile
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/admin/logout">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
                                 </li>
                             </ul>
                         </nav>
                         <!-- Topbar -->
-                    <?php
-                }
+                <?php
             }
-?>
+        }
+                ?>

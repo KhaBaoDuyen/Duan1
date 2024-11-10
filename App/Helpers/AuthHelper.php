@@ -108,6 +108,10 @@ class AuthHelper
    // ----------- ĐĂNG XUẤT -------
    public static function logout()
     {
+   if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
         if (isset($_SESSION['user'])) {
             unset($_SESSION['user']);
         }
@@ -154,35 +158,27 @@ class AuthHelper
       return true;
    }
    //------ BẮT TÀI KHOẢN ĐĂNG NHẬP
-   /* public static function middleware()
-   {
-      // var_dump($_SERVER['REQUEST_URI']);
-      $admin = explode('/', $_SERVER['REQUEST_URI']);
-      // var_dump($admin);
-      $admin = $admin[1];
-      if ($admin == 'admin') {
-         //    if (!isset($_SESSION['username']) || $_SESSION['username']['role'] != 1) {
-         //       NotificationHelper::error('admin', 'Tài khoản này không có quyền truy cập tranh quan trị!!');
-         //       header('location: /Account');
-         //       exit();
-         //    }    
-         if (!isset($_SESSION['user'])) {
-            NotificationHelper::error('admin', 'Bạn phải đăng nhập ');
+   public static function middleware()
+{
+    $admin = explode('/', $_SERVER['REQUEST_URI']);
+    $admin = $admin[1];
+    
+    if ($admin == 'admin') {
+        if (!isset($_SESSION['user'])) {
+            $_SESSION['js_error'] = 'Bạn phải đăng nhập';
             header('location: /Account');
             exit;
-         }
-         if ($_SESSION['user']['role'] != 1) {
-            NotificationHelper::error('admin', 'Tài khoản này không có quyền truy cập trang quản trị!!');
-            header('location: /Account');
+        }
+        
+        if ($_SESSION['user']['role'] != 0) {
+            $_SESSION['js_error'] = 'Tài khoản này không có quyền truy cập trang quản trị!!';
+            header('location: /');
             exit;
-         }
-
-      } */
-   }
-
+        }
+    }
+}
 
 
+}
 
-
-
-?> -->
+?>

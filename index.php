@@ -15,7 +15,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 require_once 'config.php';
 //  Gọi đến middleware;
-/* AuthHelper::middleware(); */
+AuthHelper::middleware(); 
 // exit();
 
 
@@ -85,6 +85,8 @@ Route::put('/admin/products/{id}', 'App\Controllers\Admin\ProductController@upda
 
 Route::delete('/admin/products/{id}', 'App\Controllers\Admin\ProductController@delete'); */
 
+Route::get('/admin/SearchProducts', 'App\Controllers\Admin\ProductController@search');
+
 //--------------------------[ DANH MỤC ]--------------------------
 Route::get('/admin/categories', 'App\Controllers\Admin\CategoryController@Index');
 
@@ -106,6 +108,8 @@ Route::get('/admin/users/{id}', 'App\Controllers\Admin\UserController@edit');
 Route::put('/admin/users/{id}', 'App\Controllers\Admin\UserController@update');
 
 Route::delete('/admin/users/{id}', 'App\Controllers\Admin\UserController@delete'); 
+
+Route::get('/admin/logout', 'App\Controllers\Admin\UserController@logout');
 
 //--------------------------[ ĐƠN HÀNG ]-------------------------------
 Route::get('/admin/order', 'App\Controllers\Admin\OrderController@Index');

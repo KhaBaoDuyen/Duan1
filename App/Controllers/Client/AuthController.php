@@ -35,6 +35,7 @@ class AuthController
       NotificationHelper::success('logout', 'Đăng xuất thành công');
       header('Location:/');
    }
+
    // ------------- PROFILE ----------------
    public static function profile()
    {

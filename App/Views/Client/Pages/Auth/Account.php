@@ -11,6 +11,8 @@ class Account extends BaseView
     public static function render($data = null)
     {
 ?>
+     
+
         <!DOCTYPE html>
         <html lang="en">
 
@@ -28,6 +30,12 @@ class Account extends BaseView
 
         <body>
             <div class="Page-login">
+   <?php if (isset($_SESSION['js_error'])): ?>
+            <div class="alert-custom">
+                <?php echo $_SESSION['js_error']; ?>
+            </div>
+            <?php unset($_SESSION['js_error']); ?>
+        <?php endif; ?>
 
                 <div class="container" id="container">
                     <div class="form-container sign-up">
@@ -57,7 +65,7 @@ class Account extends BaseView
                             </div>
                             <a href="/">Quay về trang chủ</a>
                             <button type="submit" class="button">Đăng nhập</button>
-                            
+
                         </form>
                     </div>
                     <div class="toggle-container">

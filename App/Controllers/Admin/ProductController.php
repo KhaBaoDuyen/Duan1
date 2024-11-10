@@ -14,6 +14,7 @@ use App\Views\Admin\Layouts\Header;
 use App\Views\Admin\Pages\Product\Shop;
 use App\Views\Admin\Pages\Product\Index;
 use App\Views\Admin\Pages\Product\Create;
+use App\Views\Admin\Pages\Product\Search;
 use App\Views\Admin\Pages\Product\Edit;
 use App\Views\Admin\Pages\Product\Detail;
 
@@ -165,6 +166,23 @@ class ProductController
         header('location: /admin/Product');
     }
  */
+  public static function search()
+    {
+        $keyword = $_GET['keyword'] ?? '';
+        $product = new ProductModel();
+        $products = $product->searchByKeyword($keyword);
+
+        $product = $product->getAllProduct();
+
+        $data = [
+            'keyword' => $keyword,
+            'products' => $products,
+            'allproduct' => $product
+        ];
+        Header::render();
+        Search::render($data);
+        Footer::render();
+    }
 
 }
 

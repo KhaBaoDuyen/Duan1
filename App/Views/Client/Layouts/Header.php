@@ -10,10 +10,17 @@ class Header extends BaseView
 {
    public static function render($data = null)
    {
-      // Kiểm tra nếu người dùng đã đăng nhập
-      $isLoggedIn = isset($_SESSION['user']); // Kiểm tra tồn tại session 'user'
+
+      $isLoggedIn = isset($_SESSION['user']);
       $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
 ?>
+    <?php if (isset($_SESSION['js_error'])): ?>
+            <div class="alert-custom">
+                <?php echo $_SESSION['js_error']; ?>
+            </div>
+            <?php unset($_SESSION['js_error']); ?>
+        <?php endif; ?>
+
       <!DOCTYPE html>
       <html lang="en">
 
@@ -47,7 +54,9 @@ class Header extends BaseView
                               <input placeholder="Search" id="input" class="input" name="keyword" type="keyword" />
                               <button type="submit" class="submit-button labelforsearch">
                                  <svg class="searchIcon" viewBox="0 0 512 512">
-                                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path>
+                                    <path
+                                       d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                    </path>
                                  </svg>
                               </button>
                            </div>
@@ -58,22 +67,18 @@ class Header extends BaseView
                      <div class="d-flex align-items-center box col-6 justify-content-end">
                         <div class="account">
                            <?php if ($isLoggedIn): ?>
-                              <!-- Hiển thị tên người dùng nếu đã đăng nhập -->
-                              <a href="/user/<?= $_SESSION['user']['id'] ?>" class="d-flex account_title justify-content-center align-items-center">
-                                 <p><?php echo htmlspecialchars($userName); ?></p>
+                              <!-- Kiểm tra xem các khóa 'id' và 'avatar' có tồn tại trong session không -->
+                              <a href="/user/<?= isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : '' ?>"
+                                 class="d-flex account_title justify-content-center align-items-center">
+                                 <p><?php echo htmlspecialchars($_SESSION['user']['username'] ?? ''); ?></p>
                                  <?php
-                                 if ($_SESSION['user']['avatar']):
-                                 ?>
-                                    <img class="img-profile rounded-circle" src="/public/uploads/users/<?= $_SESSION['user']['avatar'] ?>" style="max-width: 40px">
-                                 <?php
-                                 else:
-                                 ?>
-                                    <img class="img-profile rounded-circle" src="/public/uploads/users/20240801230858.jpg" style="max-width: 40px">
-                                 <?php
-                                 endif;
+                                 // Kiểm tra xem avatar có tồn tại trong session không
+                                 $avatar = $_SESSION['user']['avatar'] ?? 'usermacdinh.png';
+                           
                                  ?>
 
-                                 <!-- <span class="material-symbols-outlined"> account_circle </span> -->
+                                 <img class="img-profile rounded-circle" src="/public/uploads/users/<?=$avatar?>"
+                                    style="max-width: 40px">
                               </a>
                            <?php else: ?>
                               <!-- Hiển thị nút Đăng nhập / Đăng ký nếu chưa đăng nhập -->
@@ -83,6 +88,7 @@ class Header extends BaseView
                               </a>
                            <?php endif; ?>
                         </div>
+
                         <a href="/cart" class="cart_shopping col-2" title="Giỏ hàng">
                            <span class="material-symbols-outlined">shopping_cart</span>
                            <span class="cart_quantity">3</span>

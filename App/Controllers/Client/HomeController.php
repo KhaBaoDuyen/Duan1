@@ -9,6 +9,7 @@ use App\Views\Client\Layouts\Footer;
 use App\Views\Client\Home;
 use App\Models\ProductModel;
 use App\Models\CategoryModel;
+use App\Models\UserModel;
 use App\Views\Client\Contact;
 use App\Views\Client\Pages\Blogs\Instruction;
 use App\Views\Client\About;
@@ -21,6 +22,9 @@ class HomeController
     {
         $product = new ProductModel();
         $data['products'] = $product->getAllProduct();
+
+        $user = new UserModel();
+        $data['user'] = $user->getAllUser();
 
         $categogy = new CategoryModel();
         $data['categogy'] = $categogy->getAllProductByStatus();
