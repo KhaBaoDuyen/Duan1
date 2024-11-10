@@ -225,5 +225,16 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-  
+
+    public function getAllProductJoinCategory()
+    {
+        $sql = "SELECT products.*, categories.name AS category_name 
+                FROM products
+                INNER JOIN categories ON products.id_categogy = categories.id";
+        $result = $this->_conn->MySQLi()->query($sql);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+
+
 }

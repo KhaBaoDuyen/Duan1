@@ -9,72 +9,110 @@ class Create extends BaseView
     public static function render($data = null)
     {
         ?>
-
-<div class="row">
-            <div class="col-lg-6">
-              <!-- Form Basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your
-                        email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                        <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                </div>
-              </div>
-          </div>
-          <!--Row-->
-
-
-
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
-                </div>
-              </div>
+        <!-- Page Content -->
+        <div class="container-fluid" id="container-wrapper">
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Thêm Sản phẩm</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Thêm Sản phẩm</li>
+                </ol>
             </div>
-          </div>
+
+            <div class="row">
+                <!-- Form Add Product -->
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Form Thêm Sản phẩm</h6>
+                        </div>
+                        <div class="card-body">
+                            <form action="/admin/Products" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="method" value="post">
+                                <div class="form-group">
+                                    <label for="name">Tên sản phẩm</label>
+                                    <input type="text" class="form-control" name="name" id="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="price">Giá sản phẩm</label>
+                                    <input type="number" class="form-control" name="price" id="price" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="discount_price">Giảm giá</label>
+                                    <input type="number" class="form-control" name="discount_price" id="discount_price">
+                                </div>
+
+                                <!-- Ảnh sản phẩm (Ảnh chính của sản phẩm) -->
+                                <div class="form-group">
+                                    <label for="image">Ảnh chính sản phẩm</label>
+                                    <input type="file" class="form-control" name="image" id="image" accept="image/*" required>
+                                </div>
+
+                                <!-- Ảnh hover (Ảnh hiển thị khi hover) -->
+                                <!-- <div class="form-group">
+                                    <label for="hover_image">Ảnh hiển thị khi hover</label>
+                                    <input type="file" class="form-control" name="hover_image" id="hover_image" accept="image/*" required>
+                                </div> -->
+
+                                <!-- Danh mục sản phẩm -->
+                                <div class="form-group">
+                                    <label for="id_categogy">Danh mục sản phẩm</label>
+                                    <select class="form-control" name="id_categogy" id="id_categogy" required>
+                                        <option value="">Chọn danh mục</option>
+                                        <?php
+                                        // Kiểm tra xem danh mục có dữ liệu không
+                                        if (!empty($data['categories'])) {
+                                            // Lặp qua các danh mục và hiển thị các option
+                                            foreach ($data['categories'] as $category) {
+                                                echo "<option value='{$category['id']}'>{$category['name']}</option>";
+                                            }
+                                        } else {
+                                            echo "<option value=''>Không có danh mục nào</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="date">Thời gian thêm</label>
+                                    <input type="date" class="form-control" name="date" id="date">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="short_description">Mô tả ngắn</label>
+                                    <textarea class="form-control" name="short_description" id="short_description" rows="1" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Mô tả dài</label>
+                                    <textarea class="form-control" name="description" id="description" rows="2" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="status">Trạng thái</label>
+                                    <select class="form-control" name="status" id="status" required>
+                                        <option value="1">Hiển thị</option>
+                                        <option value="0">Ẩn</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="start_time">Thời gian bắt đầu</label>
+                                    <input type="datetime-local" class="form-control" name="start_time" id="start_time">
+                                </div>
+                                <div class="form-group">
+                                    <label for="end_time">Thời gian kết thúc</label>
+                                    <input type="datetime-local" class="form-control" name="end_time" id="end_time">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Form Add Product -->
+            </div>
         </div>
-        <!---Container Fluid-->
-      </div>
-            <?php
+        <!-- End Page Content -->
+        <?php
     }
 }

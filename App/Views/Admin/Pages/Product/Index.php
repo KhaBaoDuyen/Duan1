@@ -25,38 +25,59 @@ class Index extends BaseView
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h6>
                         </div>
+                        <?php
+                            if (is_array($data['products']) && count($data['products']) > 0) :
+                        ?>
                         <div class="table-responsive p-3">
                             <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                                 <thead class="thead-light">
                                     <tr>
-                                        <th>Ảnh</th>
+                                        <th>ID</th>
                                         <th>Tên sản phẩm</th>
                                         <th>Giá</th>
-                                        <th>Mô tả</th>
-                                        <th>Ngày đăng</th>
+                                        <th>Giảm giá</th>
+                                        <th>Ảnh</th>
+                                        <th>Danh mục</th>
+                                        <th>Trạng thái</th>
                                         <th>Khác</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-
+                                <?php
+                                    foreach ($data['products'] as $item) :
+                                ?>
                                     <tr>
+                                        <td><?= $item['id'] ?></td>
+                                        <td><?= $item['name'] ?></td>
+                                        <td><?= number_format($item['price'] ?? 0, 0, ',', '.') ?> VND</td>
+                                        <td><?= number_format($item['discount_price'] ?? 0, 0, ',', '.') ?> VND</td>
+                                        <!-- Hiển thị hình ảnh -->
                                         <td>
-                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/products/20240807070846.png" alt="img">
+                                        <img class="img_all" width="40px" height="40px" 
+                                         class="image" src="<?= $item['image'] ?>" alt="Product Image" height="100%">
                                         </td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
+                                        <td><?= $item['category_name'] ?></td>
+                                        <td><?= ($item['status'] == 1) ? 'Hiển thị' : 'Ẩn' ?></td>
                                         <td>
-                                            <a href="#" class="btn btn-sm btn-warning">Sửa</a>
-                                            <a href="#" class="btn btn-sm btn-danger">Xóa</a>
+                                            <a href="/admin/products/<?= $item['id'] ?>/edit" class="btn btn-sm btn-warning">Sửa</a>
+                                            <a href="/admin/products/<?= $item['id'] ?>/delete" class="btn btn-sm btn-danger" 
+                                               onclick="return confirm('Bạn có chắc chắn muốn xoá sản phẩm này?')">Xóa</a>
                                         </td>
                                     </tr>
-              
+                                <?php
+                                    endforeach;
+                                ?>
                                 </tbody>
                             </table>
                         </div>
+                        <?php
+                                else :
+                        ?>
+                                    <h4 class="text-center text-danger">Không có dữ liệu</h4>
+                        <?php
+                                endif;
+                        ?>
                     </div>
                 </div>
             </div>
@@ -85,9 +106,7 @@ class Index extends BaseView
 
         </div>
         <!---Container Fluid-->
-        </div>
-        <!-- Page level plugins -->
-
 <?php
     }
 }
+?>

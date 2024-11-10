@@ -78,7 +78,7 @@ Route::get('/admin', 'App\Controllers\Admin\HomeController@index');
 Route::get('/admin/Product', 'App\Controllers\Admin\ProductController@Index');
 
 Route::get('/admin/products/create', 'App\Controllers\Admin\ProductController@create');
-Route::post('/admin/products', 'App\Controllers\Admin\ProductController@store');
+Route::post('/admin/Products', 'App\Controllers\Admin\ProductController@store');
 
 /* Route::get('/admin/products/{id}', 'App\Controllers\Admin\ProductController@edit');
 Route::put('/admin/products/{id}', 'App\Controllers\Admin\ProductController@update');

@@ -19,56 +19,112 @@ class ProductModel extends BaseModel
 
 
 
-    // public function createProduct($data)
-    // {
-    //     return $this->create($data);
-    // }
-    // public function updateProduct($id, $data)
-    // {
-    //     return $this->update($id, $data);
-    // }
+     public function createProduct($data)
+     {
+         return $this->create($data);
+     }
+     public function updateProduct($id, $data)
+     {
+         return $this->update($id, $data);
+     }
 
-    // public function deleteProduct($id)
-    // {
-    //     return $this->delete($id);
-    // }
+     public function deleteProduct($id)
+     {
+         return $this->delete($id);
+     }
 
     public function getAllProductByStatus()
     {
         return $this->getAllByStatus();
     }
 
-    // public function getOneProductByCategogy($categogy)
-    // {
-    //     $sql = "SELECT * FROM $this->table WHERE product_id=?  LIMIT 1";
-    //     $conn = $this->_conn->MySQLi();
-    //     $stmt = $conn->prepare($sql);
+/*      public function getOneProductByCategogy($categogy)
+     {
+         $sql = "SELECT * FROM $this->table WHERE product_id=?  LIMIT 1";
+         $conn = $this->_conn->MySQLi();
+         $stmt = $conn->prepare($sql);
 
-    //     $stmt->bind_param('s', $id);
-    //     $stmt->execute();
-    //     return $stmt->get_result()->fetch_assoc();
+         $stmt->bind_param('s', $id);
+         $stmt->execute();
+         return $stmt->get_result()->fetch_assoc();
 
-    // }
-    // public function getOneProductByName($name)
-    // {
-    //     return $this->getOneByName($name);
-    // }
+     } */
 
-    // public function getOneProductByStatus($id)
-    // {
-    //     return $this->getOneByStatus($id);
-    // }
 
-    // public function getAllProductJoinCategory()
-    // {
-    //     // $this->_conn = new Database();
-    //     $sql = "SELECT product.*, category.name AS category_name 
-    //             FROM product INNER JOIN category  ON product.category_id = category.categories_id";
-    //     $result = $this->_conn->MySQLi()->query($sql);
-    //     return $result->fetch_all(MYSQLI_ASSOC);
-    // }
+     public function getOneProductByCategory($category)
+     {
+         $sql = "SELECT * FROM $this->table WHERE id_categogy=? LIMIT 1"; // Sử dụng id_categogy thay vì product_id
+         $conn = $this->_conn->MySQLi();
+         $stmt = $conn->prepare($sql);
+         $stmt->bind_param('s', $category);  // Sử dụng kiểu dữ liệu đúng ('s' cho string)
+         $stmt->execute();
+         return $stmt->get_result()->fetch_assoc();
+     }
 
-public function getAllProductByCategoryAndStatus($id)
+
+
+
+
+     public function getOneProductByName($name)
+     {
+         return $this->getOneByName($name);
+     }
+
+     public function getOneProductByStatus($id)
+     {
+         return $this->getOneByStatus($id);
+     }
+
+     public function getAllProductJoinCategory()
+     {
+         $sql = "SELECT products.*, categories.name AS category_name 
+                 FROM products
+                 INNER JOIN categories ON products.id_categogy = categories.id";
+         $result = $this->_conn->MySQLi()->query($sql);
+         return $result->fetch_all(MYSQLI_ASSOC);
+     }
+
+
+     
+
+
+     public function getAllProductByCategoryAndStatus($id)
+     {
+         $result = [];
+         try {
+             $sql = "
+                 SELECT products.*, categories.name AS category_name, 
+                     (SELECT url FROM images_product 
+                      WHERE images_product.id_product = products.id 
+                      ORDER BY images_product.id ASC LIMIT 1) 
+                     AS image_product_url 
+                 FROM products
+                 LEFT JOIN categories ON products.id_categogy = categories.id 
+                 WHERE products.id_categogy = ? 
+                 AND products.status = " . self::STATUS_ENABLE . "
+                 AND categories.status = " . self::STATUS_ENABLE . ";";  
+     
+             $conn = $this->_conn->MySQLi();
+             $stmt = $conn->prepare($sql);
+             $stmt->bind_param('i', $id);
+             $stmt->execute();
+     
+             // Fetch the results and return
+             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+         } catch (\Throwable $th) {
+             error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
+             return $result;
+         }
+     }
+
+
+
+
+
+
+
+
+/* public function getAllProductByCategoryAndStatus($id)
 {
     $result = [];
     try {
@@ -88,46 +144,77 @@ public function getAllProductByCategoryAndStatus($id)
         $stmt->bind_param('i', $id);
         $stmt->execute();
 
-        // Fetch the results and return
+         //Fetch the results and return
         return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     } catch (\Throwable $th) {
         error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
         return $result;
     }
 }
+ */
 
 
 
-    // public function countTotalProduct()
-    // {
-    //     return $this->countTotal();
-    // }
 
 
-    // public function countProductByCategogy()
-    // {
-    //     $result = [];
-    //     try {
-    //         $sql = "SELECT count(*) AS count,category.name FROM product inner JOIN category on product.category_id= category.categories_id GROUP by product.category_id;";
-    //         $result = $this->_conn->MySQLi()->query($sql);
-    //         return $result->fetch_all(MYSQLI_ASSOC);
-    //     } catch (\Throwable $th) {
-    //         error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
-    //         return $result;
-    //     }
-    // }
-    // public function countProductByView()
-    // {
-    //     $result = [];
-    //     try {
-    //         $sql = "SELECT COUNT(*) AS count, product.name, product.view FROM product GROUP BY product.product_id, product.name, product.view ORDER BY count DESC LIMIT 5;";
-    //         $result = $this->_conn->MySQLi()->query($sql);
-    //         return $result->fetch_all(MYSQLI_ASSOC);
-    //     } catch (\Throwable $th) {
-    //         error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
-    //         return $result;
-    //     }
-    // }
+
+
+
+
+     public function countTotalProduct()
+     {
+         return $this->countTotal();
+     }
+
+
+/*      public function countProductByCategogy()
+     {
+         $result = [];
+         try {
+             $sql = "SELECT count(*) AS count,category.name FROM product inner JOIN category on product.category_id= category.categories_id GROUP by product.category_id;";
+             $result = $this->_conn->MySQLi()->query($sql);
+             return $result->fetch_all(MYSQLI_ASSOC);
+         } catch (\Throwable $th) {
+             error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
+             return $result;
+         }
+     } */
+
+
+     public function countProductByCategogy()
+{
+    $result = [];
+    try {
+        // Sử dụng id_categogy thay vì category_id trong câu lệnh SQL
+        $sql = "SELECT count(*) AS count, categories.name 
+                FROM products 
+                INNER JOIN categories ON products.id_categogy = categories.id 
+                GROUP BY products.id_categogy";
+        $result = $this->_conn->MySQLi()->query($sql);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } catch (\Throwable $th) {
+        error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
+        return $result;
+    }
+}
+
+
+
+
+
+
+     public function countProductByView()
+     {
+         $result = [];
+         try {
+             $sql = "SELECT COUNT(*) AS count, product.name, product.view FROM product GROUP BY product.product_id, product.name, product.view ORDER BY count DESC LIMIT 5;";
+             $result = $this->_conn->MySQLi()->query($sql);
+             return $result->fetch_all(MYSQLI_ASSOC);
+         } catch (\Throwable $th) {
+             error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
+             return $result;
+         }
+     }
 
     //----------------[ SEARCH ]----------------
     public static function searchByKeyword($keyword)
@@ -153,5 +240,26 @@ public function getAllProductByCategoryAndStatus($id)
     }
 
 
+
+    
+    public function create(array $data)
+    {
+        try {
+            $columns = implode(", ", array_keys($data));
+            $placeholders = implode(", ", array_fill(0, count($data), '?'));
+            $sql = "INSERT INTO $this->table ($columns) VALUES ($placeholders)";
+
+            $conn = $this->_conn->MySQLi();
+            $stmt = $conn->prepare($sql);
+
+            // Chuẩn bị dữ liệu cho câu truy vấn
+            $stmt->bind_param(str_repeat("s", count($data)), ...array_values($data));
+
+            return $stmt->execute();
+        } catch (\Throwable $th) {
+            error_log("Lỗi khi thêm dữ liệu: " . $th->getMessage());
+            return false;
+        }
+    }
 
 }
