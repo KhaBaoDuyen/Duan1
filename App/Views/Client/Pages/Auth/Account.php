@@ -37,6 +37,10 @@ class Account extends BaseView
             <?php unset($_SESSION['js_error']); ?>
         <?php endif; ?>
 
+            <?php 
+                 Notification::render();
+                 NotificationHelper::unset();
+                ?>
                 <div class="container" id="container">
                     <div class="form-container sign-up">
                         <form action="/home-register" method="post">

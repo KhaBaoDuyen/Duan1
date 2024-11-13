@@ -3,6 +3,8 @@
 namespace App\Views\Client\Pages\Auth;
 
 use App\Views\BaseView;
+use App\Helpers\NotificationHelper;
+use App\Views\Client\Components\Notification;
 
 class ForgotPassword extends BaseView
 {
@@ -26,26 +28,18 @@ class ForgotPassword extends BaseView
 
 <body>
     <div class="Page-login">
+    <?php 
+                 Notification::render();
+                 NotificationHelper::unset();
+                ?>
         <div class="container">
-            <div class="form-container sign-up">
-                <form>
-                    <h1>Tạo tài khoản</h1>
-                    <input type="text" placeholder="Tên">
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <button class="button">Đăng ký</button>
-                    <!-- <div class="social-icons">
-                    <a href="#" class="icon"><i class='bx bxl-google-plus' style='color:#0f8809'  ></i></a>
-                    <a href="#" class="icon"><i class='bx bxl-facebook-circle' style='color:#0f8809'  ></i></a>
-                </div> -->
-                </form>
-            </div>
+
+           
             <div class="form-container sign-in">
-                <form>
+                <form action="/forgot-password" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="method" value="POST" id="">
                     <h1>Lấy lại mật khẩu</h1>
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Tên đăng nhập">
-                    <!-- <input type="password" placeholder="Mật khẩu mới"> -->
+                    <input type="email" name="email" placeholder="Email">
                     <div class="checkbox">
                         <!-- <div class="input-checkbox">
                             <input type="checkbox" name id>
@@ -53,7 +47,7 @@ class ForgotPassword extends BaseView
                         </div> -->
                         <a href="/Account">Quay về</a>
                     </div>
-                    <button class="button">Gửi yêu cầu</button>
+                    <button type="submit"  class="button">Gửi mã</button>
                 </form>
             </div>
             <div class="toggle-container">

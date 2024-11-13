@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Helpers;
 
 use App\Models\UserModel;
@@ -7,52 +8,57 @@ class AuthHelper
 {
    public static function register($data)
    {
-       $user = new UserModel();
-       $is_exist = $user->getOneUserByUsername($data['username']);
+      $user = new UserModel();
+      $is_exist = $user->getOneUserByUsername($data['username']);
+      $email_exist = $user->getUserByEmail($data['email']);
 
-       if ($is_exist) {
-           NotificationHelper::error('exist_register', 'Tên đăng nhập đã tồn tại');
-           return false;
-       }
+      if ($is_exist) {
+         NotificationHelper::error('exist_register', 'Tên đăng nhập đã tồn tại');
+         return false;
+      }
+      if ($email_exist) {
+         NotificationHelper::error('email_exist', 'Email đã tồn tại');
+         return false;
+      }
 
-       $result = $user->createUser($data);
+      $result = $user->createUser($data);
 
-       if ($result) {
-           NotificationHelper::success('register', 'Đăng ký thành công');
-           return true;
-       }
-       NotificationHelper::error('register', 'Đăng ký thất bại');
-       return false;
+      if ($result) {
+         NotificationHelper::success('register', 'Đăng ký thành công');
+         return true;
+      }
+      NotificationHelper::error('register', 'Đăng ký thất bại');
+      return false;
    }
    // --------------- LOGIN ---------------
    public static function login($data)
-    {
-        $user = new UserModel();
-        $is_exist = $user->getOneUserByUsername($data['username']);
+   {
+      $user = new UserModel();
+      $is_exist = $user->getOneUserByUsername($data['username']);
 
-        if (!$is_exist) {
-            echo 'Tên tài khoản không tồn tại';
-            return false;
-        }
+      if (!$is_exist) {
+         echo 'Tên tài khoản không tồn tại';
+         return false;
+      }
 
-        if (!password_verify($data['password'], $is_exist['password'])) {
-            echo 'Mật khẩu sai';
-            return false;
-        }
+      if (!password_verify($data['password'], $is_exist['password'])) {
+         echo 'Mật khẩu sai';
+         return false;
+      }
 
-        if ($is_exist['status'] == 0) {
-            echo 'Tài khoản đã bị khóa';
-            return false;
-        }
+      if ($is_exist['status'] == 0) {
+         echo 'Tài khoản đã bị khóa';
+         return false;
+      }
 
-        if ($data['remember']) {
-            self::updateCookie($is_exist['id']);
-        } else {
-            self::updateSession($is_exist['id']);
-        }
-        NotificationHelper::success('login', 'Đăng nhập thành công');
-        return true;
-    }
+      if ($data['remember']) {
+         self::updateCookie($is_exist['id']);
+      } else {
+         self::updateSession($is_exist['id']);
+      }
+      NotificationHelper::success('login', 'Đăng nhập thành công');
+      return true;
+   }
 
    // ----------- LẤY LẠI MẬT KHẨU -------
    public static function ForgotPassword($data)
@@ -123,21 +129,21 @@ class AuthHelper
 
    // ----------- EDIT -------
    public static function edit($id): bool
-    {
-        if (!self::checklogin()) {
-            NotificationHelper::error('login', 'Vui lòng đăng nhập để xem thông tin');
-            return false;
-        }
+   {
+      if (!self::checklogin()) {
+         NotificationHelper::error('login', 'Vui lòng đăng nhập để xem thông tin');
+         return false;
+      }
 
-        $data = $_SESSION['user'];
-        $user_id = $data['id'];
+      $data = $_SESSION['user'];
+      $user_id = $data['id'];
 
-        if ($user_id != $id) {
-            NotificationHelper::error('user_id', 'Không có quyền xem thông tin tài khoản này');
-            return false;
-        }
-        return true;
-    }
+      if ($user_id != $id) {
+         NotificationHelper::error('user_id', 'Không có quyền xem thông tin tài khoản này');
+         return false;
+      }
+      return true;
+   }
    //------------------UPDATE-----------------
    public static function update($id, $data)
    {
@@ -174,11 +180,24 @@ class AuthHelper
             $_SESSION['js_error'] = 'Tài khoản này không có quyền truy cập trang quản trị!!';
             header('location: /');
             exit;
-        }
-    }
+         }
+
+      } 
+   }
+
+   public static function duplicate_emails($data)
+   {
+      $user = new UserModel();
+      // Gọi hàm generateOTP để tạo OTP
+      $result = $user->generateOTP($data['email']);
+      /* var_dump($result);
+ */
+      if ($result) {
+         /* NotificationHelper::success('email', 'Tạo mã thành công'); */
+         return true;
+      }
+      /* NotificationHelper::error('email', 'Tạo mã thất bại Auth'); */
+      return false;
+   }
+
 }
-
-
-}
-
-?>

@@ -39,19 +39,19 @@ class Index extends BaseView
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/products/20240807070846.png" alt="img">
+                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/users/20240802000821.jpg" alt="img">
                                         </td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
+                                        <td>Cây đẹp</td>
+                                        <td>2/2/2024</td>
+                                        <td><span class="badge badge-success">Hiện</span></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/products/20240807070846.png" alt="img">
+                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/users/20240801230858.jpg" alt="img">
                                         </td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
+                                        <td>Giá rẻ</td>
+                                        <td>2/2/2024</td>
+                                        <td><span class="badge badge-danger">Ẩn</span></td>
                                     </tr>
 
 

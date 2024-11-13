@@ -49,9 +49,9 @@ class index extends BaseView
                                         <td>
                                             <img class="img_all" width="40px" height="40px" src="/public/uploads/users/20240801230858.jpg" alt="img">
                                         </td>
-                                        <td><span class="badge badge-success">Delivered</span></td>
+                                        <td><span class="badge badge-success">Đã thanh toán</span></td>
                                         <td>
-                                            <a href="#" class="btn btn-sm btn-warning">Sửa</a>
+                                            <a href="App/Views/Admin/Pages/Order/Edit.php" class="btn btn-sm btn-warning">Sửa</a>
                                             <a href="#" class="btn btn-sm btn-danger">Xóa</a>
                                         </td>
                                     </tr>

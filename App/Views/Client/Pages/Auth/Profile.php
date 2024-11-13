@@ -87,22 +87,10 @@ class Profile extends BaseView
                      </div>
 
                      <div class="box_title">
-                        <label for class="col-5">Địa chỉ:</label>
-                        <?php
-                        if ($data['address']):
-                        ?>
-                           <input type="text" name="address" id="address" value="<?= $data['address'] ?>">
-                        <?php
-                        else:
-                        ?>
-                           <input type="text" name="address" id="address" value="Chưa có">
-                        <?php
-                        endif;
-                        ?>
                         <div class="box_title">
-                        <label for class="col-5">Avatar:</label>
-                        <input type="file" name="avatar" id="avatar">
-                     </div>
+                           <label for class="col-5">Avatar:</label>
+                           <input type="file" name="avatar" id="avatar">
+                        </div>
                      </div>
 
                      <div class="box_btn">

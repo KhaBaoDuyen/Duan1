@@ -72,7 +72,7 @@ class AuthValidation
       return $is_valid;
    }
 
-   public static function ResetPassword(): bool
+   /* public static function ResetPassword(): bool
    {
       $is_valid = true;
 
@@ -96,7 +96,7 @@ class AuthValidation
          $is_valid = false;
       }
       return $is_valid;
-   }
+   } */
 
    // ------------- UPDATE ----------------
    public static function update(): bool
@@ -124,12 +124,12 @@ class AuthValidation
          }
       }
 
-    // PHONE 
+    /* // PHONE 
          $phonePattern = "/^(0[1-9]\d{8,9})$/";
          if (!preg_match($phonePattern, $_POST['phone'])) {
             NotificationHelper::error('phone', 'số điện thoại bắt đầu bằng 0 , theo sau là 9  chữ số. !!!');
             $is_valid = false;
-         }
+         } */
 
       return $is_valid;
    }
@@ -162,6 +162,22 @@ class AuthValidation
       }
 
       return $nameImage;
+   }
+
+   public static function ressetpassword(): bool
+   {
+      $is_valid = true;
+      // TÊN ĐĂNG NHẬP
+      if (!isset($_POST['otp']) || $_POST['otp'] === '') {
+         NotificationHelper::error('otp', 'Mã otp không được để trống ');
+         $is_valid = false;
+      }
+      // MẬT KHẨU
+      if (!isset($_POST['password']) || $_POST['password'] === '') {
+         NotificationHelper::error('password', 'Mật khẩu không được để trống ');
+         $is_valid = false;
+      }
+      return $is_valid;
    }
 }
 

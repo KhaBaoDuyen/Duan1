@@ -29,9 +29,9 @@ Route::get('/Search', 'App\Controllers\Client\HomeController@search');
 //---------------------------[ TÀI KHOẢN ]---------------------------
 Route::get('/Account', 'App\Controllers\Client\AuthController@Account');
 
-Route::get('/ForgotPassword', 'App\Controllers\Client\AuthController@ForgotPassword');
 
-Route::get('/Resetpassword', 'App\Controllers\Client\AuthController@Resetpassword');
+
+
 
 Route::get('/logout', 'App\Controllers\Client\AuthController@logout');
 
@@ -41,6 +41,13 @@ Route::get('/user', 'App\Controllers\Client\AuthController@profile');
 //hiển thị thông tin tài khoản
 Route::get('/user/{id}', 'App\Controllers\Client\AuthController@edit');
 Route::put('/user/{id}', 'App\Controllers\Client\AuthController@update');
+
+//Chức năng quên mật khẩu
+Route::post('/sendmail', 'App\Controllers\Client\Sendmail@send_otp');
+Route::get('/ForgotPassword', 'App\Controllers\Client\AuthController@ForgotPassword');
+Route::get('/Resetpassword', 'App\Controllers\Client\AuthController@Resetpassword');
+Route::post('/forgot-password', 'App\Controllers\Client\AuthController@forgotPasswordAction');
+Route::put('/reset-password', 'App\Controllers\Client\AuthController@resetPasswordAction');
 
 //-----------------------[ ĐĂNG KÝ ]--------------------------
 Route::post('/home-register', 'App\Controllers\Client\AuthController@registerAction');
