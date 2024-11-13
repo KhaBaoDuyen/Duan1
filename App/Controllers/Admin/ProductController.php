@@ -399,7 +399,7 @@ public function store()
 
         header('location: /admin/products');
     }
- */
+ 
   public static function search()
     {
         $keyword = $_GET['keyword'] ?? '';
