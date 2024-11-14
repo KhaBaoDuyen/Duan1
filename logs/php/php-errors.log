@@ -5128,3 +5128,5 @@ Stack trace:
   thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Models\ProductModel.php on line 183
 [14-Nov-2024 19:55:49 Asia/Ho_Chi_Minh] Lỗi khi hiển thị dữ liệu: Tên sản phẩm không hợp lệ
 [14-Nov-2024 20:05:10 Asia/Ho_Chi_Minh] Lỗi khi hiển thị dữ liệu: Tên sản phẩm không hợp lệ
+[14-Nov-2024 22:32:37 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected token "public", expecting ";" or "{" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\ProductController.php on line 311
+[14-Nov-2024 22:34:16 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159

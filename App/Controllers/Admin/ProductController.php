@@ -305,8 +305,7 @@ class ProductController
         }
         header('location: /admin/Product');
     }
- 
-  public static function search()
+
 
     public static function search()
     {
