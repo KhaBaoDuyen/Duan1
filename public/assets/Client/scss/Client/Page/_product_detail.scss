@@ -17,7 +17,10 @@
                height: 6rem;
                margin: 2% 0;
 
-               &:hover,
+               &:hover {
+                  border: 3px solid var(--color-price);
+                  border-radius: 5px;
+               }
                &:focus {
                   border: 3px solid var(--color-price);
                   border-radius: 5px;

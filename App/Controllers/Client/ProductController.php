@@ -38,7 +38,7 @@ class ProductController
     // hiển thị danh sách
     public static function index()
     {
-       $product = new ProductModel();
+        $product = new ProductModel();
         $products = $product->getAllProduct();
 
         $category = new CategoryModel();
@@ -53,28 +53,45 @@ class ProductController
         Index::render($data);
         Footer::render();
     }
- 
-    // public static function detail($id)
-    // {
-    //     $product = new ProductModel();
-    //     // $image = new ImageProductModel();
-    //     $data['products'] = $product->getOneProductByStatus($id);
-    //     $data['images_product'] = $image->getAllImagesByProduct($id);
-    //     Header::render();
-    //     Notification::render();
-    //     NotificationHelper::unset();
-    //     Detail::render($data);
-    //     Footer::render();
-    // }
+
+    public static function Detail($id)
+    {
+        $product = new ProductModel();
+        $data['product'] = $product->getOneProductByStatus($id);
+        if (!$data['product']) {
+            NotificationHelper::error('product_detail', 'Sản phẩm không tồn tại');
+            header("location: /shop");
+        }
+
+        $Arr_variant = [];
+        $images = [];
+
+        if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
+            if (isset($data['product']['variant']) && !empty($data['product']['variant'])) {
+                $Arr_variant = json_decode($data['product']['variant'], true);
+            }
+        };
+        if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
+            if (isset($data['product']['images']) && !empty($data['product']['images'])) {
+                $images = json_decode($data['product']['images'], true);
+            }
+        }
+        $data['Arr_variant'] = $Arr_variant;
+        $data['images'] = $images;
+        Header::render();
+        Notification::render();
+        NotificationHelper::unset();
+        Detail::render($data);
+        Footer::render();
+    }
 
 
-  
 
     //-------SP THEO DANH MỤC--------------
     public static function getProductByCategory($id)
     {
         $product = new ProductModel();
-        $products = $product-> getAllProductByCategoryAndStatus($id);
+        $products = $product->getAllProductByCategoryAndStatus($id);
 
         $category = new CategoryModel();
         $categories = $category->getAllCategoryByStatus();
@@ -92,7 +109,4 @@ class ProductController
         ProductCategory::render($data);
         Footer::render();
     }
-
-
-
 }

@@ -65,7 +65,6 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-
     //    public function create(array $data)
     //     {
     //         try {
@@ -117,10 +116,6 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-
-
-
-
     public function update(int $id, array $data)
     {
         try {
@@ -136,8 +131,7 @@ abstract class BaseModel implements CrudInterface
             $stmt = $conn->prepare($sql);
             return $stmt->execute();
         } catch (\Throwable $th) {
-           error_log("Lỗi xảy ra tại đây", 3, "path/to/logfile.log");
-
+            error_log('Lỗi khi xóa dữ liệu: ' . $th->getMessage());
             return false;
         }
     }
@@ -160,8 +154,6 @@ abstract class BaseModel implements CrudInterface
             return false;
         }
     }
-
-
 
     public function getAllByStatus()
     {
@@ -194,8 +186,6 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-
-
     public function getAllProductByStatus()
     {
 
@@ -204,7 +194,11 @@ abstract class BaseModel implements CrudInterface
 
     public function getOneByStatus(int $id)
     {
-        $sql = "SELECT * FROM $this->table WHERE $this->id=? AND status=" . self::STATUS_ENABLE;
+
+        $sql = "SELECT products.*, categories.name AS name_categogy
+            FROM products
+            LEFT JOIN categories ON products.id_categogy = categories.id
+            WHERE products.id = ? AND products.status = " . self::STATUS_ENABLE;
         $conn = $this->_conn->MySQLi();
         $stmt = $conn->prepare($sql);
 

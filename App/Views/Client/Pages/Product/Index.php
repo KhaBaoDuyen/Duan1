@@ -78,7 +78,7 @@ class Index extends BaseView
                   if (isset($data) && isset($data['products']) && !empty($data['products'])):
                      foreach ($data['products'] as $item):
                   ?>
-                        <a class="card">
+                           <a class="card" href="/product/<?= $item['id']?>" >
                            <div class="box_image">
                               <?php
                               // giải mã thành mảng

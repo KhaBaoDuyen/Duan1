@@ -187,8 +187,7 @@ class ProductController
         }
 
         $variants = $_POST['variant'];
-        $variant = isset($variants) && $variants != null ? json_encode($variants) : $current_product['variant'];
-
+$variant = isset($variants) && $variants != null ? json_encode($variants, JSON_UNESCAPED_UNICODE) : $current_product['variant'];
         $data = [
             'name' => $_POST['name'] ?? '',
             'price' => $_POST['price'] ?? 0,

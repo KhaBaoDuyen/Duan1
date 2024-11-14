@@ -56,7 +56,7 @@ class ProductModel extends BaseModel
 
     public function getOneProductByCategory($category)
     {
-        $sql = "SELECT * FROM $this->table WHERE id_categogy=? LIMIT 1"; // Sử dụng id_categogy thay vì product_id
+        $sql = "SELECT * FROM $this->table WHERE id_categogy=? LIMIT 1"; 
         $conn = $this->_conn->MySQLi();
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('s', $category);  // Sử dụng kiểu dữ liệu đúng ('s' cho string)

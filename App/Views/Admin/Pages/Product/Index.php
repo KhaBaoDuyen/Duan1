@@ -70,8 +70,8 @@ class Index extends BaseView
                                         ?>
                                             <tr>
                                                 <td><?= $item['id'] ?></td>
-                                                <td><?= $item['name'] ?></td>
-                                                <td><?= number_format($item['price'] ?? 0, 0, ',', '.') ?> </td>
+                                                <td width="20%"><?= $item['name'] ?></td>
+                                                <td><?= number_format($item['price'] ?? 0, 0, ',', '.') ?> đ </td>
                                                 <td>
                                                     <?php if (isset($item['discount_price']) && $item['discount_price'] > 0) { ?>
                                                         <span class="badge p-2 badge-danger">

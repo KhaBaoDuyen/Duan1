@@ -48,7 +48,7 @@ class Home extends BaseView
 
                      if ($start_time && $end_time && $current_time >= $start_time && $current_time <= $end_time && !empty($item['discount_price'])):
                      ?>
-                        <a href="" class="card col-2">
+                        <a href="/product/<?= $item['id']?>" class="card col-2">
                            <div class="box_image">
                               <?php
                               // giải mã thành mảng
@@ -186,7 +186,7 @@ class Home extends BaseView
                   $productsToDisplay = array_slice($data['products'], 0, 20);
                ?>
                   <?php foreach ($productsToDisplay as $item): ?>
-                     <a class="card">
+                     <a class="card" href="/product/<?= $item['id']?>" >
                         <div class="box_image">
                            <?php
                            // giải mã thành mảng
