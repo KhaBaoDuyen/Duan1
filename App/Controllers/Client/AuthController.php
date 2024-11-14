@@ -97,11 +97,13 @@ class AuthController
       $data = [
          'username' => $_POST['username'],
          'password' => $_POST['password'],
-         'remember' => isset($_POST['remember']) // Kiểm tra xem người dùng có chọn 'Ghi nhớ đăng nhập' không
+         'remember' => isset($_POST['remember'])
+     // Kiểm tra xem người dùng có chọn 'Ghi nhớ đăng nhập' không
       ];
 
       // Gọi AuthHelper để thực hiện đăng nhập
       $result = AuthHelper::login($data);
+      // var_dump($result);
 
       // Kiểm tra kết quả đăng nhập
       if ($result) {
@@ -136,6 +138,12 @@ class AuthController
       Profile::render($data);
       Footer::render();
    }
+      //   $data = [
+      //       'username' => $_POST['username'],
+      //       'email' => $_POST['email'],
+      //       'phone' => $_POST['phone'],
+      //       'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
+      //   ];
 
    public static function update($id)
    {

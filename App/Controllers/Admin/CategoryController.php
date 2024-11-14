@@ -155,19 +155,25 @@ class CategoryController
             header("location: /admin/categories/$id");
         }
     }
-    // thực hiện xoá
+
     public static function delete(int $id)
     {
+         $is_valid = CategogyValidation::delete();
+    
+    if ($is_valid) {
         $category = new CategoryModel();
         $result = $category->deleteCategory($id);
 
         if ($result) {
-            NotificationHelper::success('category', 'Xoá thành công');
+            NotificationHelper::success('category', 'Xóa danh mục thành công');
         } else {
-            NotificationHelper::error('category', 'Xoá thất bại');
+            NotificationHelper::error('category', 'danh mục này là danh mục mặc định klhoong thể xóa !!!.');
         }
+    } 
+        header("Location:/admin/categories");
 
-        header('location: /admin/categories');
+        var_dump($result);
+        // header('location: /admin/categories');
     }
     // -------------------- SEARCH----------------
     public static function search()
@@ -186,6 +192,4 @@ class CategoryController
         Search::render($data);
         Footer::render();
     }
-
-
 }

@@ -27,8 +27,12 @@ class CategoryModel extends BaseModel
 
     public function deleteCategory($id)
     {
-        return $this->delete($id);
+        return $this->deleteCategogy($id);
     }
+
+
+
+
     public function getAllCategoryByStatus()
     {
         return $this->getAllByStatus();

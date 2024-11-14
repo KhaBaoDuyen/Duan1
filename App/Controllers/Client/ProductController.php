@@ -22,6 +22,7 @@ use App\Views\Client\Layouts\Header;
 use App\Views\Client\Pages\Product\Categories  as ProductCategory;
 use App\Views\Client\Pages\Product\Shop;
 use App\Views\Client\Pages\Product\Index;
+use App\Views\Client\Pages\Product\Edit;
 use App\Views\Client\Pages\Product\Detail;
 
 
@@ -65,6 +66,8 @@ class ProductController
         Footer::render();
     }
 
+
+  
 
     //-------SP THEO DANH MỤC--------------
     public static function getProductByCategory($id)

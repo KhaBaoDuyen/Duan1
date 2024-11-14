@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Controllers\Admin;
+
 use App\Helpers\FileUploadHelper;
 use App\Helpers\NotificationHelper;
 use App\Validation\AuthValidation;
 use App\Validation\ProductValidation;
 use App\Models\CategoryModel;
+use App\Models\ImageProductModel;
+use App\Models\VariantProductModel;
 use App\Models\ProductModel;
 use App\Views\Admin\Components\Notification;
 use App\Views\Admin\Layouts\Footer;
@@ -20,254 +23,141 @@ use App\Views\Admin\Pages\Product\Detail;
 
 class ProductController
 {
- /*    public static function Index()
+
+    public static function Index()
     {
         $products = new ProductModel();
-        $data = $products->getAllProductJoinCategory();
+        $data['products'] = $products->getAllProductJoinCategory();
+
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Index::render();
+        Index::render($data);
         Footer::render();
-    } */
-
-
-
-
-   public static function Index()
-{
-    // Khởi tạo đối tượng ProductModel
-    $products = new ProductModel();
-
-    // Lấy tất cả sản phẩm kèm theo danh mục
-    $data['products'] = $products->getAllProductJoinCategory();
-
-    // Render header, thông báo, footer
-    Header::render();
-    Notification::render();
-    NotificationHelper::unset();
-
-    // Render trang danh sách sản phẩm và truyền dữ liệu vào view
-    Index::render($data); // Giả sử Index::render nhận vào tham số $data
-    Footer::render();
-}
-
-
-
-
-
-
-
+    }
 
 
 
     //------------ [ CREATE ]-------------
 
     public static function create()
-{
-    // Lấy tất cả danh mục từ cơ sở dữ liệu
-    $categories = new CategoryModel();
-    $categoriesData = $categories->getAllCategory();  // Lấy tất cả các danh mục
-
-    // Lấy tất cả sản phẩm cùng với danh mục
-    $products = new ProductModel();
-    $productsData = $products->getAllProductJoinCategory();  // Lấy sản phẩm với thông tin danh mục
-
-    // Truyền dữ liệu vào view
-    Header::render();
-    Notification::render();
-    NotificationHelper::unset();
-    Create::render([
-        'categories' => $categoriesData,  // Truyền danh mục vào view
-        'products' => $productsData  // Truyền sản phẩm vào view nếu cần
-    ]);
-    Footer::render();
-}
-
-
-
-
-/*    public static function create()
     {
-        $categories = new CategoryModel();
-        $data = $categories->getAllCategory();
-        $data = $categories->getAllProductJoinCategory();
+        $categogy = new CategoryModel();
+        $data = $categogy->getAllCategoryByStatus();
+
+
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Create::render();
+        Create::render($data);
         Footer::render();
-    } */
+    }
 
 
     //------------ [ STORE ]-------------
 
-
-
-
-// Xử lý thêm sản phẩm mới
-
-
-
-public function store()
+    public static function store()
     {
-        // Kiểm tra nếu phương thức là POST
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $product = new ProductModel();
-
-            // Lấy dữ liệu từ form
-            $data = [
-                'name' => $_POST['name'],
-                'price' => $_POST['price'],
-                'discount_price' => $_POST['discount_price'] ?? 0,
-                'id_categogy' => $_POST['id_categogy'],
-                'short_description' => $_POST['short_description'],
-                'description' => $_POST['description'],
-                'status' => $_POST['status'],
-                'start_time' => $_POST['start_time'] ?? null,
-                'end_time' => $_POST['end_time'] ?? null,
-                'date' => $_POST['date'] ?? date('Y-m-d')
-            ];
-
-            // Xử lý upload ảnh chính
-            if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
-                $imagePath = FileUploadHelper::upload($_FILES['image'], 'uploads/products');
-                $data['image'] = $imagePath;
-            }
-
-            // Thêm sản phẩm vào cơ sở dữ liệu
-            if ($product->create($data)) {
-                header("Location: /admin/Products"); // Điều hướng về danh sách sản phẩm sau khi thêm thành công
-                exit();
-            } else {
-                echo "Lỗi: Không thể thêm sản phẩm!";
-            }
+        $is_valid = ProductValidation::create();
+        if (!$is_valid) {
+            NotificationHelper::error('store', 'Thêm thất bại. Thông tin không hợp lệ.');
+            header("Location: /admin/products/create");
+            exit;
         }
-    }
-
-
-/*    public static function store()
-
-    {
-        $is_valid = true;
-        if (!isset($_POST['name']) || $_POST['name'] === '') {
-            NotificationHelper::error('name', 'Không để trống tên');
-            $is_valid = false;
-        }
-        if (!isset($_POST['price']) || $_POST['price'] === '') {
-            NotificationHelper::error('price', 'Không để trống giá tiền');
-            $is_valid = false;
-        }
-        if (!isset($_POST['discount_price']) || $_POST['discount_price'] === '') {
-            NotificationHelper::error('discount_price', 'Không để trống giá giảm');
-            $is_valid = false;
-        }
-        if (!isset($_POST['category_id']) || $_POST['category_id'] === '') {
-            NotificationHelper::error('category_id', 'Không để trống loại sản phẩm');
-            $is_valid = false;
-        }
-        if (!isset($_POST['is_featured']) || $_POST['is_featured'] === '') {
-            NotificationHelper::error('is_featured', 'Không để trống sản phẩm nổi bật');
-            $is_valid = false;
-        }
-        if (!isset($_POST['status']) || $_POST['status'] === '') {
-            NotificationHelper::error('status', 'Không để trống trạng thái');
-            $is_valid = false;
+        $product = new ProductModel();
+        $is_exist = $product->getOneProductByName($_POST['name']);
+        if ($is_exist) {
+            NotificationHelper::error('store', 'Tên sản phẩm đã tồn tại');
+            header('Location: /admin/products/create');
+            exit;
         }
 
-        if ($is_valid) {
-            // khởi tạo đối tượng model
-            $product = new ProductModel();
+        $variants = $_POST['variant'] ?? null;
+        $variant = isset($variants) && $variants != null ? json_encode($variants) : null;
 
-            $is_exist = $product->getOneProductByName($_POST['name']);
+        $images = $_FILES['images'] ?? null;
+        if (isset($images) && $images != null) {
+            $is_upload = ProductValidation::image();
 
-            if ($is_exist) {
-                NotificationHelper::error('name', 'Tên sản phẩm đã tồn tại');
-                // chuyển hướng đến trang thêm
-                header('location: /admin/product/create');
-            } else {
-
-                if (file_exists($_FILES['image']['tmp_name']) && is_uploaded_file($_FILES['image']['tmp_name'])) {
-
-                    // nơi lưu trữ hình ảnh (trong source code)
-                    $target_dir = "public/uploads/products/";
-
-                    // lấy kiểu file (đuôi file)
-                    $imageFileType = strtolower(pathinfo(basename($_FILES["image"]["name"]), PATHINFO_EXTENSION));
-
-                    // thay đổi tên file thành dạng năm tháng ngày giờ phút giây
-                    $nameImage = date('YmdHmi') . '.' . $imageFileType;
-
-                    // đường dẫn đầy đủ để di chuyển file đến
-                    $target_file = $target_dir . $nameImage;
-
-                    // nếu upload thành công => lưu vào database
-                    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                        // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
-
-                    } else {
-                        $nameImage = '';
-                        NotificationHelper::error('upload_file', 'Upload file thất bại');
-                    }
-                }
-
-                // mảng dữ liệu để lưu trữ vào database, lưu ý các key phải trùng với tên cột trong database
-                $data = [
-                    'name' => $_POST['name'],
-                    'image' => $nameImage,
-                    'description' => $_POST['description'],
-                    'price' => $_POST['price'],
-                    'discount_price' => $_POST['discount_price'],
-                    'is_featured' => $_POST['is_featured'],
-                    'status' => $_POST['status'],
-                    // 'view' => $_POST['view'],
-                    'category_id' => $_POST['category_id']
-
-                ];
-
-                // thực hiện thêm 
-                $result = $product->createProduct($data);
-
-                // kiểm tra kết quả
-                if ($result) {
-                    // echo 'Thêm thành công';
-                    NotificationHelper::success('product', 'Thêm thành công');
-                } else {
-                    // echo 'Thất bại';
-                    NotificationHelper::error('product', 'Thêm thất bại');
-                }
-                // chuyển hướng đến trang danh sách
-                header('location: /admin/products');
+            if (!$is_upload) {
+                NotificationHelper::error('store', 'Vui lòng chọn hình ảnh sản phẩm.');
+                header("Location: /admin/products/create");
+                exit;
             }
         } else {
-            // chuyển hướng đến trang thêm
-            header('location: /admin/products/create');
+            NotificationHelper::error('store', 'Vui lòng chọn hình ảnh sản phẩm.');
+            header("Location: /admin/products/create");
+            exit;
         }
-    } */
 
+        $data = [
+            'name' => $_POST['name'] ?? '',
+            'price' => $_POST['price'] ?? 0,
+            'status' => $_POST['status'] ?? 0,
+            'discount_price' => !empty($_POST['discount_price']) ? (int) $_POST['discount_price'] : 0,
+            'id_categogy' => $_POST['id_categogy'] ?? null,
+            'date' => date('Y-m-d H:i:s'),
+            'description' => $_POST['description'] ?? '',
+            'short_description' => $_POST['short_description'] ?? '',
+            'variant' => $variant,
+        ];
 
-    // hiển thị chi tiết
-    public static function show()
-    {
+        if (!empty($_POST['start_time'])) {
+            $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
+        }
+
+        if (!empty($_POST['end_time'])) {
+            $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
+        }
+
+        if (isset($is_upload)) {
+            $imageNames = json_decode($is_upload, true); // Giải mã JSON từ hàm image()
+
+            $data['image'] = $imageNames['image'] ?? '';
+            $data['images'] = isset($imageNames['images']) ? json_encode($imageNames['images']) : ''; // Ảnh phụ
+        }
+
+        $result = $product->createProduct($data);
+        if ($result) {
+            NotificationHelper::success('product', 'Thêm sản phẩm thành công');
+            header('Location: /admin/Product');
+        } else {
+            NotificationHelper::error('product', 'Thêm sản phẩm thất bại');
+            header("Location: /admin/products/create");
+        }
+
+        exit;
     }
-
 
     // hiển thị giao diện form sửa
     public static function edit($id)
     {
-        // khởi tạo đối tượng model
         $category = new CategoryModel();
         $data['category'] = $category->getAllCategory();
 
         $product = new ProductModel();
         $data['product'] = $product->getOneProduct($id);
 
-        // var_dump($data);
+        $Arr_variant = [];
+        $images = [];
+
+        if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
+            if (isset($data['product']['variant']) && !empty($data['product']['variant'])) {
+                $Arr_variant = json_decode($data['product']['variant'], true);
+            }
+        }
+        if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
+            if (isset($data['product']['images']) && !empty($data['product']['images'])) {
+                $images = json_decode($data['product']['images'], true);
+            }
+        }
+
+        $data['Arr_variant'] = $Arr_variant;
+        $data['images'] = $images;
+
         if ($data['product']) {
             Header::render();
             Notification::render();
-            NotificationHelper::unset();
-            // hiển thị form sửa
             Edit::render($data);
             Footer::render();
         } else {
@@ -277,147 +167,169 @@ public function store()
     }
 
 
+
     // xử lý chức năng sửa (cập nhật)
-    public static function update($id)
+    public static function update(int $id)
     {
-        $is_valid = true;
-        if (!isset($_POST['name']) || $_POST['name'] === '') {
-            NotificationHelper::error('name', 'Không để trống tên');
-            $is_valid = false;
+        $is_valid = ProductValidation::update($id);
+        $product = new ProductModel();
+        $current_product = $product->getOneProduct($id);
+        if (!$is_valid) {
+            NotificationHelper::error('update', 'Cập nhật thất bại');
+            header("Location: /admin/products/$id");
+            exit;
         }
-        if (!isset($_POST['price']) || $_POST['price'] === '') {
-            NotificationHelper::error('price', 'Không để trống giá tiền');
-            $is_valid = false;
-        }
-        if (!isset($_POST['discount_price']) || $_POST['discount_price'] === '') {
-            NotificationHelper::error('discount_price', 'Không để trống giá giảm');
-            $is_valid = false;
-        }
-        if (!isset($_POST['category_id']) || $_POST['category_id'] === '') {
-            NotificationHelper::error('category_id', 'Không để trống loại sản phẩm');
-            $is_valid = false;
-        }
-        if (!isset($_POST['is_featured']) || $_POST['is_featured'] === '') {
-            NotificationHelper::error('is_featured', 'Không để trống sản phẩm nổi bật');
-            $is_valid = false;
-        }
-        if (!isset($_POST['status']) || $_POST['status'] === '') {
-            NotificationHelper::error('status', 'Không để trống trạng thái');
-            $is_valid = false;
+        $is_exist = $product->getOneProductByName($_POST['name']);
+        if (!$is_exist) {
+            NotificationHelper::error('update', 'Tên sản phẩm đã tồn tại');
+            header("Location: /admin/products/$id");
+            exit;
         }
 
-        if ($is_valid) {
+        $variants = $_POST['variant'];
+        $variant = isset($variants) && $variants != null ? json_encode($variants) : $current_product['variant'];
 
-            // khởi tạo đối tượng model
-            $product = new ProductModel();
+ if (!empty($_POST['start_time'])) {
+    $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
+}
 
-            $is_exist = $product->getOneProductByName($_POST['name']);
+if (!empty($_POST['end_time'])) {
+    $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
+}
+// var_dump($_POST['start_time']); // Kiểm tra giá trị start_time
+// var_dump($_POST['end_time']); // Kiểm tra giá trị end_time
+// die(); // Dừng mã để kiểm tra
 
-            if ($is_exist && $is_exist['id'] != $id) {
-                NotificationHelper::error('name', 'Tên sản phẩm đã tồn tại');
-                // chuyển hướng đến trang sửa
-                header("location: /admin/products/$id");
+$data = [
+    'name' => $_POST['name'] ?? '',
+    'price' => $_POST['price'] ?? 0,
+    'status' => $_POST['status'] ?? 0,
+    'discount_price' => !empty($_POST['discount_price']) ? (int) $_POST['discount_price'] : 0,
+    'id_categogy' => $_POST['id_categogy'] ?? null,
+    'date' => date('Y-m-d H:i:s'),
+    'description' => $_POST['description'] ?? '',
+    'short_description' => $_POST['short_description'] ?? '',
+    'start_time' => !empty($_POST['start_time']) ? (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s') : null,
+    'end_time' => !empty($_POST['end_time']) ? (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s') : null,
+    'variant' => $variant,
+];
+
+
+
+
+        $allowed_types = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
+        $is_upload_main_image = isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK;
+        $is_upload_sub_images = isset($_FILES['images']) && count($_FILES['images']['name']) > 0;
+
+        $imageNames = [
+            'image' => $current_product['image'] ?? '',
+            'images' => json_decode($current_product['images'], true) ?? []
+        ];
+
+        // Xử lý ảnh chính
+        if ($is_upload_main_image) {
+            $mainImageType = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+
+            if (in_array($mainImageType, $allowed_types)) {
+                $mainImageName = date('YmdHis') . '_main.' . $mainImageType;
+                $mainImagePath = 'public/uploads/products/' . $mainImageName;
+
+                if (move_uploaded_file($_FILES['image']['tmp_name'], $mainImagePath)) {
+                    $imageNames['image'] = $mainImageName;
+                } else {
+                    NotificationHelper::error('move_upload', 'Không thể lưu ảnh chính.');
+                }
             } else {
-
-                if (file_exists($_FILES['image']['tmp_name']) && is_uploaded_file($_FILES['image']['tmp_name'])) {
-
-                    // nơi lưu trữ hình ảnh (trong source code)
-                    $target_dir = "public/uploads/products/";
-
-                    // lấy kiểu file (đuôi file)
-                    $imageFileType = strtolower(pathinfo(basename($_FILES["image"]["name"]), PATHINFO_EXTENSION));
-
-                    // thay đổi tên file thành dạng năm tháng ngày giờ phút giây
-                    $nameImage = date('YmdHmi') . '.' . $imageFileType;
-
-                    // đường dẫn đầy đủ để di chuyển file đến
-                    $target_file = $target_dir . $nameImage;
-
-                    // nếu upload thành công => lưu vào database
-                    if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                        // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
-
-                    } else {
-                        $nameImage = '';
-                        NotificationHelper::error('upload_file', 'Upload file thất bại');
-                    }
-                    // mảng dữ liệu để lưu trữ vào database, lưu ý các key phải trùng với tên cột trong database
-                    $data = [
-                        'name' => $_POST['name'],
-                        'image' => $nameImage,
-                        'description' => $_POST['description'],
-                        'price' => $_POST['price'],
-                        'discount_price' => $_POST['discount_price'],
-                        'is_featured' => $_POST['is_featured'],
-                        'status' => $_POST['status'],
-                        // 'view' => $_POST['view'],
-                        'category_id' => $_POST['category_id']
-
-                    ];
-                } else {
-                    $data = [
-                        'name' => $_POST['name'],
-                        // 'image' => $nameImage,
-                        'description' => $_POST['description'],
-                        'price' => $_POST['price'],
-                        'discount_price' => $_POST['discount_price'],
-                        'is_featured' => $_POST['is_featured'],
-                        'status' => $_POST['status'],
-                        // 'view' => $_POST['view'],
-                        'category_id' => $_POST['category_id']
-
-                    ];
-                }
-
-                $product = new ProductModel();
-                $result = $product->updateProduct($id, $data);
-
-                if ($result) {
-                    NotificationHelper::success('product', 'Cập nhật thành công');
-                } else {
-                    NotificationHelper::success('product', 'Cập nhật thất bại');
-                }
-                header('location: /admin/products');
+                NotificationHelper::error('invalid_main_image', 'Ảnh chính không hợp lệ.');
             }
+        }
+
+        $imageNames['images'] = is_array($imageNames['images']) ? $imageNames['images'] : json_decode($imageNames['images'], true);
+        // Xử lý ảnh phụ
+        if ($is_upload_sub_images) {
+            $newSubImages = [];
+            foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
+                if ($_FILES['images']['error'][$key] === UPLOAD_ERR_OK) {
+                    $subImageType = strtolower(pathinfo($_FILES['images']['name'][$key], PATHINFO_EXTENSION));
+                    if (in_array($subImageType, $allowed_types)) {
+                        $subImageName = date('YmdHis') . '_sub_' . $key . '.' . $subImageType;
+                        $subImagePath = 'public/uploads/products/' . $subImageName;
+                        if (move_uploaded_file($tmp_name, $subImagePath)) {
+                            $newSubImages[] = $subImageName;
+                        } else {
+                            NotificationHelper::error('move_upload_sub', 'Không thể lưu ảnh phụ thứ ' . $key);
+                        }
+                    } else {
+                        NotificationHelper::error('invalid_sub_image', 'Ảnh phụ thứ ' . $key . ' không hợp lệ.');
+                    }
+                }
+            }
+
+            // Gộp ảnh phụ mới vào danh sách cũ
+            $imageNames['images'] = array_merge($imageNames['images'], $newSubImages);
+        }
+
+        // Xử lý ảnh xóa
+        $removedImages = !empty($_POST['removedImages']) ? json_decode($_POST['removedImages'], true) : [];
+        $removedImages = is_array($removedImages) ? $removedImages : [];
+        $subImageArray = is_array($imageNames['images']) ? $imageNames['images'] : [];
+
+        foreach ($removedImages as $removedImage) {
+            $key = array_search($removedImage, $subImageArray);
+            if ($key !== false) {
+                $filePath = 'public/uploads/products/' . $removedImage;
+                if (file_exists($filePath)) {
+                    unlink($filePath); // Xóa file trên server
+                }
+                unset($subImageArray[$key]); // Loại bỏ ảnh đã xóa khỏi mảng
+            }
+        }
+
+        $imageNames['images'] = array_values($subImageArray); // Đảm bảo mảng không có khóa bị bỏ trống
+        $data['image'] = $imageNames['image'];
+        $data['images'] = json_encode($imageNames['images']);
+        $result = $product->update($id, $data);
+
+        if ($result) {
+            NotificationHelper::success('update', 'Cập nhật thành công');
+            header('location: /admin/Product');
+            exit;
         } else {
-            // chuyển hướng đến trang sửa
-            header("location: /admin/products/$id");
+            NotificationHelper::error('update', 'Cập nhật thất bại');
+            header('location: /admin/Products');
         }
     }
+
     // thực hiện xoá
     public static function delete($id)
     {
         $product = new ProductModel();
-        $result = $product->deleteProduct($id);
+        $result = $product->delete($id);
+
         if ($result) {
-            // echo 'Xoá thành công';
             NotificationHelper::success('product', 'Xoá thành công');
         } else {
-            NotificationHelper::error('product', 'Xoá thất bại');
+            NotificationHelper::error('product', 'Xoá thất bại !');
         }
-
-
-        header('location: /admin/products');
+        header('location: /admin/Product');
     }
  
   public static function search()
+
+    public static function search()
     {
         $keyword = $_GET['keyword'] ?? '';
         $product = new ProductModel();
-        $products = $product->searchByKeyword($keyword);
-
-        $product = $product->getAllProduct();
+        $products = $product->searchByKeywordProduct($keyword);
+        $allproduct = $product->getAllProductJoinCategory();
 
         $data = [
             'keyword' => $keyword,
             'products' => $products,
-            'allproduct' => $product
+            'allproduct' => $allproduct
         ];
         Header::render();
         Search::render($data);
         Footer::render();
     }
-
 }
-
-

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Validation;
 
 use App\Helpers\NotificationHelper;
@@ -106,6 +107,14 @@ class CategogyValidation
       return $nameImage;
    }
 
-}
+   public static function delete()
+   {
+      $is_valid = true;
 
-?>
+      if (empty($_POST["id"]) && $_POST['id'] == 23) {
+         $is_valid = false;
+      }
+
+      return $is_valid;
+   }
+}

@@ -13,7 +13,7 @@ class Search extends BaseView
 
       <div class="container-fluid" id="container-wrapper">
          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Danh mục</h1>
+            <h1 class="h3 mb-0 text-gray-800">Sản phẩm</h1>
             <ol class="breadcrumb">
                <li class="breadcrumb-item"><a href="/admin">Home</a></li>
                <li class="breadcrumb-item active" aria-current="page">Sản phẩm</li>
@@ -77,36 +77,58 @@ class Search extends BaseView
                            </tr>
                         </thead>
                         <tbody>
-                           <?php if (!empty($data['categories'])): ?>
-                              <?php foreach ($data['categories'] as $category): ?>
-                                 <tr>
-                                    <td><?= $category['id'] ?></td>
-                                    <td><?= $category['name'] ?></td>
-                                    <td style="overflow: hidden;" width="150px" height="150px">
-                                       <img width="100%" height="100%" src="/public/uploads/categogies/<?= $category['image'] ?>"
-                                          alt="">
-                                    </td>
-                                    <td>
-                                       <span class="badge p-2 <?= $category['status'] == 1 ? 'badge-success' : 'badge-danger' ?>">
-                                          <?= $category['status'] == 1 ? 'Hiển thị' : 'Ẩn' ?>
-                                       </span>
-                                    </td>
-                                    <td>
-                                       <a href="/admin/categories/<?= $category['id'] ?>" class="btn btn-sm btn-warning">Sửa</a>
-                                       <form action="/admin/categories/<?= $category['id'] ?>" method="post"
-                                          style="display: inline-block;"
-                                          onsubmit="return confirm('Bạn có chắc chắn xóa danh mục <?= $category['name'] ?>?')">
-                                          <input type="hidden" name="method" value="DELETE">
-                                          <button type="submit" class="btn btn-sm btn-danger">Xoá</button>
-                                       </form>
-                                    </td>
-                                 </tr>
-                              <?php endforeach ?>
-                           <?php else: ?>
-                              <tr>
-                                 <td colspan="5" class="text-center">Không tìm thấy kết quả nào</td>
+                           <?php if (!empty($data['products'])): ?>
+                                                                     <?php
+                                        foreach ($data['products'] as $item) :
+                                        ?>
+                                            <tr>
+                                                <td><?= $item['id'] ?></td>
+                                                <td><?= $item['name'] ?></td>
+                                                <td><?= number_format($item['price'] ?? 0, 0, ',', '.') ?> </td>
+                                                <td>
+                                                    <?php if (isset($item['discount_price']) && $item['discount_price'] > 0) { ?>
+                                                        <span class="badge p-2 badge-danger">
+                                                            Đang giảm
+                                                        </span>
+                                                    <?php } else { ?>
+                                                        <span class="badge p-2 badge-success">
+                                                            Không giảm
+                                                        </span>
+                                                    <?php } ?>
+                                                </td>
+
+
+                                                <td>
+                                                    <img class="img_all" width="40px" height="40px"
+                                                        class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="Product Image" height="100%">
+                                                </td>
+                                                <td><?= $item['category_name'] ?></td>
+                                                <td><?= ($item['status'] == 1) ? 'Hiển thị' : 'Ẩn' ?></td>
+                                                <td>
+                                                    <a href="/admin/products/<?= $item['id'] ?>" class="btn btn-sm btn-warning">Sửa</a>
+                                                    <form action="/admin/products/<?= $item['id'] ?>" method="post"
+                                                        style="display: inline-block;"
+                                                        onsubmit="return confirm('Bạn có chắc chắn xóa danh mục <?= $item['name'] ?>?')">
+                                                        <input type="hidden" name="method" value="DELETE">
+                                                        <button type="submit" class="btn btn-sm btn-danger">Xoá</button>
+                                                    </form>
+                                            </tr>
+                                        <?php
+                                        endforeach;
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <?php
+                        else :
+                        ?>
+                           <tr>
+                                 <td colspan="5" class="">Không tìm thấy kết quả nào</td>
                               </tr>
-                           <?php endif ?>
+                        <?php
+                        endif;
+                        ?>
+            
                         </tbody>
                      </table>
                   </div>

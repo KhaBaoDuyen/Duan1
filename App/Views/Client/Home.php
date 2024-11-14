@@ -47,11 +47,11 @@ class Home extends BaseView
                      $end_time = isset($item['end_time']) && !empty($item['end_time']) ? new \DateTime($item['end_time']) : null;
 
                      if ($start_time && $end_time && $current_time >= $start_time && $current_time <= $end_time && !empty($item['discount_price'])):
-                        ?>
+                     ?>
                         <a href="" class="card col-2">
                            <div class="box_image">
                               <img class="image" src="<?= $item['image'] ?>" alt="" height="100%">
-                              <img class="image_hover" src="<?= $item['image_product_url'] ?>" alt="image_hover">
+                              <img class="image_hover" src="<?= $item['image_product_name'] ?>" alt="image_hover">
                            </div>
 
                            <div class="title">
@@ -129,7 +129,7 @@ class Home extends BaseView
                                  </div>
                               </li>
                            <?php endif; ?>
-                           <?php
+                        <?php
                         endforeach; ?>
                      </ul>
                      <ul class="category-list d-flex">
@@ -147,7 +147,7 @@ class Home extends BaseView
                                  </div>
                               </li>
                            <?php endif; ?>
-                           <?php
+                        <?php
                         endforeach; ?>
                      </ul>
                   </div>
@@ -168,12 +168,12 @@ class Home extends BaseView
                <?php
                if (isset($data) && isset($data['products']) && $data['products']):
                   $productsToDisplay = array_slice($data['products'], 0, 20);
-                  ?>
+               ?>
                   <?php foreach ($productsToDisplay as $item): ?>
                      <a class="card">
                         <div class="box_image">
-                           <img class="image" src="<?= $item['image'] ?>" alt="" height="100%">
-                           <img class="image_hover" src="<?= $item['image_product_url'] ?>" alt="image_hover">
+                           <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
+                           <img class="image_hover" src="/public/uploads/products/<?= $item['images'] ?>" alt="image_hover">
                         </div>
 
                         <div class="title">
@@ -188,14 +188,14 @@ class Home extends BaseView
                         </div>
 
                         <?php
-                        // Tính phần trăm giảm giá nếu có
-                        $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
+                        if (isset($item['discount_price']) && $item['discount_price'] > 0 && isset($item['price']) && $item['price'] > 0) {
+                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
                         ?>
-                        <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
                            <div class="sale">
                               -<?= $discount_percentage ?>%
                            </div>
-                        <?php endif; ?>
+                        <?php } ?>
+
                      </a>
                   <?php endforeach; ?>
                <?php endif; ?>
@@ -208,7 +208,7 @@ class Home extends BaseView
          </section>
       </main>
 
-      <?php
+<?php
    }
 }
 ?>

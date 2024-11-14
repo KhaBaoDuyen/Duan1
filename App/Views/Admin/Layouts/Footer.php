@@ -37,6 +37,8 @@ class Footer extends BaseView
                 <script src="/public/assets/admin/js/ruang-admin.min.js"></script>
                 <script src="/public/assets/admin/vendor/chart.js/Chart.min.js"></script>
                 <script src="/public/assets/admin/js/demo/chart-area-demo.js"></script>
+                <script src="/public/assets/admin/js/createInput.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
                 </body>
 
                 </html>

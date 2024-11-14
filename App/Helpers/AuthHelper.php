@@ -126,7 +126,6 @@ class AuthHelper
         }
     }
 
-
    // ----------- EDIT -------
    public static function edit($id): bool
    {

@@ -5,6 +5,8 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 ini_set('log_errors', TRUE); 
 ini_set('error_log', './logs/php/php-errors.log');
+ini_set('memory_limit', '256M');
+
 
 use App\Route;
 use App\Helpers\AuthHelper;
@@ -85,12 +87,13 @@ Route::get('/admin', 'App\Controllers\Admin\HomeController@index');
 Route::get('/admin/Product', 'App\Controllers\Admin\ProductController@Index');
 
 Route::get('/admin/products/create', 'App\Controllers\Admin\ProductController@create');
-Route::post('/admin/Products', 'App\Controllers\Admin\ProductController@store');
+Route::post('/admin/products', 'App\Controllers\Admin\ProductController@store');
 
-/* Route::get('/admin/products/{id}', 'App\Controllers\Admin\ProductController@edit');
+
+Route::get('/admin/products/{id}', 'App\Controllers\Admin\ProductController@edit');
 Route::put('/admin/products/{id}', 'App\Controllers\Admin\ProductController@update');
 
-Route::delete('/admin/products/{id}', 'App\Controllers\Admin\ProductController@delete'); */
+Route::delete('/admin/products/{id}', 'App\Controllers\Admin\ProductController@delete'); 
 
 Route::get('/admin/SearchProducts', 'App\Controllers\Admin\ProductController@search');
 

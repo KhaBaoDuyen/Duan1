@@ -29,13 +29,14 @@ class Header extends BaseView
             <link href="/public/assets/admin/css/ruang-admin.min.css" rel="stylesheet">
             <link href="/public/assets/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
         </head>
 
         <body id="page-top">
             <div id="wrapper">
                 <!-- Sidebar -->
                 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                         <div class="sidebar-brand-icon">
                             <img src="/public/assets/admin/img/logo/logo2.png">
                         </div>
