@@ -189,33 +189,25 @@ class ProductController
         $variants = $_POST['variant'];
         $variant = isset($variants) && $variants != null ? json_encode($variants) : $current_product['variant'];
 
- if (!empty($_POST['start_time'])) {
-    $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
-}
+        $data = [
+            'name' => $_POST['name'] ?? '',
+            'price' => $_POST['price'] ?? 0,
+            'status' => $_POST['status'] ?? 0,
+            'discount_price' => !empty($_POST['discount_price']) ? (int) $_POST['discount_price'] : 0,
+            'id_categogy' => $_POST['id_categogy'] ?? null,
+            'date' => date('Y-m-d H:i:s'),
+            'description' => $_POST['description'] ?? '',
+            'short_description' => $_POST['short_description'] ?? '',
+            'variant' => $variant,
+        ];
 
-if (!empty($_POST['end_time'])) {
-    $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
-}
-// var_dump($_POST['start_time']); // Kiểm tra giá trị start_time
-// var_dump($_POST['end_time']); // Kiểm tra giá trị end_time
-// die(); // Dừng mã để kiểm tra
+        if (!empty($_POST['start_time'])) {
+            $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
+        }
 
-$data = [
-    'name' => $_POST['name'] ?? '',
-    'price' => $_POST['price'] ?? 0,
-    'status' => $_POST['status'] ?? 0,
-    'discount_price' => !empty($_POST['discount_price']) ? (int) $_POST['discount_price'] : 0,
-    'id_categogy' => $_POST['id_categogy'] ?? null,
-    'date' => date('Y-m-d H:i:s'),
-    'description' => $_POST['description'] ?? '',
-    'short_description' => $_POST['short_description'] ?? '',
-    'start_time' => !empty($_POST['start_time']) ? (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s') : null,
-    'end_time' => !empty($_POST['end_time']) ? (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s') : null,
-    'variant' => $variant,
-];
-
-
-
+        if (!empty($_POST['end_time'])) {
+            $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
+        }
 
         $allowed_types = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
         $is_upload_main_image = isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK;
@@ -296,7 +288,7 @@ $data = [
             exit;
         } else {
             NotificationHelper::error('update', 'Cập nhật thất bại');
-            header('location: /admin/Products');
+            // header('location: /admin/Product');
         }
     }
 

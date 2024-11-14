@@ -8,7 +8,7 @@ class Home extends BaseView
 {
    public static function render($data = null)
    {
-      ?>
+?>
 
       <section class="section_one d-flex">
          <!-- Thẻ Chứa Slideshow -->
@@ -50,9 +50,25 @@ class Home extends BaseView
                      ?>
                         <a href="" class="card col-2">
                            <div class="box_image">
-                              <img class="image" src="<?= $item['image'] ?>" alt="" height="100%">
-                              <img class="image_hover" src="<?= $item['image_product_name'] ?>" alt="image_hover">
+                              <?php
+                              // giải mã thành mảng
+                              if (isset($item['images']) && is_string($item['images'])) {
+                                 $item['images'] = json_decode($item['images'], true);
+                              }
+
+                              // Kiểm tra xem mảng  giải mã chưa
+                              if (isset($item['images'][0])) {
+                                 $imageHover = $item['images'][0];
+                              } else {
+                                 $imageHover = '/public/uploads/products/usermacdinh.png';
+                              }
+                              ?>
+
+
+                              <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
+                              <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover">
                            </div>
+
 
                            <div class="title">
                               <div class="price">
@@ -172,8 +188,23 @@ class Home extends BaseView
                   <?php foreach ($productsToDisplay as $item): ?>
                      <a class="card">
                         <div class="box_image">
+                           <?php
+                           // giải mã thành mảng
+                           if (isset($item['images']) && is_string($item['images'])) {
+                              $item['images'] = json_decode($item['images'], true);
+                           }
+
+                           // Kiểm tra xem mảng  giải mã chưa
+                           if (isset($item['images'][0])) {
+                              $imageHover = $item['images'][0];
+                           } else {
+                              $imageHover = '/public/uploads/products/usermacdinh.png';
+                           }
+                           ?>
+
+
                            <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
-                           <img class="image_hover" src="/public/uploads/products/<?= $item['images'] ?>" alt="image_hover">
+                           <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover">
                         </div>
 
                         <div class="title">

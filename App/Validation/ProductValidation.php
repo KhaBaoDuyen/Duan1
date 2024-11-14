@@ -51,7 +51,7 @@ class ProductValidation
             $is_valid = false;
         }
 
-        if (isset($_POST['end_time']) && $_POST['end_time'] !== '') {
+            if (isset($_POST['end_time']) && $_POST['end_time'] !== '') {
             if (!isset($_POST['start_time']) || $_POST['start_time'] === '') {
                 $errors['end_time'] = 'Không được chọn thời gian kết thúc khi chưa chọn thời gian bắt đầu';
                 $is_valid = false;
@@ -140,7 +140,6 @@ class ProductValidation
             $errors['price'] = 'Giá tiền phải lớn hơn 0';
             $is_valid = false;
         }
-
         if (isset($_POST['discount_price']) && $_POST['discount_price'] !== '') {
             if ((int) $_POST['discount_price'] < 0) {
                 $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn hoặc bằng 0';
@@ -164,15 +163,15 @@ class ProductValidation
             $is_valid = false;
         }
    
-        if (isset($_POST['end_time']) && $_POST['end_time'] !== '') {
-            if (!isset($_POST['start_time']) || $_POST['start_time'] === '') {
-                $errors['end_time'] = 'Không được chọn thời gian kết thúc khi chưa chọn thời gian bắt đầu';
-                $is_valid = false;
-            } elseif (strtotime($_POST['end_time']) <= strtotime($_POST['start_time'])) {
-                $errors['end_time'] = 'Thời gian kết thúc phải sau thời gian bắt đầu';
-                $is_valid = false;
-            }
-        }
+        // if (isset($_POST['end_time']) && $_POST['end_time'] !== '') {
+        //     if (!isset($_POST['start_time']) || $_POST['start_time'] === '') {
+        //         $errors['end_time'] = 'Không được chọn thời gian kết thúc khi chưa chọn thời gian bắt đầu';
+        //         $is_valid = false;
+        //     } elseif (strtotime($_POST['end_time']) <= strtotime($_POST['start_time'])) {
+        //         $errors['end_time'] = 'Thời gian kết thúc phải sau thời gian bắt đầu';
+        //         $is_valid = false;
+        //     }
+        // }
 
 
         if (!$is_valid) {

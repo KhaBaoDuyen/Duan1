@@ -22,31 +22,48 @@ public static function render($data = null)
         <?php
         if (isset($data) && isset($data['products']) && !empty($data['products'])):
             foreach ($data['products'] as $item): ?>
-                <a class="card ">
-                    <div class="box_image">
-                        <img class="image" src="<?= htmlspecialchars($item['image']) ?>" alt="" height="100%">
-                        <img class="image_hover" src="<?= htmlspecialchars($item['image_product_url']) ?>" alt="image_hover">
-                    </div>
+                  <a class="card">
+                        <div class="box_image">
+                           <?php
+                           // giải mã thành mảng
+                           if (isset($item['images']) && is_string($item['images'])) {
+                              $item['images'] = json_decode($item['images'], true);
+                           }
 
-                    <div class="title">
-                        <div class="price">
-                            <span><?= htmlspecialchars($item['price']) ?> vnd</span>
-                            <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
-                                <span class="price_sales"> <?= htmlspecialchars($item['discount_price']) ?> </span>
-                            <?php endif; ?>
+                           // Kiểm tra xem mảng  giải mã chưa
+                           if (isset($item['images'][0])) {
+                              $imageHover = $item['images'][0];
+                           } else {
+                              $imageHover = '/public/uploads/products/usermacdinh.png'; 
+                           }
+                           ?>
+
+
+                           <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
+                           <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover">
                         </div>
-                        <h4 class="name_product"><?= htmlspecialchars($item['name']) ?></h4>
-                        <p class="content"><?= htmlspecialchars($item['short_description']) ?></p>
-                    </div>
-                    <?php
-                    $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
-                    ?>
-                    <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
-                        <div class="sale">
-                            -<?= $discount_percentage ?>%
+
+                        <div class="title">
+                           <div class="price">
+                              <span><?= $item['price'] ?> VND</span>
+                              <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
+                                 <span class="price_sales"><?= $item['discount_price'] ?> </span>
+                              <?php endif; ?>
+                           </div>
+                           <h4 class="name_product"><?= $item['name'] ?></h4>
+                           <p class="content"><?= $item['short_description'] ?></p>
                         </div>
-                    <?php endif; ?>
-                </a>
+
+                        <?php
+                        if (isset($item['discount_price']) && $item['discount_price'] > 0 && isset($item['price']) && $item['price'] > 0) {
+                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
+                        ?>
+                           <div class="sale">
+                              -<?= $discount_percentage ?>%
+                           </div>
+                        <?php } ?>
+
+                     </a>
             <?php endforeach; ?>
         <?php else: ?>
             <div class="col-12">

@@ -27,7 +27,7 @@ class ProductModel extends BaseModel
     public function updateProduct($id, $data)
     {
 
-        return $this->updateProducts($id, $data);
+        return $this->update($id, $data);
     }
 
     public function deleteProduct($id)
@@ -76,11 +76,7 @@ class ProductModel extends BaseModel
 
     public function getAllProductJoinCategory()
     {
-        $sql = "SELECT products.*, categories.name AS category_name 
-                 FROM products 
-                 INNER JOIN categories ON products.id_categogy = categories.id  ORDER BY products.id  ASC";
-        $result = $this->_conn->MySQLi()->query($sql);
-        return $result->fetch_all(MYSQLI_ASSOC);
+        return $this->getAllProductJoinCategories();
     }
 
 
@@ -89,29 +85,23 @@ class ProductModel extends BaseModel
     {
         $result = [];
         try {
-            $sql = "
-            SELECT products.*, categories.name AS category_name, 
-                (SELECT name FROM images_product 
-                 WHERE images_product.id_product = products.id 
-                 ORDER BY images_product.id ASC LIMIT 1) 
-                AS image_product_name 
-            FROM products
-            LEFT JOIN categories ON products.id_categogy = categories.id 
-            WHERE products.id_categogy = ? 
-            AND products.status = " . self::STATUS_ENABLE . "
-            AND categories.status = " . self::STATUS_ENABLE . ";";
+            $sql = "SELECT products.*, categories.name AS category_name 
+    FROM products
+    INNER JOIN categories ON products.id_categogy = categories.id 
+    WHERE products.id_categogy = ? 
+    AND products.status = " . self::STATUS_ENABLE . " 
+    AND categories.status = " . self::STATUS_ENABLE;
             $conn = $this->_conn->MySQLi();
             $stmt = $conn->prepare($sql);
             $stmt->bind_param('i', $id);
             $stmt->execute();
-
-            //Fetch the results and return
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         } catch (\Throwable $th) {
             error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
             return $result;
         }
     }
+
 
     public function countTotalProduct()
     {
@@ -165,10 +155,10 @@ class ProductModel extends BaseModel
     }
 
     //----------------[ SEARCH ]----------------
-public static function searchByKeywordProduct($keyword)
-{
-    $db = (new Database())->Pdo();
-    $stmt = $db->prepare("
+    public static function searchByKeywordProduct($keyword)
+    {
+        $db = (new Database())->Pdo();
+        $stmt = $db->prepare("
         SELECT 
             products.*, categories.name AS category_name
         FROM 
@@ -180,10 +170,9 @@ public static function searchByKeywordProduct($keyword)
             OR categories.name LIKE :keyword
     ");
 
-    $stmt->execute(['keyword' => '%' . $keyword . '%']);
+        $stmt->execute(['keyword' => '%' . $keyword . '%']);
 
-    // Trả về kết quả
-    return $stmt->fetchAll();
-}
-
+        // Trả về kết quả
+        return $stmt->fetchAll();
+    }
 }

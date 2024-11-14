@@ -55,7 +55,7 @@ class HomeController
     public static function Search()
     {
         $keyword = $_GET['keyword'] ?? '';
-       $products = ProductModel::searchByKeyword($keyword);
+       $products = ProductModel::searchByKeywordProduct($keyword);
         Header::render();
         Search::render(['keyword' => $keyword, 'products' => $products]);
         Footer::render();

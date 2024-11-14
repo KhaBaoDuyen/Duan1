@@ -402,6 +402,11 @@ footer .footer_bottom .menu_footer > li > a:hover {
   color: var(--color-title);
   font-size: larger;
   font-weight: 550;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .flash .card .title .content {
   color: var(--color-content);
@@ -660,6 +665,11 @@ section .img-box img:hover {
   color: var(--color-title);
   font-size: larger;
   font-weight: 550;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .all_product .box_card .card .title .content {
   color: var(--color-content);
@@ -918,6 +928,11 @@ main article .all_products .card .title .name_product {
   color: var(--color-title);
   font-size: larger;
   font-weight: 550;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main article .all_products .card .title .content {
   color: var(--color-content);
@@ -2731,6 +2746,11 @@ ul {
   color: var(--color-title);
   font-size: larger;
   font-weight: 550;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .box_card .card .title .content {
   color: var(--color-content);

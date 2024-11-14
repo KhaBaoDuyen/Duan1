@@ -38,12 +38,7 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
-            $sql = "SELECT $this->table.*, 
-                       (SELECT name FROM images_product 
-                        WHERE images_product.id_product = $this->table.id 
-                        ORDER BY images_product.id ASC 
-                        LIMIT 1) AS image_product_name
-                FROM $this->table";
+            $sql = "SELECT *  FROM $this->table";
 
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_all(MYSQLI_ASSOC);
@@ -141,61 +136,11 @@ abstract class BaseModel implements CrudInterface
             $stmt = $conn->prepare($sql);
             return $stmt->execute();
         } catch (\Throwable $th) {
-            error_log('Lỗi khi cập nhật dữ liệu: ', $th->getMessage());
+           error_log("Lỗi xảy ra tại đây", 3, "path/to/logfile.log");
+
             return false;
         }
     }
-
-    public function updateProducts(int $id, array $data)
-    {
-
-
-
-        try {
-            $pdo = $this->_conn->PDO();
-            $sql = "
-            UPDATE products 
-            SET name = :name, 
-                price = :price, 
-                status = :status, 
-                discount_price = :discount_price, 
-                id_categogy = :id_categogy, 
-                date = :date, 
-                description = :description, 
-                short_description = :short_description, 
-                variant = :variant, 
-                image = :image, 
-                images = :images ,
-                start_time = :start_time,
-                end_time = :end_time
-            WHERE id = :id
-        ";
-
-            // Chuẩn bị câu lệnh
-            $stmt = $pdo->prepare($sql);
-            $data['images'] = json_encode($data['images']);
-            // Gán giá trị
-            $stmt->bindParam(':id', $id);
-            $stmt->bindParam(':name', $data['name']);
-            $stmt->bindParam(':price', $data['price']);
-            $stmt->bindParam(':status', $data['status']);
-            $stmt->bindParam(':discount_price', $data['discount_price']);
-            $stmt->bindParam(':id_categogy', $data['id_categogy']);
-            $stmt->bindParam(':date', $data['date']);
-            $stmt->bindParam(':description', $data['description']);
-            $stmt->bindParam(':short_description', $data['short_description']);
-            $stmt->bindParam(':variant', $data['variant']);
-            $stmt->bindParam(':image', $data['image']);
-            $stmt->bindParam(':images', $data['images']);
-
-            // Thực thi câu lệnh
-            return $stmt->execute();
-        } catch (\Throwable $th) {
-            error_log('Lỗi khi cập nhật sản phẩm: ' . $th->getMessage());
-            return false;
-        }
-    }
-
 
 
     public function delete(int $id): bool
@@ -315,7 +260,7 @@ abstract class BaseModel implements CrudInterface
     }
 
 
-    public function getAllProductJoinCategory()
+    public function getAllProductJoinCategories()
     {
         $sql = "SELECT products.*, categories.name AS category_name 
                 FROM products

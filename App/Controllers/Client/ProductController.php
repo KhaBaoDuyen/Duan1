@@ -48,23 +48,24 @@ class ProductController
             'products' => $products,
             'categories' => $categories,
         ];
+
         Header::render();
         Index::render($data);
         Footer::render();
     }
  
-    public static function detail($id)
-    {
-        $product = new ProductModel();
-        $image = new ImageProductModel();
-        $data['products'] = $product->getOneProductByStatus($id);
-        $data['images_product'] = $image->getAllImagesByProduct($id);
-        Header::render();
-        Notification::render();
-        NotificationHelper::unset();
-        Detail::render($data);
-        Footer::render();
-    }
+    // public static function detail($id)
+    // {
+    //     $product = new ProductModel();
+    //     // $image = new ImageProductModel();
+    //     $data['products'] = $product->getOneProductByStatus($id);
+    //     $data['images_product'] = $image->getAllImagesByProduct($id);
+    //     Header::render();
+    //     Notification::render();
+    //     NotificationHelper::unset();
+    //     Detail::render($data);
+    //     Footer::render();
+    // }
 
 
   
@@ -73,7 +74,7 @@ class ProductController
     public static function getProductByCategory($id)
     {
         $product = new ProductModel();
-        $products = $product->getAllProductByCategoryAndStatus($id);
+        $products = $product-> getAllProductByCategoryAndStatus($id);
 
         $category = new CategoryModel();
         $categories = $category->getAllCategoryByStatus();
