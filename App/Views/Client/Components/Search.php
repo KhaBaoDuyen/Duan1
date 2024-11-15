@@ -45,9 +45,9 @@ public static function render($data = null)
 
                         <div class="title">
                            <div class="price">
-                              <span><?= $item['price'] ?> VND</span>
+                          <span><?= number_format(  $item['price'], 0, ',', '.')  ?> vnd</span>
                               <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
-                                 <span class="price_sales"><?= $item['discount_price'] ?> </span>
+                                 <span class="price_sales"> <?= number_format($item['discount_price'] , 0, ',', '.') ?> vnd</span>
                               <?php endif; ?>
                            </div>
                            <h4 class="name_product"><?= $item['name'] ?></h4>
@@ -56,7 +56,7 @@ public static function render($data = null)
 
                         <?php
                         if (isset($item['discount_price']) && $item['discount_price'] > 0 && isset($item['price']) && $item['price'] > 0) {
-                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
+                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100);
                         ?>
                            <div class="sale">
                               -<?= $discount_percentage ?>%

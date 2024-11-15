@@ -36,7 +36,7 @@ class Home extends BaseView
          <section class="flash">
             <div class="box_title d-flex align-items-center justify-content-between p-3">
                <h3>Flash Deals</h3>
-               <a href="">Xem tất cả</a>
+               <!-- <a href="">Xem tất cả</a> -->
             </div>
             <div class="flash_box d-flex">
                <?php if (isset($data) && isset($data['products'])): ?>
@@ -72,15 +72,15 @@ class Home extends BaseView
 
                            <div class="title">
                               <div class="price">
-                                 <span><?= $item['price'] ?> vnd</span>
-                                 <span class="price_sales"> <?= $item['discount_price'] ?> vnd</span>
+                                 <span><?= number_format(  $item['price'], 0, ',', '.')  ?> vnd</span>
+                                 <span class="price_sales"> <?= number_format($item['discount_price'] , 0, ',', '.') ?> vnd</span>
                               </div>
                               <h4 class="name_product"><?= $item['name'] ?></h4>
-                              <p class="content"><?= $item['short_description'] ?></p>
+                              <p class="content"><?= $item['short_description'] ?>vnd</p>
                            </div>
 
                            <?php
-                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
+                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100);
                            ?>
                            <div class="sale">
                               -<?= $discount_percentage ?>%
@@ -114,7 +114,7 @@ class Home extends BaseView
          <section class="brand">
             <div class="box_title d-flex align-items-center justify-content-between ">
                <h3>Danh mục </h3>
-               <a href="">Xem tất cả</a>
+              
             </div>
             <div class="d-flex box_category justify-content-center align-items-center">
                <div class="col-4 box_category_left">
@@ -168,8 +168,8 @@ class Home extends BaseView
                      </ul>
                   </div>
                   <div class="box_btn_category">
-                     <button class="btn-left"><span class="material-symbols-outlined">arrow_back_ios</span></button>
-                     <button class="btn-right"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+                     <button  class="btn-left material-symbols-outlined">arrow_back_ios</button>
+                     <button class=" btn-right material-symbols-outlined">arrow_forward_ios</button>
                   </div>
                </div>
             </div>
@@ -209,9 +209,9 @@ class Home extends BaseView
 
                         <div class="title">
                            <div class="price">
-                              <span><?= $item['price'] ?> VND</span>
+                              <span><?= number_format(  $item['price'], 0, ',', '.')  ?> vnd</span>
                               <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
-                                 <span class="price_sales"><?= $item['discount_price'] ?> </span>
+                                 <span class="price_sales"> <?= number_format($item['discount_price'] , 0, ',', '.') ?> vnd</span>
                               <?php endif; ?>
                            </div>
                            <h4 class="name_product"><?= $item['name'] ?></h4>
@@ -220,7 +220,7 @@ class Home extends BaseView
 
                         <?php
                         if (isset($item['discount_price']) && $item['discount_price'] > 0 && isset($item['price']) && $item['price'] > 0) {
-                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100, 2);
+                           $discount_percentage = round((($item['price'] - $item['discount_price']) / $item['price']) * 100);
                         ?>
                            <div class="sale">
                               -<?= $discount_percentage ?>%

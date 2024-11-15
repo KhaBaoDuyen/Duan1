@@ -15,7 +15,7 @@ class Detail extends BaseView
 
       <main class="product_detail col-10 m-auto">
 
-         <section class="sec_title row justify-content-between">
+         <section class="sec_title d-flex">
             <aside class="d-flex justify-content-between align-content-center col-6">
                <div class="click_slide col-2 m-1">
 
@@ -53,10 +53,10 @@ class Detail extends BaseView
                </div>
             </aside>
 
-            <article class="col-5 p-3 m-auto">
+            <article class="col-5 ms-5 ">
                <h5 class="name_categogy"><?= $data['product']['name_categogy'] ?></h5>
                <h3 class="name_product"><?= $data['product']['name'] ?></h3>
-               <p class="describe "><?= $data['product']['short_description'] ?></p>
+               <p class="describe " style="text-align: justify;"><?= $data['product']['short_description'] ?></p>
                <div class="price_product ">
                   <h5 class="price_old" id="product-price">
                      <?= number_format($data['product']['price'], 0, ',', '.') ?> VND
@@ -169,7 +169,7 @@ class Detail extends BaseView
                </div>
             </div>
 
-            <div class="col-10 mt-3">
+            <div class="col-12 mt-3">
                <h4>MÔ TẢ SẢN PHẨM</h4>
                <p class="contents">
                   <?= $data['product']['description'] ?>
@@ -259,8 +259,8 @@ class Detail extends BaseView
             </div>
          </section>
 
-         <section class="sec_comment row  justify-content-between">
-            <div class="sec_comment_review  p-1 d-flex ">
+         <section class="sec_comment row  justify-content-between ">
+            <div class="sec_comment_review  p-1 d-flex  ">
                <div class="col-11">
                   <div class="user d-flex align-items-center">
                      <img class="avatar_comment " src="/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
@@ -277,14 +277,20 @@ class Detail extends BaseView
                      rất
                      cẩn thận. Nhìn cách gói thôi là đã thích rồi.</p>
                </div>
-               <div class="col-1 d-flex justify-content-end align-content-end">
+               <div class="col-1 d-flex justify-content-end align-content-end Utilities">
                   <span class="material-symbols-outlined">
                      more_vert
                   </span>
+                  <div class="formdown">
+                     <ul>
+                        <li><a href="">Xóa</a> </li>
+                        <li><a href="">Sửa</a></li>
+                     </ul>
+                  </div>
                </div>
             </div>
 
-            <form id="commentForm" action method="post">
+            <form id="commentForm" action method="post" class="col-12 mt-2">
                <div class="user d-flex align-items-center">
                   <img class="avatar_comment " src="/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
                      alt="Avatar của người dùng" width="6%">
