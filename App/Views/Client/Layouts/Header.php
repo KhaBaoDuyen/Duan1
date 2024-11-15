@@ -39,7 +39,7 @@ class Header extends BaseView
          <header class="banner">
             <div class="box_top_bottom">
                <div class="banner_top border-1 d-flex justify-content-center">
-                  <img src="/public/assets/Client/image/main/header.jpg" alt="" width="80%" height="100%">
+                  <img src="/public/assets/Client/image/main/header.jpg" alt="" width="100%" height="100%">
                </div>
 
                <div class="banner_bottom">

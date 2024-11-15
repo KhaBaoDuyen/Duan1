@@ -145,13 +145,14 @@ section .img-box {
    .box_category_left {
       position: relative;
       overflow: hidden;
-      height: 29rem;
+      height: 31rem;
+
       .slide_banner {
          // position: relative;
 
          .btn_slide {
             position: absolute;
-            top: 40%;
+            top: 49%;
             width: 100%;
 
             button {
@@ -161,7 +162,6 @@ section .img-box {
                opacity: 0.4;
                border-radius: 50%;
                color: var(--text-color-light);
-
                &:hover {
                   opacity: 1;
                }
@@ -173,9 +173,10 @@ section .img-box {
    .box_category_right {
       position: relative;
       overflow: hidden;
+      height: 31rem;
 
-      &:hover .box_btn_category button {
-         opacity: 0.7;
+      &:hover .box_btn_category{
+         opacity: 1;
       }
 
       .slider_box_right {
@@ -250,17 +251,18 @@ section .img-box {
          width: 98%;
          display: flex;
          justify-content: space-between;
+         animation: alternate;
+         opacity:0;
+         transition: all 0.3s ease-in-out;
 
          button {
             border: none;
-            padding: 1% 1.5%;
+            padding: 1% 1.2%;
             color: var(--text-color-light);
             background: var(--color-green);
-            margin: 0 0.5%;
+            // margin: 0 0.5%;
             border-radius: 50%;
-            animation: alternate;
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
+
 
          }
 
