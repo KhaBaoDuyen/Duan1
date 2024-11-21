@@ -1,0 +1,16 @@
+.navbar-brand {
+  display: flex;
+  align-items: center;
+justify-content: center;
+}
+
+.logo-img {
+  width: 50%; 
+}
+
+.logo-text {
+  margin: 10px 10%; 
+}
+.th_table > td{
+color:whitesmoke;
+}
