@@ -1,0 +1,71 @@
+@import'./Base/_varieables';
+@import'./Base/_mixins';
+@import'./Layout/header';
+@import'./Layout/footer';
+
+//-----------PAGES----------------
+@import'./Page/home';
+@import'./Page/product';
+@import'./Page/contact';
+@import'./Page/cart';
+@import'./Page/product_detail';
+@import'./Page/about';
+@import'./Page/login';
+@import'./Page/profile';
+@import'./Page/instruction';
+@import'./Page/baiviet';
+@import'./Page/checkout';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #f2f1f6;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+    color: var(--text-color);
+    font-family: var(--font-family-pri);
+}
+
+li {
+    list-style-type: none;
+    padding: none;
+    margin: none;
+    font-family: var(--font-family-pri);
+}
+ul{
+    padding: none;
+    margin: none;
+
+}
+  .box_card {
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1%;
+
+      .card {
+         @include card(var(--color-price), var(--color-title), var(--text-color));
+         padding: 3%;
+
+         &:hover {
+            box-shadow: 5px 5px 10px #b4b4b4,
+               -5px -5px 10px #ffffff;
+         }
+      }
+   }

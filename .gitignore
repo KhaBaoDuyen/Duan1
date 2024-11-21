@@ -1,0 +1,10 @@
+.env
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+.idea/
+.vscode/
+public/styles/*.css
+public/styles/*.map
+php-error.log
