@@ -88,17 +88,17 @@ class Contact extends BaseView
                         </div>
                         <div class="col-6">
                            <label style="font-size: 20px;" for="name">Họ:</label><br>
-                           <input type="text" id="ho" name="ho" placeholder="vui lòng nhập họ...."><br><br>
+                           <input type="text" id="ho" name="ho" placeholder="Vui lòng nhập họ...."><br><br>
                         </div>
 
                         <div>
                            <label style="font-size: 20px;" for="email">Email:</label><br>
-                           <input type="email" id="email" name="email" placeholder="vui lòng nhập email...."><br><br>
+                           <input type="email" id="email" name="email" placeholder="Vui lòng nhập email...."><br><br>
                         </div>
 
                         <div>
                            <label style="font-size: 20px;" for="phone">Số điện thoại:</label><br>
-                           <input type="text" id="phone" name="phone" placeholder="vui lòng nhập số điện thoại...."><br><br>
+                           <input type="text" id="phone" name="phone" placeholder="Vui lòng nhập số điện thoại...."><br><br>
                         </div>
 
                      

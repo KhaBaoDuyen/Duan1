@@ -17,34 +17,29 @@ class HomeController
     // hiển thị thống kê
     public static function index()
     {
-/* $user = new UserModel;
-$total_user=$user->countTotalUser();
+        $user = new UserModel;
+        $total_user = $user->countTotalUser();
+    /*     var_dump($total_user); */
+    $Category = new CategoryModel;
+    $total_category = $Category->countTotalCategogy();
 
-$product = new ProductModel;
-$total_product=$product->countTotalProduct();
-$product_by_categ=$product ->countProductByCategogy();
-$product_by_view=$product -> countProductByView();
+    $product = new ProductModel;
+    $total_product = $product->countTotalProduct();
+    $product_by_catgory = $product->countProductByCategogy();
 
-$categogy = new CategoryModel;
-$total_categogy=$categogy->countTotalCategogy();
+    $comment = new CommentModel;
+    $total_comment = $comment->countTotalComment();
+        $data=[
+            'total_user'=> $total_user['total'],
+            'total_category'=> $total_category['total'],
+            'total_product'=> $total_product['total'],
+            'total_comment'=> $total_comment['total'],
+            'product_by_catgory'=> $product_by_catgory
 
-
-$comment = new CommentModel;
-$total_comment=$comment->countTotalComment();
-
-$data=[
- 'total_user'=>$total_user['total'],
- 'total_product'=>$total_product['total'],
- 'total_categogy'=>$total_categogy['total'],
- 'total_comment'=>$total_comment['total'],
-'product_by_categ'=>$product_by_categ,
-'product_by_view'=>$product_by_view
-]; */
-
-// echo"<pre>";
-// var_dump($product_by_view);
-        Header::render();
-        Home::render();
-        Footer::render();
+        ];
+/*  var_dump($product_by_catgory);  */
+   Header::render();
+        Home::render($data);
+        Footer::render(); 
     }
 }

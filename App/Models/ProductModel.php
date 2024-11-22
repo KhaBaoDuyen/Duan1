@@ -142,46 +142,17 @@ class ProductModel extends BaseModel
         // Trả về kết quả
         return $stmt->fetchAll();
     }
-
-    // -----------------[DELETE] -------------------
-
-    // public function updateDiscountPrice(int $id, array $data)
-// {
-//     try {
-//         $sql = "UPDATE products SET discount_price = NULL, start_time = NULL, end_time = NULL";
-//         foreach ($data as $key => $value) {
-//             $sql .= ", $key = ?";
-//         }
-//         $sql .= " WHERE id = ?";
-//         $conn = $this->_conn->MySQLi();
-//         $stmt = $conn->prepare($sql);
-//         $params = array_values($data);
-//         $params[] = $id;
-//         $types = str_repeat('s', count($params) - 1) . 'i'; 
-//         $stmt->bind_param($types, ...$params);
-//         return $stmt->execute();
-//     } catch (\Throwable $th) {
-//         error_log('Lỗi khi cập nhật dữ liệu: ' . $th->getMessage());
-//         return false;
-//     }
-// }
-    // -----------------[ ACS PRODUCT ] -------------------
-    public function getAllProductAcsPice()
+    public function countProductByCategory()
     {
         $result = [];
         try {
-            $sql = "SELECT * products
-    FROM products Order by price ASC
-    WHERE products.id_categogy = ? 
-    AND products.status = " . self::STATUS_ENABLE . " 
-    AND categories.status = " . self::STATUS_ENABLE;
-            $conn = $this->_conn->MySQLi();
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param('i', $id);
-            $stmt->execute();
-            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+            $sql = "SELECT COUNT(*) AS count,categories.name FROM products INNER JOIN categories ON products.id_categogy=categories.id\n"
+
+            . "GROUP BY products.id_categogy;";
+                    $result = $this->_conn->MySQLi()->query($sql);
+            return $result->fetch_all(MYSQLI_ASSOC);
         } catch (\Throwable $th) {
-            error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
+            error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
             return $result;
         }
     }

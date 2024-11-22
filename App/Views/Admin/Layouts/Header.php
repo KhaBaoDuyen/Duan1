@@ -24,13 +24,20 @@ class Header extends BaseView
             <meta name="author" content="">
             <link rel="icon" type="image/png" href="/public/assets/Client/image/icon/Logo2.png">
             <title>BLOOM</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
             <link href="/public/assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
             <link href="/public/assets/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
             <link href="/public/assets/admin/css/ruang-admin.min.css" rel="stylesheet">
             <link href="/public/assets/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+
+       <!--  Chart.js -->
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         </head>
+
 
         <body id="page-top">
             <div id="wrapper">

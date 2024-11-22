@@ -1007,16 +1007,9 @@ main article .all_products .card:hover {
   margin: auto;
 }
 .contact .inputsubmit input {
-  width: 90%;
   background: var(--color-title);
   color: var(--text-color-light);
   font-family: var(--font-family-pri);
-}
-.contact .inputsubmit input:hover {
-  background: var(--color-green);
-  /*  color: var(--color-price); */
-  transform: scale(1.1);
-  transition: all 0.5 ease-in-out;
 }
 .contact .imgcontact {
   display: flex !important;

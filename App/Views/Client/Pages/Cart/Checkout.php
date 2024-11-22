@@ -15,13 +15,13 @@ class Checkout extends BaseView
                     <h1>THANH TOÁN</h1>
                     <form action>
                         <label for>Tên</label>
-                        <input type="text" placeholder="Ten">
+                        <input type="text" placeholder="Tên">
                         <label for>Số điện thoại</label>
-                        <input type="text" placeholder="So dien thoai">
+                        <input type="text" placeholder="Số điện thoại">
                         <label for>Địa chỉ</label>
-                        <input type="text" placeholder="Dia chi">
+                        <input type="text" placeholder="Địa chỉ">
                         <label for>Ghi chú</label>
-                        <textarea placeholder="Ghi chu"></textarea>
+                        <textarea placeholder="Ghi chú"></textarea>
                         <div class="zalopay">
                             <label for>Phương thức thanh toán khác:</label>
                             <img

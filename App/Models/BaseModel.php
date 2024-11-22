@@ -221,7 +221,20 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
-            $sql = "SELECT COUNT(*) AS total FROM $this->table WHERE status= 1";
+            $sql = "SELECT COUNT(*) AS total FROM $this->table";
+            $result = $this->_conn->MySQLi()->query($sql);
+            return $result->fetch_assoc();
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi Thống kê chi tiết dữ liệu: ' . $th->getMessage());
+            return $result;
+        }
+    }
+    // đếm số lượng 
+    public function countTotalProduct()
+    {
+        $result = [];
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM $this->table where categories_id=?";
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_assoc();
         } catch (\Throwable $th) {
@@ -275,4 +288,5 @@ abstract class BaseModel implements CrudInterface
             return false;
         }
     }
+
 }
