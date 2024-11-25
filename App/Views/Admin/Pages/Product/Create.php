@@ -9,7 +9,7 @@ class Create extends BaseView
     public static function render($data = null)
     {
         $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
-?>
+        ?>
 
         <!-- Page Content -->
         <div class="container-fluid" id="container-wrapper">
@@ -46,14 +46,18 @@ class Create extends BaseView
 
                                     <div class="form-group col-6">
                                         <label for="price">Giá sản phẩm</label>
-                                        <input type="number" class="form-control <?= isset($errors['price']) ? 'is-invalid' : '' ?>" name="price" id="price">
+                                        <input type="number"
+                                            class="form-control <?= isset($errors['price']) ? 'is-invalid' : '' ?>" name="price"
+                                            id="price">
                                         <?php if (isset($errors['price'])): ?>
                                             <span style="color:red;"><?= $errors['price'] ?></span>
                                         <?php endif; ?>
                                     </div>
                                     <div class="form-group col-6">
                                         <label for="discount_price">Giảm giá</label>
-                                        <input type="number" class="form-control <?= isset($errors['discount_price']) ? 'is-invalid' : '' ?>" name="discount_price" id="discount_price">
+                                        <input type="number"
+                                            class="form-control <?= isset($errors['discount_price']) ? 'is-invalid' : '' ?>"
+                                            name="discount_price" id="discount_price">
                                         <?php if (isset($errors['discount_price'])): ?>
                                             <span style="color:red;"><?= $errors['discount_price'] ?></span>
                                         <?php endif; ?>
@@ -62,8 +66,7 @@ class Create extends BaseView
                                     <div class="form-group col-6">
                                         <label for="id_categogy">Danh mục sản phẩm</label>
                                         <select class="form-control <?= isset($errors['categogy']) ? 'is-invalid' : '' ?>"
-                                            name="id_categogy"
-                                            id="id_categogy">
+                                            name="id_categogy" id="id_categogy">
                                             <option value="">Chọn danh mục</option>
                                             <?php
                                             if (!empty($data)) {
@@ -92,15 +95,17 @@ class Create extends BaseView
                                     <input type="hidden" class="form-control" name="date" id="date">
                                     <div class="form-group col-12">
                                         <label for="short_description">Mô tả ngắn</label>
-                                        <textarea class="form-control <?= isset($errors['short_description']) ? 'is-invalid' : '' ?>" name="short_description" id="short_description"
-                                            rows="1"></textarea>
+                                        <textarea
+                                            class="form-control <?= isset($errors['short_description']) ? 'is-invalid' : '' ?>"
+                                            name="short_description" id="short_description" rows="1"></textarea>
                                         <?php if (isset($errors['short_description'])): ?>
                                             <span style="color:red;"><?= $errors['short_description'] ?></span>
                                         <?php endif; ?>
                                     </div>
                                     <div class="form-group  col-12">
                                         <label for="description">Mô tả dài</label>
-                                        <textarea class="form-control <?= isset($errors['description']) ? 'is-invalid' : '' ?>" name="description" id="description" rows="2"></textarea>
+                                        <textarea class="form-control <?= isset($errors['description']) ? 'is-invalid' : '' ?>"
+                                            name="description" id="description" rows="2"></textarea>
                                         <?php if (isset($errors['description'])): ?>
                                             <span style="color:red;"><?= $errors['description'] ?></span>
                                         <?php endif; ?>
@@ -117,13 +122,17 @@ class Create extends BaseView
                                             <span style="color:red;"><?= $errors['end_time'] ?></span>
                                         <?php endif; ?>
                                     </div> -->
-                                    <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
+                                    </div>
                                 </div>
 
                                 <div class=" col-5">
                                     <div class="form-group col-12">
                                         <label for="image">Ảnh chính sản phẩm</label>
-                                        <input type="file" class="form-control <?= isset($errors['image']) ? 'is-invalid' : '' ?>" name="image" id="image" accept="image/*">
+                                        <input type="file"
+                                            class="form-control <?= isset($errors['image']) ? 'is-invalid' : '' ?>" name="image"
+                                            id="image" accept="image/*">
                                         <?php if (isset($errors['image'])): ?>
                                             <span style="color:red;"><?= $errors['image'] ?></span>
                                         <?php endif; ?>
@@ -191,6 +200,6 @@ class Create extends BaseView
             </div>
         </div>
 
-<?php
+        <?php
     }
 }

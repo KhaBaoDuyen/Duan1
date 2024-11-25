@@ -11,7 +11,7 @@ class Edit extends BaseView
     $product = $data['product'];
     $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
 
-?>
+    ?>
     <!-- Page Content -->
     <div class="container-fluid" id="container-wrapper">
       <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -33,26 +33,28 @@ class Edit extends BaseView
               <form action="/admin/products/<?= $product['id'] ?>" method="POST" enctype="multipart/form-data"
                 class="d-flex justify-content-between  col-12" id="productForm">
 
-                <div class=" row">
+                <div class=" row container">
                   <input type="hidden" name="method" value="PUT">
                   <div class=" col-12">
                     <label for="name">Tên sản phẩm</label>
-                    <input type="text" class="form-control <?= isset($errors['name']) ? 'is-invalid' : '' ?>" name="name" id="name" value="<?= $product['name']   ?>">
+                    <input type="text" class="form-control <?= isset($errors['name']) ? 'is-invalid' : '' ?>" name="name"
+                      id="name" value="<?= $product['name'] ?>">
                     <?php if (isset($errors['name'])): ?>
                       <span style="color:red;"><?= $errors['name'] ?></span>
                     <?php endif; ?>
                   </div>
                   <div class=" col-6">
                     <label for="price">Giá sản phẩm</label>
-                    <input type="number" class="form-control <?= isset($errors['price']) ? 'is-invalid' : '' ?>" name="price" id="price" value="<?= $product['price']   ?>">
+                    <input type="number" class="form-control <?= isset($errors['price']) ? 'is-invalid' : '' ?>"
+                      name="price" id="price" value="<?= $product['price'] ?>">
                     <?php if (isset($errors['price'])): ?>
                       <span style="color:red;"><?= $errors['price'] ?></span>
                     <?php endif; ?>
                   </div>
                   <div class=" col-6">
                     <label for="discount_price">Giảm giá</label>
-                    <input type="number" class="form-control <?= isset($errors['discount_price']) ? 'is-invalid' : '' ?>" name="discount_price" id="discount_price"
-                      value="<?= $product['discount_price'] ?>">
+                    <input type="number" class="form-control <?= isset($errors['discount_price']) ? 'is-invalid' : '' ?>"
+                      name="discount_price" id="discount_price" value="<?= $product['discount_price'] ?>">
                     <?php if (isset($errors['discount_price'])): ?>
                       <span style="color:red;"><?= $errors['discount_price'] ?></span>
                     <?php endif; ?>
@@ -60,11 +62,12 @@ class Edit extends BaseView
 
                   <div class=" col-6">
                     <label for="id_categogy">Danh mục sản phẩm</label>
-                    <select class="form-control <?= isset($errors['categogy']) ? 'is-invalid' : '' ?>" name="id_categogy" id="id_categogy" required>
+                    <select class="form-control <?= isset($errors['categogy']) ? 'is-invalid' : '' ?>" name="id_categogy"
+                      id="id_categogy" required>
                       <?php
                       if (!empty($data['category'])) {
                         foreach ($data['category'] as $category) {
-                          $selected = ($category['id'] == $product['id_categogy']) ? 'selected' : ''; // Đánh dấu danh mục đang chọn
+                          $selected = ($category['id'] == $product['id_categogy']) ? 'selected' : '';
                           echo "<option value='{$category['id']}' {$selected}>{$category['name']}</option>";
                         }
                       } else {
@@ -89,7 +92,8 @@ class Edit extends BaseView
                   <input type="hidden" class="form-control" name="date" id="date">
                   <div class=" col-12">
                     <label for="short_description">Mô tả ngắn</label>
-                    <textarea class="form-control <?= isset($errors['short_description']) ? 'is-invalid' : '' ?>" name="short_description" id="short_description"
+                    <textarea class="form-control <?= isset($errors['short_description']) ? 'is-invalid' : '' ?>"
+                      name="short_description" id="short_description"
                       rows="1"><?= $product['short_description'] ?></textarea>
                     <?php if (isset($errors['short_description'])): ?>
                       <span style="color:red;"><?= $errors['short_description'] ?></span>
@@ -97,22 +101,25 @@ class Edit extends BaseView
                   </div>
                   <div class="  col-12">
                     <label for="description">Mô tả dài</label>
-                    <textarea class="form-control <?= isset($errors['description']) ? 'is-invalid' : '' ?>" name="description" id="description"
-                      rows="2"><?= $product['description'] ?></textarea>
+                    <textarea style="min-height:200px;" class="form-control <?= isset($errors['description']) ? 'is-invalid' : '' ?>"
+                      name="description" id="description" rows="2"><?= $product['description'] ?></textarea>
                     <?php if (isset($errors['description'])): ?>
                       <span style="color:red;"><?= $errors['description'] ?></span>
                     <?php endif; ?>
                   </div>
 
-                  <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
+                  <div class="col-6">
+                    <button type="submit" class="btn btn-primary ms-3 mt-2">Cập nhật sản phẩm</button>
+                  </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-10 m-auto">
+                <div class="row container">
+                  <div class="col-12 m-auto">
                     <!-- Ảnh chính sản phẩm -->
                     <div class=" col-12 mb-1">
                       <label for="image">Ảnh chính sản phẩm</label>
-                      <img src="/public/uploads/products/<?= $product['image'] ?>" alt="Ảnh chính" class="img-fluid " style="max-width: 20%;">
+                      <img src="/public/uploads/products/<?= $product['image'] ?>" alt="Ảnh chính" class="img-fluid "
+                        style="max-width: 20%;">
                       <input type="file" class="form-control image_product col-10" name="image" accept="image/*">
                     </div>
 
@@ -120,7 +127,8 @@ class Edit extends BaseView
                     <div class=" col-12">
                       <div class="d-flex align-content-between justify-content-between col-12">
                         <label for="image">Chi tiết ảnh</label>
-                        <a href="javascript:void(0)" onclick="createImage()" class="ml-2 btn btn-primary" id="add-more-images">Thêm ảnh</a>
+                        <a href="javascript:void(0)" onclick="createImage()" class="ml-2 btn btn-primary"
+                          id="add-more-images">Thêm ảnh</a>
                       </div>
 
                       <div id="additional-images">
@@ -137,17 +145,19 @@ class Edit extends BaseView
                           }
                           if (!empty($images)) {
                             foreach ($images as $key => $images) {
-                        ?>
+                              ?>
                               <div class="image-group d-flex align-items-center justify-content-between mb-3">
                                 <div class="text-center" style="overflow: hidden; max-width:5rem; max-height: 5rem;">
-                                  <img src="/public/uploads/products/<?= htmlspecialchars($images) ?>" alt="Image [<?= $key ?>]" class="img-fluid" style="max-width: 100%;">
+                                  <img src="/public/uploads/products/<?= htmlspecialchars($images) ?>" alt="Image [<?= $key ?>]"
+                                    class="img-fluid" style="max-width: 100%;">
                                 </div>
                                 <div class="d-flex row align-items-baseline justify-content-between m-1 p-1 border rounded">
                                   <input type="file" class="form-control image_product col-10" name="images[]" multiple>
-                                  <a href="javascript:void(0)" class="btn btn-danger delete-image" onclick="deleteImage(this)" data-image-name="<?= htmlspecialchars($images) ?>">Xóa</a>
+                                  <a href="javascript:void(0)" class="btn btn-danger delete-image" onclick="deleteImage(this)"
+                                    data-image-name="<?= htmlspecialchars($images) ?>">Xóa</a>
                                 </div>
                               </div>
-                        <?php
+                              <?php
                             }
                           } else {
                             echo "<p>Dữ liệu ảnh không hợp lệ.</p>";
@@ -160,7 +170,7 @@ class Edit extends BaseView
                     </div>
                   </div>
 
-                  <div class=" <?= isset($errors['description']) ? 'is-invalid' : '' ?>col-10 m-auto group_variant">
+                  <div class=" <?= isset($errors['description']) ? 'is-invalid' : '' ?>col-12 m-auto group_variant">
                     <div class="d-flex align-content-between justify-content-between col-12 mb-1">
                       <label for="image">Biến thể</label>
                       <a href="javascript:void(0)" onclick="createVariant()" class="ml-2 btn btn-primary"
@@ -208,7 +218,7 @@ class Edit extends BaseView
       </div>
     </div>
 
-<?php
+    <?php
   }
 }
 ?>

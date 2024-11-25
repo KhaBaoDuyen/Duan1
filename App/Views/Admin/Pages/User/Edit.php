@@ -8,7 +8,7 @@ class Edit extends BaseView
 {
   public static function render($data = null)
   {
-?>
+    ?>
 
     <div class="row">
       <div class="col-lg-10 m-auto">
@@ -29,7 +29,8 @@ class Edit extends BaseView
                 <div class="form-group col-12">
                   <label for="username">Tên đăng nhập</label>
                   <input type="text" class="form-control" id="username" name="username" aria-describedby=""
-                    placeholder="Nhập tên đăng nhập" value="<?= isset($_POST['username']) ? $_POST['username'] : $data['username'] ?>">
+                    placeholder="Nhập tên đăng nhập"
+                    value="<?= isset($_POST['username']) ? $_POST['username'] : $data['username'] ?>">
                   <?php if (isset($errors['username'])): ?>
                     <span style="color:red;"><?= $errors['username'] ?></span>
                   <?php endif; ?>
@@ -45,7 +46,8 @@ class Edit extends BaseView
                 <div class="form-group col-12">
                   <label for="email">Email</label>
                   <input type="text" class="form-control" id="email" name="email" aria-describedby=""
-                    placeholder="Nhập địa chỉ email..." value="<?= isset($_POST['email']) ? $_POST['email'] : $data['email'] ?>">
+                    placeholder="Nhập địa chỉ email..."
+                    value="<?= isset($_POST['email']) ? $_POST['email'] : $data['email'] ?>">
                   <?php if (isset($errors['email'])): ?>
                     <span style="color:red;"><?= $errors['email'] ?></span>
                   <?php endif; ?>
@@ -68,14 +70,17 @@ class Edit extends BaseView
 
                 <div class="form-group col-6">
                   <label for="name">Trạng thái</label>
-                  <select class="select2 form-control shadow-none" style="width: 100%; height:36px;" id="status" name="status">
+                  <select class="select2 form-control shadow-none" style="width: 100%; height:36px;" id="status"
+                    name="status">
                     <option value="1" <?= ($data['status'] == 1 ? 'selected' : '') ?>>Đang hoạt động</option>
                     <option value="0" <?= ($data['status'] == 0 ? 'selected' : '') ?>>Đã khóa</option>
                   </select>
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">Cập nhật thông tin</button>
+                <div class="col-6">
+                  <button type="submit" class="btn btn-primary">Cập nhật thông tin</button>
+                </div>
               </div>
 
 
@@ -106,7 +111,7 @@ class Edit extends BaseView
 
     </div>
 
-<?php
+    <?php
   }
 }
 ?>
