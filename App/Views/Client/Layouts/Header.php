@@ -14,13 +14,6 @@ class Header extends BaseView
       $isLoggedIn = isset($_SESSION['user']);
       $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
 ?>
-    <?php if (isset($_SESSION['js_error'])): ?>
-            <div class="alert-custom">
-                <?php echo $_SESSION['js_error']; ?>
-            </div>
-            <?php unset($_SESSION['js_error']); ?>
-        <?php endif; ?>
-
       <!DOCTYPE html>
       <html lang="en">
 
@@ -36,6 +29,26 @@ class Header extends BaseView
       </head>
 
       <body>
+
+         <?php if (isset($_SESSION['js_error'])): ?>
+            <div class="alert alert-danger alert-dismissible fade show notification-alert" role="alert">
+               <?php echo $_SESSION['js_error']; ?>
+               <button type="button" class="ms-5 btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php unset($_SESSION['js_error']); ?>
+         <?php endif; ?>
+         <?php
+         if (isset($_SESSION['notification'])) {
+            $notification = $_SESSION['notification'];
+         ?>
+            <div id="notification" class="d-flex justify-items-center align-items-center alert alert-<?php echo $notification['type']; ?> alert-dismissible fade show notification-alert" role="alert">
+               <div class="me-4"><?php echo $notification['message']; ?></div>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> 
+            </div>
+         <?php
+            unset($_SESSION['notification']);
+         }
+         ?>
          <header class="banner">
             <div class="box_top_bottom">
                <div class="banner_top border-1 d-flex justify-content-center">
@@ -74,10 +87,10 @@ class Header extends BaseView
                                  <?php
                                  // Kiểm tra xem avatar có tồn tại trong session không
                                  $avatar = $_SESSION['user']['avatar'] ?? 'usermacdinh.png';
-                           
+
                                  ?>
 
-                                 <img class="img-profile rounded-circle" src="/public/uploads/users/<?=$avatar?>"
+                                 <img class="img-profile rounded-circle" src="/public/uploads/users/<?= $avatar ?>"
                                     style="max-width: 40px">
                               </a>
                            <?php else: ?>
@@ -108,6 +121,7 @@ class Header extends BaseView
                </ul>
             </div>
          </header>
+
 
    <?php
    }

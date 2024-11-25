@@ -1,8 +1,9 @@
 footer {
-
+   border-top: 4px solid var(--pri-color);
    // background: url(/public/assets/Client/image/icon/background.png)  no-repeat ;
+
    .footer_top {
-      border-top: 4px solid var(--pri-color);
+
       padding-top: 2%;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,6 +16,7 @@ footer {
          flex-wrap: nowrap;
          align-items: center;
          color: var(--text-color-light);
+
          // img{
          // width: 100px;
          // }
@@ -38,20 +40,26 @@ footer {
       // background-position: center;
       height: 20rem;
 
-         .menu_footer {
-            margin: 25% auto;
+      .box_menu_footer {
+         margin: 25% auto;
 
-            &>a {
-               font-size: 1.2rem;
-               color: var(--text-color-light);
-            }
+         &>a {
+            font-size: 1.2rem;
+            color: var(--text-color-light);
+            padding-left: 30px;
+            text-align: center;
+         }
+      }
 
-            >li>a {
-               color: var(--text-color-light) !important;
-               &:hover {
-                  color: var(--color-green) !important;
-               }
+      .menu_footer {
+
+         >li>a {
+            color: var(--text-color-light) !important;
+
+            &:hover {
+               color: var(--color-green) !important;
             }
+         }
 
       }
    }

@@ -31,14 +31,9 @@ Route::get('/Search', 'App\Controllers\Client\HomeController@search');
 //---------------------------[ TÀI KHOẢN ]---------------------------
 Route::get('/Account', 'App\Controllers\Client\AuthController@Account');
 
-
-
-
-
 Route::get('/logout', 'App\Controllers\Client\AuthController@logout');
 
 Route::get('/user', 'App\Controllers\Client\AuthController@profile');
-
 
 //hiển thị thông tin tài khoản
 Route::get('/user/{id}', 'App\Controllers\Client\AuthController@edit');
@@ -61,9 +56,9 @@ Route::post('/home-login', 'App\Controllers\Client\AuthController@loginAction');
 Route::get('/shop', 'App\Controllers\Client\ProductController@index'); 
 Route::get('/product/{id}', 'App\Controllers\Client\ProductController@detail');
 
-
 //----------------------[ SP THEO DANH MỤC ]-----------------------
 Route::get('/product/categories/{id}', 'App\Controllers\Client\ProductController@getProductByCategory');
+Route::get('/product/ads', 'App\Controllers\Client\ProductController@getAllProductAcsPice');
 
 Route::get('/product/parent/{id}','App\Controllers\Client\ProductController@showSubCategories');
 
@@ -78,6 +73,14 @@ Route::get('/history', 'App\Controllers\Client\CartController@history');
 
 //-----------------------[ KỸ THUÊTJ TRỒNG CÂY ]--------------------------------
 Route::get('/blog', controllerMethod: 'App\Controllers\Client\HomeController@instruction'); 
+
+//--------------------------[ NHẮC NHỞ  ]-------------------------------
+Route::get('/reminders',  'App\Controllers\Client\ReminderController@index'); 
+
+
+Route::post('/reminder', 'App\Controllers\Client\ReminderController@store');
+Route::put('/reminder/{id}', 'App\Controllers\Client\ReminderController@update');
+Route::delete('/reminder/{id}', 'App\Controllers\Client\ReminderController@delete'); 
 
 // **************************** ADMIN ********************************
 
@@ -128,6 +131,7 @@ Route::get('/admin/order', 'App\Controllers\Admin\OrderController@Index');
 Route::put('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@update');
 
 Route::delete('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@delete'); */
+
 
 //--------------------------[ BÌNH LUẬN ]-------------------------------
 Route::get('/admin/comments', 'App\Controllers\Admin\CommentController@Index');

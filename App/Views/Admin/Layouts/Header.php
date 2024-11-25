@@ -11,7 +11,7 @@ class Header extends BaseView
     {
         $isLoggedIn = isset($_SESSION['user']);
         $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
-?>
+        ?>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -29,13 +29,14 @@ class Header extends BaseView
             <link href="/public/assets/admin/css/ruang-admin.min.css" rel="stylesheet">
             <link href="/public/assets/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
         </head>
 
         <body id="page-top">
             <div id="wrapper">
                 <!-- Sidebar -->
-                <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+                <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar" style="
+">
                     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                         <div class="sidebar-brand-icon">
                             <img src="/public/assets/admin/img/logo/logo2.png">
@@ -52,11 +53,13 @@ class Header extends BaseView
 
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct"
+                            aria-expanded="true" aria-controls="collapseProduct">
                             <i class='bx bxs-cart-alt'></i>
                             <span>Quản lý sản phẩm</span>
                         </a>
-                        <div id="collapseProduct" class="collapse" aria-labelledby="headingProduct" data-parent="#accordionSidebar">
+                        <div id="collapseProduct" class="collapse" aria-labelledby="headingProduct"
+                            data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Sản phẩm</h6>
                                 <a class="collapse-item" href="/admin/Product">Danh sách</a>
@@ -66,11 +69,13 @@ class Header extends BaseView
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategory" aria-expanded="true" aria-controls="collapseCategory">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCategory"
+                            aria-expanded="true" aria-controls="collapseCategory">
                             <i class="fas fa-fw fa-table"></i>
                             <span>Quản lý danh mục</span>
                         </a>
-                        <div id="collapseCategory" class="collapse" aria-labelledby="headingCategory" data-parent="#accordionSidebar">
+                        <div id="collapseCategory" class="collapse" aria-labelledby="headingCategory"
+                            data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Danh mục</h6>
                                 <a class="collapse-item" href="/admin/categories">Danh sách</a>
@@ -80,7 +85,8 @@ class Header extends BaseView
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
+                            aria-expanded="true" aria-controls="collapseUser">
                             <i class='bx bxs-user-circle'></i>
                             <span>Quản lý tài khoản</span>
                         </a>
@@ -93,7 +99,8 @@ class Header extends BaseView
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder" aria-expanded="true" aria-controls="collapseOrder">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder"
+                            aria-expanded="true" aria-controls="collapseOrder">
                             <i class='bx bxs-cart-add'></i>
                             <span>Quản lý đơn hàng</span>
                         </a>
@@ -106,11 +113,13 @@ class Header extends BaseView
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComment" aria-expanded="true" aria-controls="collapseComment">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseComment"
+                            aria-expanded="true" aria-controls="collapseComment">
                             <i class='bx bx-message-dots'></i>
                             <span>Quản lý bình luận</span>
                         </a>
-                        <div id="collapseComment" class="collapse" aria-labelledby="headingComment" data-parent="#accordionSidebar">
+                        <div id="collapseComment" class="collapse" aria-labelledby="headingComment"
+                            data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Bình luận</h6>
                                 <a class="collapse-item" href="/admin/comments">Danh sách</a>
@@ -126,15 +135,16 @@ class Header extends BaseView
                 <div id="content-wrapper" class="d-flex flex-column">
                     <div id="content">
                         <!-- TopBar -->
-                        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top" id="navbar-expand"
+                            style="">
                             <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                                 <i class="fa fa-bars"></i>
                             </button>
                             <ul class="navbar-nav ml-auto">
 
                                 <li class="nav-item dropdown no-arrow mx-1">
-                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-bell fa-fw"></i>
                                         <span class="badge badge-danger badge-counter">3+</span>
                                     </a>
@@ -180,8 +190,8 @@ class Header extends BaseView
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown no-arrow mx-1">
-                                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-envelope fa-fw"></i>
                                         <span class="badge badge-warning badge-counter">2</span>
                                     </a>
@@ -196,7 +206,8 @@ class Header extends BaseView
                                                 <div class="status-indicator bg-success"></div>
                                             </div>
                                             <div class="font-weight-bold">
-                                                <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
+                                                <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                                    problem I've been
                                                     having.</div>
                                                 <div class="small text-gray-500">Udin Cilok · 58m</div>
                                             </div>
@@ -207,7 +218,8 @@ class Header extends BaseView
                                                 <div class="status-indicator bg-default"></div>
                                             </div>
                                             <div>
-                                                <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people
+                                                <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                                    told me that people
                                                     say this to all dogs, even if they aren't good...</div>
                                                 <div class="small text-gray-500">Jaenab · 2w</div>
                                             </div>
@@ -216,8 +228,8 @@ class Header extends BaseView
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown no-arrow mx-1">
-                                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="fas fa-tasks fa-fw"></i>
                                         <span class="badge badge-success badge-counter">3</span>
                                     </a>
@@ -232,8 +244,8 @@ class Header extends BaseView
                                                     <div class="small float-right"><b>50%</b></div>
                                                 </div>
                                                 <div class="progress" style="height: 12px;">
-                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
-                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                         </a>
@@ -243,8 +255,8 @@ class Header extends BaseView
                                                     <div class="small float-right"><b>30%</b></div>
                                                 </div>
                                                 <div class="progress" style="height: 12px;">
-                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30"
-                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"
+                                                        aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                         </a>
@@ -254,8 +266,8 @@ class Header extends BaseView
                                                     <div class="small float-right"><b>75%</b></div>
                                                 </div>
                                                 <div class="progress" style="height: 12px;">
-                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
-                                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"
+                                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>
                                         </a>
@@ -264,36 +276,40 @@ class Header extends BaseView
                                 </li>
                                 <div class="topbar-divider d-none d-sm-block"></div>
                                 <li class="nav-item dropdown no-arrow">
-                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <?php if ($isLoggedIn): ?>
 
                                             <?php $avatar = $_SESSION['user']['avatar'] ?? 'usermacdinh.png'; ?>
-                                            <img class="img-profile rounded-circle" src="/public/uploads/users/<?= $avatar ?>" style="max-width: 60px">
-                                            <span class="ml-2 d-none d-lg-inline text-white small"><?php echo htmlspecialchars($_SESSION['user']['username'] ?? ''); ?></span>
+                                            <img class="img-profile rounded-circle" src="/public/uploads/users/<?= $avatar ?>"
+                                                style="max-width: 60px">
+                                            <span
+                                                class="ml-2 d-none d-lg-inline text-white small"><?php echo htmlspecialchars($_SESSION['user']['username'] ?? ''); ?></span>
 
+                                        </a>
+                                    <?php else: ?>
+                                        <img class="img-profile rounded-circle" src="/public/uploads/users/usermacdinh.png"
+                                            style="max-width: 60px">
+                                        <span class="ml-2 d-none d-lg-inline text-white small">Usename</span>
+                                    <?php endif; ?>
                                     </a>
-                                <?php else: ?>
-                                    <img class="img-profile rounded-circle" src="/public/uploads/users/usermacdinh.png" style="max-width: 60px">
-                                    <span class="ml-2 d-none d-lg-inline text-white small">Usename</span>
-                                <?php endif; ?>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Profile
-                                    </a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/admin/logout">
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Logout
-                                    </a>
-                                </div>
+                                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                        aria-labelledby="userDropdown">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Profile
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/admin/logout">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                            Logout
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
                         </nav>
                         <!-- Topbar -->
-                <?php
-            }
-        }
-                ?>
+                        <?php
+    }
+}
+?>

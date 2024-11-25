@@ -1,5 +1,4 @@
 
-// Thêm ảnh mới
 function createImage() {
     $('#additional-images').append(`
         <div class="image-group d-flex row align-items-baseline justify-content-between m-1 p-1 border rounded">
@@ -12,8 +11,7 @@ function createImage() {
 
 let removedImages = [];
 
-// Xóa ảnh khi nhấn nút "Xóa"
-// Xóa ảnh khi nhấn nút "Xóa"
+// Xóa ảnh 
 function deleteImage(element) {
     const imageGroup = element.closest('.image-group');
     const imageName = $(element).closest('.image-group').find('img').attr('src');
@@ -24,8 +22,6 @@ function deleteImage(element) {
         removedImages.push(imageFileName);
         document.getElementById('removedImages').value = JSON.stringify(removedImages);
     }
-
-    // Xóa HTML của ảnh
     imageGroup.remove();
     console.log('Danh sách ảnh cần xóa:', removedImages);
 }

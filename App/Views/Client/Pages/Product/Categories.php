@@ -1,6 +1,5 @@
 <?php
 // sản phẩm theo loại
-
 namespace App\Views\Client\Pages\Product;
 use App\Views\BaseView;
 use App\Views\Client\Components\Category as ComponentsCategory;
@@ -70,7 +69,7 @@ class Categories extends BaseView
                </div>
             </nav>
 
-            <div class="all_products row ">
+            <div class="all_products  ">
                   <?php
                   if (isset($data) && isset($data['products']) && !empty($data['products'])):
                      foreach ($data['products'] as $item):
@@ -93,15 +92,18 @@ class Categories extends BaseView
 
 
                            <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
-                           <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover">
+                           <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover" height="100%">
                         </div>
 
                         <div class="title">
                            <div class="price">
-                             <span><?= number_format(  $item['price'], 0, ',', '.')  ?> vnd</span>
-                              <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
-                                 <span class="price_sales"> <?= number_format($item['discount_price'] , 0, ',', '.') ?> vnd</span>
-                              <?php endif; ?>
+                                 <?php if (isset($item['discount_price']) && !empty($item['discount_price'])){ ?>
+                                    <span><?= number_format($item['discount_price'], 0, ',', '.') ?>đ</span>
+                                    <span class="price_sales"><?= number_format($item['price'], 0, ',', '.') ?> đ</span>
+                                 <?php } else{ ?>
+                                    <span><?= number_format($item['price'], 0, ',', '.')?>đ</span>
+                                 <?php }  ?>
+
                            </div>
                            <h4 class="name_product"><?= $item['name'] ?></h4>
                            <p class="content"><?= $item['short_description'] ?></p>

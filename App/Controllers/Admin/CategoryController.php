@@ -149,27 +149,23 @@ class CategoryController
                 NotificationHelper::error('update', 'Cập nhật thất bại');
             }
             header('location: /admin/categories');
-            // }
         } else {
-            // chuyển hướng đến trang sửa
             header("location: /admin/categories/$id");
         }
     }
 
     public static function delete(int $id)
     {
-         $is_valid = CategogyValidation::delete();
-    
-    if ($is_valid) {
-        $category = new CategoryModel();
-        $result = $category->deleteCategory($id);
-
-        if ($result) {
-            NotificationHelper::success('category', 'Xóa danh mục thành công');
-        } else {
-            NotificationHelper::error('category', 'danh mục này là danh mục mặc định klhoong thể xóa !!!.');
+        $is_valid = CategogyValidation::delete();
+        if ($is_valid) {
+            $category = new CategoryModel();
+            $result = $category->deleteCategory($id);
+            if ($result) {
+                NotificationHelper::success('category', 'Xóa danh mục thành công');
+            } else {
+                NotificationHelper::error('category', 'danh mục này là danh mục mặc định klhoong thể xóa !!!.');
+            }
         }
-    } 
         header("Location:/admin/categories");
 
         var_dump($result);

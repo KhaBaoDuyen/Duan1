@@ -15,6 +15,7 @@
 @import'./Page/instruction';
 @import'./Page/baiviet';
 @import'./Page/checkout';
+@import'./Page/reminder';
 
 * {
     margin: 0;
@@ -25,6 +26,7 @@
 
 body {
     background: #f2f1f6;
+
 }
 
 a {
@@ -61,11 +63,45 @@ ul{
 
       .card {
          @include card(var(--color-price), var(--color-title), var(--text-color));
-         padding: 3%;
-
+        //  padding: 3%;
          &:hover {
             box-shadow: 5px 5px 10px #b4b4b4,
                -5px -5px 10px #ffffff;
          }
       }
    }
+.notification-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;  
+    transform: translateX(-50%);  
+    background-color: #28a745; 
+    color: white;  
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 16px;
+    z-index: 9999; 
+    width: max-content;
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out;  
+}
+
+.notification-alert.alert-success {
+    background-color: #28a745;  
+}
+
+.notification-alert.alert-error {
+    background-color: #dc3545;  
+}
+
+@keyframes slideIn {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}

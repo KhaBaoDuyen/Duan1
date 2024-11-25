@@ -23,13 +23,12 @@ class ProductValidation
             $is_valid = false;
         }
 
-
         if (isset($_POST['discount_price']) && $_POST['discount_price'] !== '') {
             if ((int) $_POST['discount_price'] < 0) {
                 $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn hoặc bằng 0';
                 $is_valid = false;
-            } elseif ((int) $_POST['discount_price'] > (int) $_POST['price']) {
-                $errors['discount_price'] = 'Giá giảm phải nhỏ hơn hoặc bằng giá tiền';
+            } elseif ((int) $_POST['discount_price'] >= (int) $_POST['price']) {
+                $errors['discount_price'] = 'Giá giảm phải nhỏ hơn  giá gốc';
                 $is_valid = false;
             }
         }
@@ -51,17 +50,7 @@ class ProductValidation
             $is_valid = false;
         }
 
-            if (isset($_POST['end_time']) && $_POST['end_time'] !== '') {
-            if (!isset($_POST['start_time']) || $_POST['start_time'] === '') {
-                $errors['end_time'] = 'Không được chọn thời gian kết thúc khi chưa chọn thời gian bắt đầu';
-                $is_valid = false;
-            } elseif (strtotime($_POST['end_time']) <= strtotime($_POST['start_time'])) {
-                $errors['end_time'] = 'Thời gian kết thúc phải sau thời gian bắt đầu';
-                $is_valid = false;
-            }
-        }
-
-
+    
 
 
         if (!$is_valid) {
@@ -144,8 +133,8 @@ class ProductValidation
             if ((int) $_POST['discount_price'] < 0) {
                 $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn hoặc bằng 0';
                 $is_valid = false;
-            } elseif ((int) $_POST['discount_price'] > (int) $_POST['price']) {
-                $errors['discount_price'] = 'Giá giảm phải nhỏ hơn hoặc bằng giá tiền';
+            } elseif ((int) $_POST['discount_price'] >= (int) $_POST['price']) {
+                $errors['discount_price'] = 'Giá giảm phải nhỏ hơn  giá gốc';
                 $is_valid = false;
             }
         }
@@ -162,7 +151,7 @@ class ProductValidation
             $errors['description'] = 'Vui lòng nhập mô tả';
             $is_valid = false;
         }
-   
+
         // if (isset($_POST['end_time']) && $_POST['end_time'] !== '') {
         //     if (!isset($_POST['start_time']) || $_POST['start_time'] === '') {
         //         $errors['end_time'] = 'Không được chọn thời gian kết thúc khi chưa chọn thời gian bắt đầu';

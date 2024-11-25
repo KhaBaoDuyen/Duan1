@@ -3,7 +3,7 @@
         'name' => 'baoduyen/duan1',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7c3edd4cd45ac51f8d213e4fb4bec6fae4aea298',
+        'reference' => '28e25b2c50b34ef951838827d4f27a0c4aee18c9',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'baoduyen/duan1' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7c3edd4cd45ac51f8d213e4fb4bec6fae4aea298',
+            'reference' => '28e25b2c50b34ef951838827d4f27a0c4aee18c9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

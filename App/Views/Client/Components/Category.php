@@ -25,6 +25,7 @@ class Category extends BaseView
         <?php endforeach; ?>
 
       </div>
+
     </aside>
 
 <?php

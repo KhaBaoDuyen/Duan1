@@ -19,7 +19,7 @@ use App\Views\Admin\Pages\Order\index as OrderIndex;
 use App\Views\Client\Components\Notification;
 use App\Views\Client\Layouts\Footer;
 use App\Views\Client\Layouts\Header;
-use App\Views\Client\Pages\Product\Categories  as ProductCategory;
+use App\Views\Client\Pages\Product\Categories as ProductCategory;
 use App\Views\Client\Pages\Product\Shop;
 use App\Views\Client\Pages\Product\Index;
 use App\Views\Client\Pages\Product\Edit;
@@ -33,7 +33,7 @@ class ProductController
     public function __construct()
     {
         // index product
-        $this->productModel = new  ProductModel();
+        $this->productModel = new ProductModel();
     }
     // hiển thị danh sách
     public static function index()
@@ -42,7 +42,7 @@ class ProductController
         $products = $product->getAllProduct();
 
         $category = new CategoryModel();
-        $categories = $category->getAllCategoryByStatus();
+        $categories = $category->getAllByStatus();
 
         $data = [
             'products' => $products,
@@ -70,7 +70,8 @@ class ProductController
             if (isset($data['product']['variant']) && !empty($data['product']['variant'])) {
                 $Arr_variant = json_decode($data['product']['variant'], true);
             }
-        };
+        }
+        ;
         if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
             if (isset($data['product']['images']) && !empty($data['product']['images'])) {
                 $images = json_decode($data['product']['images'], true);
@@ -79,8 +80,8 @@ class ProductController
         $data['Arr_variant'] = $Arr_variant;
         $data['images'] = $images;
         Header::render();
-        Notification::render();
-        NotificationHelper::unset();
+        // Notification::render();
+        // NotificationHelper::unset();
         Detail::render($data);
         Footer::render();
     }
@@ -93,6 +94,29 @@ class ProductController
         $product = new ProductModel();
         $products = $product->getAllProductByCategoryAndStatus($id);
 
+        $category = new CategoryModel();
+        $categories = $category->getAllCategoryByStatus();
+
+        $data = [
+            'products' => $products,
+            'categories' => $categories,
+        ];
+
+        // echo"<pre>";
+        // var_dump($data['products']);
+        // var_dump($data['categories']);
+
+        Header::render();
+        ProductCategory::render($data);
+        Footer::render();
+    }
+    // --------- LỌC SP THEO GIÁ ----------------
+   public static function getProductByCategoryAndPriceAds($id)
+    {
+        $product = new ProductModel();
+        $products = $product->getAllProductByCategoryAndStatus($id);
+          
+        
         $category = new CategoryModel();
         $categories = $category->getAllCategoryByStatus();
 

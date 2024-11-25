@@ -29,13 +29,15 @@ class Index extends BaseView
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-search fa-fw"></i>
                                 </a>
-                                <div style=" width: 350px !important;" class="  dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                <div style=" width: 350px !important;"
+                                    class="  dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                     aria-labelledby="searchDropdown">
-                                    <form class="navbar-search"  action="/admin/SearchCategogy" method="get">
+                                    <form class="navbar-search" action="/admin/SearchCategogy" method="get">
                                         <div class="input-group">
                                             <input type="text" class="form-control bg-light border-1 small"
                                                 placeholder="Nhập từ khóa tìm kiếm ?" aria-label="Search"
-                                                aria-describedby="basic-addon2"  id="input" class="input" name="keyword" type="keyword"  style="border-color: #3f51b5;">
+                                                aria-describedby="basic-addon2" id="input" class="input" name="keyword"
+                                                type="keyword" style="border-color: #3f51b5;">
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary" type="submit">
                                                     <i class="fas fa-search fa-sm"></i>

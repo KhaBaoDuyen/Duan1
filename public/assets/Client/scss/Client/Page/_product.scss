@@ -24,6 +24,7 @@
                font-size: 11em;
                color: var(--pri-color);
                font-weight: 500;
+
             }
 
             &_slogan {
@@ -127,13 +128,11 @@ main {
          color: var(--pri-color);
          font-family: var(--font-family);
          font-size: 2rem;
+         padding-top: 49px
       }
 
       .brand {
-         width: 90%;
-
          &_title {
-
             h5 {
                white-space: nowrap;
                text-overflow: ellipsis;
@@ -141,7 +140,6 @@ main {
                color: var(--pri-color);
                font-weight: 500;
             }
-
             &:hover {
                text-decoration: underline;
             }
@@ -198,6 +196,7 @@ main {
       .all_products {
          padding: 1%;
          display: flex;
+         flex-wrap: wrap;
 
          .card {
             width: 24%;

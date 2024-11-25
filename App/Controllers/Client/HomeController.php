@@ -21,13 +21,13 @@ class HomeController
     public static function index()
     {
         $product = new ProductModel();
-        $data['products'] = $product->getAllProduct();
+        $data['products'] = $product->getAllByProductStatus();
 
         $user = new UserModel();
         $data['user'] = $user->getAllUser();
 
         $categogy = new CategoryModel();
-        $data['categogy'] = $categogy->getAllProductByStatus();
+        $data['categogy'] = $categogy->getAllCategoryByStatus();
         // Notification::render();
         // NotificationHelper::unset();
         Header::render();

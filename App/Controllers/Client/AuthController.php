@@ -27,8 +27,8 @@ class AuthController
    // thuc hien  ForgotPassword giao dien 
    public static function ForgotPassword()
    {
-     /*  Notification::render();
-      NotificationHelper::unset(); */
+      /*  Notification::render();
+       NotificationHelper::unset(); */
       ForgotPassword::render();
    }
 
@@ -43,6 +43,7 @@ class AuthController
    // ------------- PROFILE ----------------
    public static function profile()
    {
+
       Header::render();
       Profile::render();
    }
@@ -98,7 +99,7 @@ class AuthController
          'username' => $_POST['username'],
          'password' => $_POST['password'],
          'remember' => isset($_POST['remember'])
-     // Kiểm tra xem người dùng có chọn 'Ghi nhớ đăng nhập' không
+         // Kiểm tra xem người dùng có chọn 'Ghi nhớ đăng nhập' không
       ];
 
       // Gọi AuthHelper để thực hiện đăng nhập
@@ -133,17 +134,18 @@ class AuthController
          }
       }
       $data = $_SESSION['user'];
-      /* var_dump($data); */
+
+   //   $data = [
+   //       'username' => $_POST['username'],
+   //       'email' => $_POST['email'],
+   //       'phone' => $_POST['phone'],
+   //       'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
+   //   ];
       Header::render();
       Profile::render($data);
       Footer::render();
    }
-      //   $data = [
-      //       'username' => $_POST['username'],
-      //       'email' => $_POST['email'],
-      //       'phone' => $_POST['phone'],
-      //       'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
-      //   ];
+
 
    public static function update($id)
    {

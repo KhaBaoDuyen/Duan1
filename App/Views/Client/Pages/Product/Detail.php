@@ -54,7 +54,7 @@ class Detail extends BaseView
             </aside>
 
             <article class="col-5 ms-5 ">
-               <h5 class="name_categogy"><?= $data['product']['name_categogy'] ?></h5>
+               <h5 class="name_categogy" style='text-transform: uppercase; font-weight: 550;'><?= $data['product']['name_categogy'] ?></h5>
                <h3 class="name_product"><?= $data['product']['name'] ?></h3>
                <p class="describe " style="text-align: justify;"><?= $data['product']['short_description'] ?></p>
                <div class="price_product ">
@@ -70,7 +70,7 @@ class Detail extends BaseView
 
                <?php if (isset($data['Arr_variant']) && !empty($data['Arr_variant'])) { ?>
                   <div class="variants d-flex flex-column mt-2">
-                     <h6 class="variant_title col-2">Kích thước: </h6>
+                     <h6 class="variant_title col-2">Phân loại: </h6>
                      <div class="variant row">
                         <?php foreach ($data['Arr_variant'] as $key => $variant) { ?>
                            <button
@@ -145,7 +145,7 @@ class Detail extends BaseView
                <h4>CHI TIẾT SẢN PHẨM</h4>
                <div class="box_des d-flex">
                   <label class="col-2">Danh mục: </label>
-                  <p>Cây để bàn</p>
+                  <p><?=$data['product']['name_categogy']?></p>
                </div>
 
                <div class="box_des d-flex">

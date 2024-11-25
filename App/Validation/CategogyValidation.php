@@ -111,7 +111,7 @@ class CategogyValidation
    {
       $is_valid = true;
 
-      if (empty($_POST["id"]) && $_POST['id'] == 23) {
+      if (empty($_POST["id"]) && $_POST['id'] == 29) {
          $is_valid = false;
       }
 

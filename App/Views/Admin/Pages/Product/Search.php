@@ -73,6 +73,7 @@ class Search extends BaseView
                               <th>Giá</th>
                               <th>Mô tả</th>
                               <th>Danh mục</th>
+                              <th>Trạng thái</th>
                               <th>Khác</th>
                            </tr>
                         </thead>

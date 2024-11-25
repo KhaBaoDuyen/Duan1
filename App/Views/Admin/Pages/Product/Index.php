@@ -8,9 +8,9 @@ class Index extends BaseView
 {
     public static function render($data = null)
     {
-?>
+        ?>
         <!-- Container Fluid-->
-        <div class="container-fluid" id="container-wrapper">
+        <div class="container-fluid" id="container-wrapper" >
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Sản phẩm</h1>
                 <ol class="breadcrumb">
@@ -22,20 +22,22 @@ class Index extends BaseView
                 <!-- DataTable with Hover -->
                 <div class="col-lg-12">
                     <div class="card mb-4">
-                           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h6>
                             <div class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fas fa-search fa-fw"></i>
                                 </a>
-                                <div style=" width: 350px !important;" class="  dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                <div style=" width: 350px !important;"
+                                    class=" dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                     aria-labelledby="searchDropdown">
-                                    <form class="navbar-search"  action="/admin/SearchProducts" method="get">
+                                    <form class="navbar-search" action="/admin/SearchProducts" method="get">
                                         <div class="input-group">
                                             <input type="text" class="form-control bg-light border-1 small"
                                                 placeholder="Nhập từ khóa tìm kiếm ?" aria-label="Search"
-                                                aria-describedby="basic-addon2"  id="input" class="input" name="keyword" type="keyword"  style="border-color: #3f51b5;">
+                                                aria-describedby="basic-addon2" id="input" class="input" name="keyword"
+                                                type="keyword" style="border-color: #3f51b5;">
                                             <div class="input-group-append">
                                                 <button class="btn btn-primary" type="submit">
                                                     <i class="fas fa-search fa-sm"></i>
@@ -47,8 +49,8 @@ class Index extends BaseView
                             </div>
                         </div>
                         <?php
-                        if (is_array($data['products']) && count($data['products']) > 0) :
-                        ?>
+                        if (is_array($data['products']) && count($data['products']) > 0):
+                            ?>
                             <div class="table-responsive p-3">
                                 <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                                     <thead class="thead-light">
@@ -64,11 +66,11 @@ class Index extends BaseView
                                         </tr>
                                     </thead>
 
-                                    <tbody>
+                                    <tbody style="">
                                         <?php
-                                        foreach ($data['products'] as $item) :
-                                        ?>
-                                            <tr>
+                                        foreach ($data['products'] as $item):
+                                            ?>
+                                            <tr style="">
                                                 <td><?= $item['id'] ?></td>
                                                 <td width="20%"><?= $item['name'] ?></td>
                                                 <td><?= number_format($item['price'] ?? 0, 0, ',', '.') ?> đ </td>
@@ -86,11 +88,18 @@ class Index extends BaseView
 
 
                                                 <td>
-                                                    <img class="img_all" width="40px" height="40px"
-                                                        class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="Product Image" height="100%">
+                                                    <img class="img_all" width="40px" height="40px" class="image"
+                                                        src="/public/uploads/products/<?= $item['image'] ?>" alt="Product Image"
+                                                        height="100%">
                                                 </td>
                                                 <td><?= $item['category_name'] ?></td>
-                                                <td><?= ($item['status'] == 1) ? 'Hiển thị' : 'Ẩn' ?></td>
+                                                <td>
+                                                    <span
+                                                        class="<?= ($item['status'] == 1) ? 'badge p-2 badge-success text-white' : 'badge p-2 badge-danger text-white' ?>">
+                                                        <?= ($item['status'] == 1) ? 'Hiển thị' : 'Ẩn' ?>
+                                                    </span> </span>
+
+                                                </td>
                                                 <td>
                                                     <a href="/admin/products/<?= $item['id'] ?>" class="btn btn-sm btn-warning">Sửa</a>
                                                     <form action="/admin/products/<?= $item['id'] ?>" method="post"
@@ -100,28 +109,28 @@ class Index extends BaseView
                                                         <button type="submit" class="btn btn-sm btn-danger">Xoá</button>
                                                     </form>
                                             </tr>
-                                        <?php
+                                            <?php
                                         endforeach;
                                         ?>
                                     </tbody>
                                 </table>
                             </div>
-                        <?php
-                        else :
-                        ?>
+                            <?php
+                        else:
+                            ?>
                             <h4 class="text-center text-danger">Không có dữ liệu</h4>
-                        <?php
+                            <?php
                         endif;
                         ?>
                     </div>
                 </div>
             </div>
 
-       
+
 
         </div>
         <!---Container Fluid-->
-<?php
+        <?php
     }
 }
 ?>

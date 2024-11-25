@@ -25,7 +25,7 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
-            $sql = "SELECT * FROM $this->table where 1";
+            $sql = "SELECT * FROM $this->table";
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_all(MYSQLI_ASSOC);
         } catch (\Throwable $th) {
@@ -157,7 +157,14 @@ abstract class BaseModel implements CrudInterface
 
     public function getAllByStatus()
     {
-        $sql = "SELECT * FROM $this->table WHERE status =  " . self::STATUS_ENABLE;
+      $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . " ";
+        $result = $this->_conn->MySQLi()->query($sql);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getAllByProductStatus()
+    {
+      $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . "   LIMIT 15";
         $result = $this->_conn->MySQLi()->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -166,13 +173,6 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
-            if (is_array($name) && isset($name[0])) {
-                $name = $name[0];
-            }
-            if (empty($name)) {
-                throw new Exception('Tên sản phẩm không hợp lệ');
-            }
-
             $sql = "SELECT * FROM $this->table WHERE name=? ";
             $conn = $this->_conn->MySQLi();
             $stmt = $conn->prepare($sql);
@@ -206,6 +206,8 @@ abstract class BaseModel implements CrudInterface
         $stmt->execute();
         return $stmt->get_result()->fetch_assoc();
     }
+
+     
 
     public function getOneProductByStatus($id)
     {
@@ -258,7 +260,7 @@ abstract class BaseModel implements CrudInterface
     {
         $sql = "SELECT products.*, categories.name AS category_name 
                 FROM products
-                INNER JOIN categories ON products.id_categogy = categories.id";
+                INNER JOIN categories ON products.id_categogy = categories.id ORDER BY products.id DESC";
         $result = $this->_conn->MySQLi()->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -278,7 +280,7 @@ abstract class BaseModel implements CrudInterface
 
             // Nếu có sản phẩm, cập nhật danh mục của chúng thành id 23
             if ($productCount > 0) {
-                $uncategorized = 23;
+                $uncategorized = 29;
                 $sqlUpdateProducts = "UPDATE products SET id_categogy = ? WHERE id_categogy = ?;";
                 $stmtUpdate = $conn->prepare($sqlUpdateProducts);
                 $stmtUpdate->bind_param('ii', $uncategorized, $id);

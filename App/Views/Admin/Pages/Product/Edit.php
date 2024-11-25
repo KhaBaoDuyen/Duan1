@@ -31,11 +31,11 @@ class Edit extends BaseView
             </div>
             <div class="card-body">
               <form action="/admin/products/<?= $product['id'] ?>" method="POST" enctype="multipart/form-data"
-                class="d-flex justify-content-between col-12" id="productForm">
-                <input type="hidden" name="method" value="PUT">
-                <div class="col-7 row">
+                class="d-flex justify-content-between  col-12" id="productForm">
 
-                  <div class="  col-12">
+                <div class=" row">
+                  <input type="hidden" name="method" value="PUT">
+                  <div class=" col-12">
                     <label for="name">Tên sản phẩm</label>
                     <input type="text" class="form-control <?= isset($errors['name']) ? 'is-invalid' : '' ?>" name="name" id="name" value="<?= $product['name']   ?>">
                     <?php if (isset($errors['name'])): ?>
@@ -104,25 +104,13 @@ class Edit extends BaseView
                     <?php endif; ?>
                   </div>
 
-                  <div class="col-6">
-                    <label for="start_time">Thời gian bắt đầu</label>
-                    <input type="datetime-local" class="form-control" name="start_time" id="start_time" value="<?= isset($product['start_time']) ? (new \DateTime($product['start_time']))->format('Y-m-d\TH:i') : '' ?>">
-                  </div>
-                  <div class="col-6">
-                    <label for="end_time">Thời gian kết thúc</label>
-                    <input type="datetime-local" class="form-control <?= isset($errors['end_time']) ? 'is-invalid' : '' ?>" name="end_time" id="end_time" value="<?= isset($product['end_time']) ? (new \DateTime($product['end_time']))->format('Y-m-d\TH:i') : '' ?>">
-                    <?php if (isset($errors['end_time'])): ?>
-                      <span style="color:red;"><?= $errors['end_time'] ?></span>
-                    <?php endif; ?>
-                  </div>
-
                   <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
                 </div>
 
-                <div class="col-6">
-                  <div class="col-12">
+                <div class="row">
+                  <div class="col-10 m-auto">
                     <!-- Ảnh chính sản phẩm -->
-                    <div class=" col-12">
+                    <div class=" col-12 mb-1">
                       <label for="image">Ảnh chính sản phẩm</label>
                       <img src="/public/uploads/products/<?= $product['image'] ?>" alt="Ảnh chính" class="img-fluid " style="max-width: 20%;">
                       <input type="file" class="form-control image_product col-10" name="image" accept="image/*">
@@ -170,14 +158,10 @@ class Edit extends BaseView
                         ?>
                       </div>
                     </div>
-
-
-
-
                   </div>
 
-                  <div class=" <?= isset($errors['description']) ? 'is-invalid' : '' ?>col-12 group_variant">
-                    <div class="d-flex align-content-between justify-content-between col-12">
+                  <div class=" <?= isset($errors['description']) ? 'is-invalid' : '' ?>col-10 m-auto group_variant">
+                    <div class="d-flex align-content-between justify-content-between col-12 mb-1">
                       <label for="image">Biến thể</label>
                       <a href="javascript:void(0)" onclick="createVariant()" class="ml-2 btn btn-primary"
                         id="add-more-images">Thêm biến thể</a>

@@ -56,7 +56,7 @@ class ProductModel extends BaseModel
 
     public function getOneProductByCategory($category)
     {
-        $sql = "SELECT * FROM $this->table WHERE id_categogy=? LIMIT 1"; 
+        $sql = "SELECT * FROM $this->table WHERE id_categogy=? LIMIT 1";
         $conn = $this->_conn->MySQLi();
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('s', $category);  // Sử dụng kiểu dữ liệu đúng ('s' cho string)
@@ -166,7 +166,7 @@ class ProductModel extends BaseModel
         LEFT JOIN categories ON categories.id = products.id_categogy
         WHERE 
             products.name LIKE :keyword 
-            OR products.description LIKE :keyword 
+            OR products.short_description LIKE :keyword 
             OR categories.name LIKE :keyword
     ");
 
@@ -174,5 +174,48 @@ class ProductModel extends BaseModel
 
         // Trả về kết quả
         return $stmt->fetchAll();
+    }
+
+    // -----------------[DELETE] -------------------
+
+    // public function updateDiscountPrice(int $id, array $data)
+// {
+//     try {
+//         $sql = "UPDATE products SET discount_price = NULL, start_time = NULL, end_time = NULL";
+//         foreach ($data as $key => $value) {
+//             $sql .= ", $key = ?";
+//         }
+//         $sql .= " WHERE id = ?";
+//         $conn = $this->_conn->MySQLi();
+//         $stmt = $conn->prepare($sql);
+//         $params = array_values($data);
+//         $params[] = $id;
+//         $types = str_repeat('s', count($params) - 1) . 'i'; 
+//         $stmt->bind_param($types, ...$params);
+//         return $stmt->execute();
+//     } catch (\Throwable $th) {
+//         error_log('Lỗi khi cập nhật dữ liệu: ' . $th->getMessage());
+//         return false;
+//     }
+// }
+    // -----------------[ ACS PRODUCT ] -------------------
+    public function getAllProductAcsPice()
+    {
+        $result = [];
+        try {
+            $sql = "SELECT * products
+    FROM products Order by price ASC
+    WHERE products.id_categogy = ? 
+    AND products.status = " . self::STATUS_ENABLE . " 
+    AND categories.status = " . self::STATUS_ENABLE;
+            $conn = $this->_conn->MySQLi();
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi lấy dữ liệu theo category và status: ' . $th->getMessage());
+            return $result;
+        }
     }
 }

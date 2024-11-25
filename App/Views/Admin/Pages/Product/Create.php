@@ -31,9 +31,9 @@ class Create extends BaseView
                         <div class="card-body">
                             <form action="/admin/products" method="POST" enctype="multipart/form-data"
                                 class="d-flex justify-content-between col-12">
-                                <input type="hidden" name="method" value="POST">
-                                <div class="col-7 row">
 
+                                <div class=" row">
+                                    <input type="hidden" name="method" value="POST">
                                     <div class="form-group col-12">
                                         <label for="name">Tên sản phẩm</label>
                                         <input type="text"
@@ -106,7 +106,7 @@ class Create extends BaseView
                                         <?php endif; ?>
                                     </div>
 
-                                    <div class="form-group col-6">
+                                    <!-- <div class="form-group col-6">
                                         <label for="start_time">Thời gian bắt đầu</label>
                                         <input type="datetime-local" class="form-control" name="start_time" id="start_time">
                                     </div>
@@ -116,7 +116,7 @@ class Create extends BaseView
                                         <?php if (isset($errors['end_time'])): ?>
                                             <span style="color:red;"><?= $errors['end_time'] ?></span>
                                         <?php endif; ?>
-                                    </div>
+                                    </div> -->
                                     <button type="submit" class="btn btn-primary">Thêm sản phẩm</button>
                                 </div>
 

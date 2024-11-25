@@ -262,8 +262,10 @@
   z-index: 1000;
 }
 
-footer .footer_top {
+footer {
   border-top: 4px solid var(--pri-color);
+}
+footer .footer_top {
   padding-top: 2%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -291,12 +293,14 @@ footer .footer_bottom {
   background-size: 19%, 20%;
   height: 20rem;
 }
-footer .footer_bottom .menu_footer {
+footer .footer_bottom .box_menu_footer {
   margin: 25% auto;
 }
-footer .footer_bottom .menu_footer > a {
+footer .footer_bottom .box_menu_footer > a {
   font-size: 1.2rem;
   color: var(--text-color-light);
+  padding-left: 30px;
+  text-align: center;
 }
 footer .footer_bottom .menu_footer > li > a {
   color: var(--text-color-light) !important;
@@ -361,7 +365,6 @@ footer .footer_bottom .menu_footer > li > a:hover {
   width: 20%;
   position: relative;
   overflow: hidden;
-  padding: 0.5%;
   max-height: 28rem;
   margin: 0.5%;
   border-radius: 10px;
@@ -372,7 +375,6 @@ footer .footer_bottom .menu_footer > li > a:hover {
   overflow: hidden;
   width: 100%;
   position: relative;
-  border-radius: 10px;
 }
 .flash .card .box_image img {
   width: 100%;
@@ -381,6 +383,7 @@ footer .footer_bottom .menu_footer > li > a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -389,6 +392,7 @@ footer .footer_bottom .menu_footer > li > a:hover {
 .flash .card .title {
   height: -moz-max-content;
   height: max-content;
+  padding: 8px;
 }
 .flash .card .title .price {
   color: var(--color-price);
@@ -415,7 +419,6 @@ footer .footer_bottom .menu_footer > li > a:hover {
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: justify;
 }
 .flash .card:hover {
   border: 1px solid var(--color-price);
@@ -589,7 +592,7 @@ section .img-box img:hover {
 .brand .box_category_right .card_category .name_brand h2 {
   font-family: "Inter", serif;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -623,19 +626,16 @@ section .img-box img:hover {
 .all_product .box_card .card {
   position: relative;
   overflow: hidden;
-  padding: 0.5%;
   max-height: 28rem;
   margin: 0.5%;
   border-radius: 10px;
   text-decoration: none;
-  padding: 3%;
 }
 .all_product .box_card .card .box_image {
   height: 15rem;
   overflow: hidden;
   width: 100%;
   position: relative;
-  border-radius: 10px;
 }
 .all_product .box_card .card .box_image img {
   width: 100%;
@@ -644,6 +644,7 @@ section .img-box img:hover {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -652,6 +653,7 @@ section .img-box img:hover {
 .all_product .box_card .card .title {
   height: -moz-max-content;
   height: max-content;
+  padding: 8px;
 }
 .all_product .box_card .card .title .price {
   color: var(--color-price);
@@ -678,7 +680,6 @@ section .img-box img:hover {
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: justify;
 }
 .all_product .box_card .card:hover {
   border: 1px solid var(--color-price);
@@ -826,9 +827,7 @@ main aside .title_brand {
   color: var(--pri-color);
   font-family: var(--font-family);
   font-size: 2rem;
-}
-main aside .brand {
-  width: 90%;
+  padding-top: 49px;
 }
 main aside .brand_title h5 {
   white-space: nowrap;
@@ -881,13 +880,13 @@ main article nav .tune:hover .tune_down {
 main article .all_products {
   padding: 1%;
   display: flex;
+  flex-wrap: wrap;
 }
 main article .all_products .card {
   width: 24%;
   transition: all 200ms ease;
   position: relative;
   overflow: hidden;
-  padding: 0.5%;
   max-height: 28rem;
   margin: 0.5%;
   border-radius: 10px;
@@ -898,7 +897,6 @@ main article .all_products .card .box_image {
   overflow: hidden;
   width: 100%;
   position: relative;
-  border-radius: 10px;
 }
 main article .all_products .card .box_image img {
   width: 100%;
@@ -907,6 +905,7 @@ main article .all_products .card .box_image .image_hover {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -915,6 +914,7 @@ main article .all_products .card .box_image .image_hover {
 main article .all_products .card .title {
   height: -moz-max-content;
   height: max-content;
+  padding: 8px;
 }
 main article .all_products .card .title .price {
   color: var(--color-price);
@@ -941,7 +941,6 @@ main article .all_products .card .title .content {
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: justify;
 }
 main article .all_products .card:hover {
   border: 1px solid var(--color-price);
@@ -1842,6 +1841,7 @@ main article .all_products .card:hover {
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  margin-top: -1.5rem;
 }
 .Page-login .container {
   background-color: #010101;
@@ -2068,11 +2068,11 @@ main article .all_products .card:hover {
 
 .profile {
   background: url(/public/assets/Client/image/main/78a2c561ba02033e13510a00e56f5776.jpg) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   padding: 2% 0;
 }
 .profile .sec_profile {
-  height: 43rem;
+  height: 35rem;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -2690,6 +2690,108 @@ main article .all_products .card:hover {
   border: none;
 }
 
+#reminder {
+  position: fixed;
+  z-index: 1000;
+  bottom: 5%;
+  left: 0.3%;
+  width: 25%;
+}
+#reminder .box_reminder {
+  background: var(--pri-color);
+  border-radius: 5px 30px 30px 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  padding: 2% 4%;
+  margin: 2% 0%;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translateX(-70%);
+  cursor: pointer;
+  transition: all 2s ease;
+}
+#reminder .box_reminder:focus, #reminder .box_reminder:hover {
+  transform: translateX(0);
+}
+#reminder form {
+  display: none;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 5px 5px 10px #b4b4b4, -5px -5px 10px #ffffff;
+  padding: 2%;
+  z-index: 1000;
+}
+#reminder form h5 {
+  background: var(--pri-color);
+  color: white;
+  padding: 2% 2%;
+  width: 100%;
+  text-align: center;
+  border-radius: 3px 3px 15px 15px;
+}
+#reminder form input,
+#reminder form textarea,
+#reminder form select,
+#reminder form option {
+  width: 100%;
+  pointer-events: auto;
+}
+#reminder form button {
+  background: var(--pri-color);
+  color: white;
+  padding: 2% 2%;
+}
+
+#scoll-top {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  transition: all 3s ease-in-out;
+  background: var(--pri-color);
+  color: white;
+  padding: 0.4% 0.5%;
+  border-radius: 3px;
+}
+
+.checkStatus .radio-input input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--pri-color);
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.checkStatus .radio-input input[type=radio]:checked {
+  background-color: var(--pri-color);
+  border-color: var(--pri-color);
+  color: rgb(255, 255, 255);
+}
+.checkStatus .radio-input input[type=radio]:checked::before {
+  content: "🌱 ";
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+}
+.checkStatus .radio-input label {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.checkStatus .radio-input span {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -2736,19 +2838,16 @@ ul {
 .box_card .card {
   position: relative;
   overflow: hidden;
-  padding: 0.5%;
   max-height: 28rem;
   margin: 0.5%;
   border-radius: 10px;
   text-decoration: none;
-  padding: 3%;
 }
 .box_card .card .box_image {
   height: 15rem;
   overflow: hidden;
   width: 100%;
   position: relative;
-  border-radius: 10px;
 }
 .box_card .card .box_image img {
   width: 100%;
@@ -2757,6 +2856,7 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2765,6 +2865,7 @@ ul {
 .box_card .card .title {
   height: -moz-max-content;
   height: max-content;
+  padding: 8px;
 }
 .box_card .card .title .price {
   color: var(--color-price);
@@ -2791,7 +2892,6 @@ ul {
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-align: justify;
 }
 .box_card .card:hover {
   border: 1px solid var(--color-price);
@@ -2823,4 +2923,41 @@ ul {
 }
 .box_card .card:hover {
   box-shadow: 5px 5px 10px #b4b4b4, -5px -5px 10px #ffffff;
+}
+
+.notification-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  z-index: 9999;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.notification-alert.alert-success {
+  background-color: #28a745;
+}
+
+.notification-alert.alert-error {
+  background-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=index.css.map */

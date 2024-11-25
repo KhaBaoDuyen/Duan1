@@ -36,19 +36,15 @@ class Home extends BaseView
          <section class="flash">
             <div class="box_title d-flex align-items-center justify-content-between p-3">
                <h3>Flash Deals</h3>
-               <!-- <a href="">Xem tất cả</a> -->
             </div>
             <div class="flash_box d-flex">
                <?php if (isset($data) && isset($data['products'])): ?>
                   <?php foreach ($data['products'] as $item): ?>
                      <?php
-                     $current_time = new \DateTime();
-                     $start_time = isset($item['start_time']) && !empty($item['start_time']) ? new \DateTime($item['start_time']) : null;
-                     $end_time = isset($item['end_time']) && !empty($item['end_time']) ? new \DateTime($item['end_time']) : null;
 
-                     if ($start_time && $end_time && $current_time >= $start_time && $current_time <= $end_time && !empty($item['discount_price'])):
+                     if (!empty($item['discount_price'])):
                      ?>
-                        <a href="/product/<?= $item['id']?>" class="card col-2">
+                        <a href="/product/<?= $item['id'] ?>" class="card col-2">
                            <div class="box_image">
                               <?php
                               // giải mã thành mảng
@@ -66,14 +62,18 @@ class Home extends BaseView
 
 
                               <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
-                              <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover">
+                              <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover" height="100%">
                            </div>
 
 
                            <div class="title">
                               <div class="price">
-                                 <span><?= number_format(  $item['price'], 0, ',', '.')  ?> vnd</span>
-                                 <span class="price_sales"> <?= number_format($item['discount_price'] , 0, ',', '.') ?> vnd</span>
+                                 <?php if (isset($item['discount_price']) && !empty($item['discount_price'])) { ?>
+                                    <span><?= number_format($item['discount_price'], 0, ',', '.') ?>đ</span>
+                                    <span class="price_sales"><?= number_format($item['price'], 0, ',', '.') ?> đ</span>
+                                 <?php } else { ?>
+                                    <span><?= number_format($item['price'], 0, ',', '.') ?>đ</span>
+                                 <?php }  ?>
                               </div>
                               <h4 class="name_product"><?= $item['name'] ?></h4>
                               <p class="content"><?= $item['short_description'] ?>vnd</p>
@@ -114,7 +114,7 @@ class Home extends BaseView
          <section class="brand">
             <div class="box_title d-flex align-items-center justify-content-between ">
                <h3>Danh mục </h3>
-              
+
             </div>
             <div class="d-flex box_category justify-content-center align-items-center">
                <div class="col-4 box_category_left">
@@ -168,7 +168,7 @@ class Home extends BaseView
                      </ul>
                   </div>
                   <div class="box_btn_category">
-                     <button  class="btn-left material-symbols-outlined">arrow_back_ios</button>
+                     <button class="btn-left material-symbols-outlined">arrow_back_ios</button>
                      <button class=" btn-right material-symbols-outlined">arrow_forward_ios</button>
                   </div>
                </div>
@@ -180,13 +180,13 @@ class Home extends BaseView
                <h3>Sản phẩm</h3>
                <a href="">Xem tất cả</a>
             </div>
-            <div class="row box_card col-12">
+            <div class=" box_card col-12">
                <?php
                if (isset($data) && isset($data['products']) && $data['products']):
-                  $productsToDisplay = array_slice($data['products'], 0, 20);
+                  $productsLimit = array_slice($data['products'], 0, 20);
                ?>
-                  <?php foreach ($productsToDisplay as $item): ?>
-                     <a class="card" href="/product/<?= $item['id']?>" >
+                  <?php foreach ($productsLimit as $item): ?>
+                     <a class="card" href="/product/<?= $item['id'] ?>">
                         <div class="box_image">
                            <?php
                            // giải mã thành mảng
@@ -209,10 +209,13 @@ class Home extends BaseView
 
                         <div class="title">
                            <div class="price">
-                              <span><?= number_format(  $item['price'], 0, ',', '.')  ?> vnd</span>
-                              <?php if (isset($item['discount_price']) && !empty($item['discount_price'])): ?>
-                                 <span class="price_sales"> <?= number_format($item['discount_price'] , 0, ',', '.') ?> vnd</span>
-                              <?php endif; ?>
+                                  <?php if (isset($item['discount_price']) && !empty($item['discount_price'])){ ?>
+                                    <span><?= number_format($item['discount_price'], 0, ',', '.') ?>đ</span>
+                                    <span class="price_sales"><?= number_format($item['price'], 0, ',', '.') ?> đ</span>
+                                 <?php } else{ ?>
+                                    <span><?= number_format($item['price'], 0, ',', '.')?>đ</span>
+                                 <?php }  ?>
+
                            </div>
                            <h4 class="name_product"><?= $item['name'] ?></h4>
                            <p class="content"><?= $item['short_description'] ?></p>
