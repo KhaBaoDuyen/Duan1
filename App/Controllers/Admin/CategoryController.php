@@ -126,7 +126,6 @@ class CategoryController
             $is_exist = $category->getOneCategoryByName($_POST['name']);
             if ($is_exist && $is_exist['id'] != $id) {
                 NotificationHelper::error('name', 'Tên loại sản phẩm đã tồn tại');
-                //       chuyển hướng đến trang sửa
                 header("location: /admin/categories/$id");
             } else {
 

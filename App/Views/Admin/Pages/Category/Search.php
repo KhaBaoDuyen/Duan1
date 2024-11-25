@@ -39,11 +39,8 @@ class Search extends BaseView
                      </div>
 
                      <div class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                           <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <div style="width: 350px !important;" class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                 
+                        <div style="width: 350px !important;" class=""
                            aria-labelledby="searchDropdown">
                            <form class="navbar-search" action="/admin/SearchCategogy" method="get">
                               <div class="input-group">

@@ -37,6 +37,7 @@ class ProductController
     }
 
 
+
     //------------ [ CREATE ]-------------
 
     public static function create()
@@ -110,7 +111,8 @@ class ProductController
         }
 
         if (isset($is_upload)) {
-            $imageNames = json_decode($is_upload, true); // Giải mã JSON từ hàm images()
+            $imageNames = json_decode($is_upload, true); // Giải mã JSON từ hàm image()
+
             $data['image'] = $imageNames['image'] ?? '';
             $data['images'] = isset($imageNames['images']) ? json_encode($imageNames['images']) : ''; // Ảnh phụ
         }
@@ -168,24 +170,22 @@ class ProductController
     public static function update(int $id)
     {
         $is_valid = ProductValidation::update($id);
-        $is_valid = true;
         $product = new ProductModel();
         $current_product = $product->getOneProduct($id);
         if (!$is_valid) {
-            NotificationHelper::error('store', 'Cập nhật thất bại. Thông tin không hợp lệ.');
-            $is_valid = false;
+            NotificationHelper::error('update', 'Cập nhật thất bại');
             header("Location: /admin/products/$id");
-            exit();
+            exit;
         }
-        $product = new ProductModel();
-
-        if (empty($_POST["name"])) {
-            NotificationHelper::error('store', 'Tên sản phẩm đã tông tại !!!.');
-            $is_valid = false;
+        $is_exist = $product->getOneProductByName($_POST['name']);
+            if ($is_exist && $is_exist['id'] != $id) {
+                NotificationHelper::error('name', 'Tên sản phẩm đã tồn tại');
+                 header("Location: /admin/products/$id");
+            exit;
         }
 
-        $variants = $_POST['variant'];
-        $variant = isset($variants) && $variants != null ? json_encode($variants, JSON_UNESCAPED_UNICODE) : $current_product['variant'];
+        $variants = $_POST['variant'] ?? null;
+        $variant = isset($variants) && $variants != null ? json_encode($variants) : null;
         $data = [
             'name' => $_POST['name'] ?? '',
             'price' => $_POST['price'] ?? 0,
@@ -198,13 +198,13 @@ class ProductController
             'variant' => $variant,
         ];
 
-        // if (!empty($_POST['start_time'])) {
-        //     $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
-        // }
+        if (!empty($_POST['start_time'])) {
+            $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
+        }
 
-        // if (!empty($_POST['end_time'])) {
-        //     $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
-        // }
+        if (!empty($_POST['end_time'])) {
+            $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
+        }
 
         $allowed_types = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
         $is_upload_main_image = isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK;
@@ -258,8 +258,6 @@ class ProductController
             $imageNames['images'] = array_merge($imageNames['images'], $newSubImages);
         }
 
-
-
         // Xử lý ảnh xóa
         $removedImages = !empty($_POST['removedImages']) ? json_decode($_POST['removedImages'], true) : [];
         $removedImages = is_array($removedImages) ? $removedImages : [];
@@ -276,7 +274,7 @@ class ProductController
             }
         }
 
-        // $imageNames['images'] = array_values($subImageArray); // Đảm bảo mảng không có khóa bị bỏ trống
+        $imageNames['images'] = array_values($subImageArray); // Đảm bảo mảng không có khóa bị bỏ trống
         $data['image'] = $imageNames['image'];
         $data['images'] = json_encode($imageNames['images']);
         $result = $product->update($id, $data);

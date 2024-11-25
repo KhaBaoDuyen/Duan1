@@ -171,17 +171,17 @@ abstract class BaseModel implements CrudInterface
 
     public function getOneByName($name)
     {
-        $result = [];
+           $result = [];
         try {
-            $sql = "SELECT * FROM $this->table WHERE name=? ";
+            $sql = "SELECT * FROM $this->table WHERE name=?";
             $conn = $this->_conn->MySQLi();
             $stmt = $conn->prepare($sql);
+
             $stmt->bind_param('s', $name);
             $stmt->execute();
             return $stmt->get_result()->fetch_assoc();
         } catch (\Throwable $th) {
-            error_log('Lỗi khi hiển thị dữ liệu: ' . $th->getMessage());
-            NotificationHelper::error('getOne', 'Lỗi khi hiển thị dữ liệu');
+            error_log('Lỗi khi lấy danh mục bằng tên  dữ liệu: ' . $th->getMessage());
             return $result;
         }
     }

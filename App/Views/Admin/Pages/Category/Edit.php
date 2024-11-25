@@ -11,7 +11,7 @@ class Edit extends BaseView
     ?>
 
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6 m-auto">
         <div class="card mb-4">
           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">Thêm Danh mục</h6>
@@ -58,7 +58,7 @@ class Edit extends BaseView
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Cập nhật</button>
             </form>
             <?php
             unset($_SESSION['errors']);
