@@ -59,11 +59,11 @@ class Detail extends BaseView
                <p class="describe " style="text-align: justify;"><?= $data['product']['short_description'] ?></p>
                <div class="price_product ">
                   <h5 class="price_old" id="product-price">
-                     <?= number_format($data['product']['price'], 0, ',', '.') ?> VND
+                     <?= number_format($data['product']['discount_price'], 0, ',', '.') ?> VND
                   </h5>
                   <h5 class="price_new">
                      <?php if (isset($data['product']['discount_price']) && !empty($data['product']['discount_price'])) { ?>
-                        <?= number_format($data['product']['discount_price'], 0, ',', '.') ?> VND
+                        <?= number_format($data['product']['price'], 0, ',', '.') ?> VND
                      <?php } ?>
                   </h5>
                </div>
@@ -149,7 +149,7 @@ class Detail extends BaseView
                </div>
 
                <div class="box_des d-flex">
-                  <label class="col-2">Thương hiệu:</label>
+                  <label class="col-2">Danh mục:</label>
                   <p>BLOOM</p>
                </div>
 

@@ -114,7 +114,7 @@ class ProductController
             $imageNames = json_decode($is_upload, true); // Giải mã JSON từ hàm image()
 
             $data['image'] = $imageNames['image'] ?? '';
-            $data['images'] = isset($imageNames['images']) ? json_encode($imageNames['images']) : ''; // Ảnh phụ
+            $data['images'] = !empty($imageNames['images']) ? json_encode($imageNames['images']) : null; // Ảnh phụ
         }
 
         $result = $product->createProduct($data);
@@ -178,9 +178,9 @@ class ProductController
             exit;
         }
         $is_exist = $product->getOneProductByName($_POST['name']);
-            if ($is_exist && $is_exist['id'] != $id) {
-                NotificationHelper::error('name', 'Tên sản phẩm đã tồn tại');
-                 header("Location: /admin/products/$id");
+        if ($is_exist && $is_exist['id'] != $id) {
+            NotificationHelper::error('name', 'Tên sản phẩm đã tồn tại');
+            header("Location: /admin/products/$id");
             exit;
         }
 
@@ -208,7 +208,7 @@ class ProductController
 
         $allowed_types = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
         $is_upload_main_image = isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK;
-        $is_upload_sub_images = isset($_FILES['images']) && count($_FILES['images']['name']) > 0;
+        $is_upload_sub_images = isset($_FILES['images']) && count($_FILES['images']['name']) >= 0;
 
         $imageNames = [
             'image' => $current_product['image'] ?? '',
@@ -320,4 +320,5 @@ class ProductController
         Search::render($data);
         Footer::render();
     }
+
 }

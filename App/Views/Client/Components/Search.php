@@ -31,10 +31,10 @@ public static function render($data = null)
                            }
 
                            // Kiểm tra xem mảng  giải mã chưa
-                           if (isset($item['images'][0])) {
+                         if (isset($item['images'][0])) {
                               $imageHover = $item['images'][0];
                            } else {
-                              $imageHover = '/public/uploads/products/usermacdinh.png'; 
+                              $imageHover = 'usermacdinh.png';
                            }
                            ?>
 

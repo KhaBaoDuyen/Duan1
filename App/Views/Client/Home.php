@@ -53,11 +53,11 @@ class Home extends BaseView
                               }
 
                               // Kiểm tra xem mảng  giải mã chưa
-                              if (isset($item['images'][0])) {
-                                 $imageHover = $item['images'][0];
-                              } else {
-                                 $imageHover = '/public/uploads/products/usermacdinh.png';
-                              }
+                            if (isset($item['images'][0])) {
+                              $imageHover = $item['images'][0];
+                           } else {
+                              $imageHover = 'usermacdinh.png';
+                           }
                               ?>
 
 
@@ -198,7 +198,7 @@ class Home extends BaseView
                            if (isset($item['images'][0])) {
                               $imageHover = $item['images'][0];
                            } else {
-                              $imageHover = '/public/uploads/products/usermacdinh.png';
+                              $imageHover = 'usermacdinh.png';
                            }
                            ?>
 

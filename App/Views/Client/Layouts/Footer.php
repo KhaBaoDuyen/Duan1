@@ -71,7 +71,7 @@ class Footer extends BaseView
                </div>
                <div class="footer_top_icon">
                   <img src="/public/assets/Client/image/icon/icon_footer_4.svg" alt="" width="100px">
-                  <p> Thương hiệu uy tín toàn cầu</p>
+                  <p> Danh mục uy tín toàn cầu</p>
                </div>
             </div>
          </div>

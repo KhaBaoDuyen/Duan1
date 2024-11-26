@@ -32,7 +32,6 @@ class ProductController
     protected $categoryModel;
     public function __construct()
     {
-        // index product
         $this->productModel = new ProductModel();
     }
     // hiển thị danh sách
@@ -41,12 +40,31 @@ class ProductController
         $product = new ProductModel();
         $products = $product->getAllProduct();
 
+
+
         $category = new CategoryModel();
         $categories = $category->getAllByStatus();
-
+        $count_product = $product->countTotalProduct();
+        $count_category = $category->countCategory();
+        $countCategoryProduct = $product->countProductByCategogy();
+        foreach ($categories as &$categoryItem) {
+            $categoryItem['countCategoryProduct'] = 0; // Mặc định 0 nếu không có sản phẩm
+            foreach ($countCategoryProduct as $countItem) {
+                if ($categoryItem['id'] === $countItem['id']) {
+                    $categoryItem['countCategoryProduct'] = $countItem['product_count'];
+                    break;
+                }
+            }
+        }
+        // echo ('<pre>');
+//   var_dump($countCategoryProduct);
+// die;
         $data = [
             'products' => $products,
             'categories' => $categories,
+            'count_product' => $count_product['total'],
+            'count_category' => $count_category['total'],
+
         ];
 
         Header::render();
@@ -96,10 +114,24 @@ class ProductController
 
         $category = new CategoryModel();
         $categories = $category->getAllCategoryByStatus();
-
+        $count_product = $product->countTotalProduct();
+        $count_category = $category->countCategory();
+        $countCategoryProduct = $product->countProductByCategogy();
+        foreach ($categories as &$categoryItem) {
+            $categoryItem['countCategoryProduct'] = 0; // Mặc định 0 nếu không có sản phẩm
+            foreach ($countCategoryProduct as $countItem) {
+                if ($categoryItem['id'] === $countItem['id']) {
+                    $categoryItem['countCategoryProduct'] = $countItem['product_count'];
+                    break;
+                }
+            }
+        }
         $data = [
             'products' => $products,
             'categories' => $categories,
+            'count_product' => $count_product['total'],
+            'count_category' => $count_category['total'],
+            'countCategoryProduct' => $countCategoryProduct
         ];
 
         // echo"<pre>";
@@ -110,27 +142,12 @@ class ProductController
         ProductCategory::render($data);
         Footer::render();
     }
-    // --------- LỌC SP THEO GIÁ ----------------
-   public static function getProductByCategoryAndPriceAds($id)
-    {
-        $product = new ProductModel();
-        $products = $product->getAllProductByCategoryAndStatus($id);
-          
-        
-        $category = new CategoryModel();
-        $categories = $category->getAllCategoryByStatus();
+    // --------- ĐẾm số lượng ----------------
+    // public static function countProductByCategory($id)
+    // {
+    //     $product = new ProductModel();
+    //     $count = $product->countProductByCategory($id);
+    //     echo $count;
+    // }
 
-        $data = [
-            'products' => $products,
-            'categories' => $categories,
-        ];
-
-        // echo"<pre>";
-        // var_dump($data['products']);
-        // var_dump($data['categories']);
-
-        Header::render();
-        ProductCategory::render($data);
-        Footer::render();
-    }
 }

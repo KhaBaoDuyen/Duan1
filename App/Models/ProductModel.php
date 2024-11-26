@@ -78,9 +78,6 @@ class ProductModel extends BaseModel
     {
         return $this->getAllProductJoinCategories();
     }
-
-
-
     public function getAllProductByCategoryAndStatus($id)
     {
         $result = [];
@@ -102,36 +99,19 @@ class ProductModel extends BaseModel
         }
     }
 
-
     public function countTotalProduct()
     {
-        return $this->countTotal();
+        return $this->countTotalByStatus();
     }
-
-
-    /*      public function countProductByCategogy()
-     {
-         $result = [];
-         try {
-             $sql = "SELECT count(*) AS count,category.name FROM product inner JOIN category on product.category_id= category.categories_id GROUP by product.category_id;";
-             $result = $this->_conn->MySQLi()->query($sql);
-             return $result->fetch_all(MYSQLI_ASSOC);
-         } catch (\Throwable $th) {
-             error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
-             return $result;
-         }
-     } */
-
 
     public function countProductByCategogy()
     {
         $result = [];
         try {
-            // Sử dụng id_categogy thay vì category_id trong câu lệnh SQL
-            $sql = "SELECT count(*) AS count, categories.name 
-                FROM products 
-                INNER JOIN categories ON products.id_categogy = categories.id 
-                GROUP BY products.id_categogy";
+            $sql = "SELECT categories.id, categories.name, COUNT(products.id) AS product_count
+            FROM categories
+            LEFT JOIN products ON categories.id = products.id_categogy
+            GROUP BY categories.id, categories.name;";
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_all(MYSQLI_ASSOC);
         } catch (\Throwable $th) {
@@ -140,19 +120,6 @@ class ProductModel extends BaseModel
         }
     }
 
-
-    public function countProductByView()
-    {
-        $result = [];
-        try {
-            $sql = "SELECT COUNT(*) AS count, product.name, product.view FROM product GROUP BY product.product_id, product.name, product.view ORDER BY count DESC LIMIT 5;";
-            $result = $this->_conn->MySQLi()->query($sql);
-            return $result->fetch_all(MYSQLI_ASSOC);
-        } catch (\Throwable $th) {
-            error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
-            return $result;
-        }
-    }
 
     //----------------[ SEARCH ]----------------
     public static function searchByKeywordProduct($keyword)

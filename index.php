@@ -58,7 +58,6 @@ Route::get('/product/{id}', 'App\Controllers\Client\ProductController@detail');
 
 //----------------------[ SP THEO DANH MỤC ]-----------------------
 Route::get('/product/categories/{id}', 'App\Controllers\Client\ProductController@getProductByCategory');
-Route::get('/product/ads', 'App\Controllers\Client\ProductController@getAllProductAcsPice');
 
 Route::get('/product/parent/{id}','App\Controllers\Client\ProductController@showSubCategories');
 

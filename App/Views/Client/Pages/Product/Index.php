@@ -31,13 +31,13 @@ class Index extends BaseView
          <div class="box_total d-flex col-10  row m-auto ">
 
             <div class="total_product col-3 ">
-               <p class="count_number">200+</p>
+               <p class="count_number"><?= $data['count_product'] ?>+</p>
                <p class="count_name"> Sản phẩm</p>
             </div>
 
             <div class="total_product col-3 ">
-               <p class="count_number">40+</p>
-               <p class="count_name"> Thương hiệu</p>
+               <p class="count_number"><?= $data['count_category'] ?>+</p>
+               <p class="count_name"> Danh mục</p>
             </div>
 
             <div class="total_product col-3 ">
@@ -57,7 +57,7 @@ class Index extends BaseView
       <main class=" col-10 m-auto d-flex">
 
          <?php
-         ComponentsCategory::render($data['categories']);
+         ComponentsCategory::render($data['categories']) ;
          ?>
          <article class="col-9">
             <nav>
@@ -87,14 +87,12 @@ class Index extends BaseView
                            }
 
                            // Kiểm tra xem mảng  giải mã chưa
-                           if (isset($item['images'][0])) {
+                         if (isset($item['images'][0])) {
                               $imageHover = $item['images'][0];
                            } else {
-                              $imageHover = '/public/uploads/products/usermacdinh.png';
+                              $imageHover = 'usermacdinh.png';
                            }
                            ?>
-
-
                            <img class="image" src="/public/uploads/products/<?= $item['image'] ?>" alt="" height="100%">
                            <img class="image_hover" src="/public/uploads/products/<?= $imageHover ?>" alt="image_hover" height="100%">
                         </div>

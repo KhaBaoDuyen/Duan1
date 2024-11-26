@@ -30,9 +30,6 @@ class CategoryModel extends BaseModel
         return $this->deleteCategogy($id);
     }
 
-
-
-
     public function getAllCategoryByStatus()
     {
         return $this->getAllByStatus();
@@ -71,9 +68,25 @@ class CategoryModel extends BaseModel
         return $stmt->fetchAll();
     }
 
-
-    public function countTotalCategogy()
+ 
+    
+  // đếm số lượng 
+    public function countCategory()
     {
-        return $this->countTotal();
+        return $this->countTotalByStatus();
     }
+
+    public function countTotalProductByCategory($id)
+    {
+        $result = [];
+        try {
+            $sql = "SELECT COUNT(*) as product_count FROM products WHERE id_categogy = $id";
+            $result = $this->_conn->MySQLi()->query($sql);
+            return $result->fetch_assoc();
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi Thoóng kê chi tiết dữ liệu: ' . $th->getMessage());
+            return $result;
+        }
+    }
+
 }

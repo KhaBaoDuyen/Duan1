@@ -46,7 +46,7 @@ class ProductValidation
             $is_valid = false;
         }
         if (!isset($_FILES['image']) || $_FILES['image']['error'] !== 0 || $_FILES['image']['tmp_name'] === '') {
-            $errors['image'] = 'Vui lòng chọn ảnh sản phẩm';
+            $errors['image'] = 'Vui lòng chọn ảnh sản phẩm ';
             $is_valid = false;
         }
 

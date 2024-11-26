@@ -157,21 +157,21 @@ abstract class BaseModel implements CrudInterface
 
     public function getAllByStatus()
     {
-      $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . " ";
+        $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . " ";
         $result = $this->_conn->MySQLi()->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getAllByProductStatus()
     {
-      $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . "   LIMIT 15";
+        $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . "   LIMIT 15";
         $result = $this->_conn->MySQLi()->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
     public function getOneByName($name)
     {
-           $result = [];
+        $result = [];
         try {
             $sql = "SELECT * FROM $this->table WHERE name=?";
             $conn = $this->_conn->MySQLi();
@@ -207,33 +207,21 @@ abstract class BaseModel implements CrudInterface
         return $stmt->get_result()->fetch_assoc();
     }
 
-     
+
 
     public function getOneProductByStatus($id)
     {
         return $this->getOneByStatus($id);
     }
 
-    public function get5CommentNewestByProductAndStatus($id)
-    {
-        $sql = "SELECT comments.*, user.username, user.name, user.avatar 
-                FROM comments INNER JOIN user ON comments.user_id=user.user_id 
-                WHERE comments.product_id=? AND comments.status=" . self::STATUS_ENABLE .
-            " ORDER BY date DESC LIMIT 5";
-        $conn = $this->_conn->MySQLi();
-        $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param('i', $id);
-        $stmt->execute();
-        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-    }
 
-    // đếm số lượng 
-    public function countTotal()
+    // đếm số lượng cho Client
+    public function countTotalByStatus()
     {
         $result = [];
         try {
-            $sql = "SELECT COUNT(*) AS total FROM $this->table";
+            $sql = "SELECT COUNT(*) AS total FROM $this->table WHERE status= 1";
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_assoc();
         } catch (\Throwable $th) {
@@ -241,19 +229,7 @@ abstract class BaseModel implements CrudInterface
             return $result;
         }
     }
-    // đếm số lượng 
-    public function countTotalProduct()
-    {
-        $result = [];
-        try {
-            $sql = "SELECT COUNT(*) AS total FROM $this->table where categories_id=?";
-            $result = $this->_conn->MySQLi()->query($sql);
-            return $result->fetch_assoc();
-        } catch (\Throwable $th) {
-            error_log('Lỗi khi Thoóng kê chi tiết dữ liệu: ' . $th->getMessage());
-            return $result;
-        }
-    }
+
 
 
     public function getAllProductJoinCategories()
@@ -271,19 +247,19 @@ abstract class BaseModel implements CrudInterface
             $conn = $this->_conn->MySQLi();
 
             // Kiểm tra xem có sản phẩm nào thuộc danh mục này không
-            $sqlCheckProducts = "SELECT COUNT(*) as product_count FROM products WHERE id_categogy = ?;";
-            $stmtCheckProducts = $conn->prepare($sqlCheckProducts);
-            $stmtCheckProducts->bind_param('i', $id);
-            $stmtCheckProducts->execute();
-            $resultCheckProducts = $stmtCheckProducts->get_result();
-            $productCount = $resultCheckProducts->fetch_assoc()['product_count'];
+            $sql = "SELECT COUNT(*) as product_count FROM products WHERE id_categogy = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $productCount = $result->fetch_assoc()['product_count'];
 
             // Nếu có sản phẩm, cập nhật danh mục của chúng thành id 23
             if ($productCount > 0) {
-                $uncategorized = 29;
-                $sqlUpdateProducts = "UPDATE products SET id_categogy = ? WHERE id_categogy = ?;";
-                $stmtUpdate = $conn->prepare($sqlUpdateProducts);
-                $stmtUpdate->bind_param('ii', $uncategorized, $id);
+                $idCategory = 29;
+                $sqlUpdate = "UPDATE products SET id_categogy = ? WHERE id_categogy = ?;";
+                $stmtUpdate = $conn->prepare($sqlUpdate);
+                $stmtUpdate->bind_param('ii', $idCategory, $id);
                 $stmtUpdate->execute();
             }
 

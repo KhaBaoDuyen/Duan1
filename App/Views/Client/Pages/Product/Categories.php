@@ -29,13 +29,13 @@ class Categories extends BaseView
          <div class="box_total d-flex col-10  row m-auto ">
 
             <div class="total_product col-3 ">
-               <p class="count_number">200+</p>
+               <p class="count_number"><?= $data['count_product'] ?>+</p>
                <p class="count_name"> Sản phẩm</p>
             </div>
 
             <div class="total_product col-3 ">
-               <p class="count_number">40+</p>
-               <p class="count_name"> Thương hiệu</p>
+               <p class="count_number"><?= $data['count_category'] ?>+</p>
+               <p class="count_name"> Danh mục</p>
             </div>
 
             <div class="total_product col-3 ">
@@ -83,10 +83,10 @@ class Categories extends BaseView
                            }
 
                            // Kiểm tra xem mảng  giải mã chưa
-                           if (isset($item['images'][0])) {
+                         if (isset($item['images'][0])) {
                               $imageHover = $item['images'][0];
                            } else {
-                              $imageHover = '/public/uploads/products/usermacdinh.png'; 
+                              $imageHover = 'usermacdinh.png';
                            }
                            ?>
 
