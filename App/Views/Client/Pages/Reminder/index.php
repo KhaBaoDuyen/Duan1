@@ -32,8 +32,8 @@ class index extends BaseView
                            <th style="width:11%;">Trạng thái </th>
                            <th>Thời gian</th>
 
-                           <th colspan="2" style="width:5%;">Khác</th>
-                           <th style="width:5%;"></th>
+                           <th colspan="2" style="width:5%;">Lưu</th>
+                           <th style="width:5%;">Xóa</th>
                         </tr>
                      </thead>
                      <tbody class="text-center">

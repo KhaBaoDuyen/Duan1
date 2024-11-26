@@ -60,10 +60,10 @@ class Profile extends BaseView
                         <input type="text" name="email" id="email" value="<?= $data['email'] ?>">
                      </div>
 
-                     <div class="box_title">
+                     <!-- <div class="box_title">
                         <label for class="col-5">Mật khẩu:</label>
                         <input type="password" id="password" name="password" value="<?= $data['password'] ?>">
-                     </div>
+                     </div> -->
 
                      <div class="box_title">
                         <div class="box_title">
