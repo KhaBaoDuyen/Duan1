@@ -78,7 +78,6 @@ class ProductController
         $images = $_FILES['images'] ?? null;
         if (isset($images) && $images != null) {
             $is_upload = ProductValidation::image();
-
             if (!$is_upload) {
                 NotificationHelper::error('store', 'Vui lòng chọn hình ảnh sản phẩm.');
                 header("Location: /admin/products/create");

@@ -278,7 +278,7 @@ class Detail extends BaseView
                               <?php
                            else:
                               ?>
-                              <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/public/uploads/users/usermacdinh.png"
+                              <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/usermacdinh.png"
                                  alt="Avatar của người dùng" width="5%">
                               <?php
                            endif;
@@ -340,7 +340,7 @@ class Detail extends BaseView
                            <?php
                         else:
                            ?>
-                           <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/public/uploads/users/usermacdinh.png"
+                           <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/usermacdinh.png"
                               alt="user" width="5%" >
 
                            <?php

@@ -27,13 +27,14 @@ class HomeController
         $total_product = $product->countTotalProduct();
         $product_by_catgory = $product->countProductByCategogy();
 
-     
+        $comment = new CommentModel;
+        $total_comment = $comment->countCommentByStatus();
 
         $data = [
             'total_user' => $total_user['total'],
             'total_category' => $total_category['total'],
             'total_product' => $total_product['total'],
-     
+            'total_comment' => $total_comment['total'],
             'product_by_catgory' => $product_by_catgory
 
         ];

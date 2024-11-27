@@ -156,4 +156,7 @@ class ProductModel extends BaseModel
             return $result;
         }
     }
+
+// -------[ LỌC GIÁ SẢN PHẨM ] -------------------------
+
 }

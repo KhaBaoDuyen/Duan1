@@ -78,34 +78,36 @@ class Footer extends BaseView
          <div class="footer_bottom m-auto">
             <div class="col-8 row m-auto">
                <div class="col-4">
-     <div class="box_menu_footer">
-              <a href="">Về Bloom</a>
-                  <Ul class="menu_footer">
-                     <li><a href="">Giới thiệu Bloom</a></li>
-                     <li><a href="">Tuyển Dụng</a></li>
-                     <li><a href="">Chính sách bảo mật</a></li>
-                     <li><a href="">Điều khoản sử dụng</a></li>
-                     <li><a href="">Liên hệ</a></li>
-                  </Ul>
-               </div></div>
+                  <div class="box_menu_footer">
+                     <a href="">Về Bloom</a>
+                     <Ul class="menu_footer">
+                        <li><a href="">Giới thiệu Bloom</a></li>
+                        <li><a href="">Tuyển Dụng</a></li>
+                        <li><a href="">Chính sách bảo mật</a></li>
+                        <li><a href="">Điều khoản sử dụng</a></li>
+                        <li><a href="">Liên hệ</a></li>
+                     </Ul>
+                  </div>
+               </div>
                <div class="col-4">
                   <div class="box_menu_footer">
-              <a href="">Hỗ trợ khách hàng</a>
-                  <Ul class="menu_footer">
-                     <li><a href="">Gửi yêu cầu hỗ trợ</a></li>
-                     <li><a href="">Hướng dẫn đặt hàng</a></li>
-                     <li><a href="">Phương thức vận chuyển</a></li>
-                     <li><a href="">Chính sách đổi trả</a></li>
-                  </Ul>
-               </div></div>
+                     <a href="">Hỗ trợ khách hàng</a>
+                     <Ul class="menu_footer">
+                        <li><a href="">Gửi yêu cầu hỗ trợ</a></li>
+                        <li><a href="">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="">Phương thức vận chuyển</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                     </Ul>
+                  </div>
+               </div>
                <div class="col-4">
-     <div class="box_menu_footer">
-              <a href="">Nước Hoa</a>
-                  <Ul class="menu_footer">
-                     <li><a href="">Nước Hoa Nữ </a></li>
-                     <li><a href=""> Nước Hoa Nam </a></li>
-                     <li><a href=""> Xịt Thơm Toàn Thân</a></li>
-</div>
+                  <div class="box_menu_footer">
+                     <a href="">Nước Hoa</a>
+                     <Ul class="menu_footer">
+                        <li><a href="">Nước Hoa Nữ </a></li>
+                        <li><a href=""> Nước Hoa Nam </a></li>
+                        <li><a href=""> Xịt Thơm Toàn Thân</a></li>
+                  </div>
                   </Ul>
                </div>
             </div>
@@ -118,46 +120,46 @@ class Footer extends BaseView
       </div>
 
 
-  <script src="/public/assets/Client/Js/slide.js"></script>
+      <script src="/public/assets/Client/Js/slide.js"></script>
       <script src="/public/assets/Client/Js/cart.js"></script>
       <script src="/public/assets/Client/Js/login.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-   <script>
-function filterByPrice(value) {
-    const sortOrder = document.getElementById('sort-order').value;
-    const url = new URL(window.location.href);
-    url.searchParams.set('price', value);
-    url.searchParams.set('sort', sortOrder);
-    window.location.href = url.toString();
-}
+      <script>
+         function filterByPrice(value) {
+            const sortOrder = document.getElementById('sort-order').value;
+            const url = new URL(window.location.href);
+            url.searchParams.set('price', value);
+            url.searchParams.set('sort', sortOrder);
+            window.location.href = url.toString();
+         }
 
-function sortProducts(value) {
-    const priceFilter = document.getElementById('price-filter').value;
-    const url = new URL(window.location.href);
-    url.searchParams.set('sort', value);
-    url.searchParams.set('price', priceFilter);
-    window.location.href = url.toString();
-}
+         function sortProducts(value) {
+            const priceFilter = document.getElementById('price-filter').value;
+            const url = new URL(window.location.href);
+            url.searchParams.set('sort', value);
+            url.searchParams.set('price', priceFilter);
+            window.location.href = url.toString();
+         }
 
-</script>
+      </script>
 
-<script>
-      const priceMin = document.getElementById("priceMin");
-      const priceMax = document.getElementById("priceMax");
-      const priceRangeText = document.getElementById("priceRangeText");
+      <script>
+         const priceMin = document.getElementById("priceMin");
+         const priceMax = document.getElementById("priceMax");
+         const priceRangeText = document.getElementById("priceRangeText");
 
-      priceMin.oninput = function() {
-        priceRangeText.innerHTML = priceMin.value + " VND - " + priceMax.value + " VND";
-      }
+         priceMin.oninput = function () {
+            priceRangeText.innerHTML = priceMin.value + " VND - " + priceMax.value + " VND";
+         }
 
-      priceMax.oninput = function() {
-        priceRangeText.innerHTML = priceMin.value + " VND - " + priceMax.value + " VND";
-      }
-    </script>
+         priceMax.oninput = function () {
+            priceRangeText.innerHTML = priceMin.value + " VND - " + priceMax.value + " VND";
+         }
+      </script>
 
 
-    <script></script>
+      <script>
          const scolltop = document.getElementById("scoll-top");
          const form = document.querySelector('#form');
          const button = document.querySelector('#box_reminder');

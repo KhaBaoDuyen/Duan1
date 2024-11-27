@@ -34,20 +34,41 @@ class ProductController
     {
         $this->productModel = new ProductModel();
     }
+    private static function filterProductsByPrice($products, $priceMinArray, $priceMaxArray)
+    {
+        $filteredProducts = [];
+
+        foreach ($products as $item) {
+            $price = $item['price'];
+
+            // Kiểm tra xem sản phẩm có thuộc một trong các khoảng giá không
+            foreach ($priceMinArray as $key => $priceMin) {
+                $priceMax = $priceMaxArray[$key]; // lấy priceMax tương ứng
+
+                if ($price >= $priceMin && $price <= $priceMax) {
+                    $filteredProducts[] = $item;
+                    break; // Nếu sản phẩm đã nằm trong một khoảng giá, không cần kiểm tra thêm
+                }
+            }
+        }
+
+        return $filteredProducts;
+    }
     // hiển thị danh sách
     public static function index()
-{
-    $product = new ProductModel();
-    $products = $product->getAllProduct();
+    {
+        $product = new ProductModel();
+        $products = $product->getAllProduct();
 
-    // $category = new CategoryModel();
-    // $categories = $category->getAllCategoryByStatus();
-           $category = new CategoryModel();
+        // $category = new CategoryModel();
+        // $categories = $category->getAllCategoryByStatus();
+        $category = new CategoryModel();
         $categories = $category->getAllByStatus();
 
         $count_product = $product->countTotalProduct();
         $count_category = $category->countCategory();
         $countCategoryProduct = $product->countProductByCategogy();
+
         $comment = new CommentModel;
         $total_comment = $comment->countCommentByStatus();
 
@@ -60,51 +81,46 @@ class ProductController
                 }
             }
         }
-    // Lấy giá trị priceMin và priceMax từ URL
-    // Xử lý giá trị priceMin
-    $priceMinArray = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
-    $priceMaxArray = [];
+        // Lấy giá trị priceMin và priceMax từ URL
+        // Xử lý giá trị priceMin
+        $priceMinArray = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
+        $priceMaxArray = [];
 
-    // Chuyển đổi các giá trị priceMin thành các priceMax tương ứng
-    foreach ($priceMinArray as $priceMin) {
-        switch ($priceMin) {
-            case '0':
-                $priceMaxArray[] = 100000;
-                break;
-            case '100000':
-                $priceMaxArray[] = 500000;
-                break;
-            case '500000':
-                $priceMaxArray[] = 1000000;
-                break;
-            case '1000000':
-                $priceMaxArray[] = 3000000;
-                break;
-            case '3000000':
-                $priceMaxArray[] = 5000000;
-                break;
+        // Chuyển đổi các giá trị priceMin thành các priceMax tương ứng
+        foreach ($priceMinArray as $priceMin) {
+            switch ($priceMin) {
+                case '0':
+                    $priceMaxArray[] = 100000;
+                    break;
+                case '100000':
+                    $priceMaxArray[] = 500000;
+                    break;
+                case '500000':
+                    $priceMaxArray[] = 1000000;
+                    break;
+                case '1000000':
+                    $priceMaxArray[] = 3000000;
+                    break;
+                case '3000000':
+                    $priceMaxArray[] = 5000000;
+                    break;
+            }
         }
-    }
 
-    // Debug giá trị priceMin và priceMax
-    /* var_dump($priceMinArray, $priceMaxArray); */
+        // Debug giá trị priceMin và priceMax
+        /* var_dump($priceMinArray, $priceMaxArray); */
 
-    // Nếu có các giá trị priceMin và priceMax, thì lọc theo khoảng giá
-    if (!empty($priceMinArray) && !empty($priceMaxArray)) {
-        $products = self::filterProductsByPrice($products, $priceMinArray, $priceMaxArray);
-    }
+        // Nếu có các giá trị priceMin và priceMax, thì lọc theo khoảng giá
+        if (!empty($priceMinArray) && !empty($priceMaxArray)) {
+            $products = self::filterProductsByPrice($products, $priceMinArray, $priceMaxArray);
+        }
+        // Kiểm tra kiểu sắp xếp (tăng dần hoặc giảm dần)
+        $sortOrder = isset($_GET['sort']) ? $_GET['sort'] : '';
 
-   // Kiểm tra kiểu sắp xếp (tăng dần hoặc giảm dần)
-   $sortOrder = isset($_GET['sort']) ? $_GET['sort'] : '';
-    
-   // Sắp xếp sản phẩm nếu có
-   if ($sortOrder) {
-       $products = self::sortProducts($products, $sortOrder);
-   }
-    $data = [
-        'products' => $products,
-        'categories' => $categories,
-    ];
+        // Sắp xếp sản phẩm nếu có
+        if ($sortOrder) {
+            $products = self::sortProducts($products, $sortOrder);
+        }
 
         // echo ('<pre>');
 //   var_dump($countCategoryProduct);
@@ -118,14 +134,26 @@ class ProductController
 
         ];
 
-    Header::render();
-    Index::render($data);
-    Footer::render();
-}
+        Header::render();
+        Index::render($data);
+        Footer::render();
+    }
+
+    // Sắp xếp sản phẩm
+    private static function sortProducts($products, $sortOrder)
+    {
+        usort($products, function ($a, $b) use ($sortOrder) {
+            if ($sortOrder === 'asc') {
+                return $a['price'] <=> $b['price']; // Tăng dần
+            } elseif ($sortOrder === 'desc') {
+                return $b['price'] <=> $a['price']; // Giảm dần
+            }
+            return 0; // Nếu không có sắp xếp, giữ nguyên
+        });
+        return $products;
+    }
 
 
-    
-    
     public static function Detail($id)
     {
         $comment = new CommentModel();
