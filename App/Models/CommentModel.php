@@ -103,8 +103,8 @@ class CommentModel extends BaseModel
    }
 
 
-   public function countTotalComment(){
-    return $this->countTotal();
+   public function countCommentByStatus(){
+    return $this->countTotalByStatus();
   }
 
   public function countCommentByProduct()

@@ -97,7 +97,7 @@ class Profile extends BaseView
                   else:
                   ?>
                      <div class="avatar">
-                        <img src="<?= APP_URL ?>/public/assets/Client/image/users/a9dd84dc03188b701f3da4d08172609f.jpg" alt>
+                        <img src="<?= APP_URL ?>/public/uploads/users/usermacdinh.png" alt>
                         <label for="file-upload">
                            <span class="material-symbols-outlined">
                               add_a_photo

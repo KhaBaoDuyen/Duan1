@@ -40,13 +40,15 @@ class ProductController
         $product = new ProductModel();
         $products = $product->getAllProduct();
 
-
-
         $category = new CategoryModel();
         $categories = $category->getAllByStatus();
+
         $count_product = $product->countTotalProduct();
         $count_category = $category->countCategory();
         $countCategoryProduct = $product->countProductByCategogy();
+        $comment = new CommentModel;
+        $total_comment = $comment->countCommentByStatus();
+
         foreach ($categories as &$categoryItem) {
             $categoryItem['countCategoryProduct'] = 0; // Mặc định 0 nếu không có sản phẩm
             foreach ($countCategoryProduct as $countItem) {
@@ -64,16 +66,17 @@ class ProductController
             'categories' => $categories,
             'count_product' => $count_product['total'],
             'count_category' => $count_category['total'],
+            'total_comment' => $total_comment['total'],
 
         ];
-        
+
         Header::render();
         Index::render($data);
         Footer::render();
     }
 
     public static function Detail($id)
-    {   
+    {
         $comment = new CommentModel();
         $data['comments'] = $comment->get5CommentNewestByProductAndStatus($id);
 
@@ -120,6 +123,10 @@ class ProductController
         $count_product = $product->countTotalProduct();
         $count_category = $category->countCategory();
         $countCategoryProduct = $product->countProductByCategogy();
+
+        $comment = new CommentModel;
+        $total_comment = $comment->countCommentByStatus();
+
         foreach ($categories as &$categoryItem) {
             $categoryItem['countCategoryProduct'] = 0; // Mặc định 0 nếu không có sản phẩm
             foreach ($countCategoryProduct as $countItem) {
@@ -134,6 +141,7 @@ class ProductController
             'categories' => $categories,
             'count_product' => $count_product['total'],
             'count_category' => $count_category['total'],
+            'total_comment' => $total_comment['total'],
             'countCategoryProduct' => $countCategoryProduct
         ];
 

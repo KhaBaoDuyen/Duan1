@@ -217,7 +217,7 @@ abstract class BaseModel implements CrudInterface
     {
         $result = [];
         try {
-            $sql = "SELECT COUNT(*) AS total FROM $this->table";
+            $sql = "SELECT COUNT(*) AS total FROM $this->table WHERE status = 1 ";
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_assoc();
         } catch (\Throwable $th) {

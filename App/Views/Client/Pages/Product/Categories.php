@@ -39,7 +39,7 @@ class Categories extends BaseView
             </div>
 
             <div class="total_product col-3 ">
-               <p class="count_number">300+</p>
+               <p class="count_number"><?= $data['total_comment'] ?>+</p>
                <p class="count_name"> Bình luận</p>
             </div>
 
