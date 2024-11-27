@@ -10,71 +10,96 @@ class Edit extends BaseView
     {
 ?>
 
-<div class="row">
-            <div class="col-lg-6">
-              <!-- Form Basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your
-                        email with anyone else.</small>
+<div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">QUẢN LÝ BÌNH LUẬN</h4>
+                        <div class="ms-auto text-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/admin">Trang chủ</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Sửa bình luận</li>
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                        <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
                 </div>
-              </div>
-          </div>
-          <!--Row-->
-
-
-
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-        <!---Container Fluid-->
-      </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <form class="form-horizontal" action="/admin/comments/<?= $data['id'] ?>" method="POST">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sửa bình luận</h4>
+                                    <input type="hidden" name="method" id="" value="PUT">
+                                    <div class="form-group">
+                                        <label for="id">ID</label>
+                                        <input type="text" class="form-control" id="id" name="id"  value="<?= $data['id'] ?>" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username">Người dùng</label>
+                                        <input type="text" class="form-control" id="username" name="username" value="<?= $data['username'] ?>" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="product_name">Sản phẩm</label>
+                                        <input type="text" class="form-control" id="product" name="product_name" value="<?= $data['product_name'] ?>" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="content">Nội dung</label>
+                                        <textarea class="form-control" id="content" name="content" rows="3" disabled><?= $data['content'] ?></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date">Ngày</label>
+                                        <input type="datetime" class="form-control" id="date" name="date" value="<?= $data['date'] ?>" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="status">Trạng thái*</label>
+                                        <select class="select2 form-select shadow-none" style="width: 100%; height:36px;" id="status" name="status" value="<?= $data['status'] ?>" required>
+                                            <option value="" selected disabled>Vui lòng chọn...</option>
+                                            <option value="1" <?= ($data['status'] == 1 ? 'selected' : '') ?>>Hiển thị</option>
+                                            <option value="0" <?= ($data['status'] == 0 ? 'selected' : '') ?>>Ẩn</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="border-top">
+                                    <div class="card-body">
+                                        <button type="reset" class="btn btn-danger text-white" name="">Làm lại</button>
+                                        <button type="submit" class="btn btn-primary" name="">Cập nhật</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
 
     <?php
     }

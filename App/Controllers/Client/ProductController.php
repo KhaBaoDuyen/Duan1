@@ -66,14 +66,17 @@ class ProductController
             'count_category' => $count_category['total'],
 
         ];
-
+        
         Header::render();
         Index::render($data);
         Footer::render();
     }
 
     public static function Detail($id)
-    {
+    {   
+        $comment = new CommentModel();
+        $data['comments'] = $comment->get5CommentNewestByProductAndStatus($id);
+
         $product = new ProductModel();
         $data['product'] = $product->getOneProductByStatus($id);
         if (!$data['product']) {

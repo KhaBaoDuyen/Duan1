@@ -25,42 +25,69 @@ class Index extends BaseView
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Danh sách bình luận</h6>
                         </div>
+                                <?php
+                                if (count($data)) :
+                                ?>
                         <div class="table-responsive p-3">
                             <table class="table align-items-center table-flush table-hover" id="dataTableHover">
                                 <thead class="thead-light">
                                     <tr>
+                                        <th>ID</th>
                                         <th>Người dùng</th>
+                                        <th>Sản Phẩm</th>
                                         <th>Nội dung</th>
                                         <th>Ngày</th>
                                         <th>Trạng thái</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/users/20240802000821.jpg" alt="img">
-                                        </td>
-                                        <td>Cây đẹp</td>
-                                        <td>2/2/2024</td>
-                                        <td><span class="badge badge-success">Hiện</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img class="img_all" width="40px" height="40px" src="/public/uploads/users/20240801230858.jpg" alt="img">
-                                        </td>
-                                        <td>Giá rẻ</td>
-                                        <td>2/2/2024</td>
-                                        <td><span class="badge badge-danger">Ẩn</span></td>
-                                    </tr>
+                                    <?php
+                                        $stt=0;
+                                            foreach ($data as $item) :
+                                                $stt++;
+                                                ?>
+                                                <tr>
+                                                <td>
+                                                    <?= $stt ?></td>
+
+                                                    <td>
+                                                        <a href="/admin/users/<?=$item['id_user']?>"><?= $item['username'] ?></a>
+                                                    </td>
+
+                                                    <td>
+                                                    <a href="/admin/products/<?=$item['product_id']?>"><?= $item['product_name'] ?></a>
+                                                   </td>
+
+                                                    <td><?= $item['content'] ?></td>
+                                                    <td><?= $item['date'] ?></td>
+                                                    <td><?= ($item['status'] == 1) ? 'Hiển thị' : 'Ẩn' ?></td>
+                                                    <td>
+                                                    <a href="/admin/comments/<?= $item['id'] ?>" class="btn btn-primary ">Sửa</a>
+                                                        <form action="/admin/comments/<?= $item['id'] ?>" method="post" style="display: inline-block;" onsubmit="return confirm('Chắc chưa?')">
+                                                            <input type="hidden" name="method" value="DELETE" id="">
+                                                            <button type="submit" class="btn btn-danger text-white">Xoá</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            <?php
+                                        endforeach;
 
 
-
-
-
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
+                        <?php
+                                else :
+
+                                ?>
+                                    <h4 class="text-center text-danger">Không có dữ liệu</h4>
+                                <?php
+                                endif;
+
+                                ?>
                     </div>
                 </div>
             </div>

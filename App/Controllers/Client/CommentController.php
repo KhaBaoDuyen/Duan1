@@ -36,44 +36,42 @@ class CommentController
     // xử lý chức năng thêm
     public static function store()
     {
+        $product_id = $_POST['product_id'];
         $is_valid = CommentValidation::createClient();
         if (!$is_valid) {
             NotificationHelper::error('store', 'Thêm thất bại thông tin thất bại');
-            if (isset($_POST['product_id']) && $_POST['product_id']) {
-                $product_id = $_POST['product_id'];
-                header("Location:/product/$product_id");
-            }
-            exit;
+            header("Location:/product/$product_id");
         } else {
-      $product_id = $_POST['product_id'];
             header("Location:/product/$product_id");
         }
 
-        $product_id=$_POST['product_id'];
         $data = [
             'content' => $_POST['content'],
             'product_id' => $_POST['product_id'],
-            'user_id' => $_POST['user_id']
+            'id_user' => $_POST['id_user'],
         ];
 
         $comment = new CommentModel();
         $result = $comment->createComment($data);
+        // var_dump($result);
+        // die;
         if ($result) {
             NotificationHelper::success('product', 'Thêm thành công');
         } else {
             NotificationHelper::error('product', 'Thêm thất bại');
         }
 
-  if (isset($_POST['product_id']) && $_POST['product_id']) {
-                $product_id = $_POST['product_id'];
-                header("Location:/product/$product_id");
-            }else{
-                $product_id = $_POST['product_id'];
-                 header("Location:/product/$product_id");
+        if (isset($_POST['product_id']) && $_POST['product_id']) {
+            $product_id = $_POST['product_id'];
+            header("Location:/product/$product_id");
+        } else {
+            $product_id = $_POST['product_id'];
+            header("Location:/product/$product_id");
 
-    }}
+        }
+    }
     // ------- EDIT ------------------
-
+/* 
     // xử lý chức năng sửa (cập nhật)
     public static function update($id)
     {
@@ -129,7 +127,7 @@ class CommentController
                 $product_id = $_POST['product_id'];
                  header("Location:/product/$product_id");
     }
-}
+} */
 }
 
 

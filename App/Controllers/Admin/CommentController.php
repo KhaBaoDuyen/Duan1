@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Helpers\NotificationHelper;
 use App\Models\Comment;
 use App\Models\CommentModel;
+use App\Validation\CommentValidation;
 use App\Views\Admin\Components\Notification;
 use App\Views\Admin\Layouts\Footer;
 use App\Views\Admin\Layouts\Header;
@@ -17,17 +18,21 @@ class CommentController
     // hiển thị danh sách
     public static function index()
     {
-        /* $comment = new CommentModel();
-        $data = $comment->getAllCommentJoinProductAndUser(); */
+        $comment = new CommentModel();
+        $data = $comment->getAllCommentJoinProductAndUser();
         Header::render();
         Notification::render();
         NotificationHelper::unset();
-        Index::render(/* $data */);
+        Index::render($data);
         Footer::render();
     }
 
+
+
+
+
     // hiển thị giao diện form sửa
-    /* public static function edit(int $id)
+    public static function edit(int $id)
     {
         // khởi tạo đối tượng model
         $comment = new CommentModel();
@@ -38,7 +43,6 @@ class CommentController
             header('location: /admin/comments');
             exit;
         }
-        // var_dump($data);
         Header::render();
         Notification::render();
         NotificationHelper::unset();
@@ -46,7 +50,11 @@ class CommentController
         Footer::render();
     }
     // xử lý chức năng sửa (cập nhật)
-    public static function update($id)
+
+
+
+
+    public static function update(int $id)
     {
         $is_valid = true;
         if (!isset($_POST['status']) || $_POST['status'] === '') {
@@ -60,8 +68,12 @@ class CommentController
             ];
 
             $comment = new CommentModel();
-            $result = $comment->updateComment($id, $data);
-
+          
+            
+            $result = $comment->updateComment($id,$data);
+            // echo "<pre>";
+            // print_r($result);
+            // die;
             if ($result) {
                 // echo 'Thành công';
                 NotificationHelper::success('comment', 'Cập nhật thành công');
@@ -89,5 +101,5 @@ class CommentController
         }
 
         header('location: /admin/comments');
-    } */
+    }
 }

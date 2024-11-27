@@ -2,6 +2,7 @@
 
 namespace App\Views\Client\Pages\Product;
 
+use App\Helpers\AuthHelper;
 use App\Models\ImageProductModel;
 use App\Views\BaseView;
 
@@ -9,9 +10,10 @@ class Detail extends BaseView
 {
    public static function render($data = null)
    {
+      $is_login = AuthHelper::checkLogin();
       // var_dump($_SESSION);
 
-?>
+      ?>
 
       <main class="product_detail col-10 m-auto">
 
@@ -31,12 +33,12 @@ class Detail extends BaseView
                      }
                      if (!empty($images)) {
                         foreach ($images as $key => $images) {
-                  ?>
+                           ?>
                            <div class="box_image">
                               <img src="/public/uploads/products/<?= htmlspecialchars($images) ?>" alt="Image [<?= $key ?>]"
                                  width="100%" onclick="changeImage(this)">
                            </div>
-                  <?php
+                           <?php
                         }
                      } else {
                         echo "<p>Dữ liệu ảnh không hợp lệ.</p>";
@@ -260,48 +262,98 @@ class Detail extends BaseView
          </section>
 
          <section class="sec_comment row  justify-content-between ">
-            <div class="sec_comment_review  p-1 d-flex  ">
-               <div class="col-11">
-                  <div class="user d-flex align-items-center">
-                     <img class="avatar_comment " src="/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
-                        alt="Avatar của người dùng" width="6%">
-                     <div class="d-flex ">
-                        <h5 class="username">KhaBaoDuyen</h5>
-                        <span class="date"><?= $data['product']['date'] ?></span>
+            <?php
+            if (isset($data) && isset($data['comments']) && $data && $data['comments']):
+               foreach ($data['comments'] as $item):
+                  ?>
+                  <div class="sec_comment_review  p-1 d-flex  ">
+                     <div class="col-11">
+                        <div class="user d-flex align-items-center">
+
+                           <?php
+                           if ($item['avatar']):
+                              ?>
+                              <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/<?= $item['avatar'] ?>"
+                                 alt="Avatar của người dùng" width="5%">
+                              <?php
+                           else:
+                              ?>
+                              <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
+                                 alt="Avatar của người dùng" width="5%">
+                              <?php
+                           endif;
+                           ?>
+                           <!-- avatar người dùng -->
+                           <div class="d-flex ">
+                              <h5 class="username"><?= $item['name'] ?> - <?= $item['username'] ?></h5>
+                              <span class="date"><?= $data['product']['date'] ?></span>
+                           </div>
+                        </div>
+                        <p class="content mt-1"><?= $item['content'] ?></p>
+                     </div>
+                     <div class="col-1 d-flex justify-content-end align-content-end Utilities">
+                        <span class="material-symbols-outlined">
+                           more_vert
+                        </span>
+                        <div class="formdown">
+
+                           <ul>
+                              <li><a href="">sua</a></li>
+                              <li><a href="">xoa</a></li>
+
+                           </ul>
+                        </div>
                      </div>
                   </div>
-                  <p class="content mt-1">Shop giao hàng rất nhanh. Qua hôm sau
-                     là
-                     nhận
-                     cây rồi. Giá tốt, cây đẹp, xanh tươi, mà shop còn gói hàng
-                     rất
-                     cẩn thận. Nhìn cách gói thôi là đã thích rồi.</p>
-               </div>
-               <div class="col-1 d-flex justify-content-end align-content-end Utilities">
-                  <span class="material-symbols-outlined">
-                     more_vert
-                  </span>
-                  <div class="formdown">
-                     <ul>
-                        <li><a href="">Xóa</a> </li>
-                        <li><a href="">Sửa</a></li>
-                     </ul>
+                  <?php
+               endforeach;
+            else:
+               ?>
+               <h6 class="text-center text-danger">
+                  Chưa có bình luận
+               </h6>
+               <?php
+            endif;
+            ?>
+
+
+
+
+
+
+
+            <?php
+            if (isset($data) && isset($is_login) && $is_login):
+               ?>
+
+               <form  id="commentForm" action="/comments" method="post" class="col-12 mt-2">
+                  <input name="method" value="POST" type="hidden">
+                  <input type="hidden" name="product_id" value="<?= $data['product']['id'] ?>" id="" required>
+                  <input type="hidden" name="id_user" value="<?= $_SESSION['user']['id'] ?>" id="" required>
+                  <div class="user d-flex align-items-center">
+                     
+                        <?php
+                        if ($_SESSION['user']['avatar']):
+                           ?>
+                           <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/<?= $_SESSION['user']['avatar'] ?>" alt="user"
+                              width="5%" >
+                           <?php
+                        else:
+                           ?>
+                           <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
+                              alt="user" width="5%" >
+
+                           <?php
+                        endif;
+                        ?>
+                     
+                     <h5 class="username m-2"><?= $_SESSION['user']['name'] ?><?= $_SESSION['user']['username'] ?></h5>
                   </div>
-               </div>
-            </div>
+                  <div>
+                     <label for="comment">Bình luận của bạn:</label>
+                     <textarea id="content" name="content" rows="4" required placeholder="Viết bình luận của bạn ở đây..."></textarea>
 
-            <form id="commentForm" action method="post" class="col-12 mt-2">
-               <div class="user d-flex align-items-center">
-                  <img class="avatar_comment " src="/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
-                     alt="Avatar của người dùng" width="6%">
-                  <h5 class="username m-2">KhaBaoDuyen</h5>
-               </div>
-               <div>
-                  <label for="comment">Bình luận của bạn:</label>
-                  <textarea id="comment" name="comment" rows="4" required
-                     placeholder="Viết bình luận của bạn ở đây..."></textarea>
-
-                  <button class="send">
+                     <button class="send">
                      <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -314,9 +366,18 @@ class Detail extends BaseView
                      </div>
                      <span>Gửi</span>
                   </button>
-               </div>
+                  </div>
 
-            </form>
+               </form>
+               <?php
+            else:
+               ?>
+               <h6 class="text-center text-danger">
+                  Vui lòng đăng nhập để bình luận
+               </h6>
+               <?php
+            endif;
+            ?>
 
          </section>
 
@@ -376,7 +437,53 @@ class Detail extends BaseView
 
 
 
-<?php
+      <?php
 
    }
 }
+/* 
+         <?php
+            if (isset($data) && isset($data['comments']) && $data && $data['comments']) :
+            foreach ($data['comments'] as $item) :
+         ?>
+            <div class="sec_comment_review  p-1 d-flex  ">
+               <div class="col-11">
+                  <div class="user d-flex align-items-center">
+
+                  <?php
+                        if ($item['avatar']) :
+                  ?>
+                     <img src="<?= APP_URL ?>/public/assets/Client/image/users/<?= $item['avatar'] ?>"alt="Avatar của người dùng" width="6%">    
+                     <?php
+                        else :
+                     ?>                         
+                     <img src="<?= APP_URL ?>/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg" alt="Avatar của người dùng" width="6%">
+                     <?php
+                        endif;
+                     ?>
+                     <!-- avatar người dùng -->
+                     <div class="d-flex ">
+                        <h5 class="username"><?= $item['name'] ?> - <?= $item['username'] ?></h5>
+                     <!-- name người dùng -->
+                        <span class="date"><?= $data['product']['date'] ?></span>
+                     <!-- ngày tháng -->
+                     </div>
+                  </div>
+                  <p class="content mt-1"><?= $item['content'] ?></p>
+               </div>
+               <div class="col-1 d-flex justify-content-end align-content-end Utilities">
+                  <span class="material-symbols-outlined">
+                     more_vert
+                  </span>
+                  <div class="formdown">
+                     <ul>
+                        <li><a href="">Xóa</a> </li>
+                        <li><a href="">Sửa</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div> */
+          
+
+
+
