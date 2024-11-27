@@ -68,8 +68,9 @@ class CategoryModel extends BaseModel
         return $stmt->fetchAll();
     }
 
- 
-    
+   public function  countTotalCategogy(){
+return $this->countTotal();
+}
   // đếm số lượng 
     public function countCategory()
     {

@@ -19,27 +19,27 @@ class HomeController
     {
         $user = new UserModel;
         $total_user = $user->countTotalUser();
-    /*     var_dump($total_user); */
-    $Category = new CategoryModel;
-    $total_category = $Category->countTotalCategogy();
+        /*     var_dump($total_user); */
+        $Category = new CategoryModel;
+        $total_category = $Category->countTotalCategogy();
 
-    $product = new ProductModel;
-    $total_product = $product->countTotalProduct();
-    $product_by_catgory = $product->countProductByCategogy();
+        $product = new ProductModel;
+        $total_product = $product->countTotalProduct();
+        $product_by_catgory = $product->countProductByCategogy();
 
-    $comment = new CommentModel;
-    $total_comment = $comment->countTotalComment();
-        $data=[
-            'total_user'=> $total_user['total'],
-            'total_category'=> $total_category['total'],
-            'total_product'=> $total_product['total'],
-            'total_comment'=> $total_comment['total'],
-            'product_by_catgory'=> $product_by_catgory
+        $comment = new CommentModel;
+        $total_comment = $comment->countTotalComment();
+        $data = [
+            'total_user' => $total_user['total'],
+            'total_category' => $total_category['total'],
+            'total_product' => $total_product['total'],
+            'total_comment' => $total_comment['total'],
+            'product_by_catgory' => $product_by_catgory
 
         ];
-/*  var_dump($product_by_catgory);  */
-   Header::render();
+        /*  var_dump($product_by_catgory);  */
+        Header::render();
         Home::render($data);
-        Footer::render(); 
+        Footer::render();
     }
 }

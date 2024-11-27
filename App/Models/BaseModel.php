@@ -207,14 +207,10 @@ abstract class BaseModel implements CrudInterface
         return $stmt->get_result()->fetch_assoc();
     }
 
-
-
     public function getOneProductByStatus($id)
     {
         return $this->getOneByStatus($id);
     }
-
-
 
     // đếm số lượng cho Client
     public function countTotalByStatus()
@@ -229,6 +225,7 @@ abstract class BaseModel implements CrudInterface
             return $result;
         }
     }
+
     // đếm số lượng 
     public function countTotalProduct()
     {
@@ -243,7 +240,18 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-
+    public function countTotal()
+    {
+        $result = [];
+        try {
+            $sql = "SELECT COUNT(*) AS total FROM $this->table";
+            $result = $this->_conn->MySQLi()->query($sql);
+            return $result->fetch_assoc();
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi Thống kê chi tiết dữ liệu: ' . $th->getMessage());
+            return $result;
+        }
+    }
 
     public function getAllProductJoinCategories()
     {
