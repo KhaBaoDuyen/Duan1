@@ -1397,9 +1397,9 @@ Stack trace:
 [02-Aug-2024 18:30:16 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type bool in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 37
 [02-Aug-2024 18:30:16 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type bool in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 45
 [02-Aug-2024 18:30:16 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type bool in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 47
-[02-Aug-2024 19:07:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Category\Index.php on line 65
-[02-Aug-2024 19:07:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Category\Index.php on line 65
-[02-Aug-2024 19:07:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Category\Index.php on line 65
+[02-Aug-2024 19:07:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Category\Index.php on line 65
+[02-Aug-2024 19:07:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Category\Index.php on line 65
+[02-Aug-2024 19:07:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Category\Index.php on line 65
 [02-Aug-2024 19:46:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Views\Admin\Pages\Category\Index" not found in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\CategoryController.php:43
 Stack trace:
 #0 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Route.php(82): App\Controllers\Admin\CategoryController::index()
@@ -1511,18 +1511,18 @@ Stack trace:
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 66
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 66
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 66
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:02:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:04:19 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Models\CategoryModel" not found in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\CategoryController.php:21
 Stack trace:
 #0 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Route.php(82): App\Controllers\Admin\CategoryController::index()
@@ -1555,32 +1555,32 @@ Stack trace:
   thrown in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\CategoryController.php on line 21
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
-[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:05:55 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 74
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
-[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
+[03-Aug-2024 16:06:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 72
 [03-Aug-2024 16:06:28 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
 [03-Aug-2024 16:06:28 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 69
 [03-Aug-2024 16:06:28 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\category\Index.php on line 68
@@ -1878,43 +1878,43 @@ Stack trace:
 #2 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\index.php(78): App\Route::dispatch()
 #3 {main}
   thrown in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Models\CategoryModel.php on line 14
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 76
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 76
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 76
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
 [06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 76
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
-[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
-[06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
+[06-Aug-2024 22:27:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
+[06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 76
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 77
-[06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
-[06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
+[06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 79
+[06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 81
 [06-Aug-2024 22:30:09 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Cannot use object of type App\Models\CategoryModel as array in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php:69
 Stack trace:
 #0 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php(35): App\Views\Admin\Pages\Product\Index::render()
@@ -1988,21 +1988,21 @@ Stack trace:
 #3 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\index.php(78): App\Route::dispatch()
 #4 {main}
   thrown in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 70
+[06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 70
 [06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "avatar" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] PHP Deprecated:  file_exists(): Passing null to parameter #1 ($filename) of type string is deprecated in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
-[06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'product_id' at row 1
-[06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 70
+[06-Aug-2024 22:53:02 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_product' at row 1
+[06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 70
 [06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "avatar" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] PHP Deprecated:  file_exists(): Passing null to parameter #1 ($filename) of type string is deprecated in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
-[06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'product_id' at row 1
-[06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 70
+[06-Aug-2024 22:54:12 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_product' at row 1
+[06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 70
 [06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "avatar" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] PHP Deprecated:  file_exists(): Passing null to parameter #1 ($filename) of type string is deprecated in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
-[06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'product_id' at row 1
+[06-Aug-2024 22:55:00 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_product' at row 1
 [06-Aug-2024 22:59:38 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\ProductController.php on line 67
 [06-Aug-2024 22:59:38 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "avatar" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
 [06-Aug-2024 22:59:38 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Validation\AuthValidation.PHP on line 156
@@ -2216,61 +2216,61 @@ Stack trace:
 [07-Aug-2024 08:47:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:47:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:47:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:00 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:01 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
-[07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
+[07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
-[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
+[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
-[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
+[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 52
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 56
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 60
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 62
 [07-Aug-2024 08:48:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 63
-[07-Aug-2024 08:50:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
+[07-Aug-2024 08:50:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 46
 [07-Aug-2024 08:50:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "categories_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 75
 [07-Aug-2024 08:50:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 75
 [07-Aug-2024 08:50:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "categories_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Edit.php on line 75
@@ -2390,60 +2390,60 @@ Stack trace:
 #0 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\index.php(93): App\Route::dispatch()
 #1 {main}
   thrown in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Route.php on line 79
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 69
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "image" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 70
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 73
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "description" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 74
 [07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category_name" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 75
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
-[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
-[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 78
+[07-Aug-2024 10:39:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\Product\Index.php on line 80
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 78
+[07-Aug-2024 10:40:26 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Admin\Pages\User\Index.php on line 80
 [07-Aug-2024 10:56:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Validation\UserValidation" not found in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Admin\UserController.php:48
 Stack trace:
 #0 D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Route.php(82): App\Controllers\Admin\UserController::store()
@@ -2850,7 +2850,7 @@ Stack trace:
 [07-Aug-2024 20:57:24 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 301
 [07-Aug-2024 20:57:24 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 302
 [07-Aug-2024 20:58:35 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_is" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 245
-[07-Aug-2024 20:58:35 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "Product_id" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 301
+[07-Aug-2024 20:58:35 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id_product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 301
 [07-Aug-2024 20:58:59 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_is" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 245
 [07-Aug-2024 21:24:46 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\Client\ProductController::() in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Route.php:104
 Stack trace:
@@ -2878,7 +2878,7 @@ Stack trace:
 [07-Aug-2024 22:53:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 50
 [07-Aug-2024 22:53:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 53
 [07-Aug-2024 22:53:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 285
-[07-Aug-2024 22:54:25 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $product_id in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Client\CommentController.php on line 91
+[07-Aug-2024 22:54:25 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $id_product in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Controllers\Client\CommentController.php on line 91
 [07-Aug-2024 22:56:25 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 246
 [07-Aug-2024 22:56:25 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 246
 [07-Aug-2024 22:56:28 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 246
@@ -2961,10 +2961,10 @@ Stack trace:
 [08-Aug-2024 02:38:51 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "products" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Category.php on line 22
 [08-Aug-2024 02:38:51 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "categories" in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Category.php on line 37
 [08-Aug-2024 02:38:51 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Components\Category.php on line 40
-[08-Aug-2024 02:58:40 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`))
-[08-Aug-2024 02:58:49 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`))
-[08-Aug-2024 02:58:56 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`))
-[08-Aug-2024 02:59:02 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`))
+[08-Aug-2024 02:58:40 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`))
+[08-Aug-2024 02:58:49 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`))
+[08-Aug-2024 02:58:56 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`))
+[08-Aug-2024 02:59:02 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`duanmau`.`comments`, CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`))
 [08-Aug-2024 03:22:15 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 25
 [08-Aug-2024 03:22:15 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 42
 [08-Aug-2024 03:22:15 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki3\BLOCK2\DUANMAU\Khathibaoduyenpc08750_duanmau_source\App\Views\Client\Pages\Product\Detail.php on line 50
@@ -5644,3 +5644,6 @@ Stack trace:
 #3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
 #4 {main}
   thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 79
+[27-Nov-2024 13:40:22 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[27-Nov-2024 13:44:57 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'date' doesn't have a default value
+[27-Nov-2024 13:45:07 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'date' doesn't have a default value

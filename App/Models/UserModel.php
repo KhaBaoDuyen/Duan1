@@ -111,6 +111,7 @@ class UserModel extends BaseModel
         return $this->countTotal();
     }
 
+
     //---------------SEARCH------------------------------
     public function searchByKeywordUser($keyword)
     {

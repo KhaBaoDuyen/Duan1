@@ -12,8 +12,8 @@ class CommentValidation
          NotificationHelper::error('content', 'Không để trống comment');
          $is_valid = false;
       }
-      //   if (!isset($_POST['product_id']) || $_POST['product_id'] === '') {
-      //    NotificationHelper::error('product_id', 'Không để trống mã sản phẩm ');
+      //   if (!isset($_POST['id_product']) || $_POST['id_product'] === '') {
+      //    NotificationHelper::error('id_product', 'Không để trống mã sản phẩm ');
       //    $is_valid = false;
       // }
       //   if (!isset($_POST['id_user']) || $_POST['id_user'] === '') {

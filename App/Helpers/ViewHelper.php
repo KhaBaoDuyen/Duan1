@@ -13,14 +13,14 @@ class ViewHelper
          $view_data = [];
       }
 
-      $product_id_arr = array_column($view_data, 'product_id');
+      $id_product_arr = array_column($view_data, 'id_product');
 
 //       echo'<pre>';
 // var_dump($view_data);
-      // ktr product_id có tồn tại chưa 
-      if (in_array($id, $product_id_arr)) {
+      // ktr id_product có tồn tại chưa 
+      if (in_array($id, $id_product_arr)) {
          foreach ($view_data as $key => $value) {
-            if ($view_data[$key]['product_id'] == $id) {
+            if ($view_data[$key]['id_product'] == $id) {
                if ($view_data[$key]['time'] < time() - 60 * 5) {
                   $view++;
                }
@@ -31,7 +31,7 @@ class ViewHelper
       } else {
          // nếu chưa có cookies
          $product_array[] = [
-            'product_id' => $id,
+            'id_product' => $id,
             'time' => time()
          ];
          $view++;

@@ -26,7 +26,7 @@ class CartController
 
     public static function add_to_card() {
         $data = [
-            'product_id' => $_GET['product_id'],
+            'id_product' => $_GET['id_product'],
             'quantity' => $_GET['product_quantity'],
             'name' => $_GET['product_name'],
         ];

@@ -104,7 +104,7 @@ class Detail extends BaseView
 
                <div class="box_btn mt-3 d-flex">
 
-                  <input type="hidden" name="product_id" value="<?= $data['product']['id'] ?>">
+                  <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>">
                   <input type="hidden" name="product_name" value="<?= $data['product']['name'] ?>">
                   <button class="cartBtn" type="submit">
                      <svg class="cart" fill="white" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
@@ -273,19 +273,19 @@ class Detail extends BaseView
                            <?php
                            if ($item['avatar']):
                               ?>
-                              <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/<?= $item['avatar'] ?>"
+                              <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/<?= $item['avatar'] ?>"
                                  alt="Avatar của người dùng" width="5%">
                               <?php
                            else:
                               ?>
-                              <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
+                              <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/public/uploads/users/usermacdinh.png"
                                  alt="Avatar của người dùng" width="5%">
                               <?php
                            endif;
                            ?>
                            <!-- avatar người dùng -->
                            <div class="d-flex ">
-                              <h5 class="username"><?= $item['name'] ?> - <?= $item['username'] ?></h5>
+                              <h5 class="username"><?= $item['username'] ?></h5>
                               <span class="date"><?= $data['product']['date'] ?></span>
                            </div>
                         </div>
@@ -328,26 +328,26 @@ class Detail extends BaseView
 
                <form  id="commentForm" action="/comments" method="post" class="col-12 mt-2">
                   <input name="method" value="POST" type="hidden">
-                  <input type="hidden" name="product_id" value="<?= $data['product']['id'] ?>" id="" required>
+                  <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="" required>
                   <input type="hidden" name="id_user" value="<?= $_SESSION['user']['id'] ?>" id="" required>
                   <div class="user d-flex align-items-center">
                      
                         <?php
                         if ($_SESSION['user']['avatar']):
                            ?>
-                           <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/<?= $_SESSION['user']['avatar'] ?>" alt="user"
+                           <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/<?= $_SESSION['user']['avatar'] ?>" alt="user"
                               width="5%" >
                            <?php
                         else:
                            ?>
-                           <img class="avatar_comment " src="<?= APP_URL ?>/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg"
+                           <img class="avatar_comment " src="<?= APP_URL ?>/public/uploads/users/public/uploads/users/usermacdinh.png"
                               alt="user" width="5%" >
 
                            <?php
                         endif;
                         ?>
                      
-                     <h5 class="username m-2"><?= $_SESSION['user']['name'] ?><?= $_SESSION['user']['username'] ?></h5>
+                     <h5 class="username m-2"><?= $_SESSION['user']['username'] ?></h5>
                   </div>
                   <div>
                      <label for="comment">Bình luận của bạn:</label>
@@ -457,7 +457,7 @@ class Detail extends BaseView
                      <?php
                         else :
                      ?>                         
-                     <img src="<?= APP_URL ?>/public/assets/Client/image/users/3927d0928309ce5f90435981f4d7d7f5.jpg" alt="Avatar của người dùng" width="6%">
+                     <img src="<?= APP_URL ?>/public/assets/Client/image/users/public/uploads/users/usermacdinh.png" alt="Avatar của người dùng" width="6%">
                      <?php
                         endif;
                      ?>

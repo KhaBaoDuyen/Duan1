@@ -43,7 +43,7 @@ class ProductModel extends BaseModel
 
     /*      public function getOneProductByCategogy($categogy)
      {
-         $sql = "SELECT * FROM $this->table WHERE product_id=?  LIMIT 1";
+         $sql = "SELECT * FROM $this->table WHERE id_product=?  LIMIT 1";
          $conn = $this->_conn->MySQLi();
          $stmt = $conn->prepare($sql);
 

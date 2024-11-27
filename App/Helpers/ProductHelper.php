@@ -133,16 +133,16 @@ class ProductHelper
          return false;
       }
       $data = $_SESSION['product'];
-      $product_id = $data['product_id'];
+      $id_product = $data['id_product'];
 
       if (isset($_COOKIE['product'])) {
-         self::updateCookie($product_id);
+         self::updateCookie($id_product);
       }
 
-      self::updateSession($product_id);
+      self::updateSession($id_product);
 
-      if ($product_id != $id) {
-         NotificationHelper::error('product_id', 'Lỗi không có quyên xem thông tin tài khoảng này ');
+      if ($id_product != $id) {
+         NotificationHelper::error('id_product', 'Lỗi không có quyên xem thông tin tài khoảng này ');
          return false;
       }
       return true;
