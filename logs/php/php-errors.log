@@ -5597,53 +5597,11 @@ Stack trace:
 [15-Nov-2024 00:31:39 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Product\Detail.php on line 73
 [15-Nov-2024 00:31:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "nameVariant" in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Product\Detail.php on line 74
 [15-Nov-2024 00:31:39 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Product\Detail.php on line 74
-[27-Nov-2024 13:19:47 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\UserModel::countTotal() in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\UserModel.php:111
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php(21): App\Models\UserModel->countTotalUser()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\HomeController::index()
-#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#3 {main}
-  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\UserModel.php on line 111
-[27-Nov-2024 13:19:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\UserModel::countTotal() in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\UserModel.php:111
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php(21): App\Models\UserModel->countTotalUser()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\HomeController::index()
-#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#3 {main}
-  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\UserModel.php on line 111
-[27-Nov-2024 13:22:37 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\CategoryModel::countTotalCategogy() in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php:24
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\HomeController::index()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#2 {main}
-  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php on line 24
-[27-Nov-2024 13:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\CategoryModel::countTotalCategogy() in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php:24
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\HomeController::index()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#2 {main}
-  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php on line 24
-[27-Nov-2024 13:22:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\CategoryModel::countTotalCategogy() in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php:24
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\HomeController::index()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#2 {main}
-  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php on line 24
-[27-Nov-2024 13:22:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\CategoryModel::countTotalCategogy() in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php:24
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\HomeController::index()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#2 {main}
-  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\HomeController.php on line 24
-[27-Nov-2024 13:29:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $data in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 142
-[27-Nov-2024 13:29:09 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: App\Models\BaseModel::update(): Argument #2 ($data) must be of type array, null given, called in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\CategoryModel.php on line 25 and defined in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\BaseModel.php:119
-Stack trace:
-#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\CategoryModel.php(25): App\Models\BaseModel->update()
-#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php(142): App\Models\CategoryModel->updateCategory()
-#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\CategoryController::update()
-#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(145): App\Route::dispatch()
-#4 {main}
-  thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 79
-[27-Nov-2024 13:40:22 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
-[27-Nov-2024 13:44:57 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'date' doesn't have a default value
-[27-Nov-2024 13:45:07 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'date' doesn't have a default value
+[18-Nov-2024 16:54:56 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category" in D:\DuAn1xuong\App\Controllers\Admin\HomeController.php on line 28
+[18-Nov-2024 16:55:07 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category" in D:\DuAn1xuong\App\Controllers\Admin\HomeController.php on line 28
+[18-Nov-2024 16:55:30 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "category" in D:\DuAn1xuong\App\Controllers\Admin\HomeController.php on line 28
+[20-Nov-2024 15:30:53 Asia/Ho_Chi_Minh] PHP Warning:  Array to string conversion in D:\DuAn1xuong\App\Views\Admin\Home.php on line 307
+[22-Nov-2024 12:10:52 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "cart" in D:\DuAn1xuong\App\Controllers\Client\CartController.php on line 15
+[22-Nov-2024 12:10:52 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\DuAn1xuong\App\Views\Client\Pages\Cart\Cart.php on line 32
+[22-Nov-2024 12:34:03 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "cart" in D:\DuAn1xuong\App\Controllers\Client\CartController.php on line 15
+[22-Nov-2024 12:34:04 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\DuAn1xuong\App\Views\Client\Pages\Cart\Cart.php on line 32

@@ -75,7 +75,7 @@ Route::get('/checkout', 'App\Controllers\Client\CartController@checkout');
 
 Route::get('/history', 'App\Controllers\Client\CartController@history'); 
 
-//-----------------------[ KỸ THUÊTJ TRỒNG CÂY ]--------------------------------
+//-----------------------[ KỸ THUAT TRỒNG CÂY ]--------------------------------
 Route::get('/blog', controllerMethod: 'App\Controllers\Client\HomeController@instruction'); 
 
 //--------------------------[ NHẮC NHỞ  ]-------------------------------

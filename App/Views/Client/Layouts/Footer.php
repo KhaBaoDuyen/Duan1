@@ -118,12 +118,46 @@ class Footer extends BaseView
       </div>
 
 
-      <script src="/public/assets/Client/Js/slide.js"></script>
+  <script src="/public/assets/Client/Js/slide.js"></script>
       <script src="/public/assets/Client/Js/cart.js"></script>
       <script src="/public/assets/Client/Js/login.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-      <script>
+   <script>
+function filterByPrice(value) {
+    const sortOrder = document.getElementById('sort-order').value;
+    const url = new URL(window.location.href);
+    url.searchParams.set('price', value);
+    url.searchParams.set('sort', sortOrder);
+    window.location.href = url.toString();
+}
+
+function sortProducts(value) {
+    const priceFilter = document.getElementById('price-filter').value;
+    const url = new URL(window.location.href);
+    url.searchParams.set('sort', value);
+    url.searchParams.set('price', priceFilter);
+    window.location.href = url.toString();
+}
+
+</script>
+
+<script>
+      const priceMin = document.getElementById("priceMin");
+      const priceMax = document.getElementById("priceMax");
+      const priceRangeText = document.getElementById("priceRangeText");
+
+      priceMin.oninput = function() {
+        priceRangeText.innerHTML = priceMin.value + " VND - " + priceMax.value + " VND";
+      }
+
+      priceMax.oninput = function() {
+        priceRangeText.innerHTML = priceMin.value + " VND - " + priceMax.value + " VND";
+      }
+    </script>
+
+
+    <script></script>
          const scolltop = document.getElementById("scoll-top");
          const form = document.querySelector('#form');
          const button = document.querySelector('#box_reminder');

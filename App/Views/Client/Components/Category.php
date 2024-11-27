@@ -23,6 +23,49 @@ class Category extends BaseView
       </a>
     <?php endforeach; ?>
   </div>
+
+<div class="price-filter brand m-auto">
+    <form action="" method="GET">
+        <div class="price-options">
+            <div class="filter-header">
+                <h4 class="title_brand">Lọc theo giá:</h4>
+                <button type="submit" class="btn btn-primary custom-btn">Lọc</button>
+            </div>
+
+            <label for="price0-100k">
+                <input type="checkbox" name="priceMin[]" value="0" class="price-checkbox" 
+                    <?php echo (isset($_GET['priceMin']) && in_array('0', $_GET['priceMin'])) ? 'checked' : ''; ?>>
+                0 VND - 100,000 VND
+            </label><br>
+
+            <label for="price100k-500k">
+                <input type="checkbox" name="priceMin[]" value="100000" class="price-checkbox" 
+                    <?php echo (isset($_GET['priceMin']) && in_array('100000', $_GET['priceMin'])) ? 'checked' : ''; ?>>
+                100,000 VND - 500,000 VND
+            </label><br>
+
+            <label for="price500k-1M">
+                <input type="checkbox" name="priceMin[]" value="500000" class="price-checkbox" 
+                    <?php echo (isset($_GET['priceMin']) && in_array('500000', $_GET['priceMin'])) ? 'checked' : ''; ?>>
+                500,000 VND - 1,000,000 VND
+            </label><br>
+
+            <label for="price1M-3M">
+                <input type="checkbox" name="priceMin[]" value="1000000" class="price-checkbox" 
+                    <?php echo (isset($_GET['priceMin']) && in_array('1000000', $_GET['priceMin'])) ? 'checked' : ''; ?>>
+                1,000,000 VND - 3,000,000 VND
+            </label><br>
+
+            <label for="price3M-5M">
+                <input type="checkbox" name="priceMin[]" value="3000000" class="price-checkbox" 
+                    <?php echo (isset($_GET['priceMin']) && in_array('3000000', $_GET['priceMin'])) ? 'checked' : ''; ?>>
+                3,000,000 VND - 5,000,000 VND
+            </label><br>
+        </div>
+    </form>
+</div>
+
+</div>
 </aside>
 
     <?php

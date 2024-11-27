@@ -36,11 +36,13 @@ class ProductController
     }
     // hiển thị danh sách
     public static function index()
-    {
-        $product = new ProductModel();
-        $products = $product->getAllProduct();
+{
+    $product = new ProductModel();
+    $products = $product->getAllProduct();
 
-        $category = new CategoryModel();
+    // $category = new CategoryModel();
+    // $categories = $category->getAllCategoryByStatus();
+           $category = new CategoryModel();
         $categories = $category->getAllByStatus();
 
         $count_product = $product->countTotalProduct();
@@ -58,6 +60,52 @@ class ProductController
                 }
             }
         }
+    // Lấy giá trị priceMin và priceMax từ URL
+    // Xử lý giá trị priceMin
+    $priceMinArray = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
+    $priceMaxArray = [];
+
+    // Chuyển đổi các giá trị priceMin thành các priceMax tương ứng
+    foreach ($priceMinArray as $priceMin) {
+        switch ($priceMin) {
+            case '0':
+                $priceMaxArray[] = 100000;
+                break;
+            case '100000':
+                $priceMaxArray[] = 500000;
+                break;
+            case '500000':
+                $priceMaxArray[] = 1000000;
+                break;
+            case '1000000':
+                $priceMaxArray[] = 3000000;
+                break;
+            case '3000000':
+                $priceMaxArray[] = 5000000;
+                break;
+        }
+    }
+
+    // Debug giá trị priceMin và priceMax
+    /* var_dump($priceMinArray, $priceMaxArray); */
+
+    // Nếu có các giá trị priceMin và priceMax, thì lọc theo khoảng giá
+    if (!empty($priceMinArray) && !empty($priceMaxArray)) {
+        $products = self::filterProductsByPrice($products, $priceMinArray, $priceMaxArray);
+    }
+
+   // Kiểm tra kiểu sắp xếp (tăng dần hoặc giảm dần)
+   $sortOrder = isset($_GET['sort']) ? $_GET['sort'] : '';
+    
+   // Sắp xếp sản phẩm nếu có
+   if ($sortOrder) {
+       $products = self::sortProducts($products, $sortOrder);
+   }
+    $data = [
+        'products' => $products,
+        'categories' => $categories,
+    ];
+
         // echo ('<pre>');
 //   var_dump($countCategoryProduct);
 // die;
@@ -70,11 +118,14 @@ class ProductController
 
         ];
 
-        Header::render();
-        Index::render($data);
-        Footer::render();
-    }
+    Header::render();
+    Index::render($data);
+    Footer::render();
+}
 
+
+    
+    
     public static function Detail($id)
     {
         $comment = new CommentModel();
@@ -153,12 +204,4 @@ class ProductController
         ProductCategory::render($data);
         Footer::render();
     }
-    // --------- ĐẾm số lượng ----------------
-    // public static function countProductByCategory($id)
-    // {
-    //     $product = new ProductModel();
-    //     $count = $product->countProductByCategory($id);
-    //     echo $count;
-    // }
-
 }

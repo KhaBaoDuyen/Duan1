@@ -3,23 +3,22 @@
 namespace App\Views\Client\Pages\Product;
 
 use App\Views\BaseView;
-// use App\Views\Client\Components\Category;
 use App\Views\Client\Components\Category as ComponentsCategory;
 
 class Index extends BaseView
 {
    public static function render($data = null)
    {
-?>
+ 
+      ?>
 
       <section class="product_banner">
          <div class="box_banner col-10 m-auto d-flex">
-            <div class="product_banner_left col-8  m-0">
+            <div class="product_banner_left col-8 m-0">
                <div class="title">
                   <p class="title_name">BLOOM</p>
                   <p class="title_slogan">Hơi thở cuộc sống</p>
                </div>
-
             </div>
             <div class="product_banner_right col-4 ">
                <img src="/public/assets/Client/image/about/sen3.png" alt width="100%">
@@ -28,51 +27,51 @@ class Index extends BaseView
       </section>
 
       <section class="count m-auto">
-         <div class="box_total d-flex col-10  row m-auto ">
-
+         <div class="box_total d-flex col-10 row m-auto ">
             <div class="total_product col-3 ">
                <p class="count_number"><?= $data['count_product'] ?>+</p>
                <p class="count_name"> Sản phẩm</p>
             </div>
-
             <div class="total_product col-3 ">
                <p class="count_number"><?= $data['count_category'] ?>+</p>
                <p class="count_name"> Danh mục</p>
             </div>
-
             <div class="total_product col-3 ">
                <p class="count_number"><?= $data['total_comment'] ?>+</p>
                <p class="count_name"> Bình luận</p>
             </div>
-
             <div class="total_product col-3 ">
                <p class="count_number">1000+</p>
                <p class="count_name"> Lượt truy cập</p>
             </div>
-
          </div>
       </section>
 
-
-      <main class=" col-10 m-auto d-flex">
-
+      <main class="col-10 m-auto d-flex">
          <?php
          ComponentsCategory::render($data['categories']) ;
          ?>
          <article class="col-9">
-            <nav>
+         <nav>
+   <div class="tune">
+      <div class="tune_icon"><span class="material-symbols-outlined">tune</span></div>
+      <div class="tune_down">
+         <li>
+            <form action="" method="GET">
+               <select id="sort-order" name="sort" onchange="this.form.submit()">
+                  <option value="">Mặc định</option>
+                  <option value="asc" <?= isset($_GET['sort']) && $_GET['sort'] == 'asc' ? 'selected' : ''; ?>>A-Z</option>
+                  <option value="desc" <?= isset($_GET['sort']) && $_GET['sort'] == 'desc' ? 'selected' : ''; ?>>Z-A</option>
+               </select>
+            </form>
+         </li>
+      </div>
+   </div>
+</nav>
 
-               <div class="tune">
-                  <div class="tune_icon"> <span class="material-symbols-outlined"> tune </span></div>
-                  <div class="tune_down">
-                     <li><a href="/product/ads">A-z</a></li>
-                     <li><a href>Z-a</a></li>
-                  </div>
-               </div>
-            </nav>
 
 
-            <div class="all_products  ">
+            <div class="all_products ">
                <?php
                if (isset($data) && isset($data['products']) && !empty($data['products'])):
                   foreach ($data['products'] as $item):
@@ -129,13 +128,9 @@ class Index extends BaseView
             </div>
 
          </article>
-
       </main>
 
-      </div>
-
-<?php
-
+      <?php
    }
 }
 ?>

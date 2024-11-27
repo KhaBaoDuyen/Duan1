@@ -246,20 +246,34 @@
   color: var(--color-secondary);
 }
 
-.alert-custom {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 5px 10px;
-  background-color: #ffffff;
-  color: #d10000;
-  font-size: 18px;
-  font-weight: bold;
-  border: 2px solid rgba(209, 0, 0, 0.5882352941);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+/* Tiêu đề cho phần lọc giá */
+.price-filter h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.price-filter .price-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* khoảng cách giữa các checkbox */
+}
+
+.filter-header {
+  display: flex;
+  align-items: center; /* Căn chỉnh theo chiều dọc */
+  justify-content: space-between; /* Căn chỉnh thẻ h4 và nút lọc ra hai bên */
+  margin-bottom: 20px; /* Khoảng cách dưới filter header */
+}
+
+.title_brand {
+  margin: 0; /* Đảm bảo không có khoảng cách thừa quanh h4 */
+}
+
+.custom-btn {
+  padding: 8px 16px;
+  margin-left: 10px;
+  background-color: var(--pri-color);
 }
 
 footer {
