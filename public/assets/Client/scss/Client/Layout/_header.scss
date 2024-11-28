@@ -295,3 +295,35 @@
    margin-left: 10px;
    background-color: var(--pri-color);
 }
+ /* Căn giữa danh sách ul */
+ .sort-list {
+   list-style: none; /* Xóa bỏ dấu chấm trong danh sách */
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center; /* Căn giữa theo chiều ngang */
+ }
+
+ /* Căn giữa các phần tử trong sort-options */
+ .sort-options {
+   display: flex;
+   flex-direction: column; /* Hiển thị các phần tử theo chiều dọc */
+   align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+   cursor: pointer;
+ }
+
+ .sort-option {
+   padding: 10px 20px; /* Thêm padding để các phần tử dễ cho nhìn */
+   border-radius: 4px;
+   margin: 5px 0; /* Thêm khoảng cách giữa các phần tử */
+   transition: background-color 0.3s ease;
+ }
+
+ .sort-option:hover {
+   background-color: #e0e0e0;
+ }
+
+ /* Điều chỉnh khi hover */
+ .sort-options:hover .sort-option {
+   color: #007bff;
+ }

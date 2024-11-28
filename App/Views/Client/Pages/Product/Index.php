@@ -54,17 +54,20 @@ class Index extends BaseView
          <article class="col-9">
          <nav>
    <div class="tune">
-      <div class="tune_icon"><span class="material-symbols-outlined">tune</span></div>
+      <div class="tune_icon">
+         <span class="material-symbols-outlined">tune</span>
+      </div>
       <div class="tune_down">
-         <li>
-            <form action="" method="GET">
-               <select id="sort-order" name="sort" onchange="this.form.submit()">
-                  <option value="">Mặc định</option>
-                  <option value="asc" <?= isset($_GET['sort']) && $_GET['sort'] == 'asc' ? 'selected' : ''; ?>>A-Z</option>
-                  <option value="desc" <?= isset($_GET['sort']) && $_GET['sort'] == 'desc' ? 'selected' : ''; ?>>Z-A</option>
-               </select>
-            </form>
-         </li>
+         <ul class="sort-list">
+            <li>
+               <form action="" method="GET">
+                  <div class="sort-options">
+                     <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=asc'">A-z</span>
+                     <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=desc'">Z-a</span>
+                  </div>
+               </form>
+            </li>
+         </ul>
       </div>
    </div>
 </nav>
