@@ -25,6 +25,7 @@ AuthHelper::middleware();
 // ------- HEADER--------
 Route::get('/', 'App\Controllers\Client\HomeController@index');
 Route::get('/contact', 'App\Controllers\Client\HomeController@contact');
+Route::post('/sendmailcontact', 'App\Controllers\Client\HomeController@sendmailContact');
 Route::get('/about', 'App\Controllers\Client\HomeController@about');
 Route::get('/Search', 'App\Controllers\Client\HomeController@search');
 
@@ -69,7 +70,7 @@ Route::get('/product/parent/{id}','App\Controllers\Client\ProductController@show
 //-----------------------[ GIỎ HÀNG ]--------------------------------
 Route::get('/cart', 'App\Controllers\Client\CartController@index'); 
 
-Route::get('/add_to_card', 'App\Controllers\Client\CartController@add_to_card'); 
+Route::post('/cart', 'App\Controllers\Client\CartController@addtocart'); 
 
 Route::get('/checkout', 'App\Controllers\Client\CartController@checkout'); 
 

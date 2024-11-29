@@ -10,6 +10,7 @@ use App\Views\Client\Home;
 use App\Models\ProductModel;
 use App\Models\CategoryModel;
 use App\Models\UserModel;
+use App\Validation\ContactValidation;
 use App\Views\Client\Contact;
 use App\Views\Client\Pages\Blogs\Instruction;
 use App\Views\Client\About;
@@ -36,9 +37,23 @@ class HomeController
     }
     public static function contact()
     {
+        Notification::render();
+        NotificationHelper::unset();
         Header::render();
         Contact::render();
         Footer::render();
+    }
+    public static function sendmailContact()
+    {
+        $data = ContactValidation::contact();
+        if (!$data) {
+            NotificationHelper::error('contact_valid', 'Vui lòng nhập đầy đủ thông tin!');
+            header('location: /contact');
+            exit();
+        }
+        $mail= new UserModel();
+        $sendmail= $mail->sendmailContact();
+        header('location: /contact');
     }
     public static function instruction()
     {
@@ -55,10 +70,9 @@ class HomeController
     public static function Search()
     {
         $keyword = $_GET['keyword'] ?? '';
-       $products = ProductModel::searchByKeywordProduct($keyword);
+        $products = ProductModel::searchByKeywordProduct($keyword);
         Header::render();
         Search::render(['keyword' => $keyword, 'products' => $products]);
         Footer::render();
     }
-
 }

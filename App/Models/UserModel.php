@@ -258,4 +258,161 @@ class UserModel extends BaseModel
         $stmt->execute();
         return $stmt->get_result()->fetch_assoc();
     }
+
+
+    public static function sendmailContact()
+    {
+        //Create an instance; passing `true` enables exceptions
+        $mail = new PHPMailer(true);
+        $name = $_POST['name'];
+        $ho = $_POST['ho'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        try {
+            //Server settings
+            /*  $mail->SMTPDebug = SMTP::DEBUG_SERVER;     */                  //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'Quynhctppc08873@gmail.com';                     //gmail của người gửi
+            $mail->Password   = 'benvlqjevebyolau';                               //mật khẩu smtp
+
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            //Recipients
+            $mail->setFrom('Quynhctppc08873@gmail.com', 'BLOOM');
+            $mail->addAddress($email, 'Quynh');     //người nhận
+
+            $mail->SMTPOptions = [
+                'ssl' => [
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                ]
+            ];
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'BLOOM XIN KÍNH CHÀO QUÝ KHÁCH!';
+            $mail->Body    = '
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #3cb371;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .email-body {
+            padding: 20px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .email-body h2 {
+            color: #3cb371;
+            margin-top: 0;
+        }
+        .email-body p {
+            margin: 10px 0;
+        }
+        .email-body .info-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3cb371;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .email-footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            color: #666666;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3cb371;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="email-header">
+            <h1>Chúng tôi ở đây để giúp bạn!</h1>
+        </div>
+
+        <!-- Body -->
+        <div class="email-body">
+            <h2>Xin chào '.$ho.' '.$name.',</h2>
+            <p>Cảm ơn bạn đã liên hệ với đội ngũ hỗ trợ của BLOOM. Chúng tôi đã nhận được yêu cầu :'.$message.'
+             của bạn hãy trả lời đến mail này để được hỗ trợ nhé!.</p>
+
+            <div class="image-container">
+                <img src="https://example.com/your-support-image.png" alt="Hình minh họa hỗ trợ khách hàng">
+            </div>
+
+            <p>Nếu cần hỗ trợ khẩn cấp, bạn có thể liên hệ với chúng tôi qua số hotline <strong>1900 1234</strong> hoặc email <strong>support@bloom.com</strong>.</p>
+            <a href="https://yourwebsite.com/contact" class="button">Liên hệ ngay</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="email-footer">
+            <p>Cảm ơn bạn đã tin tưởng BLOOM 🌿</p>
+            <p>Đội ngũ hỗ trợ khách hàng của chúng tôi luôn sẵn sàng giúp bạn!</p>
+        </div>
+    </div>
+</body>
+</html>
+
+            ';
+            $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+            $mail->send();
+            echo 'Message has been sent';
+            return true; // Trả về true nếu gửi thành công
+            /* header('Location: /Resetpassword'); */
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            return false; // Trả về false nếu có lỗi
+        }
+    }
 }

@@ -81,7 +81,8 @@ class Contact extends BaseView
                   <p style="float: left;">Bạn có những thắc mắc hãy liên hệ với
                      chúng tôi và nhập thông tin dưới đây.</p><br> <br>
                   <div class="contact-box">
-                     <form class="row ">
+                     <form action="/sendmailcontact" method="post"  enctype="multipart/form-data" class="row">
+                     <input type="hidden" name="method" value="POST" id="">
                         <div class="col-6">
                            <label style="font-size: 20px;" for="name">Tên:</label><br>
                            <input type="text" id="name" name="name" placeholder="Vui lòng nhập Tên....."><br><br>
