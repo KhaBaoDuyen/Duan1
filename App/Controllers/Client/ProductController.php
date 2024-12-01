@@ -34,7 +34,7 @@ class ProductController
     {
         $this->productModel = new ProductModel();
     }
-    private static function filterProductsByPrice($products, $priceMinArray, $priceMaxArray)
+    /* private static function filterProductsByPrice($products, $priceMinArray, $priceMaxArray)
     {
         $filteredProducts = [];
 
@@ -53,7 +53,7 @@ class ProductController
         }
 
         return $filteredProducts;
-    }
+    } */
     // hiển thị danh sách
     public static function index()
     {
@@ -142,7 +142,7 @@ class ProductController
     }
 
     // Sắp xếp sản phẩm
-    private static function sortProducts($products, $sortOrder)
+    /* private static function sortProducts($products, $sortOrder)
     {
         usort($products, function ($a, $b) use ($sortOrder) {
             if ($sortOrder === 'asc') {
@@ -153,7 +153,7 @@ class ProductController
             return 0; // Nếu không có sắp xếp, giữ nguyên
         });
         return $products;
-    }
+    } */
 
 
     public static function Detail($id)
@@ -199,8 +199,8 @@ class ProductController
     public static function getProductByCategory($id)
     {
         $product = new ProductModel();
-        $products = $product->getAllProductByCategoryAndStatus($id);
-
+        $products = $product->getAllProductByCategoryAndStatus($id); // Lấy tất cả sản phẩm trong danh mục
+    
         $category = new CategoryModel();
         $categories = $category->getAllCategoryByStatus();
         $count_product = $product->countTotalProduct();
@@ -219,21 +219,97 @@ class ProductController
                 }
             }
         }
+        
+    
+        // Lấy giá trị priceMin từ URL
+        $priceMinArray = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
+        $priceMaxArray = [];
+    
+        // Chuyển đổi các giá trị priceMin thành các priceMax tương ứng
+        foreach ($priceMinArray as $priceMin) {
+            switch ($priceMin) {
+                case '0':
+                    $priceMaxArray[] = 100000;
+                    break;
+                case '100000':
+                    $priceMaxArray[] = 500000;
+                    break;
+                case '500000':
+                    $priceMaxArray[] = 1000000;
+                    break;
+                case '1000000':
+                    $priceMaxArray[] = 3000000;
+                    break;
+                case '3000000':
+                    $priceMaxArray[] = 5000000;
+                    break;
+            }
+        }
+    
+        // Lọc các sản phẩm theo giá nếu có giá trị lọc
+        if (!empty($priceMinArray) && !empty($priceMaxArray)) {
+            $products = self::filterProductsByPrice($products, $priceMinArray, $priceMaxArray);
+        }
+    
+        // Kiểm tra nếu không có sản phẩm nào phù hợp với lọc giá
+        if (empty($products)) {
+            $noProductsMessage = "Không có sản phẩm trong tầm giá này.";
+        }
+    
+        // Dữ liệu truyền vào view
         $data = [
             'products' => $products,
             'categories' => $categories,
+            'noProductsMessage' => isset($noProductsMessage) ? $noProductsMessage : null,
+            'priceMin' => $priceMinArray,
             'count_product' => $count_product['total'],
             'count_category' => $count_category['total'],
             'total_comment' => $total_comment['total'],
             'countCategoryProduct' => $countCategoryProduct
         ];
-
-        // echo"<pre>";
-        // var_dump($data['products']);
-        // var_dump($data['categories']);
-
+    
         Header::render();
         ProductCategory::render($data);
         Footer::render();
+    }
+    
+
+    private static function filterProductsByPrice($products, $priceMinArray, $priceMaxArray)
+    {
+        $filteredProducts = [];
+    
+        foreach ($products as $item) {
+            $price = $item['price'];
+    
+            // Kiểm tra xem sản phẩm có thuộc một trong các khoảng giá không
+            foreach ($priceMinArray as $key => $priceMin) {
+                $priceMax = $priceMaxArray[$key]; // lấy priceMax tương ứng
+    
+                if ($price >= $priceMin && $price <= $priceMax) {
+                    $filteredProducts[] = $item;
+                    break; // Nếu sản phẩm đã nằm trong một khoảng giá, không cần kiểm tra thêm
+                }
+            }
+        }
+    
+        return $filteredProducts;
+    }
+    
+    
+    
+    
+
+    // Sắp xếp sản phẩm
+    private static function sortProducts($products, $sortOrder)
+    {
+        usort($products, function ($a, $b) use ($sortOrder) {
+            if ($sortOrder === 'asc') {
+                return $a['price'] <=> $b['price']; // Tăng dần
+            } elseif ($sortOrder === 'desc') {
+                return $b['price'] <=> $a['price']; // Giảm dần
+            }
+            return 0; // Nếu không có sắp xếp, giữ nguyên
+        });
+        return $products;
     }
 }
