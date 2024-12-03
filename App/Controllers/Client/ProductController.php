@@ -135,6 +135,8 @@ class ProductController
         ];
 
         Header::render();
+        Notification::render();
+        NotificationHelper::unset();
         Index::render($data);
         Footer::render();
     }
@@ -156,6 +158,8 @@ class ProductController
 
     public static function Detail($id)
     {
+
+
         $comment = new CommentModel();
         $data['comments'] = $comment->get5CommentNewestByProductAndStatus($id);
 
@@ -173,8 +177,8 @@ class ProductController
             if (isset($data['product']['variant']) && !empty($data['product']['variant'])) {
                 $Arr_variant = json_decode($data['product']['variant'], true);
             }
-        }
-        ;
+        };
+
         if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
             if (isset($data['product']['images']) && !empty($data['product']['images'])) {
                 $images = json_decode($data['product']['images'], true);
@@ -183,8 +187,8 @@ class ProductController
         $data['Arr_variant'] = $Arr_variant;
         $data['images'] = $images;
         Header::render();
-        // Notification::render();
-        // NotificationHelper::unset();
+        Notification::render();
+        NotificationHelper::unset();
         Detail::render($data);
         Footer::render();
     }

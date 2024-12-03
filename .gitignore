@@ -8,4 +8,4 @@ package-lock.json
 public/styles/*.css
 public/styles/*.map
 php-error.log
-public
+App/Auto

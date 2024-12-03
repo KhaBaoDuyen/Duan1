@@ -215,13 +215,18 @@
 .banner_bottom .cart_shopping .cart_quantity {
   position: absolute;
   bottom: 0;
-  left: -5px;
+  left: -14px;
   background-color: var(--color-price);
   color: white;
   border-radius: 50%;
-  padding: 2px 7px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 12px;
   font-weight: bold;
+  padding: 2px;
 }
 .banner_menu_main {
   background: var(--color-green-light);
@@ -256,18 +261,23 @@
 .price-filter .price-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px; /* khoảng cách giữa các checkbox */
+  gap: 5px;
+  /* khoảng cách giữa các checkbox */
 }
 
 .filter-header {
   display: flex;
-  align-items: center; /* Căn chỉnh theo chiều dọc */
-  justify-content: space-between; /* Căn chỉnh thẻ h4 và nút lọc ra hai bên */
-  margin-bottom: 20px; /* Khoảng cách dưới filter header */
+  align-items: center;
+  /* Căn chỉnh theo chiều dọc */
+  justify-content: space-between;
+  /* Căn chỉnh thẻ h4 và nút lọc ra hai bên */
+  margin-bottom: 20px;
+  /* Khoảng cách dưới filter header */
 }
 
 .title_brand {
-  margin: 0; /* Đảm bảo không có khoảng cách thừa quanh h4 */
+  margin: 0;
+  /* Đảm bảo không có khoảng cách thừa quanh h4 */
 }
 
 .custom-btn {
@@ -276,37 +286,80 @@
   background-color: var(--pri-color);
 }
 
-/* Căn giữa danh sách ul */
-.sort-list {
-  list-style: none; /* Xóa bỏ dấu chấm trong danh sách */
-  padding: 0;
-  margin: 0;
+/* From Uiverse.io by akshat-patel28 */
+.Error {
+  width: 330px;
+  height: 80px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
 }
-
-/* Căn giữa các phần tử trong sort-options */
-.sort-options {
+.Error .wave {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -31px;
+  top: 32px;
+  width: 80px;
+  fill: rgba(4, 228, 0, 0.2274509804);
+}
+.Error .icon-container {
+  width: 35px;
+  height: 35px;
   display: flex;
-  flex-direction: column; /* Hiển thị các phần tử theo chiều dọc */
-  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(4, 228, 0, 0.2823529412);
+  border-radius: 50%;
+  margin-left: 8px;
+}
+.Error .icon {
+  width: 17px;
+  height: 17px;
+  color: #269b24;
+}
+.Error .message-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.Error .message-text,
+.Error .sub-text {
+  margin: 0;
+  cursor: default;
+}
+.Error .message-text {
+  color: #269b24;
+  font-size: 17px;
+  font-weight: 700;
+}
+.Error .sub-text {
+  font-size: 14px;
+  color: #555;
+}
+.Error .cross-icon {
+  width: 18px;
+  height: 18px;
+  color: #555;
   cursor: pointer;
 }
 
-.sort-option {
-  padding: 10px 20px; /* Thêm padding để các phần tử dễ nhìn */
-  border-radius: 4px;
-  margin: 5px 0; /* Thêm khoảng cách giữa các phần tử */
-  transition: background-color 0.3s ease;
-}
-
-.sort-option:hover {
-  background-color: #e0e0e0;
-}
-
-/* Điều chỉnh khi hover */
-.sort-options:hover .sort-option {
-  color: #007bff;
+.login-notice {
+  color: #929292;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
 }
 
 footer {
@@ -1081,39 +1134,191 @@ main article .all_products .card:hover {
   padding-bottom: 20px;
 }
 
+.cart {
+  position: relative;
+  /* Input */
+  /* Span */
+  /* Box */
+  /* Checkmark */
+  /* Checked, Indeterminate */
+  /* Hover, Focus */
+  /* Active */
+  /* Disabled */
+}
+.cart .box_Cart {
+  position: sticky;
+  bottom: 0px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.849);
+  margin: 1% 0;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.cart .box_Cart form {
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+}
+.cart .box_Cart form .checkout {
+  background: var(--pri-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.3em;
+}
+.cart .cl-checkbox {
+  position: relative;
+  display: inline-block;
+}
+.cart .cl-checkbox > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: none;
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+}
+.cart .cl-checkbox > span {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+.cart .cl-checkbox > span::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 3px 11px 3px 1px;
+  border: solid 2px;
+  /* Safari */
+  border-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2px;
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.cart .cl-checkbox > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 10px;
+  height: 5px;
+  border: solid 2px transparent;
+  border-right: none;
+  border-top: none;
+  transform: translate(3px, 4px) rotate(-45deg);
+}
+.cart .cl-checkbox > input:checked,
+.cart .cl-checkbox > input:indeterminate {
+  background-color: var(--pri-color);
+}
+.cart .cl-checkbox > input:checked + span::before,
+.cart .cl-checkbox > input:indeterminate + span::before {
+  border-color: var(--pri-color);
+  background-color: var(--pri-color);
+}
+.cart .cl-checkbox > input:checked + span::after,
+.cart .cl-checkbox > input:indeterminate + span::after {
+  border-color: #fff;
+}
+.cart .cl-checkbox > input:indeterminate + span::after {
+  border-left: none;
+  transform: translate(4px, 3px);
+}
+.cart .cl-checkbox:hover > input {
+  opacity: 0.04;
+}
+.cart .cl-checkbox > input:focus {
+  opacity: 0.12;
+}
+.cart .cl-checkbox:hover > input:focus {
+  opacity: 0.16;
+}
+.cart .cl-checkbox > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+.cart .cl-checkbox > input:active + span::before {
+  border-color: var(--pri-color);
+}
+.cart .cl-checkbox > input:checked:active + span::before {
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.cart .cl-checkbox > input:disabled {
+  opacity: 0;
+}
+.cart .cl-checkbox > input:disabled + span {
+  color: rgba(0, 0, 0, 0.38);
+  cursor: initial;
+}
+.cart .cl-checkbox > input:disabled + span::before {
+  border-color: currentColor;
+}
+.cart .cl-checkbox > input:checked:disabled + span::before,
+.cart .cl-checkbox > input:indeterminate:disabled + span::before {
+  border-color: transparent;
+  background-color: currentColor;
+}
 .cart .table {
   width: 100%;
   border-collapse: collapse;
 }
-.cart .table th, .cart .table td {
+.cart .table th,
+.cart .table tr,
+.cart .table td {
   padding: px;
   text-align: center;
-  vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+  vertical-align: middle;
+  /* Căn giữa nội dung theo chiều dọc */
+  background-color: white;
+}
+.cart .table tr {
+  border-bottom: 1px solid #ddd;
+}
+.cart .table > :not(caption) > * > * {
+  border-bottom-width: none;
 }
 .cart .table img {
-  max-width: 70px; /* Đảm bảo ảnh không vượt quá kích thước */
-  height: auto;
+  width: 90px;
+  max-height: 90px;
 }
 .cart .quantity-control {
-  display: flex; /* Sử dụng flexbox để căn chỉnh */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều ngang */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cart .quantity-control input[type=button] {
-  background-color: #07503d; /* Màu nền cho nút */
-  color: white; /* Màu chữ */
-  border: none; /* Bỏ viền */
-  border-radius: 5px; /* Bo góc */
-  width: 30px; /* Chiều rộng của nút */
-  height: 30px; /* Chiều cao của nút */
-  cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+  background-color: #07503d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 .cart .quantity-control input[type=number] {
-  width: 80px; /* Chiều rộng của ô nhập số lượng */
-  text-align: center; /* Căn giữa nội dung */
-  border: 1px solid #ddd; /* Đường viền */
-  border-radius: 5px; /* Bo góc */
-  margin: 0 5px; /* Khoảng cách giữa các phần tử */
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 5px;
 }
 
 .product_detail .sec_title {
@@ -1199,19 +1404,25 @@ main article .all_products .card:hover {
   overflow-y: auto;
   max-height: 100px;
 }
-.product_detail .sec_title article .variants .variant button {
+.product_detail .sec_title article .variants .variant label span {
   border-radius: 3px;
   border: 1px solid var(--text-color-sale);
   color: var(--text-color-sale);
   width: -moz-max-content;
   width: max-content;
   margin: 1%;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 5px;
 }
-.product_detail .sec_title article .variants .variant button p {
-  padding: 2% 3%;
-  font-weight: 600;
+.product_detail .sec_title article .variants .variant label span:hover, .product_detail .sec_title article .variants .variant label span:focus {
+  border: 2px solid var(--color-price);
+  color: var(--pri-color);
 }
-.product_detail .sec_title article .variants .variant button:hover, .product_detail .sec_title article .variants .variant button:focus {
+.product_detail .sec_title article .variants .variant label input[type=radio] {
+  display: none;
+}
+.product_detail .sec_title article .variants .variant label input[type=radio]:checked ~ span {
   border: 2px solid var(--color-price);
   color: var(--pri-color);
 }
@@ -2672,62 +2883,116 @@ main article .all_products .card:hover {
   background-color: #0056b3; /* Đổi màu nền khi hover */
 }
 
-.checkout-page .container {
-  display: flex;
-  padding: 2rem;
+.checkout-page {
+  padding: 1% 0;
+}
+.checkout-page .container_checkout .content-left {
+  border-radius: 5px;
+  padding: 2% 1%;
   background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-.checkout-page .container .content-left {
-  width: 50%;
-}
-.checkout-page .container .content-left form input,
-.checkout-page .container .content-left form textarea {
+.checkout-page .container_checkout .content-left input,
+.checkout-page .container_checkout .content-left textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.checkout-page .container .content-left form label {
-  font-size: 20px;
+.checkout-page .container_checkout .content-left label {
+  font-size: 18px;
   padding: 5px;
 }
-.checkout-page .container .content-left form img {
+.checkout-page .container_checkout .content-left img {
   width: 100px;
 }
-.checkout-page .container .content-left .zalopay {
+.checkout-page .container_checkout .zalopay {
   padding: 10px;
 }
-.checkout-page .container .content-right {
-  width: 50%;
-  padding: 2rem;
+.checkout-page .container_checkout .content-right {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1% 2%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   /* background-color: #e5fbf1; */
-  background-image: url(/public/assets/Client/image/about/checkout-nen-text.jpg);
   background-size: 100%;
   background-position-y: bottom;
-  margin-left: 2rem;
 }
-.checkout-page .container .content-right .content1 {
+.checkout-page .container_checkout .content-right .content1 {
   height: 100%;
   position: relative;
 }
-.checkout-page .container .content-right .content1 table {
+.checkout-page .container_checkout .content-right .content1 table {
   width: 100%;
 }
-.checkout-page .container .content-right .content1 table tr {
+.checkout-page .container_checkout .content-right .content1 table tr {
   border-bottom: 1px solid #dee0df;
 }
-.checkout-page .container .content-right .content1 table tr th {
+.checkout-page .container_checkout .content-right .content1 table tr th {
   padding: 10px;
 }
-.checkout-page .container .content-right .content1 button {
-  margin-top: 20px;
-  position: absolute;
-  right: 0px;
+
+.thanhtoan {
+  margin-top: 2%;
+  bottom: 5%;
+}
+.thanhtoan button {
   width: 150px;
   background: linear-gradient(to right, #142b16, #598059);
   padding: 10px;
   color: white;
   border: none;
+}
+
+.payment-method {
+  margin: 20px 0;
+}
+
+.payment-options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.payment-option input[type=radio] {
+  display: none;
+}
+
+.payment-option label {
+  font-size: 16px !important;
+}
+
+.payment-option.zalopay label {
+  display: flex;
+  align-items: center;
+  color: #4CAF50;
+  /* Màu xanh ZaloPay */
+}
+
+.payment-option.zalopay img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.payment-option input[type=radio]:checked + label {
+  border: 2px solid var(--color-price);
+  border-radius: 3px;
+}
+
+.payment-option.cod input[type=radio]:checked + label {
+  border: 2px solid var(--color-price);
+  border-radius: 3px;
 }
 
 #reminder {

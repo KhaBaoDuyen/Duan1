@@ -70,14 +70,19 @@ Route::get('/product/parent/{id}','App\Controllers\Client\ProductController@show
 //-----------------------[ GIỎ HÀNG ]--------------------------------
 Route::get('/cart', 'App\Controllers\Client\CartController@index'); 
 
-Route::post('/cart', 'App\Controllers\Client\CartController@addtocart'); 
+Route::post('/cart/{id}', 'App\Controllers\Client\CartController@store'); 
+Route::put('/cart', 'App\Controllers\Client\CartController@update');
+Route::delete('/cart/{id}', 'App\Controllers\Client\CartController@delete'); 
 
-Route::get('/checkout', 'App\Controllers\Client\CartController@checkout'); 
+//------------------------[ THANH TOÁN ]-------------------------
+Route::get('/checkout', 'App\Controllers\Client\OrderController@checkout'); 
+Route::post('/order', 'App\Controllers\Client\OrderController@store'); 
+
 
 Route::get('/history', 'App\Controllers\Client\CartController@history'); 
 
 //-----------------------[ KỸ THUAT TRỒNG CÂY ]--------------------------------
-Route::get('/blog', controllerMethod: 'App\Controllers\Client\HomeController@instruction'); 
+Route::get('/blog',  'App\Controllers\Client\HomeController@instruction'); 
 
 //--------------------------[ NHẮC NHỞ  ]-------------------------------
 Route::get('/reminders',  'App\Controllers\Client\ReminderController@index'); 

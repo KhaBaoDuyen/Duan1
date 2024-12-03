@@ -104,9 +104,13 @@ abstract class BaseModel implements CrudInterface
 
             $sql = "INSERT INTO $this->table ($columns) VALUES ($placeholders)";
             $conn = $this->_conn->MySQLi();
+            if ($conn->connect_error) {
+                error_log('Connection failed: ' . $conn->connect_error);
+                return false;
+            }
+
             $stmt = $conn->prepare($sql);
 
-            // Bind parameters
             $stmt->bind_param(str_repeat('s', count($data)), ...array_values($data)); // Giả sử tất cả các giá trị đều là chuỗi
 
             return $stmt->execute();
@@ -297,4 +301,16 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
+    public function countTotalCart()
+    {
+        $result = [];
+        try {
+            $sql = "SELECT SUM(quantity) AS totalQuantity FROM cart;";
+            $result = $this->_conn->MySQLi()->query($sql);
+            return $result->fetch_assoc();
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi Thống kê chi tiết dữ liệu: ' . $th->getMessage());
+            return $result;
+        }
+    }
 }

@@ -98,8 +98,8 @@ foreach ($reminders as $reminder) {
       </body>
       </html>';
 
-        $mail->addEmbeddedImage($_SERVER['DOCUMENT_ROOT'] . 'd:/hoctap/hocki4/BLOCK2/MONDUAN/testautocron/image-removebg-preview.png', 'tree_image');
-        $emailTemplate = str_replace('d:/hoctap/hocki4/BLOCK2/MONDUAN/testautocron/image-removebg-preview.png', 'cid:tree_image', $emailTemplate);
+        $mail->addEmbeddedImage($_SERVER['DOCUMENT_ROOT'] . 'D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\public\assets\Client\image\main', 'tree_image');
+        $emailTemplate = str_replace('D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\public\assets\Client\image\main', 'cid:tree_image', $emailTemplate);
 
         // Nội dung email đã được thay thế
         $mail->Body = $emailTemplate;

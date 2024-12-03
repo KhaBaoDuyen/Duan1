@@ -3,7 +3,7 @@
 namespace App\Views\Client\Pages\Cart;
 
 use App\Views\BaseView;
-
+use App\Views\Client\Components\Menu as ComponentsMenu;
 class History extends BaseView
 {
   public static function render($data = null)
@@ -11,31 +11,9 @@ class History extends BaseView
     ?>
    <main class="p-2 profile d-flex justify-content-center align-items-center ">
       <section class="sec_profile d-flex col-10 p-3 ">
-         <aside class="sec_profile_left col-3 ">
-            <div class="box_logo">
-               <div class="logo"><img src="/public/assets/Client/image/icon/Logo2.png" alt>
-               </div>
-               <h3 class="mt-3">BLOOM</h3>
-            </div>
-
-            <ul class="menu">
-               <li> <span class="material-symbols-outlined">
-                     manage_accounts
-                  </span><a href="/user">Trang cá
-                     nhân</a> </li>
-
-               <li><span class="material-symbols-outlined">
-                     deployed_code_history
-                  </span> <a href="/history">Đơn hàng của
-                     tôi</a> </li>
-               <li><span class="material-symbols-outlined">
-                     logout
-                  </span> <a href="/logout">Đăng
-                     xuất</a>
-               </li>
-
-            </ul>
-         </aside>
+            <?php
+            ComponentsMenu::render();
+            ?>
 
        <article class="sec_historycart_right col-9 d-flex flex-column bg-white p-4">
             <h2 class="mt-3">Lịch sử mua hàng</h2>

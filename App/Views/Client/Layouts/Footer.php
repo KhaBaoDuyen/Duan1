@@ -9,8 +9,6 @@ class Footer extends BaseView
    public static function render($data = null)
    {
       $isLoggedIn = isset($_SESSION['user']);
-      $userid = $isLoggedIn ? $_SESSION['user']['id'] : null;
-      $username = $isLoggedIn ? $_SESSION['user']['username'] : null;
       ?>
       <div class="reminder" id="reminder">
          <form action="/reminder" method="POST" class="mx-auto p-2 shadow-sm active" id="form" style="border-radius: 8px;"
@@ -193,6 +191,20 @@ class Footer extends BaseView
                behavior: "smooth"
             });
          };
+      </script>
+      <!-- Phuong thuc thanh toan -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="/public/assets/Client/Js/jquery.min.js"></script>
+      <script src="/public/assets/Client/Js/bootstrap.min.js"></script>
+      <script src="/public/assets/Client/Js/icheck.min.js"></script>
+
+      <script>
+         $(document).ready(function () {
+            $('input').iCheck({
+               checkboxClass: 'icheckbox_flat-blue',
+               radioClass: 'iradio_flat-blue'
+            });
+         });
       </script>
 
       </body>

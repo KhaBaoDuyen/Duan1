@@ -1,63 +1,139 @@
 .checkout-page {
-    .container {
-        display: flex;
-        padding: 2rem;
-        background-color: #fff;
-    
+    padding: 1% 0;
+
+    .container_checkout {
+
         .content-left {
-            width: 50%;
-            form {
-                input,
-                textarea {
-                    width: 100%;
-                    padding: 10px;
-                    border-radius: 5px;
-                    border: 1px solid #ccc;
-                }
-                label {
-                    font-size: 20px;
-                    padding: 5px;
-                }
-                img {
-                    width: 100px;
-                }
-            }
-            .zalopay {
+            border-radius: 5px;
+            padding: 2% 1%;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+
+
+            input,
+            textarea {
+                width: 100%;
                 padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            label {
+                font-size: 18px;
+                padding: 5px;
+            }
+
+            img {
+                width: 100px;
             }
         }
+
+        .zalopay {
+            padding: 10px;
+
+        }
+
         .content-right {
-            width: 50%;
-            padding: 2rem;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 1% 2%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             /* background-color: #e5fbf1; */
-            background-image: url(/public/assets/Client/image/about/checkout-nen-text.jpg);
             background-size: 100%;
             background-position-y: bottom;
-            margin-left: 2rem;
-            .content1{
+            // margin-left: 2rem;
+
+            .content1 {
                 height: 100%;
                 position: relative;
+
                 table {
                     width: 100%;
+
                     tr {
                         border-bottom: 1px solid #dee0df;
+
                         th {
                             padding: 10px;
                         }
                     }
                 }
-                button {
-                    margin-top: 20px;
-                    position: absolute;
-                    right: 0px;
-                    width: 150px;
-                    background: linear-gradient(to right, #142b16, #598059);
-                    padding: 10px;
-                    color: white;
-                    border: none;
-                }
+
+
             }
-            
+
+
         }
     }
+}
+
+.thanhtoan {
+    margin-top: 2%;
+    // position: sticky;
+    bottom: 5%;
+
+    button {
+
+        width: 150px;
+        background: linear-gradient(to right, #142b16, #598059);
+        padding: 10px;
+        color: white;
+        border: none;
+    }
+}
+
+.payment-method {
+    margin: 20px 0;
+}
+
+.payment-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+// .payment-option:hover {
+//  border: 2px solid var(--color-price);
+// }
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-option label {
+    font-size: 16px !important;
+}
+
+.payment-option.zalopay label {
+    display: flex;
+    align-items: center;
+    color: #4CAF50;
+    /* Màu xanh ZaloPay */
+}
+
+.payment-option.zalopay img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.payment-option input[type="radio"]:checked+label {
+    border: 2px solid var(--color-price);
+    border-radius: 3px;
+}
+
+.payment-option.cod input[type="radio"]:checked+label {
+    border: 2px solid var(--color-price);
+    border-radius: 3px;
 }

@@ -25,9 +25,9 @@ class ProductValidation
 
         if (isset($_POST['discount_price']) && $_POST['discount_price'] !== '') {
             if ((int) $_POST['discount_price'] < 0) {
-                $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn hoặc bằng 0';
+                $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn hoặc  0';
                 $is_valid = false;
-            } elseif ((int) $_POST['discount_price'] >= (int) $_POST['price']) {
+            } elseif ((int) $_POST['discount_price'] > (int) $_POST['price']) {
                 $errors['discount_price'] = 'Giá giảm phải nhỏ hơn  giá gốc';
                 $is_valid = false;
             }
@@ -46,7 +46,7 @@ class ProductValidation
             $is_valid = false;
         }
         if (!isset($_FILES['image']) || $_FILES['image']['error'] !== 0 || $_FILES['image']['tmp_name'] === '') {
-            $errors['image'] = 'Vui lòng chọn ảnh sản phẩm 123 ';
+            $errors['image'] = 'Vui lòng chọn ảnh sản phẩm  ';
             $is_valid = false;
         }
 

@@ -71,9 +71,11 @@ class ProductController
             header('Location: /admin/products/create');
             exit;
         }
-
         $variants = $_POST['variant'] ?? null;
-        $variant = isset($variants) && $variants != null ? json_encode($variants) : null;
+        $variant = isset($variants) && $variants != null ? json_encode($variants, JSON_UNESCAPED_UNICODE) : null;
+
+        echo $variant;
+
 
         $images = $_FILES['images'] ?? null;
         if (isset($images) && $images != null) {
@@ -90,9 +92,9 @@ class ProductController
         }
 
         $data = [
-            'name' => $_POST['name'] ?? '',
-            'price' => $_POST['price'] ?? 0,
-            'status' => $_POST['status'] ?? 0,
+            'name' => $_POST['name'],
+            'price' => $_POST['price'],
+            'status' => $_POST['status'],
             'discount_price' => !empty($_POST['discount_price']) ? (int) $_POST['discount_price'] : 0,
             'id_categogy' => $_POST['id_categogy'] ?? null,
             'date' => date('Y-m-d H:i:s'),
@@ -101,13 +103,13 @@ class ProductController
             'variant' => $variant,
         ];
 
-        if (!empty($_POST['start_time'])) {
-            $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
-        }
+        // if (!empty($_POST['start_time'])) {
+        //     $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
+        // }
 
-        if (!empty($_POST['end_time'])) {
-            $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
-        }
+        // if (!empty($_POST['end_time'])) {
+        //     $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
+        // }
 
         if (isset($is_upload)) {
             $imageNames = json_decode($is_upload, true); // Giải mã JSON từ hàm image()
@@ -116,10 +118,14 @@ class ProductController
             $data['images'] = !empty($imageNames['images']) ? json_encode($imageNames['images']) : null; // Ảnh phụ
         }
 
+
+
+        print_r($data);
         $result = $product->createProduct($data);
         if ($result) {
             NotificationHelper::success('product', 'Thêm sản phẩm thành công');
             header('Location: /admin/Product');
+
         } else {
             NotificationHelper::error('product', 'Thêm sản phẩm thất bại');
             header("Location: /admin/products/create");
@@ -184,11 +190,11 @@ class ProductController
         }
 
         $variants = $_POST['variant'] ?? null;
-        $variant = isset($variants) && $variants != null ? json_encode($variants) : null;
+         $variant = isset($variants) && $variants != null ? json_encode($variants, JSON_UNESCAPED_UNICODE) : null;
         $data = [
-            'name' => $_POST['name'] ?? '',
-            'price' => $_POST['price'] ?? 0,
-            'status' => $_POST['status'] ?? 0,
+            'name' => $_POST['name'],
+            'price' => $_POST['price'],
+            'status' => $_POST['status'],
             'discount_price' => !empty($_POST['discount_price']) ? (int) $_POST['discount_price'] : 0,
             'id_categogy' => $_POST['id_categogy'] ?? null,
             'date' => date('Y-m-d H:i:s'),
@@ -197,13 +203,13 @@ class ProductController
             'variant' => $variant,
         ];
 
-        if (!empty($_POST['start_time'])) {
-            $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
-        }
+        // if (!empty($_POST['start_time'])) {
+        //     $data['start_time'] = (new \DateTime($_POST['start_time']))->format('Y-m-d H:i:s');
+        // }
 
-        if (!empty($_POST['end_time'])) {
-            $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
-        }
+        // if (!empty($_POST['end_time'])) {
+        //     $data['end_time'] = (new \DateTime($_POST['end_time']))->format('Y-m-d H:i:s');
+        // }
 
         $allowed_types = ['jpg', 'png', 'jpeg', 'gif', 'webp'];
         $is_upload_main_image = isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK;

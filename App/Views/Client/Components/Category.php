@@ -27,10 +27,16 @@ class Category extends BaseView
 <div class="price-filter brand m-auto">
     <form action="" method="GET">
         <div class="price-options">
-            <div class="filter-header">
-                <h4 class="title_brand">Lọc theo giá:</h4>
-                <button type="submit" class="btn btn-primary custom-btn">Lọc</button>
-            </div>
+<div class="filter-header d-flex justify-content-between align-items-center" style="width: 90%; ">
+    <h4 class="filter-title" style="color: var(--pri-color); font-family: var(--font-family); font-size: 2rem;">
+        Lọc theo giá:
+    </h4>
+    <div>
+        <button type="submit" class="btn btn-primary custom-btn">Lọc</button>
+    </div>
+</div>
+
+
 
             <label for="price0-100k">
                 <input type="checkbox" name="priceMin[]" value="0" class="price-checkbox" 

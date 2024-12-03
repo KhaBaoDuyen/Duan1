@@ -4,7 +4,7 @@ namespace App\Views\Client\Layouts;
 
 use App\Controllers\Client\AuthController;
 use App\Views\BaseView;
-use App\Models\UserModel;
+use App\Models\CartModel;
 
 class Header extends BaseView
 {
@@ -13,7 +13,10 @@ class Header extends BaseView
 
       $isLoggedIn = isset($_SESSION['user']);
       $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
-?>
+
+      $carts = new CartModel;
+      $cart = $carts->countTotalCartQuatity();
+      ?>
       <!DOCTYPE html>
       <html lang="en">
 
@@ -24,6 +27,7 @@ class Header extends BaseView
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
          <link rel="stylesheet" href="/public/assets/Client/scss/Client/index.css">
+         <link rel="stylesheet" href="/public/assets/Client/scss/Client/blue.css">
          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
          <link rel="icon" type="image/png" href="/public/assets/Client/image/icon/Logo2.png">
       </head>
@@ -40,12 +44,14 @@ class Header extends BaseView
          <?php
          if (isset($_SESSION['notification'])) {
             $notification = $_SESSION['notification'];
-         ?>
-            <div id="notification" class="d-flex justify-items-center align-items-center alert alert-<?php echo $notification['type']; ?> alert-dismissible fade show notification-alert" role="alert">
+            ?>
+            <div id="notification"
+               class="d-flex justify-items-center align-items-center alert alert-<?php echo $notification['type']; ?> alert-dismissible fade show notification-alert"
+               role="alert">
                <div class="me-4"><?php echo $notification['message']; ?></div>
-               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> 
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-         <?php
+            <?php
             unset($_SESSION['notification']);
          }
          ?>
@@ -104,7 +110,10 @@ class Header extends BaseView
 
                         <a href="/cart" class="cart_shopping col-2" title="Giỏ hàng">
                            <span class="material-symbols-outlined">shopping_cart</span>
-                           <span class="cart_quantity">3</span>
+                           <?php if ($isLoggedIn) { ?> <span class="cart_quantity">
+                                 <?= htmlspecialchars((string) $cart) ?></span>
+                           <?php } else { ?><span class="cart_quantity">0</span><?php } ?>
+
                         </a>
                      </div>
                   </div>
@@ -123,7 +132,7 @@ class Header extends BaseView
          </header>
 
 
-   <?php
+         <?php
    }
 }
-   ?>
+?>
