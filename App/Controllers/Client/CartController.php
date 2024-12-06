@@ -24,7 +24,7 @@ class CartController
     }
     public static function index()
     {
-        // Kiểm tra xem người dùng đã đăng nhập hay chưa
+        // Kiểm tra đã đăng nhập hay chưa
         if (isset($_SESSION['user']['id'])) {
             $cartModel = new CartModel();
             $data = $cartModel->getAllCartByUserId($_SESSION['user']['id']);
