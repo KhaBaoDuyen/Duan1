@@ -5622,3 +5622,165 @@ Stack trace:
 #3 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\index.php(142): App\Route::dispatch()
 #4 {main}
   thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 79
+[29-Nov-2024 13:54:05 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id' doesn't have a default value
+[29-Nov-2024 13:55:44 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id' doesn't have a default value
+[30-Nov-2024 15:34:55 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id' doesn't have a default value
+[30-Nov-2024 15:50:30 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
+[30-Nov-2024 15:50:34 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
+[30-Nov-2024 15:50:44 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 25
+[30-Nov-2024 15:50:44 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 29
+[30-Nov-2024 15:50:44 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 46
+[30-Nov-2024 15:50:44 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 60
+[30-Nov-2024 15:50:44 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 65
+[30-Nov-2024 15:50:44 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 85
+[30-Nov-2024 15:50:46 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 25
+[30-Nov-2024 15:50:46 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 29
+[30-Nov-2024 15:50:46 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 46
+[30-Nov-2024 15:50:46 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 60
+[30-Nov-2024 15:50:46 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 65
+[30-Nov-2024 15:50:46 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 85
+[01-Dec-2024 12:50:16 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
+[01-Dec-2024 12:52:51 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 25
+[01-Dec-2024 12:52:51 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 29
+[01-Dec-2024 12:52:51 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 46
+[01-Dec-2024 12:52:51 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 60
+[01-Dec-2024 12:52:51 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 65
+[01-Dec-2024 12:52:51 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Auth\Profile.php on line 85
+[01-Dec-2024 12:57:57 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '12:58', '9')' at line 1
+[01-Dec-2024 13:05:21 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`reminders`, CONSTRAINT `fkuser` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[01-Dec-2024 13:06:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
+[01-Dec-2024 14:38:46 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id' doesn't have a default value
+[01-Dec-2024 14:41:08 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
+[02-Dec-2024 13:14:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'comments.id_product' in 'where clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\CommentModel.php:45
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\CommentModel.php(45): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Client\ProductController.php(160): App\Models\CommentModel->get5CommentNewestByProductAndStatus()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Client\ProductController::Detail()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(171): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\CommentModel.php on line 45
+[02-Dec-2024 13:15:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'comments.id_product' in 'where clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\CommentModel.php:45
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\CommentModel.php(45): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Client\ProductController.php(160): App\Models\CommentModel->get5CommentNewestByProductAndStatus()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Client\ProductController::Detail()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(171): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\CommentModel.php on line 45
+[02-Dec-2024 13:32:44 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Unknown column 'images' in 'field list'
+[02-Dec-2024 17:10:44 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\BaseModel.php(168): App\Models\Database->MySQLi()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Client\HomeController.php(25): App\Models\BaseModel->getAllByProductStatus()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Client\HomeController::index()
+#4 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(171): App\Route::dispatch()
+#5 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[04-Dec-2024 12:53:35 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Unknown column 'images' in 'field list'
+[04-Dec-2024 12:53:59 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Unknown column 'images' in 'field list'
+[05-Dec-2024 20:19:30 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 20:19:38 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 20:19:50 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 22:58:12 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:05:28 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:11:32 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:12:05 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:12:09 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:32:01 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_user' doesn't have a default value
+[05-Dec-2024 23:34:25 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_user' doesn't have a default value
+[05-Dec-2024 23:37:11 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_user' doesn't have a default value
+[05-Dec-2024 23:38:13 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_user' doesn't have a default value
+[05-Dec-2024 23:49:20 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:56:51 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:58:43 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:59:38 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[05-Dec-2024 23:59:42 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:01:50 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:01:52 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:02:43 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:02:45 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:02:45 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:02:46 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:02:46 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:02:47 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:39 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:40 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:04:40 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:04:41 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:04:41 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:04:41 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:04:42 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:04:43 Asia/Ho_Chi_Minh] Lỗi khi hiển thị tất cả dữ liệu: Unknown column 'comments.id_product' in 'on clause'
+[06-Dec-2024 00:04:55 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught Error: Class "App\Controllers\Admin\ContactController" not found in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php:79
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#1 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php on line 79
+[06-Dec-2024 00:14:09 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + string in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php:64
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\ContactController.php(18): App\Views\Admin\Pages\Contact\index::render()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\ContactController->index()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#3 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 64
+[06-Dec-2024 00:15:22 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + string in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php:64
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\ContactController.php(18): App\Views\Admin\Pages\Contact\index::render()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\ContactController->index()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(174): App\Route::dispatch()
+#3 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 64
+[06-Dec-2024 00:15:58 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 00:15:58 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 00:15:58 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 00:15:58 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 11:13:04 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 11:13:04 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 11:13:04 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86
+[06-Dec-2024 11:13:04 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Contact\Index.php on line 86

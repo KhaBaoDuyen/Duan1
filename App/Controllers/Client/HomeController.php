@@ -52,15 +52,13 @@ class HomeController
             header('location: /contact');
             exit();
         }
-        $firstname = $_POST['ho'];
-        $lastname = $_POST['name'];
+        $name = $_POST['ho'] . ' ' . $_POST['name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $message = $_POST['message'];
 
         $data = [
-            'firstname' => $firstname,
-            'lastname' => $lastname,
+            'name' => $name,
             'phone' => $phone,
             'email' => $email,
             'message' => $message,

@@ -9,6 +9,7 @@ use App\Models\ContactModel;
 use App\Views\Admin\Layouts\Header;
 use App\Views\Admin\Pages\Contact\index;
 use App\Views\Admin\Pages\Contact\Edit;
+use App\Views\Admin\Pages\Contact\Search;
 use App\Views\Admin\Layouts\Footer;
 
 class ContactController
@@ -64,5 +65,22 @@ class ContactController
             NotificationHelper::error('delete','Xóa thất bại!');
             header('Location: /admin/contact');
         }
+    }
+
+    public static function search()
+    {
+        $keyword = $_GET['keyword'] ?? '';
+        $contact = new ContactModel();
+        $contacts = $contact->searchByKeywordContact($keyword);
+        $contactall = $contact->getAllContact();
+
+        $data = [
+            'keyword' => $keyword,
+            'contacts' => $contacts,
+            'contactall' => $contactall
+        ];
+        Header::render();
+        Search::render($data);
+        Footer::render();
     }
 }

@@ -26,22 +26,14 @@ class Edit extends BaseView
               <input type="hidden" name="method" id="" value="PUT">
 
               <div class="form-group">
-                <label for="firstname">Họ</label>
-                <input type="text" class="form-control" value="<?= $data['firstname'] ?>" name="firstname" id="firstname"
+                <label for="name">Họ</label>
+                <input type="text" class="form-control" value="<?= $data['name'] ?>" name="name" id="name"
                   aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['firstname'])): ?>
-                  <span style="color:red;"><?= $errors['firstname'] ?></span>
+                <?php if (isset($errors['name'])): ?>
+                  <span style="color:red;"><?= $errors['name'] ?></span>
                 <?php endif; ?>
               </div>
 
-              <div class="form-group">
-                <label for="lastname">Ten</label>
-                <input type="text" class="form-control" value="<?= $data['lastname'] ?>" name="lastname" id="lastname"
-                  aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['lastname'])): ?>
-                  <span style="color:red;"><?= $errors['lastname'] ?></span>
-                <?php endif; ?>
-              </div>
 
               <div class="form-group">
                 <label for="email">Email</label>

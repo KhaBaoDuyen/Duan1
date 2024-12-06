@@ -168,7 +168,7 @@ Route::get('/admin/contact', 'App\Controllers\Admin\ContactController@index');
 Route::get('/admin/contact/{id}', 'App\Controllers\Admin\ContactController@edit');
 Route::put('/admin/contact/{id}', 'App\Controllers\Admin\ContactController@update');
 Route::delete('/admin/contact/{id}', 'App\Controllers\Admin\ContactController@delete');
-
+Route::get('/admin/search', 'App\Controllers\Admin\ContactController@search');
 
 
 /* Route::get('/admin/comments', 'App\Controllers\Admin\CommentController@Index');

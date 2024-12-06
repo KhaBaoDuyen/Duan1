@@ -30,6 +30,16 @@ class ContactModel extends BaseModel
         return $this->delete($id);
     }
     
-    
+    public function searchByKeywordContact($keyword)
+    {
+        $db = (new Database())->Pdo();
+        $stmt = $db->prepare("
+        SELECT * FROM $this->table WHERE name LIKE :keyword ");
+
+        $stmt->execute(['keyword' => '%' . $keyword . '%']);
+
+        // Trả về kết quả
+        return $stmt->fetchAll();
+    }
 
 }
