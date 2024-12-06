@@ -169,7 +169,7 @@ class ProductController
             NotificationHelper::error('product_detail', 'Sản phẩm không tồn tại');
             header("location: /shop");
         }
-
+        //var_dump($data['comments']);
         $Arr_variant = [];
         $images = [];
 

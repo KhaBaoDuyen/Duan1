@@ -35,20 +35,47 @@ class CommentController
 
     // xử lý chức năng thêm
     public static function store()
-    {
+    {   // Lấy dữ liệu từ form
         $id_product = $_POST['id_product'];
         $is_valid = CommentValidation::createClient();
+
+        // Kiểm tra tính hợp lệ của dữ liệu
         if (!$is_valid) {
             NotificationHelper::error('store', 'Thêm thất bại thông tin thất bại');
             header("Location:/product/$id_product");
         } else {
             header("Location:/product/$id_product");
         }
+        if (file_exists($_FILES['image']['tmp_name']) && is_uploaded_file($_FILES['image']['tmp_name'])) {
+
+            // nơi lưu trữ hình ảnh (trong source code)
+            $target_dir = "public/uploads/comments/";
+
+            // lấy kiểu file (đuôi file)
+            $imageFileType = strtolower(pathinfo(basename($_FILES["image"]["name"]), PATHINFO_EXTENSION));
+
+            // thay đổi tên file thành dạng năm tháng ngày giờ phút giây
+            $nameImage = date('YmdHmi') . '.' . $imageFileType;
+
+            // đường dẫn đầy đủ để di chuyển file đến
+            $target_file = $target_dir . $nameImage;
+
+            // nếu upload thành công => lưu vào database
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
+
+            } else {
+                $nameImage = '';
+                NotificationHelper::error('upload_file', 'Upload file thất bại');
+            }
+        }
+        
 
         $data = [
             'content' => $_POST['content'],
             'id_product' => $_POST['id_product'],
             'id_user' => $_POST['id_user'],
+            'image' => $nameImage,
         ];
 
         $comment = new CommentModel();
@@ -71,7 +98,7 @@ class CommentController
         }
     }
     // ------- EDIT ------------------
-/* 
+
     // xử lý chức năng sửa (cập nhật)
     public static function update($id)
     {
@@ -112,22 +139,27 @@ class CommentController
     // thực hiện xoá
     public static function delete($id)
     {
+        // Khởi tạo đối tượng CommentModel và gọi phương thức delete
         $product = new CommentModel();
-        $result = $product->deleteComment($id);
+        $result = $product->deleteComment($id); // Xoá bình luận với ID tương ứng
+    
+        // Kiểm tra kết quả xoá
         if ($result) {
-            // echo 'Xoá thành công';
-            NotificationHelper::success('product', 'Xoá thành công');
+            NotificationHelper::success('product', 'Xoá bình luận thành công');
         } else {
-            NotificationHelper::error('product', 'Xoá thất bại');
+            NotificationHelper::error('product', 'Xoá bình luận thất bại');
         }
-            if (isset($_POST['id_product']) && $_POST['id_product']) {
-                $id_product = $_POST['id_product'];
-                header("Location:/product/$id_product");
-            }else{
-                $id_product = $_POST['id_product'];
-                 header("Location:/product/$id_product");
+    
+        // Điều hướng lại về trang sản phẩm sau khi xoá
+        if (isset($_POST['id_product']) && $_POST['id_product']) {
+            $id_product = $_POST['id_product'];
+            header("Location:/product/$id_product"); // Điều hướng đến trang sản phẩm
+        } else {
+            // Nếu không có id_product, vẫn điều hướng về trang sản phẩm mặc định
+            $id_product = $_POST['id_product'];
+            header("Location:/product/$id_product");
+        }
     }
-} */
 }
 
 

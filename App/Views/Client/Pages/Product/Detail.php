@@ -322,6 +322,38 @@ class Detail extends BaseView
                            </div>
                         </div>
                         <p class="content mt-1"><?= $item['content'] ?></p>
+                        <img src="/public/uploads/comments/<?= $item['image'] ?>" alt="" width="150px">
+
+                        <div class="collapse" id="<?= $item['username'] ?><?= $item['id'] ?>">
+                                                        <div  id="commentForm" class="col-12">
+                                                            <form action="/comments/<?= $item['id'] ?>" method="post">
+                                                                <input type="hidden" name="method" value="PUT" id="">
+                                                                <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="">
+                                                                <div class="form-group col-12 mt-2">
+                                                                    <label for="">Bình luận</label>
+                                                                    <textarea id="content" name="content" rows="4" placeholder="Nhập bình luận..."><?= $item['content'] ?></textarea>
+                                                                </div>
+                                                                <div class="form-group col-12 mt-2">
+                                                                <label for="image">Chọn hình ảnh</label>
+                                                                <input type="file" name="image" accept="image/*" />
+                                                               </div>
+                                                                <button class="send">
+                     <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path fill="currentColor"
+                                 d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                              </path>
+                           </svg>
+                        </div>
+                     </div>
+                     <span>Gửi</span>
+                  </button>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
                      </div>
                      <div class="col-1 d-flex justify-content-end align-content-end Utilities">
                         <span class="material-symbols-outlined">
@@ -329,11 +361,20 @@ class Detail extends BaseView
                         </span>
                         <div class="formdown">
 
-                           <ul>
-                              <li><a href="">sua</a></li>
-                              <li><a href="">xoa</a></li>
+                        <?php
+                           if (isset($data) && isset($is_login) && $is_login && ($_SESSION['user']['id'] == $item['id_user'])) :
+                        ?>
 
-                           </ul>
+                                                    <button type="button" class="btn btn-cyan btn-sm btn-warning" data-toggle="collapse" data-target="#<?= $item['username'] ?><?= $item['id'] ?>" aria-expanded="false" aria-controls="<?= $item['username'] ?><?= $item['id'] ?>">Sửa</button>
+                                                    <form action="/comments/<?= $item['id'] ?>" method="post" onsubmit="return confirm('Chắc chưa?')" style="display: inline-block">
+                                                        <input type="hidden" name="method" value="DELETE" id="">
+                                                        <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="">
+                                                        <button type="submit" class="btn btn-danger btn-sm">Xoá</button>
+
+                                                    </form>
+                                                <?php
+                                                endif;
+                                                ?>
                         </div>
                      </div>
                   </div>
@@ -378,7 +419,8 @@ class Detail extends BaseView
                      <label for="comment">Bình luận của bạn:</label>
                      <textarea id="content" name="content" rows="4" required
                         placeholder="Viết bình luận của bạn ở đây..."></textarea>
-
+            
+                   
                      <button class="send">
                         <div class="svg-wrapper-1">
                            <div class="svg-wrapper">
