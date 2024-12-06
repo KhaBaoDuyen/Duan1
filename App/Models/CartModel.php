@@ -168,8 +168,7 @@ class CartModel extends BaseModel
    public function deleteCartItem($id_user, $id_product)
    {
       try {
-         // Xóa sản phẩm theo id_user và id_product
-         $sql = "DELETE FROM {$this->table} WHERE id_user = ? AND id_product = ?";
+         $sql = "DELETE FROM {$this->table} WHERE id_user = ? AND id_product = ? AND variant_key IS  NULL";
          $conn = $this->_conn->MySQLi();
          $stmt = $conn->prepare($sql);
 
