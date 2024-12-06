@@ -9,8 +9,8 @@ class Index extends BaseView
 {
    public static function render($data = null)
    {
- 
-      ?>
+
+?>
 
       <section class="product_banner">
          <div class="box_banner col-10 m-auto d-flex">
@@ -49,28 +49,28 @@ class Index extends BaseView
 
       <main class="col-10 m-auto d-flex">
          <?php
-         ComponentsCategory::render($data['categories']) ;
+         ComponentsCategory::render($data['categories']);
          ?>
          <article class="col-9">
-         <nav>
-   <div class="tune">
-      <div class="tune_icon">
-         <span class="material-symbols-outlined">tune</span>
-      </div>
-      <div class="tune_down">
-         <ul class="sort-list">
-            <li>
-               <form action="" method="GET">
-                  <div class="sort-options">
-                     <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=asc'">A-z</span>
-                     <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=desc'">Z-a</span>
+            <nav>
+               <div class="tune">
+                  <div class="tune_icon">
+                     <span class="material-symbols-outlined">tune</span>
                   </div>
-               </form>
-            </li>
-         </ul>
-      </div>
-   </div>
-</nav>
+                  <div class="tune_down">
+                     <form action="" method="GET">
+                        <ul class="sort-list">
+                           <li>
+                              <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=asc'">A-z</span>
+                           </li>
+                           <li>
+                                 <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=desc'">Z-a</span>
+                           </li>
+                        </ul>
+                     </form>
+                  </div>
+               </div>
+            </nav>
 
 
 
@@ -89,7 +89,7 @@ class Index extends BaseView
                            }
 
                            // Kiểm tra xem mảng  giải mã chưa
-                         if (isset($item['images'][0])) {
+                           if (isset($item['images'][0])) {
                               $imageHover = $item['images'][0];
                            } else {
                               $imageHover = 'usermacdinh.png';
@@ -133,7 +133,7 @@ class Index extends BaseView
          </article>
       </main>
 
-      <?php
+<?php
    }
 }
 ?>

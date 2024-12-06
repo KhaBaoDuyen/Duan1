@@ -951,6 +951,10 @@ main article nav .tune {
   margin-left: auto;
   width: 5%;
 }
+main article nav .tune ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 main article nav .tune .tune_down {
   z-index: 99;
   position: absolute;
@@ -965,12 +969,12 @@ main article nav .tune .tune_down {
   transition: opacity 0.5s ease, transform 0.5s ease;
   background: var(--text-color-light);
 }
-main article nav .tune .tune_down a {
+main article nav .tune .tune_down span {
   width: 100%;
   padding: 0 1rem;
   color: var(--pri-color);
 }
-main article nav .tune .tune_down a:hover {
+main article nav .tune .tune_down span:hover {
   background: rgb(230, 230, 230);
 }
 main article nav .tune:hover .tune_down {

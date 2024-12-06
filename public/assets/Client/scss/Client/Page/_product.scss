@@ -159,6 +159,10 @@ main {
             margin-left: auto;
             // padding: 0 1%;
             width: 5%;
+            ul{
+               padding: 0 !important;
+               margin: 0 !important;
+            }
 
             .tune_down {
                z-index: 99;
@@ -173,7 +177,7 @@ main {
                transition: opacity 0.5s ease, transform 0.5s ease;
                background: var(--text-color-light);
 
-               a {
+               span {
                   width: 100%;
                   padding: 0 1rem;
                   color: var(--pri-color);
