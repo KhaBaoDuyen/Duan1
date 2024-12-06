@@ -134,6 +134,21 @@ class Header extends BaseView
                         </div>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmail"
+                            aria-expanded="true" aria-controls="collapseEmail">
+                            <i class='bx bx-message-dots'></i>
+                            <span>Quản lý email</span>
+                        </a>
+                        <div id="collapseEmail" class="collapse" aria-labelledby="headingEmail"
+                            data-parent="#accordionSidebar">
+                            <div class="bg-white py-2 collapse-inner rounded">
+                                <h6 class="collapse-header">Bình luận</h6>
+                                <a class="collapse-item" href="/admin/contact">Danh sách</a>
+                            </div>
+                        </div>
+                    </li>
+
 
                     <hr class="sidebar-divider">
                     <!-- <div class="version" id="version-ruangadmin"></div> -->

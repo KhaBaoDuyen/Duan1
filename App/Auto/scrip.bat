@@ -1,2 +1,2 @@
 @echo off
-"D:\hoctap\hocki4\BLOCK2\MONDUAN\Ampps\php\php.exe" "D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Auto\send_reminders.php"
+"D:\Ampps\php\php.exe" "D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Auto\send_reminders.php"

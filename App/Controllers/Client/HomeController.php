@@ -3,6 +3,7 @@
 namespace App\Controllers\Client;
 
 use App\Helpers\NotificationHelper;
+use App\Models\ContactModel;
 use App\Views\Client\Components\Notification;
 use App\Views\Client\Components\Search;
 use App\Views\Client\Layouts\Footer;
@@ -45,15 +46,37 @@ class HomeController
     }
     public static function sendmailContact()
     {
-        $data = ContactValidation::contact();
-        if (!$data) {
+        $is_value = ContactValidation::contact();
+        if (!$is_value) {
             NotificationHelper::error('contact_valid', 'Vui lòng nhập đầy đủ thông tin!');
             header('location: /contact');
             exit();
         }
-        $mail= new UserModel();
-        $sendmail= $mail->sendmailContact();
-        header('location: /contact');
+        $firstname = $_POST['ho'];
+        $lastname = $_POST['name'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        $data = [
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'phone' => $phone,
+            'email' => $email,
+            'message' => $message,
+        ];
+        $contact = new ContactModel();
+        $resunl=$contact->createContact($data);
+        if ($resunl) {
+            $mail = new UserModel();
+            $sendmail = $mail->sendmailContact();
+            header('location: /contact');
+            exit();
+        }else{
+            NotificationHelper::error('sendmail_fail', 'Gửi email thất bại!');
+            /* header('location: /contact'); */
+            var_dump($data);
+        }
     }
     public static function instruction()
     {

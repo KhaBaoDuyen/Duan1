@@ -107,11 +107,11 @@ class AuthValidation
          NotificationHelper::error('username', 'Tên đăng nhập không được để trống !!!');
          $is_valid = false;
       }
-      // TÊN KHÁCH HÀNG
+      /* // TÊN KHÁCH HÀNG
       if (!isset($_POST['password']) || $_POST['password'] === '') {
          NotificationHelper::error('password', 'Mật khẩu không được để trống !!!');
          $is_valid = false;
-      }
+      } */
       //EMAIL
       if (!isset($_POST['email']) || $_POST['email'] === '') {
          NotificationHelper::error('email', 'Email không được để trống !!!');

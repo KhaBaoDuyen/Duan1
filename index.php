@@ -163,6 +163,13 @@ Route::put('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@upda
 // DELETE /comments/{id} (delete bình luận với id cụ thể)
 Route::delete('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@delete');
 
+//--------------------------[ QUẢN LÝ EMAIl ]-------------------------------
+Route::get('/admin/contact', 'App\Controllers\Admin\ContactController@index');
+Route::get('/admin/contact/{id}', 'App\Controllers\Admin\ContactController@edit');
+Route::put('/admin/contact/{id}', 'App\Controllers\Admin\ContactController@update');
+Route::delete('/admin/contact/{id}', 'App\Controllers\Admin\ContactController@delete');
+
+
 
 /* Route::get('/admin/comments', 'App\Controllers\Admin\CommentController@Index');
 

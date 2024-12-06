@@ -5616,24 +5616,9 @@ Stack trace:
   thrown in D:\DuAn1xuong\App\Views\Client\Components\Category.php on line 40
 [27-Nov-2024 13:46:16 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in D:\DuAn1xuong\App\Views\Client\Components\Category.php:40
 Stack trace:
-#0 D:\DuAn1xuong\App\Views\Client\Components\Category.php(40): in_array()
-#1 D:\DuAn1xuong\App\Views\Client\Pages\Product\Categories.php(59): App\Views\Client\Components\Category::render()
-#2 D:\DuAn1xuong\App\Controllers\Client\ProductController.php(126): App\Views\Client\Pages\Product\Categories::render()
-#3 D:\DuAn1xuong\App\Route.php(104): App\Controllers\Client\ProductController::getProductByCategory()
-#4 D:\DuAn1xuong\index.php(142): App\Route::dispatch()
-#5 {main}
-  thrown in D:\DuAn1xuong\App\Views\Client\Components\Category.php on line 40
-[27-Nov-2024 13:46:17 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in D:\DuAn1xuong\App\Views\Client\Components\Category.php:40
-Stack trace:
-#0 D:\DuAn1xuong\App\Views\Client\Components\Category.php(40): in_array()
-#1 D:\DuAn1xuong\App\Views\Client\Pages\Product\Categories.php(59): App\Views\Client\Components\Category::render()
-#2 D:\DuAn1xuong\App\Controllers\Client\ProductController.php(126): App\Views\Client\Pages\Product\Categories::render()
-#3 D:\DuAn1xuong\App\Route.php(104): App\Controllers\Client\ProductController::getProductByCategory()
-#4 D:\DuAn1xuong\index.php(142): App\Route::dispatch()
-#5 {main}
-  thrown in D:\DuAn1xuong\App\Views\Client\Components\Category.php on line 40
-[27-Nov-2024 14:39:26 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected token "public" in D:\DuAn1xuong\App\Controllers\Client\ProductController.php on line 78
-[27-Nov-2024 14:48:51 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "priceVariant" in D:\DuAn1xuong\App\Views\Client\Pages\Product\Detail.php on line 77
-[27-Nov-2024 14:48:51 Asia/Ho_Chi_Minh] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\DuAn1xuong\App\Views\Client\Pages\Product\Detail.php on line 77
-[27-Nov-2024 14:52:31 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "cart" in D:\DuAn1xuong\App\Controllers\Client\CartController.php on line 15
-[27-Nov-2024 14:52:31 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\DuAn1xuong\App\Views\Client\Pages\Cart\Cart.php on line 32
+#0 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php(79): number_format()
+#1 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Client\HomeController.php(34): App\Views\Client\Home::render()
+#2 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Client\HomeController::index()
+#3 D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\index.php(142): App\Route::dispatch()
+#4 {main}
+  thrown in D:\hoctap\hocki4\BLOCK 2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Home.php on line 79

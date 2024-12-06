@@ -187,7 +187,6 @@ class AuthHelper
    public static function duplicate_emails($data)
    {
       $user = new UserModel();
-      // Gọi hàm generateOTP để tạo OTP
       $result = $user->generateOTP($data['email']);
       /* var_dump($result);
  */

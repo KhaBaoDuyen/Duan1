@@ -1,15 +1,19 @@
 <?php
 // require __DIR__ . './vendor/autoload.php';
-require_once __DIR__ . '/../../vendor/autoload.php';
+// require_once __DIR__ . '/../../vendor/autoload.php';
+require_once 'd:/BLOCK2/mon-du-an-1/duan1_update3/WebBanCayCanhVaHoa/vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+
 
 $pdo = new PDO('mysql:host=localhost;dbname=webbancayvahoa', 'root', 'mysql');
 
 $query = "SELECT reminders.*, user.email, user.username
 FROM reminders
 JOIN user ON reminders.id_user = user.id
- WHERE HOUR(reminder_date) = HOUR(CURTIME()) AND MINUTE(reminder_date) = MINUTE(CURTIME()) AND reminders.status = 1";
+WHERE HOUR(reminder_date) = HOUR(CURTIME()) AND MINUTE(reminder_date) = MINUTE(CURTIME()) AND reminders.status = 1
+";
 
 $stmt = $pdo->query($query);
 $reminders = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -100,6 +104,8 @@ foreach ($reminders as $reminder) {
 
         $mail->addEmbeddedImage($_SERVER['DOCUMENT_ROOT'] . 'D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\public\assets\Client\image\main', 'tree_image');
         $emailTemplate = str_replace('D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\public\assets\Client\image\main', 'cid:tree_image', $emailTemplate);
+        $mail->addEmbeddedImage($_SERVER['DOCUMENT_ROOT'] . 'C:\Users\PC\Pictures\duan1\z6089657529152_5f24f13a83dc0434b92e8e7dd27dcb6b_preview_rev_1.png', 'tree_image');
+        $emailTemplate = str_replace('C:\Users\PC\Pictures\duan1\z6089657529152_5f24f13a83dc0434b92e8e7dd27dcb6b_preview_rev_1.png', 'cid:tree_image', $emailTemplate);
 
         // Nội dung email đã được thay thế
         $mail->Body = $emailTemplate;
