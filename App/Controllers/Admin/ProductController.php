@@ -151,6 +151,7 @@ class ProductController
                 $Arr_variant = json_decode($data['product']['variant'], true);
             }
         }
+
         if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
             if (isset($data['product']['images']) && !empty($data['product']['images'])) {
                 $images = json_decode($data['product']['images'], true);
@@ -190,7 +191,7 @@ class ProductController
         }
 
         $variants = $_POST['variant'] ?? null;
-         $variant = isset($variants) && $variants != null ? json_encode($variants, JSON_UNESCAPED_UNICODE) : null;
+        $variant = isset($variants) && $variants != null ? json_encode($variants, JSON_UNESCAPED_UNICODE) : null;
         $data = [
             'name' => $_POST['name'],
             'price' => $_POST['price'],
@@ -299,7 +300,6 @@ class ProductController
     {
         $product = new ProductModel();
         $result = $product->delete($id);
-
         if ($result) {
             NotificationHelper::success('product', 'Xoá thành công');
         } else {

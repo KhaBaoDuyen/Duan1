@@ -301,11 +301,11 @@ abstract class BaseModel implements CrudInterface
         }
     }
 
-    public function countTotalCart()
+    public function countTotalCart($id)
     {
         $result = [];
         try {
-            $sql = "SELECT SUM(quantity) AS totalQuantity FROM cart;";
+            $sql = "SELECT SUM(quantity) AS totalQuantity FROM cart WHERE id_user = $id;";
             $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_assoc();
         } catch (\Throwable $th) {

@@ -121,7 +121,21 @@ class Cart extends BaseView
    <?php endif; ?>
 </main>
 
+<script>
+//--------------- TONG BAO LOI --------------------
+// window.addEventListener('load', () => {
+//   const errorElement = document.querySelector('.Error');
 
+//   setTimeout(() => {
+//     errorElement.classList.add('show');
+//   }, 2000);
+
+//   setTimeout(() => {
+//     errorElement.classList.remove('show');
+//   }, 7000);
+// });
+
+</script>
 
 <?php
     }

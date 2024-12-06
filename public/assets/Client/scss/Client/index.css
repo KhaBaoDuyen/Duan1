@@ -1449,10 +1449,14 @@ main article .all_products .card:hover {
   color: var(--text-color);
   font-size: 1.2rem;
 }
+.product_detail .sec_title article .box_btn {
+  width: 100%;
+}
 .product_detail .sec_title article .box_btn .cartBtn {
-  padding: 2% 15%;
+  width: 100% !important;
   height: 50px;
   border: none;
+  padding: 1% 2%;
   border-radius: 0px;
   display: flex;
   align-items: center;
@@ -1517,6 +1521,8 @@ main article .all_products .card:hover {
 .product_detail .sec_title article .box_btn .buyBtn {
   position: relative;
   padding: 10px 35px;
+  width: 100%;
+  text-align: center;
   font-size: 18px;
   font-weight: bold;
   color: #2F5C2F;
@@ -1544,12 +1550,12 @@ main article .all_products .card:hover {
 .product_detail .sec_title article .box_btn .buyBtn .icon-1 {
   position: absolute;
   width: 15%;
-  top: 10px;
+  top: 5px;
   right: 15px;
   color: #2F5C2F;
   transform-origin: 100% 100%;
   transform: rotate(-20deg) translateX(100%) translateY(-5%);
-  z-index: -1;
+  z-index: 2;
   transition: all 0.5s;
 }
 .product_detail .sec_title article .box_btn .buyBtn:hover .icon-1 {
@@ -2923,7 +2929,6 @@ main article .all_products .card:hover {
   background-position-y: bottom;
 }
 .checkout-page .container_checkout .content-right .content1 {
-  height: 100%;
   position: relative;
 }
 .checkout-page .container_checkout .content-right .content1 table {
@@ -3099,6 +3104,63 @@ main article .all_products .card:hover {
   display: inline-block;
   margin-left: 8px;
   vertical-align: middle;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+  color: var(--text-color);
+  font-family: var(--font-family-pri);
+}
+
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  min-height: 80vh;
+}
+.thankyou .box-camon {
+  padding: 7%;
+}
+.thankyou .table-custom {
+  width: 100%;
+  border: none;
+  background-color: transparent !important;
+}
+.thankyou .table-custom th,
+.thankyou .table-custom td {
+  border: none;
+  padding-bottom: 10px;
+}
+.thankyou .table-custom th {
+  width: 30%;
+}
+.thankyou .tieptucmuahang {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: center;
+  border-radius: 4px;
+  border: 3px solid var(--color-price);
+  padding: 1% 2%;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--pri-color);
+}
+.thankyou .tieptucmuahang:hover {
+  text-decoration: underline;
+}
+.thankyou .total {
+  margin-top: 2rem;
 }
 
 * {

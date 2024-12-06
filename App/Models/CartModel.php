@@ -185,9 +185,9 @@ class CartModel extends BaseModel
       }
    }
 
-   public function countTotalCartQuatity()
+   public function countTotalCartQuatity($id)
    {
-      $result = $this->countTotalCart();
+      $result = $this->countTotalCart($id);
       return isset($result['totalQuantity']) ? (int) $result['totalQuantity'] : 0;
    }
 }

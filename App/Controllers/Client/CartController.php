@@ -39,6 +39,7 @@ class CartController
             $_SESSION['checkout'] = $data;
             echo "</pre>";
             print_r($_SESSION['checkout']);
+
         } else {
             Header::render();
             Notification::render();
@@ -111,10 +112,12 @@ class CartController
         if (!$setCart && !$variantKey) {
             $setCart = $cartModel->getCartItemByProductId($id_user, $id);
         }
+
         if ($setCart) {
             $newQuantity = $setCart['quantity'] + $quantity;
             $cartModel->updateCartItem($setCart['id'], $newQuantity);
         } else {
+
             $data = [
                 'id_user' => $id_user,
                 'id_product' => $id,
@@ -126,15 +129,13 @@ class CartController
 
             $result = $cartModel->createCart($data);
             if ($result) {
-                NotificationHelper::success('store', 'Thêm thành công');
+                NotificationHelper::success('cart_shopping', 'Thêm thành công');
                 header("location: /product/$id");
                 exit;
             } else {
-                NotificationHelper::error('store', 'Thêm giỏ hàng thất bại.');
+                NotificationHelper::error('cart_shopping', 'Thêm giỏ hàng thất bại.');
             }
-
         }
-
         // echo "<pre>";
         // var_dump($_SESSION);
         // die;
@@ -199,6 +200,7 @@ class CartController
         History::render();
         Footer::render();
     }
+
 
 
 }

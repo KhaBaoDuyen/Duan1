@@ -15,7 +15,8 @@ class Header extends BaseView
       $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
 
       $carts = new CartModel;
-      $cart = $carts->countTotalCartQuatity();
+      $cart = $carts->countTotalCartQuatity($_SESSION['user']['id']);
+// echo"$cart";
       ?>
       <!DOCTYPE html>
       <html lang="en">

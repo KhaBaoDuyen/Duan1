@@ -198,14 +198,14 @@ class Footer extends BaseView
       <script src="/public/assets/Client/Js/bootstrap.min.js"></script>
       <script src="/public/assets/Client/Js/icheck.min.js"></script>
 
-      <script>
+      <!-- <script>
          $(document).ready(function () {
-            $('input').iCheck({
+            $('.icheck').iCheck({
                checkboxClass: 'icheckbox_flat-blue',
                radioClass: 'iradio_flat-blue'
             });
          });
-      </script>
+      </script> -->
 
       </body>
 

@@ -12,6 +12,8 @@ use App\Route;
 use App\Helpers\AuthHelper;
 
 require_once 'vendor/autoload.php';
+require_once('App/Controllers/vnpay_php/config.php');
+
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -76,8 +78,13 @@ Route::delete('/cart/{id}', 'App\Controllers\Client\CartController@delete');
 
 //------------------------[ THANH TOÁN ]-------------------------
 Route::get('/checkout', 'App\Controllers\Client\OrderController@checkout'); 
+Route::get('/thank', 'App\Controllers\Client\OrderController@thank'); 
+
 Route::post('/order', 'App\Controllers\Client\OrderController@store'); 
 
+//*************MOMO**************
+
+Route::post('/momo', 'App\Controllers\Client\PayMomo@createPayment');
 
 Route::get('/history', 'App\Controllers\Client\CartController@history'); 
 

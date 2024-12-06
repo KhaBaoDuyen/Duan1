@@ -137,7 +137,7 @@ class Detail extends BaseView
                   </div>
 
 
-                  <div class="box_btn mt-3 d-flex justify-content-between" style="width: 80%;">
+                  <div class="box_btn mt-3 d-flex justify-content-between" style="">
                      <input type="hidden" name="method" value="POST">
                      <button type="submit" class="cartBtn" style="width: max-content;">
                         Thêm giỏ hàng

@@ -8,8 +8,8 @@ class Checkout extends BaseView
 {
    public static function render($data = null)
    {
-?>
-      <div class="checkout-page col-10 m-auto">
+      ?>
+      <div class="checkout-page col-10 m-auto" id="checkout">
          <form action="/order" method="post" class="container container_checkout m-auto">
             <input type="hidden" name="method" value="POST">
 
@@ -19,31 +19,34 @@ class Checkout extends BaseView
                   <table>
                      <thead class="text-center">
                         <tr>
+                           <th></th>
                            <th colspan="2">Sản phẩm</th>
-                           <th>Đơn giá</th>
                            <th>Loại</th>
+                           <th>Đơn giá</th>
                            <th>Số lượng</th>
                            <th>Thành tiền</th>
                         </tr>
                      </thead>
                      <tbody class="text-center">
 
+                        <?php $counter = 1; ?>
                         <?php
                         $total = 0;
                         foreach ($data as $item) {
                            $total_price = $item['product_price'] * $item['quantity'];
                            $total += $total_price;
-                        ?>
+                           ?>
                            <tr>
-                              <td width=" 10%">
+                              <td><?= $counter++ ?></td>
+                              <td width="10%" class="p-2">
                                  <img width="100%" src="/public/uploads/products/<?= $item['product_image'] ?>"
                                     alt="Ảnh sản phẩm">
                               </td>
                               <td width="230px" class="p-1"><span><?= $item['product_name'] ?></span>
                               </td>
-                              <td> <span class="text-muted"> Loại:
+                              <td> <span class="text-muted">
                                     <?php if (isset($item['product_variant']) && !empty($item['product_variant'])) { ?>
-                                       <?= json_decode($item['product_variant'], true)[1]['nameVariant'] ?>
+                                       Loại: <?= json_decode($item['product_variant'], true)[1]['nameVariant'] ?>
                                     <?php } ?></span></td>
 
                               <td><?= number_format($item['product_price'], 0, ',', '.') ?>đ</td>
@@ -80,23 +83,19 @@ class Checkout extends BaseView
                   <div class="">
                      <label for="payment-method">Phương thức thanh toán :</label>
                      <div class="mb-1">
-                        <label><input type="radio" alt="cod" name="iCheck" class="iradio_flat-blue" value="1" checked> Thanh
+                        <label><input type="radio" alt="cod" name="iCheck" class="iCheck iradio_flat-blue" value="1" checked>
+                           Thanh
                            toán
                            khi nhận hàng
                         </label>
                      </div>
                      <div class="mb-1">
-                        <label><input type="radio" name="iCheck" class="iradio_flat-blue"> Ví <img
-                              src="/public/assets/Client/image/icon/logo-zalopay.svg" alt=""></label>
+                        <label><input type="radio" alt="cod" name="iCheck" class="iCheck iradio_flat-blue" value="2"> Ví <img
+                              src="/public/assets/Client/image/icon/OIP.jpg" alt="">
+
+                        </label>
                      </div>
-                     <div class="mb-1">
-                        <label><input type="radio" name="iCheck" class="iradio_flat-blue"> Visa, Mastercard, JCB <span
-                              class="txtGray">(qua cổng ZaloPay)</span></label>
-                     </div>
-                     <div class="mb-1">
-                        <label><input type="radio" name="iCheck" class="iradio_flat-blue"> Thẻ ATM <span class="txtGray">(qua
-                              cổng ZaloPay)</span></label>
-                     </div>
+
                   </div>
                   <div class="thanhtoan">
                      <div class="d-flex justify-content-between align-items-center">
@@ -105,7 +104,7 @@ class Checkout extends BaseView
                            <h5 class="ms-2"><?= number_format($total, 0, ',', '.') ?> đ</h5>
                            <input type="hidden" name="total" value="<?= $total ?>">
                         </div>
-                        <button class="btn btn-primary">Thanh toán</button>
+                        <button class="btn btn-primary" name="redirect">Thanh toán</button>
                      </div>
                   </div>
                </div>
@@ -113,8 +112,9 @@ class Checkout extends BaseView
             </div>
 
          </form>
+
       </div>
 
 
-<?php }
+   <?php }
 } ?>

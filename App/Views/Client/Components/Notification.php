@@ -41,7 +41,6 @@ class Notification extends BaseView
 
                 <?php
             endforeach;
-            // Xóa thông báo thành công sau khi hiển thị
             unset($_SESSION['success']);
         endif;
 

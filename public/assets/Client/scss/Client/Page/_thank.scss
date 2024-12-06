@@ -1,0 +1,63 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+   color: var(--text-color);
+   font-family: var(--font-family-pri);
+}
+
+.thankyou {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-content: center;
+   align-items: center;
+   justify-content: center;
+   padding: 2%;
+   min-height: 80vh;
+
+   .box-camon {
+      padding: 7%;
+   }
+
+   .table-custom {
+      width: 100%;
+      border: none;
+      background-color: transparent !important;
+
+      th,
+      td {
+         border: none;
+         padding-bottom: 10px;
+      }
+
+      th {
+         width: 30%;
+      }
+
+   }
+
+   .tieptucmuahang {
+      width: max-content;
+      height: max-content;
+      text-align: center;
+      border-radius: 4px;
+      border: 3px solid var(--color-price);
+      padding: 1% 2%;
+      margin-bottom: 16px;
+      text-decoration: none;
+      color: var(--pri-color);
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   .total {
+      margin-top: 2rem;
+
+   }
+}
