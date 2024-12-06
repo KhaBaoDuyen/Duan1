@@ -63,8 +63,16 @@ class Categories extends BaseView
                <div class="tune">
                   <div class="tune_icon"> <span class="material-symbols-outlined"> tune </span></div>
                   <div class="tune_down">
-                     <li><a href>A-z</a></li>
-                     <li><a href>Z-a</a></li>
+                     <form action="" method="GET">
+                        <ul >
+                           <li>
+                              <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=asc'">A-z</span>
+                           </li>
+                           <li>
+                                 <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=desc'">Z-a</span>
+                           </li>
+                        </ul>
+                     </form>
                   </div>
                </div>
             </nav>

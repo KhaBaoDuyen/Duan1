@@ -59,7 +59,7 @@ class Index extends BaseView
                   </div>
                   <div class="tune_down">
                      <form action="" method="GET">
-                        <ul class="sort-list">
+                        <ul >
                            <li>
                               <span class="sort-option" style="color: #ff8e4d;" onclick="location.href='?sort=asc'">A-z</span>
                            </li>

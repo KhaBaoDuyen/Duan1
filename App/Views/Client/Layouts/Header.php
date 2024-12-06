@@ -13,11 +13,14 @@ class Header extends BaseView
 
       $isLoggedIn = isset($_SESSION['user']);
       $userName = $isLoggedIn ? $_SESSION['user']['username'] : null;
-
-      $carts = new CartModel;
-      $cart = $carts->countTotalCartQuatity($_SESSION['user']['id']);
-// echo"$cart";
-      ?>
+      if ($isLoggedIn) {
+         $carts = new CartModel;
+         $cart = $carts->countTotalCartQuatity($_SESSION['user']['id']);
+      } else {
+         $cart = 0;
+      }
+      // echo"$cart";
+?>
       <!DOCTYPE html>
       <html lang="en">
 
@@ -45,14 +48,14 @@ class Header extends BaseView
          <?php
          if (isset($_SESSION['notification'])) {
             $notification = $_SESSION['notification'];
-            ?>
+         ?>
             <div id="notification"
                class="d-flex justify-items-center align-items-center alert alert-<?php echo $notification['type']; ?> alert-dismissible fade show notification-alert"
                role="alert">
                <div class="me-4"><?php echo $notification['message']; ?></div>
                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <?php
+         <?php
             unset($_SESSION['notification']);
          }
          ?>
@@ -133,7 +136,7 @@ class Header extends BaseView
          </header>
 
 
-         <?php
+   <?php
    }
 }
-?>
+   ?>

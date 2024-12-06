@@ -8,6 +8,7 @@ class Category extends BaseView
 {
   public static function render($data = null)
   {
+    $priceMin = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
 ?>
 
 <aside class="col-3">
@@ -18,7 +19,7 @@ class Category extends BaseView
         ?>
             <a href="/product/categories/<?= $item['id'] ?>" class="brand_title d-flex justify-content-between align-content-center">
                 <h5 class="col-10"><?= $item['name'] ?></h5>
-                <p class="count_product col-2">(30)</p>
+                <p class="count_product col-2">(<?= $item['countCategoryProduct'] ?>)</p>
             </a>
         <?php endforeach; ?>
     </div>
