@@ -109,7 +109,7 @@ class Header extends BaseView
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder"
                             aria-expanded="true" aria-controls="collapseOrder">
                             <i class='bx bxs-cart-add'></i>
-                            <span>Quản lý đơn hàng</span>
+                            <span>Quản lý hóa đơn</span>
                         </a>
                         <div id="collapseOrder" class="collapse" aria-labelledby="headingOrder" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
