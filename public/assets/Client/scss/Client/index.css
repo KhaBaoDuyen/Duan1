@@ -419,7 +419,7 @@
   left: -31px;
   top: 32px;
   width: 80px;
-  fill: rgba(4, 228, 0, 0.2274509804);
+  fill: rgba(228, 0, 0, 0.2274509804);
 }
 .Error .icon-container {
   width: 35px;
@@ -427,14 +427,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(4, 228, 0, 0.2823529412);
+  background-color: rgba(228, 0, 0, 0.2823529412);
   border-radius: 50%;
   margin-left: 8px;
 }
 .Error .icon {
   width: 17px;
   height: 17px;
-  color: #269b24;
+  color: #bb291e;
 }
 .Error .message-text-container {
   display: flex;
@@ -449,7 +449,7 @@
   cursor: default;
 }
 .Error .message-text {
-  color: #269b24;
+  color: rgb(155, 36, 36);
   font-size: 17px;
   font-weight: 700;
 }
