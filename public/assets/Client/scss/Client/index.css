@@ -290,6 +290,7 @@
   width: -moz-max-content;
   width: max-content;
   height: 80px;
+  z-index: 1000;
   border-radius: 8px;
   box-sizing: border-box;
   padding: 10px 15px;
@@ -375,7 +376,8 @@
 }
 
 .Error {
-  width: 330px;
+  width: -moz-max-content;
+  width: max-content;
   height: 80px;
   z-index: 1000;
   border-radius: 8px;
@@ -383,12 +385,33 @@
   padding: 10px 15px;
   background-color: #ffffff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  position: relative;
-  overflow: hidden;
+  position: fixed;
+  right: -100px;
+  top: 2%;
+  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 15px;
+  animation: slideDown 3s ease-out forwards;
+}
+@keyframes slideDown {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  50% {
+    right: 2%;
+    opacity: 1;
+  }
+  60% {
+    right: 2%;
+    opacity: 1;
+  }
+  100% {
+    right: -100px;
+    opacity: 0;
+  }
 }
 .Error .wave {
   position: absolute;

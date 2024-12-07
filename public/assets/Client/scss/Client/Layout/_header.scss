@@ -313,6 +313,7 @@
 .Susses {
    width: max-content;
    height: 80px;
+z-index: 1000;
    border-radius: 8px;
    box-sizing: border-box;
    padding: 10px 15px;
@@ -408,9 +409,11 @@
 
 }
 
+
 .Error{
  width: max-content;
    height: 80px;
+z-index: 1000;
    border-radius: 8px;
    box-sizing: border-box;
    padding: 10px 15px;
@@ -505,4 +508,9 @@
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
+}
+
+
+.input-error {
+    border: 1px solid red !important;
 }

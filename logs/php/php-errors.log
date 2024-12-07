@@ -5639,3 +5639,5 @@ Stack trace:
 [06-Dec-2024 22:50:35 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
 [06-Dec-2024 23:00:13 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 1 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Checkout.php on line 49
 [06-Dec-2024 23:00:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Checkout.php on line 49
+[07-Dec-2024 23:55:18 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Cart.php on line 83
+[07-Dec-2024 23:55:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Cart.php on line 83
