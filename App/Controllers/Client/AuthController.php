@@ -55,7 +55,6 @@ class AuthController
       $is_valid = AuthValidation::register();
 
       if (!$is_valid) {
-         NotificationHelper::error('register_valid', 'Đăng ký thất bại');
          header('location: /Account');
          exit();
       }
@@ -80,6 +79,7 @@ class AuthController
       if ($result) {
          header('Location: /Account'); // Đăng ký thành công, chuyển hướng về trang tài khoản
       } else {
+         NotificationHelper::error('register', 'Đăng ký thất bại');
          header('Location: /Account'); // Đăng ký thất bại, cũng chuyển hướng về trang tài khoản
       }
    }

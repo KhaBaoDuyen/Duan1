@@ -45,10 +45,11 @@ class Checkout extends BaseView
                               </td>
                               <td width="230px" class="p-1"><span><?= $item['product_name'] ?></span>
                               </td>
-                              <td> <span class="text-muted">
-                                    <?php if (isset($item['product_variant']) && !empty($item['product_variant'])) { ?>
-                                       Loại: <?= $item['variant_name'] ?>
-                                    <?php } ?></span></td>
+                            <td> <span class="text-muted">
+                                    <?= isset($item['product_variant']) && isset($item['variant_name'])
+                                       ? 'Loại: ' . htmlspecialchars($item['variant_name'])
+                                       : '' ?>
+                                 </span></td>
 
                               <td><?= number_format($item['product_price'], 0, ',', '.') ?>đ</td>
                               <td><?= $item['quantity'] ?? 0 ?></td>
