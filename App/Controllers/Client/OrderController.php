@@ -25,9 +25,9 @@ class OrderController
    public static function checkout()
    {
       //  echo "</pre>";
-      //       print_r($_SESSION['checkout']);
+      // print_r($_SESSION['checkout']);
       $data = $_SESSION['checkout'];
-
+     
       Header::render();
       Checkout::render($data);
       Footer::render();
@@ -65,32 +65,30 @@ class OrderController
          // die;
          // echo '</pre>';
 
-         foreach ($_SESSION['checkout'] as $i => $item) {
-            if (isset($item['variant_name']) && isset($item['variant_price'])) {
-               $price = $item['variant_price'];
-            } elseif (isset($item['product_discount_price'])) {
-               $price = $item['product_discount_price'];
-            } elseif (isset($item['product_price'])) {
-               $price = $item['product_price'];
-            } else {
-               echo "Lỗi: Không tìm thấy giá cho sản phẩm tại chỉ mục $i.";
-               continue;
-            }
+foreach ($_SESSION['checkout'] as $i => $item) {
+    if (isset($item['variant_name']) && isset($item['variant_price'])) {
+        $price = $item['variant_price'];
+    } elseif (isset($item['product_discount_price'])) {
+        $price = $item['product_discount_price'];
+    } elseif (isset($item['product_price'])) {
+        $price = $item['product_price'];
+    } else {
+        echo "Lỗi: Không tìm thấy giá cho sản phẩm tại chỉ mục $i.";
+        continue; // Bỏ qua sản phẩm này nếu không có giá
+    }
 
-            $data = [
-               'id_order' => $id_order,
-               'id_product' => $item['id_product'],
-               'quantity' => $item['quantity'],
-               'price' => $price,
-               'variant_key' => $item['variant_name'] ?? '',
-            ];
+    $data = [
+        'id_order' => $id_order,
+        'id_product' => $item['id_product'],
+        'quantity' => $item['quantity'],
+        'price' => $price,
+        'variant_key' => $item['variant_name'] ?? '',
+    ];
 
+    // Gọi hàm để lưu vào bảng order_details
+    $orderModel->createOrderDetail($data);
+}
 
-            // echo '<pre>';
-            // print_r($data);
-            // echo '</pre>';
-         }
-      }
       $_SESSION['order'] = $id_order;
 
       if ($pay == 1) {
@@ -195,6 +193,7 @@ class OrderController
       // } else {
       //    echo "Không thể thêm đơn hàng.";
       // }
+   }
    }
 
 

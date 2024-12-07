@@ -23,12 +23,12 @@ class ProductValidation
             $is_valid = false;
         }
 
-        if (isset($_POST['discount_price']) && $_POST['discount_price'] !== '') {
-            if ((int) $_POST['discount_price'] < 0) {
-                $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn hoặc  0';
+        if (isset($_POST['discount_price']) && $_POST['discount_price'] !== '' && $_POST['discount_price'] == 0) {
+            if ((int) $_POST['discount_price'] <= 0) {
+                $errors['discount_price'] = 'Giá tiền giảm phải lớn hơn  0';
                 $is_valid = false;
             } elseif ((int) $_POST['discount_price'] > (int) $_POST['price']) {
-                $errors['discount_price'] = 'Giá giảm phải nhỏ hơn  giá gốc';
+                $errors['discount_price'] = 'Giá giảm phải nhỏ hơn giá gốc';
                 $is_valid = false;
             }
         }

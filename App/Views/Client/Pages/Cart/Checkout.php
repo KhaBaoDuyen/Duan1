@@ -32,8 +32,16 @@ class Checkout extends BaseView
                         <?php $counter = 1; ?>
                         <?php
                         $total = 0;
-                        foreach ($data as $item) {
-                           $total_price = $item['product_price'] * $item['quantity'];
+                        foreach ($data as $item) { ?>
+                           <?php
+                           if (!empty($item['variant_key']) && !empty($item['variant_price'])) {
+                              $final_price = $item['variant_price'];
+                           } elseif (!empty($item['product_discount_price'])) {
+                              $final_price = $item['product_discount_price'];
+                           } else {
+                              $final_price = $item['product_price'];
+                           }
+                           $total_price = $final_price * $item['quantity'];
                            $total += $total_price;
                            ?>
                            <tr>
@@ -45,22 +53,35 @@ class Checkout extends BaseView
                               <td width="230px" class="p-1"><span><?= $item['product_name'] ?></span>
                               </td>
                               <td> <span class="text-muted">
-                                    <?php if (isset($item['product_variant']) && !empty($item['product_variant'])) { ?>
-                                       Loại: <?= json_decode($item['product_variant'], true)[1]['nameVariant'] ?>
-                                    <?php } ?></span></td>
+                                    <?= isset($item['product_variant']) && isset($item['variant_name'])
+                                       ? 'Loại: ' . htmlspecialchars($item['variant_name'])
+                                       : '' ?>
+                                 </span></td>
+                              <td>
+                                 <?php if (!empty($item['variant_key']) && !empty($item['variant_price'])) { ?>
+                                    <?= number_format($item['variant_price'], 0, ',', '.') ?>đ
+                                 <?php } elseif (!empty($item['product_discount_price'])) { ?>
+                                    <?= number_format($item['product_discount_price'], 0, ',', '.') ?>đ
+                                 <?php } else { ?>
+                                    <?= number_format($item['product_price'], 0, ',', '.') ?>đ
+                                 <?php } ?>
+                              </td>
 
-                              <td><?= number_format($item['product_price'], 0, ',', '.') ?>đ</td>
+
                               <td><?= $item['quantity'] ?? 0 ?></td>
-                              <td><?= number_format($item['product_price'] * $item['quantity'], 0, ',', '.') ?>đ</td>
+                              <td>
+                                 <?php if (!empty($item['variant_key']) && !empty($item['variant_price'])) { ?>
+                                    <?= number_format($item['variant_price'] * $item['quantity'], 0, ',', '.') ?>đ
+                                 <?php } elseif (!empty($item['product_discount_price'])) { ?>
+                                    <?= number_format($item['product_discount_price'] * $item['quantity'], 0, ',', '.') ?>đ
+                                 <?php } else { ?>
+                                    <?= number_format($item['product_price'] * $item['quantity'], 0, ',', '.') ?>đ
+                                 <?php } ?>
+                              </td>
                            </tr>
                         <?php } ?>
-
                      </tbody>
-
                   </table>
-
-
-
                </div>
 
             </div>

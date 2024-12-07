@@ -279,8 +279,8 @@ class ProductController
                 unset($subImageArray[$key]); // Loại bỏ ảnh đã xóa khỏi mảng
             }
         }
-
-        $imageNames['images'] = array_values($subImageArray); // Đảm bảo mảng không có khóa bị bỏ trống
+        // Đảm bảo mảng không có khóa bị bỏ trống
+        $imageNames['images'] = array_values($subImageArray);
         $data['image'] = $imageNames['image'];
         $data['images'] = json_encode($imageNames['images']);
         $result = $product->update($id, $data);

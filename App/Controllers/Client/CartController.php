@@ -12,6 +12,7 @@ use App\Views\Client\Pages\Cart\Cart;
 use App\Views\Client\Pages\Cart\Checkout;
 use App\Helpers\NotificationHelper;
 use App\Views\Client\Components\Notification;
+use GrahamCampbell\ResultType\Success;
 
 class CartController
 {
@@ -33,12 +34,11 @@ class CartController
             NotificationHelper::unset();
             Cart::render($data);
             Footer::render();
-
             $_SESSION['checkout'] = [];
             // $id_user = $_SESSION['user']['id'];
             $_SESSION['checkout'] = $data;
-            echo "</pre>";
-            print_r($_SESSION['checkout']);
+            // echo "</pre>";
+            // print_r($_SESSION['checkout']);
 
         } else {
             Header::render();
@@ -104,6 +104,7 @@ class CartController
         //     'quantity' => $quantity,
         // ];
         // $_SESSION['checkout'] = $data;
+
         $id_user = $_SESSION['user']['id'];
         $cartModel = new CartModel();
 
@@ -128,6 +129,7 @@ class CartController
             ];
 
             $result = $cartModel->createCart($data);
+
             if ($result) {
                 NotificationHelper::success('cart_shopping', 'Thêm thành công');
                 header("location: /product/$id");
@@ -159,17 +161,17 @@ class CartController
                 $delete = $cartModel->deleteCartItem($id_user, $id_product);
             }
         }
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
+        // echo "<pre>";
+        // print_r($_POST);
+        // echo "</pre>";
         header("Location: /cart");
         exit;
     }
 
     public static function update()
     {
-        echo "<pre>";
-        print_r($_POST);
+        // echo "<pre>";
+        // print_r($_POST);
 
         if (isset($_SESSION['user']['id'])) {
             $id_user = $_SESSION['user']['id'];
@@ -180,7 +182,6 @@ class CartController
                         $quantity = $details['quantity'];
                         $setCart = $cartModel->getCartItem($id_user, $productId, $variantKey);
 
-                        // Nếu không có biến thể và có sản phẩm cùng ID thì lấy sản phẩm đó
                         if (!$setCart && !$variantKey) {
                             $setCart = $cartModel->getCartItemByProductId($id_user, $productId);
                         }
@@ -189,8 +190,14 @@ class CartController
                         }
                     }
                 }
+
             }
+            NotificationHelper::success('updateQuantity', 'Cập nhật số lượng thành công thành công');
+        } else {
+            NotificationHelper::error('updateQuantity', 'Cập nhật số lượng thất bại');
         }
+        header("Location: /cart");
+        exit;
     }
 
 

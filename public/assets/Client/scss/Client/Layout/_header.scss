@@ -309,28 +309,148 @@
 }
 
 // thong ba loi
-/* From Uiverse.io by akshat-patel28 */ 
-.Error {
-  width: 330px;
-  height: 80px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  padding: 10px 15px;
-  background-color: #ffffff;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 15px;
+
+.Susses {
+   width: max-content;
+   height: 80px;
+   border-radius: 8px;
+   box-sizing: border-box;
+   padding: 10px 15px;
+   background-color: #ffffff;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   position: fixed;
+   right: -100px;
+   top: 2%;
+   opacity: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 15px;
+ animation: slideDown 3s ease-out forwards;
+
+@keyframes slideDown {
+   0% {
+      right: -100px;
+      opacity: 0;
+   }
+   50% {
+      right: 2%;
+      opacity: 1;
+   }
+   60% {
+      right: 2%;
+      opacity: 1;
+   }
+   100% {
+      right: -100px;
+      opacity: 0;
+   }
+}
+
+
+   .wave {
+      position: absolute;
+      transform: rotate(90deg);
+      left: -31px;
+      top: 32px;
+      width: 80px;
+      fill: #04e4003a;
+   }
+
+   .icon-container {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #04e40048;
+      border-radius: 50%;
+      margin-left: 8px;
+   }
+
+   .icon {
+      width: 17px;
+      height: 17px;
+      color: #269b24;
+   }
+
+   .message-text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex-grow: 1;
+   }
+
+   .message-text,
+   .sub-text {
+      margin: 0;
+      cursor: default;
+   }
+
+   .message-text {
+      color: #269b24;
+      font-size: 17px;
+      font-weight: 700;
+   }
+
+   .sub-text {
+      font-size: 14px;
+      color: #555;
+   }
+
+   .cross-icon {
+      width: 18px;
+      height: 18px;
+      color: #555;
+      cursor: pointer;
+   }
+
+}
+
+.Error{
+ width: max-content;
+   height: 80px;
+   border-radius: 8px;
+   box-sizing: border-box;
+   padding: 10px 15px;
+   background-color: #ffffff;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   position: fixed;
+   right: -100px;
+   top: 2%;
+   opacity: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   gap: 15px;
+ animation: slideDown 3s ease-out forwards;
+
+@keyframes slideDown {
+   0% {
+      right: -100px;
+      opacity: 0;
+   }
+   50% {
+      right: 2%;
+      opacity: 1;
+   }
+   60% {
+      right: 2%;
+      opacity: 1;
+   }
+   100% {
+      right: -100px;
+      opacity: 0;
+   }
+}
 .wave {
   position: absolute;
   transform: rotate(90deg);
   left: -31px;
   top: 32px;
   width: 80px;
-  fill: #04e4003a;
+  fill: #fc0c0c3a;
 }
 .icon-container {
   width: 35px;
@@ -338,14 +458,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #04e40048;
+  background-color: #fc0c0c48;
   border-radius: 50%;
   margin-left: 8px;
 }
 .icon {
   width: 17px;
   height: 17px;
-  color: #269b24;
+  color: #d10d0d;
 }
 .message-text-container {
   display: flex;
@@ -360,7 +480,7 @@
   cursor: default;
 }
 .message-text {
-  color: #269b24;
+  color: #d10d0d;
   font-size: 17px;
   font-weight: 700;
 }
@@ -376,13 +496,12 @@
 }
 
 }
-
 //----------loi----------------
 .login-notice {
-    color: #929292;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
+   color: #929292;
+   font-size: 1.5rem;
+   text-align: center;
+   padding: 20px;
+   margin: 20px auto;
+   max-width: 600px;
 }

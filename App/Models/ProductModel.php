@@ -148,15 +148,14 @@ class ProductModel extends BaseModel
         try {
             $sql = "SELECT COUNT(*) AS count,categories.name FROM products INNER JOIN categories ON products.id_categogy=categories.id\n"
 
-            . "GROUP BY products.id_categogy;";
-                    $result = $this->_conn->MySQLi()->query($sql);
+                . "GROUP BY products.id_categogy;";
+            $result = $this->_conn->MySQLi()->query($sql);
             return $result->fetch_all(MYSQLI_ASSOC);
         } catch (\Throwable $th) {
             error_log('Lỗi khi hiển thị tất cả dữ liệu: ' . $th->getMessage());
             return $result;
         }
     }
-
 
 
 
