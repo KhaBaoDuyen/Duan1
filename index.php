@@ -150,7 +150,10 @@ Route::get('/admin/logout', 'App\Controllers\Admin\UserController@logout');
 
 //--------------------------[ ĐƠN HÀNG ]-------------------------------
 Route::get('/admin/order', 'App\Controllers\Admin\OrderController@Index');
-
+Route::get('/admin/order/{id}', 'App\Controllers\Admin\OrderController@Edit');
+Route::put('/admin/order/{id}', 'App\Controllers\Admin\OrderController@update');
+Route::delete('/admin/order/{id}', 'App\Controllers\Admin\OrderController@delete');
+Route::get('/admin/searchOrder', 'App\Controllers\Admin\OrderController@searchOrder');
 /* Route::get('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@edit');
 Route::put('/admin/comments/{id}', 'App\Controllers\Admin\CommentController@update');
 

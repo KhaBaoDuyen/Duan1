@@ -4,7 +4,7 @@ namespace App\Views\Admin\Pages\Order;
 
 use App\Views\BaseView;
 
-class Index extends BaseView
+class Search extends BaseView
 {
     public static function render($data = null)
     {
@@ -24,6 +24,15 @@ class Index extends BaseView
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Danh sách đơn hàng</h6>
+                            <div>
+                                    <?php
+                                    if (isset($data['keyword']) && $data['keyword'] !== '') {
+                                        echo '<div style="width: max-content;" class="d-flex  m-auto">Kết quả tìm kiếm: ' . htmlspecialchars($data['keyword']) . '</div>';
+                                    } else {
+                                        echo "Không có từ khóa tìm kiếm nào được nhập.";
+                                    }
+                                    ?>
+                                </div>
                             <div class="nav-item dropdown no-arrow">
                                 <div style=" width: 350px !important;"
                                     class=""
@@ -59,8 +68,8 @@ class Index extends BaseView
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if (isset($data)): ?>
-                                        <?php foreach ($data as $order): ?>
+                                    <?php if (!empty($data['ordersearch'])): ?>
+                                        <?php foreach ($data['ordersearch'] as $order): ?>
                                             <tr>
                                                 <td><?= $order['id'] ?></td>
                                                 <td><?= $order['user_name'] ?></td>

@@ -6,76 +6,169 @@ use App\Views\BaseView;
 
 class Edit extends BaseView
 {
-    public static function render($data = null)
-    {
-?>
+  public static function render($data = null)
+  {
+    ?>
 
-<div class="row">
-            <div class="col-lg-6">
-              <!-- Form Basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">We'll never share your
-                        email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                        <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-                </div>
-              </div>
+    <div class="row">
+      <div class="col-lg-6 m-auto">
+        <div class="card mb-4">
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h4 class="m-0 font-weight-bold text-primary">Chi tiết đơn hàng</h4>
           </div>
-          <!--Row-->
+          <div class="card-body">
+            <?php
+            // Lấy lỗi từ session
+            $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+            ?>
+            <form class="form-horizontal row" action="/admin/order/<?= $data['id'] ?>" method="POST"
+              enctype="multipart/form-data">
+              <input type="hidden" name="method" id="" value="PUT">
+
+              <div class="form-group col-12">
+                <label for="name">Người dùng</label>
+                <input type="text" class="form-control" value="<?= $data['user_name'] ?>" name="user_name" id="user_name"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['user_name'])): ?>
+                  <span style="color:red;"><?= $errors['user_name'] ?></span>
+                <?php endif; ?>
+              </div>
 
 
+              <div class="form-group col-6">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" value="<?= $data['email'] ?>" name="email" id="email"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['email'])): ?>
+                  <span style="color:red;"><?= $errors['email'] ?></span>
+                <?php endif; ?>
+              </div>
 
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
+              <div class="form-group col-6">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" class="form-control" value="<?= $data['phone'] ?>" name="phone" id="phone"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['phone'])): ?>
+                  <span style="color:red;"><?= $errors['phone'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-12">
+                <label for="product_name">Sản phẩm</label>
+                <input type="text" class="form-control" value="<?= $data['product_name'] ?>" name="product_name" id="product_name"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['product_name'])): ?>
+                  <span style="color:red;"><?= $errors['product_name'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-6">
+                <label for="quantity">Số lượng</label>
+                <input type="text" class="form-control" value="<?= $data['quantity'] ?>" name="quantity" id="quantity"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['quantity'])): ?>
+                  <span style="color:red;"><?= $errors['quantity'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-6">
+                <label for="price">Tổng giá</label>
+                <input type="text" class="form-control" value="<?= $data['price'] ?>" name="price" id="price"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['price'])): ?>
+                  <span style="color:red;"><?= $errors['price'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-6">
+                <label for="variant_key">Loại sản phẩm</label>
+                <input type="text" class="form-control" value="<?= $data['variant_key'] ?:'Không có' ?>" name="variant_key" id="variant_key"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['variant_key'])): ?>
+                  <span style="color:red;"><?= $errors['variant_key'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-6">
+                <label for="date">Ngày mua hàng</label>
+                <input type="text" class="form-control" value="<?= $data['date'] ?>" name="date" id="date"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['date'])): ?>
+                  <span style="color:red;"><?= $errors['date'] ?></span>
+                <?php endif; ?>
+              </div>
+
+
+              <div class="form-group col-6">
+                <label for="pay">Phương thức thanh toán</label>
+                <input type="text" class="form-control" value="<?= $data['pay'] == 1 ? 'Thanh toán khi nhận hàng' : 'VNpay' ?>" name="pay" id="pay"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['pay'])): ?>
+                  <span style="color:red;"><?= $errors['pay'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-6">
+                <label for="address">Địa chỉ</label>
+                <input type="text" class="form-control" value="<?= $data['address'] ?>" name="address" id="address"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['address'])): ?>
+                  <span style="color:red;"><?= $errors['address'] ?></span>
+                <?php endif; ?>
+              </div>
+
+
+              <div class="form-group col-12">
+                <label for="exampleInputPassword1">Chọn trạng thái:</label>
+                <div class="custom-file">
+                  <select class="select2 form-control shadow-none" style="width: 100%; height:36px;" id="status"
+                    name="status" value="<?= $data['status'] ?>">
+                    <option value="1" <?= ($data['status'] == 1 ? 'selected' : '') ?>>Chờ xử lý</option>
+                    <option value="2" <?= ($data['status'] == 2 ? 'selected' : '') ?>>Đang xử lý</option>
+                    <option value="3" <?= ($data['status'] == 3 ? 'selected' : '') ?>>Đang vận chuyển</option>
+                    <option value="4" <?= ($data['status'] == 4 ? 'selected' : '') ?>>Đã hoàn thành</option>
+                  </select>
+                  <?php if (isset($errors['status'])): ?>
+                    <span style="color:red;"><?= $errors['status'] ?></span>
+                  <?php endif; ?>
                 </div>
               </div>
+
+              <button type="submit" class="btn btn-primary">Cập nhật</button>
+            </form>
+            <?php
+            unset($_SESSION['errors']);
+            ?>
+          </div>
+        </div>
+      </div>
+      <!--Row-->
+
+
+
+      <!-- Modal Logout -->
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to logout?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+              <a href="login.html" class="btn btn-primary">Logout</a>
             </div>
           </div>
         </div>
-        <!---Container Fluid-->
       </div>
+    </div>
 
     <?php
-    }
+  }
 }
