@@ -35,7 +35,7 @@ class Thanks extends BaseView
                            đơn hàng của mình thông qua tài
                            khoản cá nhân hoặc liên kết được gửi qua email</p>
                      </span>
-                     <a class="tieptucmuahang " href="">Tiếp tục mua hàng</a>
+                     <a class="tieptucmuahang " href="/shop">Tiếp tục mua hàng</a>
                   </div>
                </div>
 
@@ -66,7 +66,7 @@ class Thanks extends BaseView
                      <tbody class="text-left border-top mb-3">
                         <tr class="">
                            <td>Image</td>
-                           <td width="45%" >Tên sản phẩm</td>
+                           <td width="45%">Tên sản phẩm</td>
                            <td></td>
                            <td>Giá</td>
                         </tr>
@@ -82,13 +82,12 @@ class Thanks extends BaseView
                               </td>
                               <td class="price">
                                  <span>
-                                    <?php if (isset($order['variant_name']) && isset($order['variant_price'])) { ?>
-                                       <?= number_format($order['variant_price'], 0, ',', '.') ?>đ
-                                    <?php } elseif (!isset($order['variant_price'])) { ?>
-                                       <?= number_format($order['product_discount_price'], 0, ',', '.') ?>đ
+                                    <?php if (isset($order['variant_price']) && !empty($order['variant_price'])) { ?>
+                                       <?= number_format($order['variant_price'] * $order['quantity'], 0, ',', '.') ?>đ
+                                    <?php } elseif (isset($order['product_discount_price']) && $order['product_discount_price'] > 0) { ?>
+                                       <?= number_format($order['product_discount_price'] * $order['quantity'], 0, ',', '.') ?>đ
                                     <?php } else { ?>
-                                       <?= number_format($order['price'], 0, ',', '.') ?>đ
-
+                                       <?= number_format($order['product_price'] * $order['quantity'], 0, ',', '.') ?>đ
                                     <?php } ?>
 
                                  </span>
@@ -100,7 +99,8 @@ class Thanks extends BaseView
                      <tfoot>
                         <tr class="" style="border-top: 2px solid var(--color-price);">
                            <th scope="row" class="" style="font-size: larger; color: var(--color-price);">Tổng đơn:</th>
-                           <td class="fw-bold" style="font-size: larger; "><?= number_format($data['bill'][0]["total"], 0, ',', '.' ) ?> đ</td>
+                           <td class="fw-bold" style="font-size: larger; ">
+                              <?= number_format($data['bill'][0]["total"], 0, ',', '.') ?> đ</td>
                         </tr>
                      </tfoot>
                      </thead>

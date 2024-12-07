@@ -6,71 +6,96 @@ use App\Helpers\NotificationHelper;
 class AuthValidation
 {
 
-   public static function register(): bool{
-      $is_valid = true;
-      if(!isset($_POST['username']) || $_POST['username'] === ''){
-          NotificationHelper::error('empty_username','Tên đăng nhập không được để trống');
-          $is_valid = false;
-      }
-      
-
-      if(!isset($_POST['password']) || $_POST['password'] === ''){
-          NotificationHelper::error('empty_password','Mat khau không được để trống');
-          $is_valid = false;
-      }
-     
-
-      if(!isset($_POST['email']) || $_POST['email'] === ''){
-          NotificationHelper::error('empty_email','Email không được để trống');
-          $is_valid = false;
-      }else{
-          $emailPattern = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
-          if (!preg_match($emailPattern, $_POST['email'])) {
-              NotificationHelper::error('email', 'Email không đúng định dạng');
-              $is_valid = false;
-          }
-      }
-     
-      return $is_valid;
-  }
-
-   public static function login(): bool
+   public static function register(): bool
    {
       $is_valid = true;
-      // TÊN ĐĂNG NHẬP
-      if (!isset($_POST['username']) || $_POST['username'] === '') {
-         NotificationHelper::error('username', 'Tên đăng nhập không được để trống ');
+      $errors = [];
+
+      if (empty($_POST['username'])) {
+         $errors['username'] = "Tên người dùng không được để trống.";
          $is_valid = false;
       }
-      // MẬT KHẨU
-      if (!isset($_POST['password']) || $_POST['password'] === '') {
-         NotificationHelper::error('password', 'Mật khẩu không được để trống ');
+
+      if (empty($_POST['email'])) {
+         $errors['email'] = "Địa chỉ email không được để trống.";
+         $is_valid = false;
+      } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+         $errors['email'] = "Địa chỉ email không hợp lệ.";
          $is_valid = false;
       }
+      if (empty($_POST['password'])) {
+         $errors['password'] = "Mật khẩu không được để trống.";
+         $is_valid = false;
+      } elseif (strlen($_POST['password']) < 6) {
+         $errors['password'] = "Mật khẩu phải có ít nhất 6 ký tự.";
+         $is_valid = false;
+      }
+
+      if (empty($_POST['confirm_password'])) {
+         $errors['confirm_password'] = "Vui lòng xác nhận mật khẩu.";
+         $is_valid = false;
+      } elseif ($_POST['confirm_password'] !== $_POST['password']) {
+         $errors['confirm_password'] = "Mật khẩu xác nhận không khớp.";
+         $is_valid = false;
+      }
+
+      if (!$is_valid) {
+         $_SESSION['errors'] = $errors;
+      }
+
       return $is_valid;
    }
 
-   public static function ForgotPassword(): bool
-   {
-      $is_valid = true;
-      // TÊN ĐĂNG NHẬP
-      if (!isset($_POST['username']) || $_POST['username'] === '') {
-         NotificationHelper::error('username', 'Tên đăng nhập không được để trống ');
-         $is_valid = false;
-      }
-      //EMAIL
-      if (!isset($_POST['email']) || $_POST['email'] === '') {
-         NotificationHelper::error('email', 'Email không được để trống !!!');
-         $is_valid = false;
-      } else {
-         $emailPattern = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/";
-         if (!preg_match($emailPattern, $_POST['email'])) {
-            NotificationHelper::error('email', 'Email không hợp lệ !!!');
+
+public static function login(): bool
+{
+    $is_valid = true;
+    $errors = [];
+
+    if (empty($_POST['username'])) {
+        $errors['usernamelogin'] = "Tên đăng nhập không được để trống.";
+        $is_valid = false;
+    }
+
+    if (empty($_POST['password'])) {
+        $errors['passwordlogin'] = "Mật khẩu không được để trống.";
+        $is_valid = false;
+    }
+    if (!$is_valid) {
+        $_SESSION['errors'] = $errors;
+    }
+
+    return $is_valid;
+}
+
+public static function ForgotPassword(): bool
+{
+    $is_valid = true;
+    $errors = [];
+
+    if (empty($_POST['username'])) {
+        $errors['username'] = "Tên đăng nhập không được để trống.";
+        $is_valid = false;
+    }
+
+    if (empty($_POST['email'])) {
+        $errors['email'] = "Email không được để trống.";
+        $is_valid = false;
+    } else {
+        $emailPattern = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/";
+        if (!preg_match($emailPattern, $_POST['email'])) {
+            $errors['email'] = "Email không hợp lệ.";
             $is_valid = false;
-         }
-      }
-      return $is_valid;
-   }
+        }
+    }
+
+    if (!$is_valid) {
+        $_SESSION['errors'] = $errors;
+    }
+
+    return $is_valid;
+}
+
 
    /* public static function ResetPassword(): bool
    {
@@ -124,12 +149,12 @@ class AuthValidation
          }
       }
 
-    /* // PHONE 
-         $phonePattern = "/^(0[1-9]\d{8,9})$/";
-         if (!preg_match($phonePattern, $_POST['phone'])) {
-            NotificationHelper::error('phone', 'số điện thoại bắt đầu bằng 0 , theo sau là 9  chữ số. !!!');
-            $is_valid = false;
-         } */
+      /* // PHONE 
+           $phonePattern = "/^(0[1-9]\d{8,9})$/";
+           if (!preg_match($phonePattern, $_POST['phone'])) {
+              NotificationHelper::error('phone', 'số điện thoại bắt đầu bằng 0 , theo sau là 9  chữ số. !!!');
+              $is_valid = false;
+           } */
 
       return $is_valid;
    }

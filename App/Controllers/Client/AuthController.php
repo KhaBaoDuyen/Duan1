@@ -53,6 +53,7 @@ class AuthController
    {
       // Xác thực dữ liệu đầu vào cho quá trình đăng ký
       $is_valid = AuthValidation::register();
+
       if (!$is_valid) {
          NotificationHelper::error('register_valid', 'Đăng ký thất bại');
          header('location: /Account');
@@ -135,12 +136,12 @@ class AuthController
       }
       $data = $_SESSION['user'];
 
-   //   $data = [
-   //       'username' => $_POST['username'],
-   //       'email' => $_POST['email'],
-   //       'phone' => $_POST['phone'],
-   //       'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
-   //   ];
+      //   $data = [
+      //       'username' => $_POST['username'],
+      //       'email' => $_POST['email'],
+      //       'phone' => $_POST['phone'],
+      //       'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
+      //   ];
       Header::render();
       Profile::render($data);
       Footer::render();

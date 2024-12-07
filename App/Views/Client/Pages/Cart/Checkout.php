@@ -8,6 +8,7 @@ class Checkout extends BaseView
 {
    public static function render($data = null)
    {
+      $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
       ?>
       <div class="checkout-page col-10 m-auto" id="checkout">
          <form action="/order" method="post" class="container container_checkout m-auto">
@@ -67,17 +68,51 @@ class Checkout extends BaseView
             <div class="content-left col-12 row m-auto">
                <h3>Địa chỉ nhận hàng</h3>
                <div class="col-6">
-                  <label for>Tên</label>
-                  <input type=" text" placeholder="Vui lòng nhập tên người nhận" name="name">
-                  <label for>Số điện thoại</label>
-                  <input type="text" placeholder="Vui lòng nhập số điện thoại" name="phone">
-                  <label for>Email</label>
-                  <input type="text" placeholder="Vui lòng nhập địa chỉ email" name="email">
-                  <label for>Địa chỉ</label>
-                  <input type="text" placeholder="Vui lòng nhập địa chỉ" name="address">
-                  <label for>Ghi chú</label>
-                  <textarea placeholder="Ghi chú"></textarea>
+                  <div class="form-group">
+                     <label for="name">Tên</label>
+                     <input type="text" placeholder="Vui lòng nhập tên người nhận" name="name" class="<?= isset($errors['name']) ? 'input-error' : '' ?>"
+                        value="<?= $_POST['name'] ?? '' ?>">
+                     <?php if (isset($errors['name'])): ?>
+                        <span style="color:red;"><?= $errors['name'] ?></span>
+                     <?php endif; ?>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="phone">Số điện thoại</label>
+                     <input type="text" placeholder="Vui lòng nhập số điện thoại" name="phone"
+                        value="<?= $_POST['phone'] ?? '' ?>"  class="<?= isset($errors['phone']) ? 'input-error' : '' ?>">
+                     <?php if (isset($errors['phone'])): ?>
+                        <span style="color:red;"><?= $errors['phone'] ?></span>
+                     <?php endif; ?>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="email">Email</label>
+                     <input type="text" placeholder="Vui lòng nhập địa chỉ email" name="email" class="<?= isset($errors['email']) ? 'input-error' : '' ?>"
+                        value="<?= $_POST['email'] ?? '' ?>">
+                     <?php if (isset($errors['email'])): ?>
+                        <span style="color:red;"><?= $errors['email'] ?></span>
+                     <?php endif; ?>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="address">Địa chỉ</label>
+                     <input type="text" placeholder="Vui lòng nhập địa chỉ" name="address" class="<?= isset($errors['address']) ? 'input-error' : '' ?>"
+                        value="<?= $_POST['address'] ?? '' ?>">
+                     <?php if (isset($errors['address'])): ?>
+                        <span style="color:red;"><?= $errors['address'] ?></span>
+                     <?php endif; ?>
+                  </div>
+
+                  <div class="form-group">
+                     <label for="note">Ghi chú</label>
+                     <textarea placeholder="Ghi chú" name="note"><?= $_POST['note'] ?? '' ?></textarea>
+                     <?php if (isset($errors['note'])): ?>
+                        <span style="color:red;"><?= $errors['note'] ?></span>
+                     <?php endif; ?>
+                  </div>
                </div>
+
 
                <div class="payment-method col-6 d-flex flex-column justify-content-between">
                   <div class="">
@@ -114,7 +149,9 @@ class Checkout extends BaseView
          </form>
 
       </div>
-
+     <?php
+                            unset($_SESSION['errors']);
+                            ?>
 
    <?php }
 } ?>

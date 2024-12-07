@@ -286,10 +286,98 @@
   background-color: var(--pri-color);
 }
 
-/* From Uiverse.io by akshat-patel28 */
+.Susses {
+  width: -moz-max-content;
+  width: max-content;
+  height: 80px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: fixed;
+  right: -100px;
+  top: 2%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  animation: slideDown 3s ease-out forwards;
+}
+@keyframes slideDown {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  50% {
+    right: 2%;
+    opacity: 1;
+  }
+  60% {
+    right: 2%;
+    opacity: 1;
+  }
+  100% {
+    right: -100px;
+    opacity: 0;
+  }
+}
+.Susses .wave {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -31px;
+  top: 32px;
+  width: 80px;
+  fill: rgba(4, 228, 0, 0.2274509804);
+}
+.Susses .icon-container {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(4, 228, 0, 0.2823529412);
+  border-radius: 50%;
+  margin-left: 8px;
+}
+.Susses .icon {
+  width: 17px;
+  height: 17px;
+  color: #269b24;
+}
+.Susses .message-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.Susses .message-text,
+.Susses .sub-text {
+  margin: 0;
+  cursor: default;
+}
+.Susses .message-text {
+  color: #269b24;
+  font-size: 17px;
+  font-weight: 700;
+}
+.Susses .sub-text {
+  font-size: 14px;
+  color: #555;
+}
+.Susses .cross-icon {
+  width: 18px;
+  height: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
 .Error {
   width: 330px;
   height: 80px;
+  z-index: 1000;
   border-radius: 8px;
   box-sizing: border-box;
   padding: 10px 15px;
@@ -360,6 +448,10 @@
   padding: 20px;
   margin: 20px auto;
   max-width: 600px;
+}
+
+.input-error {
+  border: 1px solid red !important;
 }
 
 footer {

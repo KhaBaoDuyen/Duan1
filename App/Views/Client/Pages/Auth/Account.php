@@ -10,8 +10,10 @@ class Account extends BaseView
 {
     public static function render($data = null)
     {
-?>
-     
+        $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+
+        ?>
+
 
         <!DOCTYPE html>
         <html lang="en">
@@ -30,25 +32,49 @@ class Account extends BaseView
 
         <body>
             <div class="Page-login">
-   <?php if (isset($_SESSION['js_error'])): ?>
-            <div class="alert-custom">
-                <?php echo $_SESSION['js_error']; ?>
-            </div>
-            <?php unset($_SESSION['js_error']); ?>
-        <?php endif; ?>
+                <?php if (isset($_SESSION['js_error'])): ?>
+                    <div class="alert-custom">
+                        <?php echo $_SESSION['js_error']; ?>
+                    </div>
+                    <?php unset($_SESSION['js_error']); ?>
+                <?php endif; ?>
 
-            <?php 
-                 Notification::render();
-                 NotificationHelper::unset();
+                <?php
+                Notification::render();
+                NotificationHelper::unset();
                 ?>
                 <div class="container" id="container">
                     <div class="form-container sign-up">
                         <form action="/home-register" method="post">
                             <input type="hidden" name="method" value="POST" id="">
                             <h1>Tạo tài khoản</h1>
-                            <input name="username" type="text" placeholder="Tên">
-                            <input name="email" type="text" placeholder="Email">
-                            <input name="password" type="password" placeholder="Password">
+                            <div class="w-100">
+                                <input name="username" type="text" placeholder="Tên"
+                                    class="<?= isset($errors['username']) ? 'input-error' : '' ?>"
+                                    value="<?= $_POST['username'] ?? '' ?>">
+                                <?php if (isset($errors['username'])): ?>
+                                    <span style="color:red;"><?= $errors['username'] ?></span>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="w-100">
+                                <input name="email" type="text" placeholder="Email"
+                                    class="<?= isset($errors['email']) ? 'input-error' : '' ?>"
+                                    value="<?= $_POST['email'] ?? '' ?>">
+                                <?php if (isset($errors['email'])): ?>
+                                    <span style="color:red;"><?= $errors['email'] ?></span>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="w-100">
+                                <input name="password" type="password" placeholder="Password"
+                                    class="<?= isset($errors['password']) ? 'input-error' : '' ?>">
+                                <?php if (isset($errors['password'])): ?>
+                                    <span style="color:red;"><?= $errors['password'] ?></span>
+                                <?php endif; ?>
+                            </div>
+
+
                             <a href="/">Quay về trang chủ</a>
                             <button type="submit" id="home-register" class="button">Đăng ký</button>
                         </form>
@@ -57,8 +83,23 @@ class Account extends BaseView
                         <form action="/home-login" method="post">
                             <input type="hidden" name="method" value="POST" id="">
                             <h1>Đăng nhập</h1>
-                            <input name="username" type="text" placeholder="Username">
-                            <input name="password" type="password" placeholder="Password">
+                            <div class="w-100">
+                                <input name="username" type="text" placeholder="Tên"
+                                    class="<?= isset($errors['usernamelogin']) ? 'input-error' : '' ?>"
+                                    value="<?= $_POST['username'] ?? '' ?>">
+                                <?php if (isset($errors['usernamelogin'])): ?>
+                                    <span style="color:red;"><?= $errors['usernamelogin'] ?></span>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="w-100">
+                                <input name="password" type="password" placeholder="Password"
+                                    class="<?= isset($errors['passwordlogin']) ? 'input-error' : '' ?>">
+                                <?php if (isset($errors['passwordlogin'])): ?>
+                                    <span style="color:red;"><?= $errors['passwordlogin'] ?></span>
+                                <?php endif; ?>
+                            </div>
+
                             <div class="checkbox">
                                 <div class="input-checkbox">
                                     <input name="remember" type="checkbox" name id>
@@ -86,8 +127,9 @@ class Account extends BaseView
             </div>
             <script src="/public/assets/Client/Js/login.js"></script>
         </body>
-
         </html>
-<?php }
+        <?php
+        unset($_SESSION['errors']);
+    }
 }
 ?>

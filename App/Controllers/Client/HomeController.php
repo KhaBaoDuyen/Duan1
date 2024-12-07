@@ -30,8 +30,8 @@ class HomeController
 
         $categogy = new CategoryModel();
         $data['categogy'] = $categogy->getAllCategoryByStatus();
-        // Notification::render();
-        // NotificationHelper::unset();
+        Notification::render();
+        NotificationHelper::unset();
         Header::render();
         Home::render($data);
         Footer::render();
