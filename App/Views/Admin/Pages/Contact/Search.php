@@ -89,8 +89,8 @@ class Search extends BaseView
                                                     </span>
                                                 </td>
 
-                                                <td>
-                                                    <a href="/admin/contact/<?= $contact['id'] ?>"
+                                                <td style="display: flex;">
+                                                    <a style="margin-right: 5px;" href="/admin/contact/<?= $contact['id'] ?>"
                                                         class="btn btn-sm btn-warning">Sửa</a>
                                                     <form action="/admin/contact/<?= $contact['id'] ?>" method="post">
                                                         <input type="hidden" name="method" value="DELETE">
