@@ -106,7 +106,7 @@ class Contact extends BaseView
                        <div>
                        <label style="font-size: 20px;" for="message">Tin nhắn:</label><br><br>
                         <textarea id="message" name="message"
-                           rows="4"  placeholder="Vui lòng nội dung bạn thắc mắc....."></textarea><br><br>
+                           rows="4"  placeholder="Vui lòng nội dung bạn cần hỗ trợ...."></textarea><br><br>
                        </div>
                  
 

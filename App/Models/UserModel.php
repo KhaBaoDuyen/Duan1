@@ -383,8 +383,8 @@ class UserModel extends BaseModel
 
         <!-- Body -->
         <div class="email-body">
-            <h2>Xin chào '.$ho.' '.$name.',</h2>
-            <p>Cảm ơn bạn đã liên hệ với đội ngũ hỗ trợ của BLOOM. Chúng tôi đã nhận được yêu cầu :'.$message.'
+            <h2>Xin chào ' . $ho . ' ' . $name . ',</h2>
+            <p>Cảm ơn bạn đã liên hệ với đội ngũ hỗ trợ của BLOOM. Chúng tôi đã nhận được yêu cầu :' . $message . '
              của bạn hãy trả lời đến mail này để được hỗ trợ nhé!.</p>
 
             <div class="image-container">

@@ -5641,3 +5641,6 @@ Stack trace:
 [06-Dec-2024 23:00:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Checkout.php on line 49
 [07-Dec-2024 23:55:18 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Cart.php on line 83
 [07-Dec-2024 23:55:19 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Cart.php on line 83
+[08-Dec-2024 00:32:34 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Table 'webbancayvahoa.contact' doesn't exist
+[08-Dec-2024 00:37:21 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Table 'webbancayvahoa.contact' doesn't exist
+[08-Dec-2024 00:38:54 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id' doesn't have a default value

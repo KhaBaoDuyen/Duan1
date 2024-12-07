@@ -64,13 +64,14 @@ class HomeController
             'message' => $message,
         ];
         $contact = new ContactModel();
-        $resunl=$contact->createContact($data);
+        $resunl = $contact->createContact($data);
         if ($resunl) {
             $mail = new UserModel();
             $sendmail = $mail->sendmailContact();
+            NotificationHelper::success('sendmail_fail', 'Gửi email thành công !');
             header('location: /contact');
             exit();
-        }else{
+        } else {
             NotificationHelper::error('sendmail_fail', 'Gửi email thất bại!');
             /* header('location: /contact'); */
             var_dump($data);
