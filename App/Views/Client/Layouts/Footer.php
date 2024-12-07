@@ -100,11 +100,11 @@ class Footer extends BaseView
                </div>
                <div class="col-4">
                   <div class="box_menu_footer">
-                     <a href="">Nước Hoa</a>
+                     <a href="">Danh mục sản phẩm</a>
                      <Ul class="menu_footer">
-                        <li><a href="">Nước Hoa Nữ </a></li>
-                        <li><a href=""> Nước Hoa Nam </a></li>
-                        <li><a href=""> Xịt Thơm Toàn Thân</a></li>
+                        <li><a href="">Cây cảnh độc lạ </a></li>
+                        <li><a href=""> Cây mini trong nhà </a></li>
+                        <li><a href=""> Cây cảnh văn phòng</a></li>
                   </div>
                   </Ul>
                </div>
