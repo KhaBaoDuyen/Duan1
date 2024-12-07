@@ -46,7 +46,7 @@ class Checkout extends BaseView
                               </td>
                               <td> <span class="text-muted">
                                     <?php if (isset($item['product_variant']) && !empty($item['product_variant'])) { ?>
-                                       Loại: <?= json_decode($item['product_variant'], true)[1]['nameVariant'] ?>
+                                       Loại: <?= $item['variant_name'] ?>
                                     <?php } ?></span></td>
 
                               <td><?= number_format($item['product_price'], 0, ',', '.') ?>đ</td>

@@ -37,8 +37,8 @@ class CartController
             $_SESSION['checkout'] = [];
             // $id_user = $_SESSION['user']['id'];
             $_SESSION['checkout'] = $data;
-            echo "</pre>";
-            print_r($_SESSION['checkout']);
+            // echo "</pre>";
+            // print_r($_SESSION['checkout']);
 
         } else {
             Header::render();
@@ -104,6 +104,7 @@ class CartController
         //     'quantity' => $quantity,
         // ];
         // $_SESSION['checkout'] = $data;
+
         $id_user = $_SESSION['user']['id'];
         $cartModel = new CartModel();
 
@@ -117,7 +118,6 @@ class CartController
             $newQuantity = $setCart['quantity'] + $quantity;
             $cartModel->updateCartItem($setCart['id'], $newQuantity);
         } else {
-
             $data = [
                 'id_user' => $id_user,
                 'id_product' => $id,
