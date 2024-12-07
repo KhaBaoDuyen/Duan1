@@ -29,7 +29,7 @@ class Contact extends BaseView
                <div class=" col-3 m-1 contact1 align-content-center justify-content-center">
                   <div class="imgcontact d-flex  justify-content-center mt-2">
                       <img src="/public/assets/Client/image/contact/call_60dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" width="20%" alt="">
-                      <h2 style="color: var(--text-color-light);">whatsapp</h2>
+                      <h2 style="color: var(--text-color-light);">Whatsapp</h2>
                       <h5 style="color: var(--text-color-light);">0987&nbsp;654&nbsp;321</h5>
                   
                   </div>
@@ -103,9 +103,11 @@ class Contact extends BaseView
                         </div>
 
                      
-                        <label style="font-size: 20px;" for="message">Tin nhắn:</label><br>
+                       <div>
+                       <label style="font-size: 20px;" for="message">Tin nhắn:</label><br><br>
                         <textarea id="message" name="message"
                            rows="4"  placeholder="Vui lòng nội dung bạn thắc mắc....."></textarea><br><br>
+                       </div>
                  
 
                       <div class="inputsubmit d-flex justify-content-center ">
