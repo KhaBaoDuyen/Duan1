@@ -14,18 +14,18 @@ class Detail extends BaseView
       // var_dump($_SESSION);
 
 ?>
-         <?php
-         if (isset($_SESSION['notification'])) {
-            $notification = $_SESSION['notification'];
-         ?>
-            <div id="notification" class="d-flex justify-items-center align-items-center alert alert-<?php echo $notification['type']; ?> alert-dismissible fade show notification-alert" role="alert">
-               <div class="me-4"><?php echo $notification['message']; ?></div>
-               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> 
-            </div>
-         <?php
-            unset($_SESSION['notification']);
-         }
-         ?>
+      <?php
+      if (isset($_SESSION['notification'])) {
+         $notification = $_SESSION['notification'];
+      ?>
+         <div id="notification" class="d-flex justify-items-center align-items-center alert alert-<?php echo $notification['type']; ?> alert-dismissible fade show notification-alert" role="alert">
+            <div class="me-4"><?php echo $notification['message']; ?></div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+      <?php
+         unset($_SESSION['notification']);
+      }
+      ?>
       <main class="product_detail col-10 m-auto">
 
          <section class="sec_title d-flex">
@@ -301,7 +301,6 @@ class Detail extends BaseView
                   <div class="sec_comment_review  p-1 d-flex  ">
                      <div class="col-11">
                         <div class="user d-flex align-items-center">
-
                            <?php
                            if ($item['avatar']):
                            ?>
@@ -321,39 +320,35 @@ class Detail extends BaseView
                               <span class="date"><?= $data['product']['date'] ?></span>
                            </div>
                         </div>
+
                         <p class="content mt-1"><?= $item['content'] ?></p>
-                        <img src="/public/uploads/comments/<?= $item['image'] ?>" alt="" width="150px">
-
                         <div class="collapse" id="<?= $item['username'] ?><?= $item['id'] ?>">
-                                                        <div  id="commentForm" class="col-12">
-                                                            <form action="/comments/<?= $item['id'] ?>" method="post">
-                                                                <input type="hidden" name="method" value="PUT" id="">
-                                                                <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="">
-                                                                <div class="form-group col-12 mt-2">
-                                                                    <label for="">Bình luận</label>
-                                                                    <textarea id="content" name="content" rows="4" placeholder="Nhập bình luận..."><?= $item['content'] ?></textarea>
-                                                                </div>
-                                                                <div class="form-group col-12 mt-2">
-                                                                <label for="image">Chọn hình ảnh</label>
-                                                                <input type="file" name="image" accept="image/*" />
-                                                               </div>
-                                                                <button class="send">
-                     <div class="svg-wrapper-1">
-                        <div class="svg-wrapper">
-                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                              <path fill="none" d="M0 0h24v24H0z"></path>
-                              <path fill="currentColor"
-                                 d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                              </path>
-                           </svg>
-                        </div>
-                     </div>
-                     <span>Gửi</span>
-                  </button>
-                                                            </form>
+                           <div id="commentForm" class="col-12">
+                              <form action="/comments/<?= $item['id'] ?>" method="post">
+                                 <input type="hidden" name="method" value="PUT" id="">
+                                 <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="">
+                                 <div class="form-group col-12 mt-2">
+                                    <label for="">Bình luận</label>
+                                    <textarea id="content" name="content" rows="4" placeholder="Nhập bình luận..."><?= $item['content'] ?></textarea>
+                                 </div>
 
-                                                        </div>
-                                                    </div>
+                                 <button class="send">
+                                    <div class="svg-wrapper-1">
+                                       <div class="svg-wrapper">
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                             <path fill="none" d="M0 0h24v24H0z"></path>
+                                             <path fill="currentColor"
+                                                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                             </path>
+                                          </svg>
+                                       </div>
+                                    </div>
+                                    <span>Gửi</span>
+                                 </button>
+                              </form>
+
+                           </div>
+                        </div>
                      </div>
                      <div class="col-1 d-flex justify-content-end align-content-end Utilities">
                         <span class="material-symbols-outlined">
@@ -361,20 +356,19 @@ class Detail extends BaseView
                         </span>
                         <div class="formdown">
 
-                        <?php
+                           <?php
                            if (isset($data) && isset($is_login) && $is_login && ($_SESSION['user']['id'] == $item['id_user'])) :
-                        ?>
+                           ?>
+                              <button type="button" class="btn btn-cyan btn-sm btn-warning" data-toggle="collapse" data-target="#<?= $item['username'] ?><?= $item['id'] ?>" aria-expanded="false" aria-controls="<?= $item['username'] ?><?= $item['id'] ?>">Sửa</button>
+                              <form action="/comments/<?= $item['id'] ?>" method="post" onsubmit="return confirm('Xác nhận xóa?')" style="display: inline-block">
+                                 <input type="hidden" name="method" value="DELETE" id="">
+                                 <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="">
+                                 <button type="submit" class="btn btn-danger btn-sm">Xoá</button>
 
-                                                    <button type="button" class="btn btn-cyan btn-sm btn-warning" data-toggle="collapse" data-target="#<?= $item['username'] ?><?= $item['id'] ?>" aria-expanded="false" aria-controls="<?= $item['username'] ?><?= $item['id'] ?>">Sửa</button>
-                                                    <form action="/comments/<?= $item['id'] ?>" method="post" onsubmit="return confirm('Chắc chưa?')" style="display: inline-block">
-                                                        <input type="hidden" name="method" value="DELETE" id="">
-                                                        <input type="hidden" name="id_product" value="<?= $data['product']['id'] ?>" id="">
-                                                        <button type="submit" class="btn btn-danger btn-sm">Xoá</button>
-
-                                                    </form>
-                                                <?php
-                                                endif;
-                                                ?>
+                              </form>
+                           <?php
+                           endif;
+                           ?>
                         </div>
                      </div>
                   </div>
@@ -419,8 +413,8 @@ class Detail extends BaseView
                      <label for="comment">Bình luận của bạn:</label>
                      <textarea id="content" name="content" rows="4" required
                         placeholder="Viết bình luận của bạn ở đây..."></textarea>
-            
-                   
+
+
                      <button class="send">
                         <div class="svg-wrapper-1">
                            <div class="svg-wrapper">

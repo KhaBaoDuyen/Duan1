@@ -46,36 +46,13 @@ class CommentController
         } else {
             header("Location:/product/$id_product");
         }
-        if (file_exists($_FILES['image']['tmp_name']) && is_uploaded_file($_FILES['image']['tmp_name'])) {
 
-            // nơi lưu trữ hình ảnh (trong source code)
-            $target_dir = "public/uploads/comments/";
-
-            // lấy kiểu file (đuôi file)
-            $imageFileType = strtolower(pathinfo(basename($_FILES["image"]["name"]), PATHINFO_EXTENSION));
-
-            // thay đổi tên file thành dạng năm tháng ngày giờ phút giây
-            $nameImage = date('YmdHmi') . '.' . $imageFileType;
-
-            // đường dẫn đầy đủ để di chuyển file đến
-            $target_file = $target_dir . $nameImage;
-
-            // nếu upload thành công => lưu vào database
-            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                // echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
-
-            } else {
-                $nameImage = '';
-                NotificationHelper::error('upload_file', 'Upload file thất bại');
-            }
-        }
-        
-
+    
         $data = [
             'content' => $_POST['content'],
             'id_product' => $_POST['id_product'],
             'id_user' => $_POST['id_user'],
-            'image' => $nameImage,
+        
         ];
 
         $comment = new CommentModel();

@@ -36,7 +36,7 @@ class CommentModel extends BaseModel
 
    public function get5CommentNewestByProductAndStatus($id)
    {
-      $sql = "SELECT comments.*, user.username, user.name, user.avatar, comments.image
+      $sql = "SELECT comments.*, user.username, user.name, user.avatar
         FROM comments 
         INNER JOIN user ON comments.id_user = user.id 
         WHERE comments.id_product = ? AND comments.status = " . self::STATUS_ENABLE . "
