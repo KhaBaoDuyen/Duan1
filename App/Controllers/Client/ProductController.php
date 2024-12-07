@@ -65,6 +65,15 @@ class ProductController
         $category = new CategoryModel();
         $categories = $category->getAllByStatus();
 
+        $itemsPerPage = 16;  // Số lượng sản phẩm trên mỗi trang
+        $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;  // Lấy trang hiện tại từ URL (mặc định là 1)
+        $totalProducts = count($products);  // Tổng số sản phẩm
+        $totalPages = ceil($totalProducts / $itemsPerPage);  // Tính tổng số trang
+    
+        // Tính chỉ số bắt đầu của các sản phẩm cần hiển thị
+        $startIndex = ($currentPage - 1) * $itemsPerPage;
+        $products = array_slice($products, $startIndex, $itemsPerPage);  // Cắt mảng sản phẩm để chỉ hiển thị 8 sản phẩm
+
         $count_product = $product->countTotalProduct();
         $count_category = $category->countCategory();
         $countCategoryProduct = $product->countProductByCategogy();
@@ -85,8 +94,7 @@ class ProductController
         // Xử lý giá trị priceMin
         $priceMinArray = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
         $priceMaxArray = [];
-
-        // Chuyển đổi các giá trị priceMin thành các priceMax tương ứng
+        
         foreach ($priceMinArray as $priceMin) {
             switch ($priceMin) {
                 case '0':
@@ -106,6 +114,7 @@ class ProductController
                     break;
             }
         }
+        
 
         // Debug giá trị priceMin và priceMax
         /* var_dump($priceMinArray, $priceMaxArray); */
@@ -130,6 +139,8 @@ class ProductController
             'categories' => $categories,
             'count_product' => $count_product['total'],
             'count_category' => $count_category['total'],
+            'currentPage' => $currentPage,
+        'totalPages' => $totalPages,
             'total_comment' => $total_comment['total'],
 
         ];

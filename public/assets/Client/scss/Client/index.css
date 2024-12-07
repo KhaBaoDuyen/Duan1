@@ -1077,6 +1077,28 @@ main article .all_products .card .price_sales {
 main article .all_products .card:hover {
   box-shadow: 3px 3px 10px gray;
 }
+main .pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+main .pagination a {
+  padding: 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+main .pagination a.active {
+  background-color: #ff8e4d;
+  color: white;
+}
+main .pagination a:hover {
+  background-color: #f1f1f1;
+}
+main .pagination .prev, main .pagination .next {
+  font-weight: bold;
+}
 
 .contact {
   /*  border: 1px solid var(--pri-color);  */

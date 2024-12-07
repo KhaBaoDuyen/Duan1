@@ -25,50 +25,37 @@ class Category extends BaseView
     </div>
 
     <div class="price-filter brand m-auto">
-    <form action="" method="GET">
-        <div class="price-options">
-<div class="filter-header d-flex justify-content-between align-items-center" style="width: 90%; ">
-    <h4 class="filter-title" style="color: var(--pri-color); font-family: var(--font-family); font-size: 2rem;">
-        Lọc theo giá:
-    </h4>
-    <div>
-        <button type="submit" class="btn btn-primary custom-btn">Lọc</button>
+    <form method="GET" action="" id="price-filter-form">
+    <div class="filter-price">
+        <h4 style="color: var(--pri-color); font-family: var(--font-family); font-size: 2rem;" >Lọc theo giá</h4>
+        <label>
+            <input type="checkbox" name="priceMin[]" value="0" 
+                <?= (isset($_GET['priceMin']) && in_array('0', $_GET['priceMin'])) ? 'checked' : ''; ?>
+                onchange="this.form.submit()"> Dưới 100,000 VND
+        </label><br>
+        <label>
+            <input type="checkbox" name="priceMin[]" value="100000" 
+                <?= (isset($_GET['priceMin']) && in_array('100000', $_GET['priceMin'])) ? 'checked' : ''; ?>
+                onchange="this.form.submit()"> 100,000 VND - 500,000 VND
+        </label><br>
+        <label>
+            <input type="checkbox" name="priceMin[]" value="500000" 
+                <?= (isset($_GET['priceMin']) && in_array('500000', $_GET['priceMin'])) ? 'checked' : ''; ?>
+                onchange="this.form.submit()"> 500,000 VND - 1,000,000 VND
+        </label><br>
+        <label>
+            <input type="checkbox" name="priceMin[]" value="1000000" 
+                <?= (isset($_GET['priceMin']) && in_array('1000000', $_GET['priceMin'])) ? 'checked' : ''; ?>
+                onchange="this.form.submit()"> 1,000,000 VND - 3,000,000 VND
+        </label><br>
+        <label>
+            <input type="checkbox" name="priceMin[]" value="3000000" 
+                <?= (isset($_GET['priceMin']) && in_array('3000000', $_GET['priceMin'])) ? 'checked' : ''; ?>
+                onchange="this.form.submit()"> Trên 3,000,000 VND
+        </label><br>
     </div>
-</div>
+</form>
 
-
-
-            <label for="price0-100k">
-                <input type="checkbox" name="priceMin[]" value="0" class="price-checkbox" 
-                    <?php echo (in_array('0', $priceMin)) ? 'checked' : ''; ?>>
-                0 VND - 100,000 VND
-            </label><br>
-
-            <label for="price100k-500k">
-                <input type="checkbox" name="priceMin[]" value="100000" class="price-checkbox" 
-                    <?php echo (in_array('100000', $priceMin)) ? 'checked' : ''; ?>>
-                100,000 VND - 500,000 VND
-            </label><br>
-
-            <label for="price500k-1M">
-                <input type="checkbox" name="priceMin[]" value="500000" class="price-checkbox" 
-                    <?php echo (in_array('500000', $priceMin)) ? 'checked' : ''; ?>>
-                500,000 VND - 1,000,000 VND
-            </label><br>
-
-            <label for="price1M-3M">
-                <input type="checkbox" name="priceMin[]" value="1000000" class="price-checkbox" 
-                    <?php echo (in_array('1000000', $priceMin)) ? 'checked' : ''; ?>>
-                1,000,000 VND - 3,000,000 VND
-            </label><br>
-
-            <label for="price3M-5M">
-                <input type="checkbox" name="priceMin[]" value="3000000" class="price-checkbox" 
-                    <?php echo (in_array('3000000', $priceMin)) ? 'checked' : ''; ?>>
-                3,000,000 VND - 5,000,000 VND
-            </label><br>
-        </div>
-    </form>
 </div>
 
 </div>
