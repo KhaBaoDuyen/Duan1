@@ -275,6 +275,7 @@ ORDER BY orders.id DESC, order_details.id_product;
                 o.total as total_price,
                 o.name AS user_name,
                 o.id,
+                o.note,
                 od.quantity, 
                 od.price, 
                 od.date, 

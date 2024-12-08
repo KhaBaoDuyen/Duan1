@@ -75,8 +75,11 @@ class Index extends BaseView
                                                     <span class="badge p-2 
                                          <?php
                                             switch ($order['status']) {
-                                                case 1:
+                                                case 0:
                                                     echo 'badge-danger'; // Chờ xử lý
+                                                    break;
+                                                case 1:
+                                                    echo 'badge-secondary'; // Chờ xử lý
                                                     break;
                                                 case 2:
                                                     echo 'badge-warning'; // Đang xử lý
@@ -93,6 +96,9 @@ class Index extends BaseView
                                         ?>">
                                                         <?php
                                                         switch ($order['status']) {
+                                                            case 0:
+                                                                echo 'Đã hủy';
+                                                                break;
                                                             case 1:
                                                                 echo 'Chờ xử lý';
                                                                 break;

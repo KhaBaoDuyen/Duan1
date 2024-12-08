@@ -294,6 +294,7 @@ class UserModel extends BaseModel
                 ]
             ];
             //Content
+            $mail->CharSet = 'UTF-8';
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'BLOOM XIN KÍNH CHÀO QUÝ KHÁCH!';
             $mail->Body    = '
@@ -380,21 +381,15 @@ class UserModel extends BaseModel
         <div class="email-header">
             <h1>Chúng tôi ở đây để giúp bạn!</h1>
         </div>
-
         <!-- Body -->
         <div class="email-body">
             <h2>Xin chào ' . $ho . ' ' . $name . ',</h2>
-            <p>Cảm ơn bạn đã liên hệ với đội ngũ hỗ trợ của BLOOM. Chúng tôi đã nhận được yêu cầu :' . $message . '
+            <p>Cảm ơn bạn đã liên hệ với đội ngũ hỗ trợ của BLOOM. Chúng tôi đã nhận được yêu cầu<br/> 
+            <strong>' . $message . '</strong>
              của bạn hãy trả lời đến mail này để được hỗ trợ nhé!.</p>
 
-            <div class="image-container">
-                <img src="https://example.com/your-support-image.png" alt="Hình minh họa hỗ trợ khách hàng">
-            </div>
-
-            <p>Nếu cần hỗ trợ khẩn cấp, bạn có thể liên hệ với chúng tôi qua số hotline <strong>1900 1234</strong> hoặc email <strong>support@bloom.com</strong>.</p>
-            <a href="https://yourwebsite.com/contact" class="button">Liên hệ ngay</a>
+            <p>Nếu cần hỗ trợ khẩn cấp, bạn có thể liên hệ với chúng tôi qua số hotline <strong>0768623218</strong> hoặc email <strong>bloomfpt@gmail.com</strong>.</p>
         </div>
-
         <!-- Footer -->
         <div class="email-footer">
             <p>Cảm ơn bạn đã tin tưởng BLOOM 🌿</p>
@@ -405,6 +400,8 @@ class UserModel extends BaseModel
 </html>
 
             ';
+         
+
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             $mail->send();
             echo 'Message has been sent';

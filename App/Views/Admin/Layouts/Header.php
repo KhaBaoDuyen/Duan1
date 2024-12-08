@@ -130,7 +130,7 @@ class Header extends BaseView
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Bình luận</h6>
                                 <a class="collapse-item" href="/admin/comments">Danh sách</a>
-                                <a class="collapse-item" href="/admin/comments/create">Thêm mới</a>
+                               
                             </div>
                         </div>
                     </li>
