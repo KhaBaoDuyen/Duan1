@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Helpers\NotificationHelper;
 use App\Models\CategoryModel;
 use App\Models\CommentModel;
+use App\Models\OrderModel;
 use App\Models\ProductModel;
 use App\Models\UserModel;
 use App\Views\Admin\Components\Notification;
@@ -30,11 +31,13 @@ class HomeController
         $comment = new CommentModel;
         $total_comment = $comment->countCommentByStatus();
 
+
         $data = [
             'total_user' => $total_user['total'],
             'total_category' => $total_category['total'],
             'total_product' => $total_product['total'],
             'total_comment' => $total_comment['total'],
+        
             'product_by_catgory' => $product_by_catgory
 
         ];

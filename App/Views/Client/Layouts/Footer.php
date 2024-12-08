@@ -11,6 +11,7 @@ class Footer extends BaseView
       $isLoggedIn = isset($_SESSION['user']);
       ?>
       <div class="reminder" id="reminder">
+
          <form action="/reminder" method="POST" class="mx-auto p-2 shadow-sm active" id="form" style="border-radius: 8px;"
             enctype="multipart/form-data">
             <input type="hidden" name="method" value="POST">

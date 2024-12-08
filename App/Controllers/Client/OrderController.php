@@ -9,6 +9,7 @@ use App\Views\Client\Layouts\Footer;
 use App\Views\Client\Home;
 use App\Models\ProductModel;
 use App\Models\OrderModel;
+use App\Models\CartModel;
 use App\Models\UserModel;
 use App\Validation\CartValidation;
 use App\Views\Client\Pages\Cart\Checkout;
@@ -25,16 +26,16 @@ class OrderController
 
    public static function checkout()
    {
-      //  echo "</pre>";
-      //       print_r($_SESSION['checkout']);
+      // echo "</pre>";
+      // print_r($_SESSION['checkout']);
+      // print_r($_SESSION['muangay']);
+
       $data = $_SESSION['checkout'];
 
       Header::render();
       Checkout::render($data);
       Footer::render();
    }
-
-
    public static function store()
    {
       $is_valid = CartValidation::order();
@@ -75,7 +76,7 @@ class OrderController
          foreach ($_SESSION['checkout'] as $i => $item) {
             if (isset($item['variant_name']) && isset($item['variant_price'])) {
                $price = $item['variant_price'];
-            } elseif (isset($item['product_discount_price'])) {
+            } elseif (isset($item['product_discount_price']) && $item['product_discount_price'] > 0) {
                $price = $item['product_discount_price'];
             } elseif (isset($item['product_price'])) {
                $price = $item['product_price'];
@@ -92,17 +93,19 @@ class OrderController
                'variant_key' => $item['variant_name'] ?? '',
             ];
 
-            // Gọi hàm để lưu vào bảng order_details
-            $orderModel->createOrderDetail($data);
+            //  lưu vào bảng order_details
+            $result = $orderModel->createOrderDetail($data);
+
          }
 
          $_SESSION['order'] = $id_order;
 
          if ($pay == 1) {
             echo "thanh toan tien mat";
-            $result = $orderModel->createOrderDetail($data);
+            // $result = $orderModel->createOrderDetail($data);
             if (isset($result) && $result) {
-
+               $cartModel = new CartModel();
+               $cartModel->deleteCart($_SESSION['user']['id']);
                header('Location: /thank');
                die();
 
@@ -183,12 +186,13 @@ class OrderController
                $_SESSION['order'] = $id_order;
                header('Location: ' . $vnp_Url);
                $result = $orderModel->createOrderDetail($data);
+               $cartModel = new CartModel();
+               $cartModel->deleteCart($_SESSION['user']['id']);
 
-               die();
+               // die();
             } else {
                echo json_encode($returnData);
             }
-            // vui lòng tham khảo thêm tại code demo
 
          } else {
             echo "thanh toan loi";
@@ -201,6 +205,7 @@ class OrderController
          //    echo "Không thể thêm đơn hàng.";
          // }
       }
+      unset($_SESSION['checkout']);
    }
 
 

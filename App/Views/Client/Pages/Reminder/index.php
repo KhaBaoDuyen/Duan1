@@ -4,11 +4,12 @@ namespace App\Views\Client\Pages\Reminder;
 
 use App\Views\BaseView;
 use App\Views\Client\Components\Menu as ComponentsMenu;
+
 class index extends BaseView
 {
    public static function render($data = null)
    {
-      ?>
+?>
       <style>
          .no-border {
             border: none;
@@ -24,7 +25,7 @@ class index extends BaseView
                <div class="my_profile col-12 ">
                   <h4>Lịch nhắc nhở tưới cây</h4>
                   <table class="table table-hover" style="background: none !important;">
-                     <thead class="text-center table-success" >
+                     <thead class="text-center table-success">
                         <tr>
                            <th>Id</th>
                            <th style="width:20%;">Tiêu đề</th>
@@ -41,7 +42,7 @@ class index extends BaseView
                         if (isset($data) && !empty($data)):
                            $counter = 1;
                            foreach ($data as $reminder):
-                              ?>
+                        ?>
                               <tr class="">
                                  <td><?= $counter++ ?></td>
                                  <form action="/reminder/<?= $reminder['id'] ?>" method="POST" enctype="multipart/form-data">
@@ -101,5 +102,5 @@ class index extends BaseView
 
       </main>
 
-   <?php }
+<?php }
 } ?>

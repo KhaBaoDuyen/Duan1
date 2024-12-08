@@ -76,8 +76,15 @@ Route::post('/cart/{id}', 'App\Controllers\Client\CartController@store');
 Route::put('/cart', 'App\Controllers\Client\CartController@update');
 Route::delete('/cart/{id}', 'App\Controllers\Client\CartController@delete'); 
 
+Route::post('/checkout', 'App\Controllers\Client\CartController@muangay'); 
+
+Route::get('/history', 'App\Controllers\Client\CartController@history'); 
+Route::put('/history', 'App\Controllers\Client\CartController@updateHistory');
+Route::post('/history/{id}', 'App\Controllers\Client\CartController@updateHistory');
+
 //------------------------[ THANH TOÁN ]-------------------------
 Route::get('/checkout', 'App\Controllers\Client\OrderController@checkout'); 
+
 Route::get('/thank', 'App\Controllers\Client\OrderController@thank'); 
 
 Route::post('/order', 'App\Controllers\Client\OrderController@store'); 
@@ -86,7 +93,7 @@ Route::post('/order', 'App\Controllers\Client\OrderController@store');
 
 Route::post('/momo', 'App\Controllers\Client\PayMomo@createPayment');
 
-Route::get('/history', 'App\Controllers\Client\CartController@history'); 
+
 
 //-----------------------[ KỸ THUAT TRỒNG CÂY ]--------------------------------
 Route::get('/blog',  'App\Controllers\Client\HomeController@instruction'); 

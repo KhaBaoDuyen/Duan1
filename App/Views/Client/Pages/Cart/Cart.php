@@ -15,7 +15,7 @@ class Cart extends BaseView
       <main class="col-10 cart m-auto" style="height: auto;">
          <?php if (!$isLoggedIn):
          ?>
-            <h2 class="login-notice">Vui lòng đăng nhập để thêm sản phẩm</h2>
+            <h4 class="login-notice">Vui lòng đăng nhập để thêm sản phẩm</h4>
          <?php else: ?>
             <form action="/cart" method="post" enctype="multipart/form-data">
                <input type="hidden" name="method" value="PUT">
@@ -30,7 +30,6 @@ class Cart extends BaseView
                      <table class="table">
                         <thead>
                            <tr>
-
                               <th>Stt</th>
                               <th>Ảnh</th>
                               <th width="100px">Tên sản phẩm</th>
@@ -42,12 +41,10 @@ class Cart extends BaseView
                            </tr>
                         </thead>
                         <tbody id="cartItems">
-                           <?php if (isset($data)): ?>
+                           <?php if (is_array($data) && count($data) > 0): ?>
                               <?php $counter = 1; ?>
                               <?php foreach ($data as $item): ?>
-
                                  <tr>
-
                                     <td><?= $counter++ ?></td>
                                     <td><img src="/public/uploads/products/<?= $item['product_image'] ?>" alt="Lỗi ảnh" height="100%">
                                     </td>
@@ -61,9 +58,8 @@ class Cart extends BaseView
                                        <?php } else { ?>
                                           <?= number_format($item['product_price'], 0, ',', '.') ?>đ
                                        <?php } ?>
-
-
                                     </td>
+
                                     <td class="quantity">
                                        <div class="quantity-control">
                                           <input type="button" value="-" onclick="TinhTien(this, -1)">
@@ -101,38 +97,24 @@ class Cart extends BaseView
          <?php endforeach; ?>
       <?php else: ?>
          <tr>
-            <td colspan="8" class="text-center">Giỏ hàng của bạn đang trống.</td>
+            <td colspan="8" class="text-center text-secondary">Giỏ hàng của bạn đang trống.</td>
          </tr>
       <?php endif; ?>
       </tbody>
       </table>
+      </div>
+      </div>
       <div class=" box_Cart p-3 ">
          <form action="/checkout" method="POST" id="order">
             <input type="hidden" name="method" value="POST">
             <a href="/checkout" class="checkout">MUA HÀNG</a>
          </form>
-
-      </div>
-      </div>
       </div>
 
    <?php endif; ?>
       </main>
 
-      <script>
-         //--------------- TONG BAO LOI --------------------
-         // window.addEventListener('load', () => {
-         //   const errorElement = document.querySelector('.Error');
 
-         //   setTimeout(() => {
-         //     errorElement.classList.add('show');
-         //   }, 2000);
-
-         //   setTimeout(() => {
-         //     errorElement.classList.remove('show');
-         //   }, 7000);
-         // });
-      </script>
 
 <?php
    }

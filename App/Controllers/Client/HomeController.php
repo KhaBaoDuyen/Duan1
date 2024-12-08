@@ -16,7 +16,7 @@ use App\Views\Client\Contact;
 use App\Views\Client\Pages\Blogs\Instruction;
 use App\Views\Client\About;
 use App\Views\Client\Layouts\Header;
-
+use App\Models\OrderModel;
 class HomeController
 {
     // hiển thị danh sách
@@ -30,6 +30,9 @@ class HomeController
 
         $categogy = new CategoryModel();
         $data['categogy'] = $categogy->getAllCategoryByStatus();
+
+     
+
         Notification::render();
         NotificationHelper::unset();
         Header::render();

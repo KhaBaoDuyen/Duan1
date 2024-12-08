@@ -33,8 +33,16 @@ class Checkout extends BaseView
                         <?php $counter = 1; ?>
                         <?php
                         $total = 0;
-                        foreach ($data as $item) {
-                           $total_price = $item['product_price'] * $item['quantity'];
+                        foreach ($data as $item) { ?>
+                           <?php
+                           if (!empty($item['variant_key']) && !empty($item['variant_price'])) {
+                              $final_price = $item['variant_price'];
+                           } elseif (!empty($item['product_discount_price'])) {
+                              $final_price = $item['product_discount_price'];
+                           } else {
+                              $final_price = $item['product_price'];
+                           }
+                           $total_price = $final_price * $item['quantity'];
                            $total += $total_price;
                            ?>
                            <tr>
@@ -45,20 +53,35 @@ class Checkout extends BaseView
                               </td>
                               <td width="230px" class="p-1"><span><?= $item['product_name'] ?></span>
                               </td>
-                            <td> <span class="text-muted">
+                              <td> <span class="text-muted">
                                     <?= isset($item['product_variant']) && isset($item['variant_name'])
                                        ? 'Loại: ' . htmlspecialchars($item['variant_name'])
                                        : '' ?>
                                  </span></td>
+                              <td>
+                                 <?php if (!empty($item['variant_key']) && !empty($item['variant_price'])) { ?>
+                                    <?= number_format($item['variant_price'], 0, ',', '.') ?>đ
+                                 <?php } elseif (!empty($item['product_discount_price'])) { ?>
+                                    <?= number_format($item['product_discount_price'], 0, ',', '.') ?>đ
+                                 <?php } else { ?>
+                                    <?= number_format($item['product_price'], 0, ',', '.') ?>đ
+                                 <?php } ?>
+                              </td>
 
-                              <td><?= number_format($item['product_price'], 0, ',', '.') ?>đ</td>
+
                               <td><?= $item['quantity'] ?? 0 ?></td>
-                              <td><?= number_format($item['product_price'] * $item['quantity'], 0, ',', '.') ?>đ</td>
+                              <td>
+                                 <?php if (!empty($item['variant_key']) && !empty($item['variant_price'])) { ?>
+                                    <?= number_format($item['variant_price'] * $item['quantity'], 0, ',', '.') ?>đ
+                                 <?php } elseif (!empty($item['product_discount_price'])) { ?>
+                                    <?= number_format($item['product_discount_price'] * $item['quantity'], 0, ',', '.') ?>đ
+                                 <?php } else { ?>
+                                    <?= number_format($item['product_price'] * $item['quantity'], 0, ',', '.') ?>đ
+                                 <?php } ?>
+                              </td>
                            </tr>
                         <?php } ?>
-
                      </tbody>
-
                   </table>
 
 
@@ -71,8 +94,8 @@ class Checkout extends BaseView
                <div class="col-6">
                   <div class="form-group">
                      <label for="name">Tên</label>
-                     <input type="text" placeholder="Vui lòng nhập tên người nhận" name="name" class="<?= isset($errors['name']) ? 'input-error' : '' ?>"
-                        value="<?= $_POST['name'] ?? '' ?>">
+                     <input type="text" placeholder="Vui lòng nhập tên người nhận" name="name"
+                        class="<?= isset($errors['name']) ? 'input-error' : '' ?>" value="<?= $_POST['name'] ?? '' ?>">
                      <?php if (isset($errors['name'])): ?>
                         <span style="color:red;"><?= $errors['name'] ?></span>
                      <?php endif; ?>
@@ -81,7 +104,7 @@ class Checkout extends BaseView
                   <div class="form-group">
                      <label for="phone">Số điện thoại</label>
                      <input type="text" placeholder="Vui lòng nhập số điện thoại" name="phone"
-                        value="<?= $_POST['phone'] ?? '' ?>"  class="<?= isset($errors['phone']) ? 'input-error' : '' ?>">
+                        value="<?= $_POST['phone'] ?? '' ?>" class="<?= isset($errors['phone']) ? 'input-error' : '' ?>">
                      <?php if (isset($errors['phone'])): ?>
                         <span style="color:red;"><?= $errors['phone'] ?></span>
                      <?php endif; ?>
@@ -89,8 +112,8 @@ class Checkout extends BaseView
 
                   <div class="form-group">
                      <label for="email">Email</label>
-                     <input type="text" placeholder="Vui lòng nhập địa chỉ email" name="email" class="<?= isset($errors['email']) ? 'input-error' : '' ?>"
-                        value="<?= $_POST['email'] ?? '' ?>">
+                     <input type="text" placeholder="Vui lòng nhập địa chỉ email" name="email"
+                        class="<?= isset($errors['email']) ? 'input-error' : '' ?>" value="<?= $_POST['email'] ?? '' ?>">
                      <?php if (isset($errors['email'])): ?>
                         <span style="color:red;"><?= $errors['email'] ?></span>
                      <?php endif; ?>
@@ -98,8 +121,8 @@ class Checkout extends BaseView
 
                   <div class="form-group">
                      <label for="address">Địa chỉ</label>
-                     <input type="text" placeholder="Vui lòng nhập địa chỉ" name="address" class="<?= isset($errors['address']) ? 'input-error' : '' ?>"
-                        value="<?= $_POST['address'] ?? '' ?>">
+                     <input type="text" placeholder="Vui lòng nhập địa chỉ" name="address"
+                        class="<?= isset($errors['address']) ? 'input-error' : '' ?>" value="<?= $_POST['address'] ?? '' ?>">
                      <?php if (isset($errors['address'])): ?>
                         <span style="color:red;"><?= $errors['address'] ?></span>
                      <?php endif; ?>
@@ -150,9 +173,11 @@ class Checkout extends BaseView
          </form>
 
       </div>
-     <?php
-                            unset($_SESSION['errors']);
-                            ?>
+      <?php
+      unset($_SESSION['errors']);
+      ?>
 
-   <?php }
+      <?php
+   }
+
 } ?>
