@@ -5639,3 +5639,759 @@ Stack trace:
 [06-Dec-2024 22:50:35 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
 [06-Dec-2024 23:00:13 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 1 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Checkout.php on line 49
 [06-Dec-2024 23:00:13 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Checkout.php on line 49
+[07-Dec-2024 23:36:36 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:41 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:41 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:41 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:36:42 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:39:03 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:39:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:39:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:39:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:39:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:28 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:29 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:29 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:29 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:29 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:30 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:30 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:30 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:30 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:31 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:31 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:31 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:31 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:40:32 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(38): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:04 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:05 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:06 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:07 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:07 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:07 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[07-Dec-2024 23:43:07 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: No data supplied for parameters in prepared statement in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:260
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(260): mysqli_stmt->execute()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(36): App\Models\OrderModel->getAllBy_Orderdetail_JoinId_Order()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 260
+[08-Dec-2024 00:06:35 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php:164
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(48): App\Views\Admin\Pages\Order\Edit::render()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#3 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 164
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 58
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 67
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 76
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 85
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 94
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 113
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 125
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 126
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 127
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 128
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 129
+[08-Dec-2024 00:15:07 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 156
+[08-Dec-2024 00:17:45 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php:164
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(39): App\Views\Admin\Pages\Order\Edit::render()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#3 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 164
+[08-Dec-2024 01:05:17 Asia/Ho_Chi_Minh] PHP Fatal error:  Constant expression contains invalid operations in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 9
+[08-Dec-2024 01:23:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $return in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 167
+[08-Dec-2024 01:23:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $return in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 167
+[08-Dec-2024 01:23:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $return in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 167
+[08-Dec-2024 02:17:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.price' in 'field list' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 58
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 67
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 76
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 85
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 94
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 113
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 125
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 126
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 127
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 128
+[08-Dec-2024 12:56:40 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 129
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 58
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 67
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 76
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 85
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 94
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 113
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 125
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 126
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 127
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 128
+[08-Dec-2024 12:56:45 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 129
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 58
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 67
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 76
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 85
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 94
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 113
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 125
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 126
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 127
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 128
+[08-Dec-2024 12:56:53 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 129
+[08-Dec-2024 14:14:09 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:16:25 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:44 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:44 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:17:45 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "total_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 69
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 79
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 88
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 100
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 101
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 102
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 103
+[08-Dec-2024 14:26:29 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 69
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 79
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 88
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 100
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 101
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 102
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 103
+[08-Dec-2024 14:29:14 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 14:58:29 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 24
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 30
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 40
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 49
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 59
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 69
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 79
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 88
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 100
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 101
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 102
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 103
+[08-Dec-2024 14:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[08-Dec-2024 14:58:38 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:00:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:00:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:00:59 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:01 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:08 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:08 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:09 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php:57
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php(57): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrdersModel->getAllByOrders()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrdersModel.php on line 57
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 19
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 19
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 25
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 25
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 32
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 32
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 49
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 49
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 53
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 53
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 103
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 103
+[08-Dec-2024 15:01:11 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 103
+[08-Dec-2024 15:02:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_product_detail' doesn't have a default value
+[08-Dec-2024 15:02:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:02:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:02:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:03:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_order_detail' doesn't have a default value
+[08-Dec-2024 15:03:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:03:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:03:04 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:03:15 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_order_detail' doesn't have a default value
+[08-Dec-2024 15:03:15 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:03:15 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:03:15 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:04:06 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_order_detail' doesn't have a default value
+[08-Dec-2024 15:04:06 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:04:06 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:04:06 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:22:08 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Field 'id_order_detail' doesn't have a default value
+[08-Dec-2024 15:22:08 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:22:08 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 15:22:08 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Incorrect integer value: '' for column 'id_order' at row 1
+[08-Dec-2024 16:33:56 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 75
+[08-Dec-2024 16:33:56 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 75
+[08-Dec-2024 16:33:56 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 75
+[08-Dec-2024 16:48:24 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:48:24 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:48:24 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:48:24 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:48:24 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "product_price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:48:24 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:48:59 Asia/Ho_Chi_Minh] PHP Parse error:  syntax error, unexpected identifier "đ", expecting "," or ";" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 152
+[08-Dec-2024 16:49:52 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:185
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(185): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 185
+[08-Dec-2024 16:49:56 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:185
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(185): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 185
+[08-Dec-2024 16:49:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:185
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(185): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 185
+[08-Dec-2024 16:49:57 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'o.id_order_detail' in 'on clause' in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php:185
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php(185): mysqli->prepare()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 185
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 65
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 66
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 65
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 66
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 65
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 66
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 65
+[08-Dec-2024 16:52:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 66
+[08-Dec-2024 16:57:19 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: number_format(): Argument #2 ($decimals) must be of type int, string given in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php:66
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php(66): number_format()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(28): App\Views\Admin\Pages\Order\Index::render()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#3 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#4 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Index.php on line 66
+[08-Dec-2024 17:14:48 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 75
+[08-Dec-2024 17:14:48 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 76
+[08-Dec-2024 17:14:48 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 84
+[08-Dec-2024 17:14:48 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user_name" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 75
+[08-Dec-2024 17:14:48 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "price" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 76
+[08-Dec-2024 17:14:48 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 84
+[08-Dec-2024 17:15:55 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php:73
+Stack trace:
+#0 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(89): App\Views\Admin\Pages\Order\Search::render()
+#1 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController->searchOrder()
+#2 D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\index.php(193): App\Route::dispatch()
+#3 {main}
+  thrown in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 73
+[08-Dec-2024 17:16:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 84
+[08-Dec-2024 17:16:57 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "date" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Search.php on line 84

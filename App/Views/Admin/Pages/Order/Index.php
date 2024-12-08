@@ -53,7 +53,6 @@ class Index extends BaseView
                                         <th>Giá</th>
                                         <th>Địa chỉ</th>
                                         <th>Phương thức thanh toán</th>
-                                        <th>Thời gian</th>
                                         <th>Trạng thái</th>
                                         <th>Khác</th>
                                     </tr>
@@ -63,8 +62,8 @@ class Index extends BaseView
                                         <?php foreach ($data as $order): ?>
                                             <tr>
                                                 <td><?= $order['id'] ?></td>
-                                                <td><?= $order['user_name'] ?></td>
-                                                <td><?= $order['price'] ?></td>
+                                                <td><?= $order['name'] ?></td>
+                                                <td><?= number_format ($order['total'],0, ',','.') ?>đ</td>
                                                 <td><?= $order['address'] ?></td>
                                                 <td>
                                                     <span
@@ -72,7 +71,6 @@ class Index extends BaseView
                                                         <?= $order['pay'] == 1 ? 'Thanh toán khi nhận hàng' : 'VNpay' ?>
                                                     </span>
                                                 </td>
-                                                <td><?= $order['date'] ?></td>
                                                 <td>
                                                     <span class="badge p-2 
                                          <?php
