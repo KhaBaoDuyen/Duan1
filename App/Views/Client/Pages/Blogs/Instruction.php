@@ -23,20 +23,20 @@ class Instruction extends BaseView
             <div class="post_1 col-4 d-flex">
                 <img src="/public/assets/Client/image/instruction/post3.jpeg" alt="" width="100%" >
                 <div class="text_post"><h1>Hoa Tulip Trắng</h1>
-                    <p>Hoa Tulip trắng  là biểu tượng của tình yêu thuần khiết, niềm đam mê mãnh liệt, sự bình yên và chiến thắng.</p>
+                    <p>Hoa Tulip trắng  là biểu tượng của tình yêu thuần khiết, niềm đam mê mãnh liệt, sự bình yên.</p>
                 </div>
             </div>
             <div class="post_1 col-4 d-flex">
                 <img src="/public/assets/Client/image/instruction/post2.jpeg" alt="" width="100%" >
                 <div class="text_post"><h1>Hoa Bỉ Ngạn</h1>
-                <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc, tan thương.</p>
+                <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc.</p>
                 </div>
             </div>
       
         </div>
         </section>
         <section class="section_2">
-         <div class="title_2"><h1 class="text_section_1">Hướng dẫn sau mua hàng</h1></div> <!-- nền -->
+         <div class="title"><h1 class="text_section_1">Hướng dẫn sau mua hàng</h1></div> <!-- nền -->
          <div  class="post_total_2 d-flex  col-10 m-auto">
             <div class="step-box box1 col-2">
                <div class="step-circle">1</div>
@@ -79,7 +79,7 @@ class Instruction extends BaseView
       
         </section>
         <section class="section_3">
-         <div class="title_3"><h1 class="text_section_1">Hướng Dẫn Kỹ Thuật</h1></div> <!-- nền -->
+         <div class="title"><h1 class="text_section_1">Hướng Dẫn Kỹ Thuật</h1></div> <!-- nền -->
          <div  class="post_total d-flex justify-content-between col-10 m-auto">
             <div class="post_3 col-2 d-flex ">
                 <img src="/public/assets/Client/image/instruction/post4.jpeg" alt="" width="100%" >
@@ -90,25 +90,25 @@ class Instruction extends BaseView
             <div class="post_3 col-2 d-flex">
                 <img src="/public/assets/Client/image/instruction/post5.jpg" alt="" width="100%" >
                 <div class="text_post"><h1>Hình thức chăm sóc</h1>
-                    <p>Hoa Tulip trắng  là biểu tượng của tình yêu thuần khiết, niềm đam mê mãnh liệt, sự bình yên và chiến thắng.</p>
+                    <p>Hoa Tulip trắng  là biểu tượng của tình yêu thuần khiết, niềm đam mê mãnh liệt, sự bình yên.</p>
                 </div>
             </div>
             <div class="post_3 col-2 d-flex">
                 <img src="/public/assets/Client/image/instruction/post6.jpg" alt="" width="100%" >
                 <div class="text_post"><h1>Kỹ Thuật Trồng</h1>
-                <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc, tan thương.</p>
+                <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc.</p>
                 </div>
             </div>
             <div class="post_3 col-2 d-flex">
                <img src="/public/assets/Client/image/instruction/post7.jpg" alt="" width="100%" >
                <div class="text_post"><h1>Phân bón</h1>
-               <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc, tan thương.</p>
+               <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc.</p>
                </div>
            </div>
            <div class="post_3 col-2 d-flex">
             <img src="/public/assets/Client/image/instruction/post8.jpg" alt="" width="100%" >
             <div class="text_post"><h1>Loại đất</h1>
-            <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc, tan thương.</p>
+            <p>Hoa Bỉ ngạn mang đến ý nghĩa chia ly, u buồn, không may mắn hay biểu thị sự chết chóc.</p>
             </div>
             
         </div>

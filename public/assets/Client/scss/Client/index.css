@@ -2516,7 +2516,7 @@ main article .all_products .card:hover {
   color: white;
   text-align: center;
   text-shadow: 1px 3px 5px black;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 .instruction .post_1 {
   border-radius: 1px;
@@ -2546,15 +2546,15 @@ main article .all_products .card:hover {
   width: 200px;
 }
 .instruction .text_post h1 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: rgb(8, 92, 40);
   text-align: center;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 .instruction .text_post p {
   text-align: center;
   font-size: 0.8em;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 .instruction .post_total {
   background-color: white;
@@ -2572,7 +2572,7 @@ main article .all_products .card:hover {
   color: white;
   text-align: center;
   text-shadow: 1px 3px 5px black;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: var(--font-family-pri);
 }
 
 .post_total_2 {
