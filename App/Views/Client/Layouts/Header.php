@@ -102,7 +102,8 @@ class Header extends BaseView
                                     style="max-width: 40px">
                               </a>
                               <div class="user-menu">
-                                 <a href="/order-history" class="order-history-link">Đơn mua</a>
+                                 <a href="/history" class="order-history-link">Đơn mua</a>
+                                 <a href="/logout" class="order-history-link">Đăng xuất</a>
                               </div>
                            <?php else: ?>
                               <!-- Hiển thị nút Đăng nhập / Đăng ký nếu chưa đăng nhập -->

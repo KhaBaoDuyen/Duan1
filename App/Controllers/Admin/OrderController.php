@@ -25,6 +25,8 @@ class OrderController
         $data = $order->getAllByOrder();
         /* var_dump($data); */
         Header::render();
+         Notification::render();
+            NotificationHelper::unset();
         Index::render($data);
         Footer::render();
     }
@@ -35,6 +37,8 @@ class OrderController
         $data = $order->getOneByOrderdetail($id);
         $return = $order->getAllBy_Orderdetail_JoinId_Order($id);
         Header::render();
+         Notification::render();
+            NotificationHelper::unset();
         Edit::render($data, $return);
         Footer::render();
     }
@@ -64,6 +68,7 @@ class OrderController
     {
         $order = new OrderModel();
         $return = $order->deleteOrders($id);
+// var_dump($return);
         if ($return) {
             NotificationHelper::success('delete', 'Xóa thành công!');
             header('Location: /admin/order');
@@ -86,6 +91,8 @@ class OrderController
             'orderall' => $orderall
         ];
         Header::render();
+         Notification::render();
+            NotificationHelper::unset();
         Search::render($data);
         Footer::render();
     }

@@ -110,11 +110,10 @@ class CategogyValidation
    public static function delete()
    {
       $is_valid = true;
-
-      if (empty($_POST["id"]) && $_POST['id'] == 29) {
+      if (isset($_POST['id']) && $_POST['id'] == 12) {
+         NotificationHelper::error('delete', 'Đây là danh mục mặc định không thể xóa');
          $is_valid = false;
       }
-
       return $is_valid;
    }
 }

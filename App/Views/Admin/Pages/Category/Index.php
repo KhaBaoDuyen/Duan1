@@ -78,6 +78,7 @@ class Index extends BaseView
                                                     <form action="/admin/categories/<?= $categogy['id'] ?>" method="post"
                                                         style="display: inline-block;"
                                                         onsubmit="return confirm('Bạn có chắc chắn xóa danh mục <?= $categogy['name'] ?>?')">
+ <input type="hidden" name="id" value="<?= $categogy['id']?>">
                                                         <input type="hidden" name="method" value="DELETE">
                                                         <button type="submit" class="btn btn-sm btn-danger">Xoá</button>
                                                     </form>

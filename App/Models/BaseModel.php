@@ -281,7 +281,7 @@ abstract class BaseModel implements CrudInterface
 
             // Nếu có sản phẩm, cập nhật danh mục của chúng thành id 23
             if ($productCount > 0) {
-                $idCategory = 29;
+                $idCategory = 12;
                 $sqlUpdate = "UPDATE products SET id_categogy = ? WHERE id_categogy = ?;";
                 $stmtUpdate = $conn->prepare($sqlUpdate);
                 $stmtUpdate->bind_param('ii', $idCategory, $id);

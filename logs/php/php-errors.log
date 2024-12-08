@@ -6398,3 +6398,207 @@ Stack trace:
 [08-Dec-2024 21:22:43 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
 [08-Dec-2024 23:39:35 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
 [08-Dec-2024 23:39:42 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "user" in D:\BLOCK2\mon-du-an-1\duan1_update3\WebBanCayCanhVaHoa\App\Helpers\AuthHelper.php on line 159
+[09-Dec-2024 03:01:00 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:01:02 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:01:47 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:01:49 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:01:50 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:01:50 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:01:50 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'webbancayvahoa1' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php:53
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php(53): mysqli->__construct()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(251): App\Models\Database->MySQLi()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(25): App\Models\OrderModel->getAllByOrder()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(82): App\Controllers\Admin\OrderController::Index()
+#4 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#5 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\Database.php on line 53
+[09-Dec-2024 03:02:15 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'od.status' in 'field list' in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php:295
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(295): mysqli->prepare()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getOneByOrderdetail()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#4 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 295
+[09-Dec-2024 03:03:43 Asia/Ho_Chi_Minh] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM 
+                order_details od 
+            JOIN 
+                pro' at line 16 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php:295
+Stack trace:
+#0 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php(295): mysqli->prepare()
+#1 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\OrderController.php(35): App\Models\OrderModel->getOneByOrderdetail()
+#2 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Route.php(104): App\Controllers\Admin\OrderController->edit()
+#3 D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\index.php(200): App\Route::dispatch()
+#4 {main}
+  thrown in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Models\OrderModel.php on line 295
+[09-Dec-2024 03:04:41 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 99
+[09-Dec-2024 03:04:41 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 100
+[09-Dec-2024 03:04:41 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 101
+[09-Dec-2024 03:04:41 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 102
+[09-Dec-2024 03:04:41 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 103
+[09-Dec-2024 03:04:41 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "status" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Order\Edit.php on line 104
+[09-Dec-2024 03:05:39 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:40 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:41 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:41 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:42 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:42 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:52 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:05:54 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:13 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:14 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:14 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:15 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:15 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:15 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:16 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:16 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:06:16 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:09:12 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:09:14 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:09:15 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:09:37 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:10:54 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:10:56 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:11:00 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:16:38 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "checkout" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Client\OrderController.php on line 247
+[09-Dec-2024 03:16:38 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 73
+[09-Dec-2024 03:17:20 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:22 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:23 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:24 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:24 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:25 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:25 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:26 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:26 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:38 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:39 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:41 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:43 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:17:46 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:25:58 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:25:59 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:26:00 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] Lỗi khi thêm dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`tbl_vnpay`, CONSTRAINT `fk_vnpaybyorder` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "checkout" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Client\OrderController.php on line 247
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 19
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 19
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 25
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 25
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 32
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 32
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 49
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 49
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 53
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 53
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 62
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  foreach() argument must be of type array|object, null given in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 73
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key 0 in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 103
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Warning:  Trying to access array offset on value of type null in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 103
+[09-Dec-2024 03:27:49 Asia/Ho_Chi_Minh] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Client\Pages\Cart\Thanks.php on line 103
+[09-Dec-2024 03:32:06 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`order_details`, CONSTRAINT `fk_product` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:32:21 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`order_details`, CONSTRAINT `fk_product` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:32:24 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:32:30 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:33:44 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`order_details`, CONSTRAINT `fk_product` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:34:58 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`order_details`, CONSTRAINT `fk_product` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:36:38 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`order_details`, CONSTRAINT `fk_product` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:42:29 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:42:35 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:42:44 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:42:48 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:43:16 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:45:26 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:48:20 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot delete or update a parent row: a foreign key constraint fails (`webbancayvahoa`.`cart`, CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`))
+[09-Dec-2024 03:53:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 03:56:03 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 03:58:33 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 03:58:39 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 03:58:42 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 03:58:46 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 03:59:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 03:59:14 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 04:00:03 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 113
+[09-Dec-2024 04:00:06 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 113
+[09-Dec-2024 04:04:03 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 04:04:08 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 04:04:36 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 04:04:40 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 04:04:43 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170
+[09-Dec-2024 04:07:41 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:08:23 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 04:08:24 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:09:02 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 04:10:12 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 04:10:16 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 04:10:16 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:10:20 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Validation\CategogyValidation.php on line 114
+[09-Dec-2024 04:10:20 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:11:27 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Category\Index.php on line 81
+[09-Dec-2024 04:11:27 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Category\Index.php on line 81
+[09-Dec-2024 04:11:27 Asia/Ho_Chi_Minh] PHP Warning:  Undefined array key "id" in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Views\Admin\Pages\Category\Index.php on line 81
+[09-Dec-2024 04:11:39 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:11:44 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:12:07 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:12:34 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:13:14 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:13:17 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:13:40 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:15:12 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:16:10 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 164
+[09-Dec-2024 04:17:24 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:19:10 Asia/Ho_Chi_Minh] Lỗi khi xóa dữ liệu: Cannot add or update a child row: a foreign key constraint fails (`webbancayvahoa`.`products`, CONSTRAINT `fk_id_category` FOREIGN KEY (`id_categogy`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT)
+[09-Dec-2024 04:46:05 Asia/Ho_Chi_Minh] PHP Warning:  Undefined variable $result in D:\hoctap\hocki4\BLOCK2\MONDUAN\WebBanCayCanhVaHoa\App\Controllers\Admin\CategoryController.php on line 170

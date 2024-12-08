@@ -53,12 +53,11 @@ class AuthController
    {
       $is_valid = AuthValidation::register();
 
-      if (!$is_valid) {
+      if ($is_valid) {
          NotificationHelper::error('register', 'Đăng ký thất bại');
          header('location: /Account');
          exit();
       }
-
 
       $username = $_POST['username'];
       $password = $_POST['password'];

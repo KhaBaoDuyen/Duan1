@@ -23,6 +23,7 @@ class Edit extends BaseView
             ?>
             <form class="form-horizontal" action="/admin/categories/<?= $data['id'] ?>" method="POST"
               enctype="multipart/form-data">
+             
               <input type="hidden" name="method" id="" value="PUT">
               <div class="form-group">
                 <label for="name">Tên danh mục</label>

@@ -174,7 +174,7 @@ class OrderModel extends BaseModel
         }
     }
 
-// -------------------[ HISTORY ]----------------------------------------
+    // -------------------[ HISTORY ]----------------------------------------
     public function getAllOrderHitory($id_user)
     {
         $result = [];
@@ -210,25 +210,24 @@ ORDER BY orders.id DESC, order_details.id_product;
 
     public function updateHistory($status, $id)
     {
-      try {
-         $sql = "UPDATE {$this->table} SET status = ? WHERE id = ?";
-         $conn = $this->_conn->MySQLi();
-         $stmt = $conn->prepare($sql);
+        try {
+            $sql = "UPDATE {$this->table} SET status = ? WHERE id = ?";
+            $conn = $this->_conn->MySQLi();
+            $stmt = $conn->prepare($sql);
 
-         if (!$stmt) {
-            throw new \Exception("Lỗi chuẩn bị SQL: " . $conn->error);
-         }
+            if (!$stmt) {
+                throw new \Exception("Lỗi chuẩn bị SQL: " . $conn->error);
+            }
 
-         $updatedAt = date('Y-m-d H:i:s');
-         $stmt->bind_param("si", $status, $id);
+            $updatedAt = date('Y-m-d H:i:s');
+            $stmt->bind_param("si", $status, $id);
 
 
-         return $stmt->execute();
-      } catch (\Throwable $th) {
-         error_log("Lỗi khi cập nhật dữ liệu: " . $th->getMessage());
-         return false;
-      }
-   
+            return $stmt->execute();
+        } catch (\Throwable $th) {
+            error_log("Lỗi khi cập nhật dữ liệu: " . $th->getMessage());
+            return false;
+        }
     }
 
     public function countTotalOrder()
@@ -244,7 +243,7 @@ ORDER BY orders.id DESC, order_details.id_product;
         }
     }
 
-  function getAllByOrder()
+    function getAllByOrder()
     {
         $sql = "SELECT * FROM orders";
 
@@ -262,8 +261,8 @@ ORDER BY orders.id DESC, order_details.id_product;
         return $data;
     }
 
+    
 
- 
     function getOneByOrderdetail($id)
     {
         $sql = "SELECT 
@@ -279,8 +278,8 @@ ORDER BY orders.id DESC, order_details.id_product;
                 od.quantity, 
                 od.price, 
                 od.date, 
-                od.variant_key, 
-                od.status
+                od.variant_key,
+ o.status
             FROM 
                 order_details od 
             JOIN 
@@ -294,7 +293,7 @@ ORDER BY orders.id DESC, order_details.id_product;
 
         $stmt = $conn->prepare($sql);
 
-        $stmt->bind_param('i', $id); 
+        $stmt->bind_param('i', $id);
 
         $stmt->execute();
 
@@ -339,6 +338,7 @@ ORDER BY orders.id DESC, order_details.id_product;
     }
 
 
+
     public function searchByKeywordOrder_detail($keyword)
     {
         $db = (new Database())->Pdo();
@@ -349,5 +349,4 @@ ORDER BY orders.id DESC, order_details.id_product;
 
         return $stmt->fetchAll();
     }
-
 }
