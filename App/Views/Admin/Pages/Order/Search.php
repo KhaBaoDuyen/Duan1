@@ -62,7 +62,6 @@ class Search extends BaseView
                                         <th>Giá</th>
                                         <th>Địa chỉ</th>
                                         <th>Phương thức thanh toán</th>
-                                        <th>Thời gian</th>
                                         <th>Trạng thái</th>
                                         <th>Khác</th>
                                     </tr>
@@ -72,8 +71,8 @@ class Search extends BaseView
                                         <?php foreach ($data['ordersearch'] as $order): ?>
                                             <tr>
                                                 <td><?= $order['id'] ?></td>
-                                                <td><?= $order['user_name'] ?></td>
-                                                <td><?= $order['price'] ?></td>
+                                                <td><?= $order['name'] ?></td>
+                                                <td><?= $order['total'] ?></td>
                                                 <td><?= $order['address'] ?></td>
                                                 <td>
                                                     <span
@@ -81,7 +80,6 @@ class Search extends BaseView
                                                         <?= $order['pay'] == 1 ? 'Thanh toán khi nhận hàng' : 'VNpay' ?>
                                                     </span>
                                                 </td>
-                                                <td><?= $order['date'] ?></td>
                                                 <td>
                                                     <span class="badge p-2 
                                          <?php

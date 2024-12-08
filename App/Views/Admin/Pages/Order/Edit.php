@@ -6,12 +6,12 @@ use App\Views\BaseView;
 
 class Edit extends BaseView
 {
-  public static function render($data = null)
+  public static function render($data = null, $return = null)
   {
-    ?>
+?>
 
-    <div class="row">
-      <div class="col-lg-6 m-auto">
+    <div class="row p-1">
+      <div class="col-lg-4 ">
         <div class="card mb-4">
           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h4 class="m-0 font-weight-bold text-primary">Chi tiết đơn hàng</h4>
@@ -53,48 +53,13 @@ class Edit extends BaseView
                 <?php endif; ?>
               </div>
 
-              <div class="form-group col-12">
-                <label for="product_name">Sản phẩm</label>
-                <input type="text" class="form-control" value="<?= $data['product_name'] ?>" name="product_name" id="product_name"
-                  aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['product_name'])): ?>
-                  <span style="color:red;"><?= $errors['product_name'] ?></span>
-                <?php endif; ?>
-              </div>
 
               <div class="form-group col-6">
-                <label for="quantity">Số lượng</label>
-                <input type="text" class="form-control" value="<?= $data['quantity'] ?>" name="quantity" id="quantity"
+                <label for="total_price">Tổng giá</label>
+                <input type="text" class="form-control" value="<?= number_format($data['total_price'], 0, ',', '.') ?>đ" name="total_price" id="total_price"
                   aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['quantity'])): ?>
-                  <span style="color:red;"><?= $errors['quantity'] ?></span>
-                <?php endif; ?>
-              </div>
-
-              <div class="form-group col-6">
-                <label for="price">Tổng giá</label>
-                <input type="text" class="form-control" value="<?= $data['price'] ?>" name="price" id="price"
-                  aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['price'])): ?>
-                  <span style="color:red;"><?= $errors['price'] ?></span>
-                <?php endif; ?>
-              </div>
-
-              <div class="form-group col-6">
-                <label for="variant_key">Loại sản phẩm</label>
-                <input type="text" class="form-control" value="<?= $data['variant_key'] ?:'Không có' ?>" name="variant_key" id="variant_key"
-                  aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['variant_key'])): ?>
-                  <span style="color:red;"><?= $errors['variant_key'] ?></span>
-                <?php endif; ?>
-              </div>
-
-              <div class="form-group col-6">
-                <label for="date">Ngày mua hàng</label>
-                <input type="text" class="form-control" value="<?= $data['date'] ?>" name="date" id="date"
-                  aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['date'])): ?>
-                  <span style="color:red;"><?= $errors['date'] ?></span>
+                <?php if (isset($errors['total_price'])): ?>
+                  <span style="color:red;"><?= $errors['total_price'] ?></span>
                 <?php endif; ?>
               </div>
 
@@ -114,6 +79,15 @@ class Edit extends BaseView
                   aria-describedby="categogylHelp" readonly>
                 <?php if (isset($errors['address'])): ?>
                   <span style="color:red;"><?= $errors['address'] ?></span>
+                <?php endif; ?>
+              </div>
+
+              <div class="form-group col-6">
+                <label for="email">Ghi chú</label>
+                <input type="text" class="form-control" value="<?= $data['email'] ?>" name="email" id="email"
+                  aria-describedby="categogylHelp" readonly>
+                <?php if (isset($errors['email'])): ?>
+                  <span style="color:red;"><?= $errors['email'] ?></span>
                 <?php endif; ?>
               </div>
 
@@ -143,8 +117,72 @@ class Edit extends BaseView
         </div>
       </div>
       <!--Row-->
+      <!-- Danh sach san pham -->
+      <?php if (isset($return)): ?>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h4 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h4>
+          </div>
+          <div class="card-body">
+            <form class="row" action="">
+              
+                <?php foreach ($return as $item): ?>
 
+                  <div class="form-group col-4">
+                    <label for="product_name">Tên sản phẩm</label>
+                    <input type="text" class="form-control" value="<?= $item['product_name'] ?>" name="product_name" id="product_name"
+                      aria-describedby="categogylHelp" readonly>
+                    <?php if (isset($errors['product_name'])): ?>
+                      <span style="color:red;"><?= $errors['product_name'] ?></span>
+                    <?php endif; ?>
+                  </div>
 
+                  <div class="form-group col-2">
+                    <label for="quantity">Số lượng</label>
+                    <input type="text" class="form-control" value="<?= $item['quantity'] ?>" name="quantity" id="quantity"
+                      aria-describedby="categogylHelp" readonly>
+                    <?php if (isset($errors['quantity'])): ?>
+                      <span style="color:red;"><?= $errors['quantity'] ?></span>
+                    <?php endif; ?>
+                  </div>
+
+                  <div class="form-group col-2">
+                    <label for="date">Thời gian</label>
+                    <input type="text" class="form-control" value="<?= $item['date'] ?>" name="date" id="date"
+                      aria-describedby="categogylHelp" readonly>
+                    <?php if (isset($errors['date'])): ?>
+                      <span style="color:red;"><?= $errors['date'] ?></span>
+                    <?php endif; ?>
+                  </div>
+
+                  <div class="form-group col-2">
+                    <label for="product_price">Giá</label>
+                    <input type="text" class="form-control" value="<?= number_format($item['product_price'], 0, ',', '.') ?>đ" name="product_price" id="product_price"
+                      aria-describedby="categogylHelp" readonly>
+                    <?php if (isset($errors['product_price'])): ?>
+                      <span style="color:red;"><?= $errors['product_price'] ?></span>
+                    <?php endif; ?>
+                  </div>
+
+                  <div class="form-group col-2">
+                    <label for="variant_key">Loại</label>
+                    <input type="text" class="form-control" value="<?= $item['variant_key'] ?: 'Không có' ?>" name="variant_key" id="variant_key"
+                      aria-describedby="categogylHelp" readonly>
+                    <?php if (isset($errors['variant_key'])): ?>
+                      <span style="color:red;"><?= $errors['product_privariant_keyce'] ?></span>
+                    <?php endif; ?>
+                  </div>
+
+                <?php endforeach; ?>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      <?php else: ?>
+                <p>Không có sản phẩm nào trong đơn hàng này.</p>
+              <?php endif; ?>
 
       <!-- Modal Logout -->
       <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -169,6 +207,6 @@ class Edit extends BaseView
       </div>
     </div>
 
-    <?php
+<?php
   }
 }

@@ -19,7 +19,22 @@ class OrderModel extends BaseModel
 
     public function updateOrder_details($id, $data)
     {
-        return $this->update($id, $data);
+        try {
+            $sql = "UPDATE orders SET ";
+            foreach ($data as $key => $value) {
+                $sql .= "$key = '$value', ";
+            }
+            $sql = rtrim($sql, ", ");
+
+            $sql .= " WHERE $this->id=$id";
+
+            $conn = $this->_conn->MySQLi();
+            $stmt = $conn->prepare($sql);
+            return $stmt->execute();
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi xóa dữ liệu: ' . $th->getMessage());
+            return false;
+        }
     }
 
     public function getOneOrder_details($id)
@@ -29,7 +44,20 @@ class OrderModel extends BaseModel
 
     public function deleteOrder_detail($id)
     {
-        return $this->delete($id);
+        try {
+            $sql = "
+            DELETE FROM orders WHERE $this->id=$id ";
+
+            $conn = $this->_conn->MySQLi();
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+
+            // trả về số hàng dữ liệu bị ảnh hưởng
+            return $stmt->affected_rows;
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi xóa dữ liệu: ' . $th->getMessage());
+            return false;
+        }
     }
 
     public function createOrder($data)
@@ -146,57 +174,39 @@ class OrderModel extends BaseModel
         }
     }
 
-    function getAllByOrderdetail()
-    {
-        // Truy vấn SQL
-        $sql = "SELECT 
-                p.name AS product_name, 
-                o.address, 
-                o.pay, 
-                o.name AS user_name,
-                od.id, 
-                od.price, 
-                od.date, 
-                od.status
-            FROM 
-                order_details od 
-            JOIN 
-                products p ON od.id_product = p.id 
-            JOIN 
-                orders o ON od.id_order = o.id;";
 
-        // Kết nối cơ sở dữ liệu
+
+    function getAllByOrder()
+    {
+        $sql = "SELECT * FROM orders";
+
         $conn = $this->_conn->MySQLi();
 
-        // Chuẩn bị câu lệnh
         $stmt = $conn->prepare($sql);
 
-        // Thực thi câu lệnh
         $stmt->execute();
-
-        // Lấy kết quả
         $result = $stmt->get_result();
-        $data = $result->fetch_all(MYSQLI_ASSOC); // Lấy tất cả các dòng dưới dạng mảng kết hợp
+        $data = $result->fetch_all(MYSQLI_ASSOC);
 
-        // Đóng câu lệnh và kết nối
         $stmt->close();
         $conn->close();
 
-        // Trả về dữ liệu
         return $data;
     }
 
+
+ 
     function getOneByOrderdetail($id)
     {
-        // Truy vấn SQL với điều kiện WHERE để chỉ lấy một đơn hàng
         $sql = "SELECT 
                 p.name AS product_name, 
                 o.phone, 
                 o.email,
                 o.address, 
                 o.pay, 
+                o.total as total_price,
                 o.name AS user_name,
-                od.id,
+                o.id,
                 od.quantity, 
                 od.price, 
                 od.date, 
@@ -209,27 +219,53 @@ class OrderModel extends BaseModel
             JOIN 
                 orders o ON od.id_order = o.id
             WHERE 
-                od.id = ?;"; // Điều kiện lấy theo id_order
+                o.id = ?;";
 
-        // Kết nối cơ sở dữ liệu
         $conn = $this->_conn->MySQLi();
 
-        // Chuẩn bị câu lệnh
         $stmt = $conn->prepare($sql);
 
-        // Gắn tham số cho câu truy vấn
-        $stmt->bind_param('i', $id); // 'i' cho kiểu số nguyên (id_order)
+        $stmt->bind_param('i', $id); 
 
-        // Thực thi câu lệnh
         $stmt->execute();
 
-        // Lấy kết quả
         $result = $stmt->get_result();
-        $data = $result->fetch_assoc(); // Lấy một dòng dữ liệu dưới dạng mảng kết hợp
+        $data = $result->fetch_assoc();
 
-        // Đóng câu lệnh và kết nối
         $stmt->close();
         $conn->close();
+        return $data;
+    }
+    function getAllBy_Orderdetail_JoinId_Order($id)
+    {
+        $sql = "SELECT 
+                p.name AS product_name, 
+                od.price AS product_price,
+                od.id, 
+                od.variant_key,
+                od.date,
+                od.quantity
+            FROM 
+                order_details od 
+            JOIN 
+                products p ON od.id_product = p.id 
+            WHERE 
+                od.id_order = ?;";
+
+        $conn = $this->_conn->MySQLi();
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->bind_param('i', $id);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+
+        $stmt->close();
+        $conn->close();
+
         return $data;
     }
 
@@ -238,27 +274,10 @@ class OrderModel extends BaseModel
     {
         $db = (new Database())->Pdo();
         $stmt = $db->prepare("
-        SELECT 
-                p.name AS product_name, 
-                o.address, 
-                o.pay, 
-                o.name AS user_name,
-                od.id,
-                od.price, 
-                od.date, 
-                od.status
-            FROM 
-                order_details od 
-            JOIN 
-                products p ON od.id_product = p.id 
-            JOIN 
-                orders o ON od.id_order = o.id
-        WHERE o.name LIKE :keyword
-    ");
+        SELECT * FROM orders WHERE name LIKE :keyword ");
 
         $stmt->execute(['keyword' => '%' . $keyword . '%']);
 
-        // Trả về kết quả
         return $stmt->fetchAll();
     }
 }
