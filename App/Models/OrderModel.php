@@ -4,10 +4,10 @@ namespace App\Models;
 
 class OrderModel extends BaseModel
 {
-    protected $table = 'order_details';
+    protected $table = 'orders';
     protected $id = 'id';
 
-    public function getAllOrder_details()
+    public function getAllOrders()
     {
         return $this->getAll();
     }
@@ -17,7 +17,7 @@ class OrderModel extends BaseModel
         return $this->getOne($id);
     }
 
-    public function updateOrder_details($id, $data)
+    public function updateOrders($id, $data)
     {
         try {
             $sql = "UPDATE orders SET ";
@@ -37,12 +37,12 @@ class OrderModel extends BaseModel
         }
     }
 
-    public function getOneOrder_details($id)
+    public function getOneOrders($id)
     {
         return $this->getOne($id);
     }
 
-    public function deleteOrder_detail($id)
+    public function deleteOrders($id)
     {
         try {
             $sql = "
