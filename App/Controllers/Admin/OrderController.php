@@ -48,7 +48,7 @@ class OrderController
         ];
         if ($data) {
             $order = new OrderModel();
-            $return = $order->updateOrder_details($id, $data);
+            $return = $order->updateOrders($id, $data);
             if ($return) {
                 NotificationHelper::success('update', 'Cập nhật trạng thái thành công!');
                 header('Location: /admin/order');
@@ -63,7 +63,7 @@ class OrderController
     function delete($id)
     {
         $order = new OrderModel();
-        $return = $order->deleteOrder_detail($id);
+        $return = $order->deleteOrders($id);
         if ($return) {
             NotificationHelper::success('delete', 'Xóa thành công!');
             header('Location: /admin/order');

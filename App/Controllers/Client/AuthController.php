@@ -51,7 +51,6 @@ class AuthController
 
    public static function registerAction()
    {
-      // Xác thực dữ liệu đầu vào cho quá trình đăng ký
       $is_valid = AuthValidation::register();
       if (!$is_valid) {
          NotificationHelper::error('register_valid', 'Đăng ký thất bại');
@@ -59,34 +58,32 @@ class AuthController
          exit();
       }
 
-      // Lấy dữ liệu từ form
+
       $username = $_POST['username'];
       $password = $_POST['password'];
-      $hash_password = password_hash($password, PASSWORD_DEFAULT); // Băm mật khẩu
+      $hash_password = password_hash($password, PASSWORD_DEFAULT);
       $email = $_POST['email'];
 
-      // Tạo một mảng dữ liệu chứa thông tin người dùng
+
       $data = [
          'username' => $username,
          'password' => $hash_password,
          'email' => $email
       ];
 
-      // Gọi AuthHelper để đăng ký người dùng với dữ liệu đã chuẩn bị
       $result = AuthHelper::register($data);
 
-      // Kiểm tra kết quả đăng ký
       if ($result) {
-         header('Location: /Account'); // Đăng ký thành công, chuyển hướng về trang tài khoản
+         header('Location: /Account'); 
       } else {
-         header('Location: /Account'); // Đăng ký thất bại, cũng chuyển hướng về trang tài khoản
+         header('Location: /Account');
       }
    }
 
 
    public static function loginAction()
    {
-      // Xác thực dữ liệu đầu vào cho quá trình đăng nhập
+
       $is_valid = AuthValidation::login();
       if (!$is_valid) {
          NotificationHelper::error('register_valid', 'Đăng nhập thất bại');
@@ -94,25 +91,21 @@ class AuthController
          exit();
       }
 
-      // Tạo mảng dữ liệu chứa thông tin đăng nhập
       $data = [
          'username' => $_POST['username'],
          'password' => $_POST['password'],
          'remember' => isset($_POST['remember'])
-         // Kiểm tra xem người dùng có chọn 'Ghi nhớ đăng nhập' không
       ];
 
-      // Gọi AuthHelper để thực hiện đăng nhập
       $result = AuthHelper::login($data);
       // var_dump($result);
 
-      // Kiểm tra kết quả đăng nhập
       if ($result) {
          NotificationHelper::success('login', 'Đăng nhập thành công');
-         header('location: /'); // Đăng nhập thành công, chuyển hướng về trang chủ
+         header('location: /');
       } else {
          NotificationHelper::error('error_login', 'Đăng nhập thất bại');
-         header('location: /Account');  // Đăng nhập thất bại, chuyển hướng về trang đăng nhập
+         header('location: /Account'); 
       }
       var_dump($result);
    }
@@ -135,12 +128,6 @@ class AuthController
       }
       $data = $_SESSION['user'];
 
-   //   $data = [
-   //       'username' => $_POST['username'],
-   //       'email' => $_POST['email'],
-   //       'phone' => $_POST['phone'],
-   //       'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
-   //   ];
       Header::render();
       Profile::render($data);
       Footer::render();
