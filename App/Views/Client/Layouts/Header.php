@@ -97,12 +97,13 @@ class Header extends BaseView
                                  <?php
                                  // Kiểm tra xem avatar có tồn tại trong session không
                                  $avatar = $_SESSION['user']['avatar'] ?? 'usermacdinh.png';
-
                                  ?>
-
                                  <img class="img-profile rounded-circle" src="/public/uploads/users/<?= $avatar ?>"
                                     style="max-width: 40px">
                               </a>
+                              <div class="user-menu">
+                                 <a href="/order-history" class="order-history-link">Đơn mua</a>
+                              </div>
                            <?php else: ?>
                               <!-- Hiển thị nút Đăng nhập / Đăng ký nếu chưa đăng nhập -->
                               <a href="/Account" class="d-flex account_title justify-content-center align-items-center">
