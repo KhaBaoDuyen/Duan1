@@ -280,21 +280,27 @@
    color: #333;
 }
 
+.price-filter p {
+   padding: 0;
+   margin: 0;
+   margin-left: 15px;
+   font-size: large;
+}
+
 .price-filter .price-options {
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    gap: 5px;
-   /* khoảng cách giữa các checkbox */
+   flex-direction: column;
 }
+
+
 
 .filter-header {
    display: flex;
    align-items: center;
-   /* Căn chỉnh theo chiều dọc */
    justify-content: space-between;
-   /* Căn chỉnh thẻ h4 và nút lọc ra hai bên */
    margin-bottom: 20px;
-   /* Khoảng cách dưới filter header */
 }
 
 .title_brand {

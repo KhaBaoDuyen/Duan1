@@ -87,7 +87,7 @@ class CartModel extends BaseModel
    }
 
    // Lssy sp theo id người dùng và id sản phẩm
-   public function getCartItemByProductId($userId, $productId)
+public function getCartItemByProductId($userId, $productId)
    {
       $sql = "SELECT * FROM cart WHERE id_user = ? AND id_product = ? AND variant_key IS NULL";
       $conn = $this->_conn->MySQLi();
@@ -96,7 +96,6 @@ class CartModel extends BaseModel
       $stmt->execute();
       return $stmt->get_result()->fetch_assoc();
    }
-
 
    //  Lấy sản phẩm trong giỏ hàng theo id người dùng id sản phẩm và variantKey
    public function getCartItem($id_user, $id_product, $variantKey)
@@ -144,7 +143,7 @@ class CartModel extends BaseModel
       }
    }
 
-   // xóa giỏ hàng theo biến thể
+   // ------------------[xóa giỏ hàng theo biến thể]-----------------------
    public function deleteCartItemVariant($id_user, $id_product, $variantKey)
    {
       try {
@@ -164,7 +163,7 @@ class CartModel extends BaseModel
       }
    }
 
-   //  xóa giỏ hàng theo sản phẩm
+   //  -----------------------[xóa giỏ hàng theo sản phẩm]-------------------
    public function deleteCartItem($id_user, $id_product)
    {
       try {
@@ -189,4 +188,24 @@ class CartModel extends BaseModel
       $result = $this->countTotalCart($id);
       return isset($result['totalQuantity']) ? (int) $result['totalQuantity'] : 0;
    }
+
+// ----------------[ xóa tất cả sp trong giỏ hàng khi thanh toán thnah công ]---------------------------
+       public function deleteCart( $id_User): bool
+    {
+        try {
+            $sql = "
+            DELETE FROM cart WHERE id_user =$id_User ";
+
+            $conn = $this->_conn->MySQLi();
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+
+            // trả về số hàng dữ liệu bị ảnh hưởng
+            return $stmt->affected_rows;
+        } catch (\Throwable $th) {
+            error_log('Lỗi khi xóa dữ liệu: ' . $th->getMessage());
+            return false;
+        }
+    }
+
 }

@@ -41,8 +41,8 @@ class Index extends BaseView
                <p class="count_name"> Bình luận</p>
             </div>
             <div class="total_product col-3 ">
-               <p class="count_number">1000+</p>
-               <p class="count_name"> Lượt truy cập</p>
+               <p class="count_number"><?= $data['total_orders'] ?>+</p>
+               <p class="count_name"> Đơn hàng</p>
             </div>
          </div>
       </section>

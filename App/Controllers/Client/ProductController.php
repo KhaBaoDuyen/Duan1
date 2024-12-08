@@ -24,6 +24,7 @@ use App\Views\Client\Pages\Product\Shop;
 use App\Views\Client\Pages\Product\Index;
 use App\Views\Client\Pages\Product\Edit;
 use App\Views\Client\Pages\Product\Detail;
+use App\Models\OrderModel;
 
 
 class ProductController
@@ -34,26 +35,7 @@ class ProductController
     {
         $this->productModel = new ProductModel();
     }
-    /* private static function filterProductsByPrice($products, $priceMinArray, $priceMaxArray)
-    {
-        $filteredProducts = [];
 
-        foreach ($products as $item) {
-            $price = $item['price'];
-
-            // Kiểm tra xem sản phẩm có thuộc một trong các khoảng giá không
-            foreach ($priceMinArray as $key => $priceMin) {
-                $priceMax = $priceMaxArray[$key]; // lấy priceMax tương ứng
-
-                if ($price >= $priceMin && $price <= $priceMax) {
-                    $filteredProducts[] = $item;
-                    break; // Nếu sản phẩm đã nằm trong một khoảng giá, không cần kiểm tra thêm
-                }
-            }
-        }
-
-        return $filteredProducts;
-    } */
     // hiển thị danh sách
     public static function index()
     {
@@ -71,6 +53,9 @@ class ProductController
 
         $comment = new CommentModel;
         $total_comment = $comment->countCommentByStatus();
+
+        $order = new OrderModel;
+        $total_orders = $order->countTotalOrder();
 
         foreach ($categories as &$categoryItem) {
             $categoryItem['countCategoryProduct'] = 0; // Mặc định 0 nếu không có sản phẩm
@@ -131,6 +116,7 @@ class ProductController
             'count_product' => $count_product['total'],
             'count_category' => $count_category['total'],
             'total_comment' => $total_comment['total'],
+            'total_orders' => $total_orders['total'],
 
         ];
 
@@ -177,7 +163,8 @@ class ProductController
             if (isset($data['product']['variant']) && !empty($data['product']['variant'])) {
                 $Arr_variant = json_decode($data['product']['variant'], true);
             }
-        };
+        }
+        ;
 
         if ($data['product'] && isset($data['product']) && !empty($data['product'])) {
             if (isset($data['product']['images']) && !empty($data['product']['images'])) {
@@ -200,7 +187,7 @@ class ProductController
     {
         $product = new ProductModel();
         $products = $product->getAllProductByCategoryAndStatus($id); // Lấy tất cả sản phẩm trong danh mục
-    
+
         $category = new CategoryModel();
         $categories = $category->getAllCategoryByStatus();
         $count_product = $product->countTotalProduct();
@@ -209,6 +196,9 @@ class ProductController
 
         $comment = new CommentModel;
         $total_comment = $comment->countCommentByStatus();
+
+        $order = new OrderModel;
+        $total_orders = $order->countTotalOrder();
 
         foreach ($categories as &$categoryItem) {
             $categoryItem['countCategoryProduct'] = 0; // Mặc định 0 nếu không có sản phẩm
@@ -219,12 +209,12 @@ class ProductController
                 }
             }
         }
-        
-    
+
+
         // Lấy giá trị priceMin từ URL
         $priceMinArray = isset($_GET['priceMin']) ? $_GET['priceMin'] : [];
         $priceMaxArray = [];
-    
+
         // Chuyển đổi các giá trị priceMin thành các priceMax tương ứng
         foreach ($priceMinArray as $priceMin) {
             switch ($priceMin) {
@@ -245,17 +235,17 @@ class ProductController
                     break;
             }
         }
-    
+
         // Lọc các sản phẩm theo giá nếu có giá trị lọc
         if (!empty($priceMinArray) && !empty($priceMaxArray)) {
             $products = self::filterProductsByPrice($products, $priceMinArray, $priceMaxArray);
         }
-    
+
         // Kiểm tra nếu không có sản phẩm nào phù hợp với lọc giá
         if (empty($products)) {
             $noProductsMessage = "Không có sản phẩm trong tầm giá này.";
         }
-    
+
         // Dữ liệu truyền vào view
         $data = [
             'products' => $products,
@@ -265,39 +255,40 @@ class ProductController
             'count_product' => $count_product['total'],
             'count_category' => $count_category['total'],
             'total_comment' => $total_comment['total'],
+            'total_orders' => $total_orders['total'],
             'countCategoryProduct' => $countCategoryProduct
         ];
-    
+
         Header::render();
         ProductCategory::render($data);
         Footer::render();
     }
-    
+
 
     private static function filterProductsByPrice($products, $priceMinArray, $priceMaxArray)
     {
         $filteredProducts = [];
-    
+
         foreach ($products as $item) {
             $price = $item['price'];
-    
+
             // Kiểm tra xem sản phẩm có thuộc một trong các khoảng giá không
             foreach ($priceMinArray as $key => $priceMin) {
                 $priceMax = $priceMaxArray[$key]; // lấy priceMax tương ứng
-    
+
                 if ($price >= $priceMin && $price <= $priceMax) {
                     $filteredProducts[] = $item;
                     break; // Nếu sản phẩm đã nằm trong một khoảng giá, không cần kiểm tra thêm
                 }
             }
         }
-    
+
         return $filteredProducts;
     }
-    
-    
-    
-    
+
+
+
+
 
     // Sắp xếp sản phẩm
     private static function sortProducts($products, $sortOrder)

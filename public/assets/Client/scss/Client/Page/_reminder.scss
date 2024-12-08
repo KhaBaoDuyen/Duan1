@@ -5,6 +5,7 @@
    left: 0.3%;
    width: 25%;
 
+
    .box_reminder {
       // position: relative;
       background: var(--pri-color);
@@ -28,8 +29,8 @@
 
    form {
       // position: absolute;
-     display: none;
-    
+      display: none;
+
 
       h5 {
          background: var(--pri-color);
@@ -77,44 +78,44 @@
    border-radius: 3px;
 }
 
-.checkStatus{
-.radio-input input[type="radio"] {
-  -webkit-appearance: none; 
-  -moz-appearance: none;
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--pri-color);
-  border-radius: 4px; 
-  position: relative;
-  transition: all 0.3s ease;
-}
+.checkStatus {
+   .radio-input input[type="radio"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--pri-color);
+      border-radius: 4px;
+      position: relative;
+      transition: all 0.3s ease;
+   }
 
-.radio-input input[type="radio"]:checked {
-  background-color: var(--pri-color); 
-  border-color: var(--pri-color); 
-  color: rgb(255, 255, 255);
-}
+   .radio-input input[type="radio"]:checked {
+      background-color: var(--pri-color);
+      border-color: var(--pri-color);
+      color: rgb(255, 255, 255);
+   }
 
-.radio-input input[type="radio"]:checked::before {
-  content: '🌱 '; 
-  position: absolute;
-  top: -3px;
-  left: -2px;
-  font-size: 14px;
-  color: rgb(255, 255, 255);
-}
+   .radio-input input[type="radio"]:checked::before {
+      content: '🌱 ';
+      position: absolute;
+      top: -3px;
+      left: -2px;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+   }
 
-.radio-input label {
-  cursor: pointer;
-  padding: 0 10px;
-  font-size: 14px;
-  font-weight: 600;
-}
+   .radio-input label {
+      cursor: pointer;
+      padding: 0 10px;
+      font-size: 14px;
+      font-weight: 600;
+   }
 
-.radio-input span {
-  display: inline-block;
-  margin-left: 8px;
-  vertical-align: middle;
-}
+   .radio-input span {
+      display: inline-block;
+      margin-left: 8px;
+      vertical-align: middle;
+   }
 }
