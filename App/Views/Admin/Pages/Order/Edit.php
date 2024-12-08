@@ -83,11 +83,11 @@ class Edit extends BaseView
               </div>
 
               <div class="form-group col-6">
-                <label for="email">Ghi chú</label>
-                <input type="text" class="form-control" value="<?= $data['email'] ?>" name="email" id="email"
+                <label for="note">Ghi chú</label>
+                <input type="text" class="form-control" value="<?= $data['note'] ?>" name="note" id="note"
                   aria-describedby="categogylHelp" readonly>
-                <?php if (isset($errors['email'])): ?>
-                  <span style="color:red;"><?= $errors['email'] ?></span>
+                <?php if (isset($errors['note'])): ?>
+                  <span style="color:red;"><?= $errors['note'] ?></span>
                 <?php endif; ?>
               </div>
 
@@ -97,6 +97,7 @@ class Edit extends BaseView
                 <div class="custom-file">
                   <select class="select2 form-control shadow-none" style="width: 100%; height:36px;" id="status"
                     name="status" value="<?= $data['status'] ?>">
+                    <option value="0" <?= ($data['status'] == 0 ? 'selected' : '') ?>>Hủy đơn</option>
                     <option value="1" <?= ($data['status'] == 1 ? 'selected' : '') ?>>Chờ xử lý</option>
                     <option value="2" <?= ($data['status'] == 2 ? 'selected' : '') ?>>Đang xử lý</option>
                     <option value="3" <?= ($data['status'] == 3 ? 'selected' : '') ?>>Đang vận chuyển</option>
