@@ -29,8 +29,8 @@ class Contact extends BaseView
                <div class=" col-3 m-1 contact1 align-content-center justify-content-center">
                   <div class="imgcontact d-flex  justify-content-center mt-2">
                       <img src="/public/assets/Client/image/contact/call_60dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" width="20%" alt="">
-                      <h2 style="color: var(--text-color-light);">Whatsapp</h2>
-                      <h5 style="color: var(--text-color-light);">0987&nbsp;654&nbsp;321</h5>
+                      <h4 style="color: var(--text-color-light);">Whatsapp</h4>
+                      <h6 style="color: var(--text-color-light);">0987&nbsp;654&nbsp;321</h6>
                   
                   </div>
 
@@ -39,8 +39,8 @@ class Contact extends BaseView
                <div class=" col-3 m-1 contact1 align-content-center justify-content-center">
                   <div class="imgcontact d-flex justify-content-center mt-2">
                      <img src="/public/assets/Client/image/contact/whatsapp.png" width="20%" alt="">
-                     <h2 style="color: var(--text-color-light);">Phone</h2>
-                     <h5 style="color: var(--text-color-light);">0987&nbsp;654&nbsp;321</h5>
+                     <h4 style="color: var(--text-color-light);">Phone</h4>
+                     <h6 style="color: var(--text-color-light);">0987&nbsp;654&nbsp;321</h6>
                  
                  </div>
                </div>
@@ -50,16 +50,16 @@ class Contact extends BaseView
                <div class=" col-3 m-1 contact1 align-content-center justify-content-center">
                   <div class="imgcontact d-flex justify-content-center mt-2">
                      <img src="/public/assets/Client/image/contact/mail_60dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" width="20%" alt="">
-                     <h2 style="color: var(--text-color-light);">Email</h2>
-                     <h5 style="color: var(--text-color-light);">FPT@Poly.shop</h5>
+                     <h4 style="color: var(--text-color-light);">Email</h4>
+                     <h6 style="color: var(--text-color-light);">FPT@Poly.shop</h6>
                  
                  </div>
                </div>
                <div class=" col-3 m-1 contact1 align-content-center justify-content-center">
                   <div class="imgcontact d-flex justify-content-center mt-2">
                      <img src="/public/assets/Client/image/contact/storefront_60dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png" width="20%" alt="">
-                     <h2 style="color: var(--text-color-light);">Địa chỉ</h2>
-                     <h5 style="color: var(--text-color-light); ">Đ số 22, Thới Thạnh,Cần Thơ</h5>
+                     <h4 style="color: var(--text-color-light);">Địa chỉ</h4>
+                     <h6 style="color: var(--text-color-light); ">Đ số 22, Thới Thạnh,Cần Thơ</h6>
                  
                  </div>
                </div>
@@ -92,10 +92,10 @@ class Contact extends BaseView
                            <input type="text" id="ho" name="ho" placeholder="Vui lòng nhập họ...."><br><br>
                         </div>
 
-                        <div>
+                        <span>
                            <label style="font-size: 20px;" for="email">Email:</label><br>
                            <input type="email" id="email" name="email" placeholder="Vui lòng nhập email...."><br><br>
-                        </div>
+                        </span>
 
                         <div>
                            <label style="font-size: 20px;" for="phone">Số điện thoại:</label><br>

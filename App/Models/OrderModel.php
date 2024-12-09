@@ -197,7 +197,7 @@ FROM orders
 LEFT JOIN order_details ON orders.id = order_details.id_order 
 LEFT JOIN tbl_vnpay ON orders.id = tbl_vnpay.id_order 
 LEFT JOIN products ON products.id = order_details.id_product 
-WHERE orders.id_user = 2
+WHERE orders.id_user = $id_user
 ORDER BY orders.id DESC, order_details.id_product;
 ";
             $result = $this->_conn->MySQLi()->query($sql);

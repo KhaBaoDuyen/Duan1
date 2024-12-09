@@ -178,7 +178,7 @@ class Home extends BaseView
          <section class="all_product">
             <div class="box_title d-flex align-items-center justify-content-between p-3">
                <h3>Sản phẩm</h3>
-               <a href="">Xem tất cả</a>
+               <a href="/shop">Xem tất cả</a>
             </div>
             <div class=" box_card col-12">
                <?php
@@ -237,7 +237,7 @@ class Home extends BaseView
 
 
             <div class="title_all_product">
-               <a href=""> Xem thêm</a>
+               <a href="/shop"> Xem thêm</a>
             </div>
          </section>
       </main>

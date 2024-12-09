@@ -168,7 +168,7 @@ abstract class BaseModel implements CrudInterface
 
     public function getAllByProductStatus()
     {
-        $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . "   LIMIT 15";
+        $sql = "SELECT * FROM $this->table WHERE status = " . self::STATUS_ENABLE . "   LIMIT 10";
         $result = $this->_conn->MySQLi()->query($sql);
         return $result->fetch_all(MYSQLI_ASSOC);
     }

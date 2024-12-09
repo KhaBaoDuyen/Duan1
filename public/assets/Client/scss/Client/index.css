@@ -1250,6 +1250,7 @@ main article .all_products .card:hover {
   height: 200px;
   width: 45%;
   border-radius: 5px;
+  height: auto;
 }
 .contact .information {
   /*  border: 1px solid var(--pri-color); */
@@ -1262,7 +1263,6 @@ main article .all_products .card:hover {
 .contact input {
   height: 55px;
   border-radius: 10px;
-  margin-top: 1rem;
   width: 100%;
   border: 1px solid var(--text-color-sale);
   padding: 10px;
@@ -1270,7 +1270,7 @@ main article .all_products .card:hover {
 .contact textarea {
   padding: 10px;
   border-radius: 10px;
-  width: 97%;
+  width: 100%;
   margin: auto;
 }
 .contact .inputsubmit input {
